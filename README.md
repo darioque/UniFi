@@ -1,4 +1,4 @@
-# grupo-06
+# grupo_06_NOMBRE
 
 Este grupo está compuesto por Dario Skidelsky, Federico Loro Meyer, Leonardo Bujan y Lucas Introzzi. Todos somos apasionados del mundo Crypto y creemos que tanto la programación como también las criptomonedas serán muy importantes en el futuro venidero. Es por esto mismo que decidimos encarar un proyecto de esta índole.
 
