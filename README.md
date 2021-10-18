@@ -1,6 +1,6 @@
 # grupo_06_NOMBRE
 
-Este grupo está compuesto por Dario Skidelsky, Federico Loro Meyer, Leonardo Bujan y Lucas Introzzi. Todos somos apasionados del mundo Crypto y creemos que tanto la programación como también las criptomonedas serán muy importantes en el futuro venidero. Es por esto mismo que decidimos encarar un proyecto de esta índole.
+ste grupo está compuesto por Dario Skidelsky, Federico Loro Meyer, Leonardo Bujan y Lucas Introzzi. Todos somos apasionados del mundo Crypto y creemos que tanto la programación como también las criptomonedas serán muy importantes en el futuro venidero. Es por esto mismo que decidimos encarar un proyecto de esta índole.
 
 Nuestro marketplace ofrecerá la compraventa de distintos productos del mundo financiero. Si bien la idea inicial trató de Criptomonedas, nos extendimos más allá y ofreceremos también productos de los mercados tradicionales (Equity, Renta Fija, etc).
 También queremos ofrecer herramientas de custodia e inversión (productos de lending, por ejemplo).
