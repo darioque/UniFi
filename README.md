@@ -4,6 +4,16 @@
 
 Este grupo está compuesto por Dario Skidelsky, Federico Loro Meyer, Leonardo Bujan y Lucas Introzzi. Todos somos apasionados del mundo cripto y de las finanzas, y creemos que tanto la programación como también las criptomonedas serán muy importantes en el futuro venidero. Es por esto mismo que decidimos encarar un proyecto de esta índole.
 
+### Dario Skidelsky
+
+Tengo 23 años y soy estudiante de Ing. En sistemas de información en UTN-FRC. Tengo conocimientos básicos de programación, lo disfruto y espero profundizar mis conocimientos con este proyecto.
+
+### Federico Loro Meyer
+
+### Leonardo Bujan
+
+### Lucas Introzzi
+
 ## Descripción
 
 Nuestro marketplace ofrecerá la compraventa de distintos productos del mundo financiero. Si bien la idea inicial trató de criptomonedas, nos extendimos más allá y ofreceremos también productos de los mercados tradicionales (Equity, Renta Fija, etc).
@@ -14,8 +24,8 @@ Si bien el público que busca hacer compraventa de criptomonedas suele ser joven
 
 El UI del sitio fue inspirado en distintas páginas web de brokers, billeteras y mesas OTC Crypto, entre ellas:
 
-1. Ripio
-2. Bitso
-3. Binance
-4. B2C2
-5. MetaMask
+1. [Ripio](https://ripio.com.ar)
+2. [Bitso](https://bitso.com)
+3. [Binance](https://binance.com)
+4. [B2C2](https://b2c2.com)
+5. [MetaMask](https://metamask.io)
