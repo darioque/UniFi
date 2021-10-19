@@ -12,7 +12,7 @@ La idea principal del proyecto es **unificar** el mercado "del futuro" con las f
 
 Si bien el público que busca hacer compraventa de criptomonedas suele ser joven (20-50 años de edad), el hecho de agregar productos de mercados tradicionales nos desafía a tener que apuntar este sitio a personas de todas las edades.
 
-El UI del sitio fue inspirado en distintas páginas web de brokers, billeteras y mesas OTC Crypto, entre ellos:
+El UI del sitio fue inspirado en distintas páginas web de brokers, billeteras y mesas OTC Crypto, entre ellas:
 
 1. Ripio
 2. Bitso
