@@ -10,6 +10,8 @@ Tengo 23 años y soy estudiante de Ing. En sistemas de información en UTN-FRC. 
 
 ### Federico Loro Meyer
 
+Apasionado por las finanzas y el mundo Crypto. Tengo 25 años, estudié Lic. en Economía e hice una Maestría en Finanzas. Trabajo como trader en un broker de Crypto muy grande y quiero aprender a programar para darle la chance de un giro a mi carrera laboral en caso de así quererlo.
+
 ### Leonardo Bujan
 
 ### Lucas Introzzi
