@@ -14,6 +14,8 @@ Tengo 23 años y soy estudiante de Ing. En sistemas de información en UTN-FRC. 
 
 ### Lucas Introzzi
 
+Tengo 21 años y si bien estudie nutrición un año se me genero una curiosidad enorme por la programación. Antes de ingresar al curso tenia un leve conocimiento sobre HTML y CSS. Espero dar mi maximo esfuerzo en este proyecto y seguir aprendiendo cada día mas. 
+
 ## Descripción
 
 Nuestro marketplace ofrecerá la compraventa de distintos productos del mundo financiero. Si bien la idea inicial trató de criptomonedas, nos extendimos más allá y ofreceremos también productos de los mercados tradicionales (Equity, Renta Fija, etc).
