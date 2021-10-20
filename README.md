@@ -31,3 +31,20 @@ El UI del sitio fue inspirado en distintas páginas web de brokers, billeteras y
 3. [Binance](https://binance.com)
 4. [B2C2](https://b2c2.com)
 5. [MetaMask](https://metamask.io)
+
+#### Logo
+
+![logo](/public/img/logo.png)
+
+#### Tipografías
+
+-   ['Quicksand'](https://freefontsfamily.com/quicksand-font/) 
+-   ['Open Sans'](https://freefontsfamily.com/open-sans-font-free/)
+
+
+#### Colores
+
+    -   ![##ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `##ffffff`
+    -   ![##131013](https://via.placeholder.com/15/131013/000000?text=+) `##131013`
+    -   ![##c9f7a6](https://via.placeholder.com/15/c9f7a6/000000?text=+) `##c9f7a6`
+    -   ![##004c66](https://via.placeholder.com/15/004c66/000000?text=+) `##004c66`
