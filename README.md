@@ -14,6 +14,7 @@ Apasionado por las finanzas y el mundo Crypto. Tengo 25 años, estudié Lic. en 
 
 ### Leonardo Bujan
 
+Soy de Curuzú Cuatiá (Corrientes), tengo 35 años de edad y me gusta mucho la programación. Estudié 3 años de Licenciatura en sistemas y fue ahí donde nació esta pasión. Me decidí a hacer el curso para adquirir más conocimientos acerca de programación y poder dedicarme profesionalmente a lo que me gusta.
 ### Lucas Introzzi
 
 Tengo 21 años y si bien estudie nutrición un año se me genero una curiosidad enorme por la programación. Antes de ingresar al curso tenia un leve conocimiento sobre HTML y CSS. Espero dar mi maximo esfuerzo en este proyecto y seguir aprendiendo cada día mas. 
