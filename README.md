@@ -29,7 +29,7 @@ Si bien el público que busca hacer compraventa de criptomonedas suele ser joven
 
 El UI del sitio fue inspirado en distintas páginas web de brokers, billeteras y mesas OTC Crypto, entre ellas:
 
-1. [Ripio](https://ripio.com.ar)
+1. [Ripio](https://ripio.com)
 2. [Bitso](https://bitso.com)
 3. [Binance](https://binance.com)
 4. [B2C2](https://b2c2.com)
