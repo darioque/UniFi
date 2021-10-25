@@ -45,9 +45,8 @@ El UI del sitio fue inspirado en distintas páginas web de brokers, billeteras y
 -   ['Open Sans'](https://freefontsfamily.com/open-sans-font-free/)
 
 #### Colores
+
 -   ![##ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `#ffffff`
 -   ![##131013](https://via.placeholder.com/15/131013/000000?text=+) `#131013`
 -   ![##c9f7a6](https://via.placeholder.com/15/c9f7a6/000000?text=+) `#c9f7a6`
 -   ![##004c66](https://via.placeholder.com/15/004c66/000000?text=+) `#004c66`
-
-

@@ -7,6 +7,14 @@ html {
     font-family: 'Open Sans', sans-serif;
 }
 
+.bg-blue {
+    background-color: #004c66;
+}
+
+.bg-green {
+    background-color: #c9f7a6;
+}
+
 body {
     background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);

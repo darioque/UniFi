@@ -20,7 +20,6 @@
     flex: 1 1 0%;
     flex-direction: row;
     padding: 20px 24px;
-    background-color: rgb(255, 255, 255);
     align-items: center;
     order: 1;
 }
@@ -51,6 +50,23 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
+}
+
+.price-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.percentage-change {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 10px;
+    background-color: #56e404;
+    color: #ffff;
+    white-space: nowrap;
+    border-radius: 10px;
+    margin-bottom: 5px;
 }
 
 .main-price {
