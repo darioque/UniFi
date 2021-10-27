@@ -10,11 +10,18 @@ app.use(express.static(publicPath));
 
 // ejecutamos el servidor
 app.listen(3000, () => {
-    console.log("El servidor se está ejecutando en el puerto 3000");
+  console.log("El servidor se está ejecutando en el puerto 3000");
 });
 
 // responde al request "get" a root con index.html
 app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "/views/index.html"));
+});
 
-    res.sendFile(path.join(__dirname, "/views/productDetail.html"));
+app.get("/product-detail", (req, res) => {
+  res.sendFile(path.join(__dirname, "/views/productDetail.html"));
+});
+
+app.get("/trade-confirmation", (req, res) => {
+  res.sendFile(path.join(__dirname, "/views/tradeConfirmation.html"));
 });
