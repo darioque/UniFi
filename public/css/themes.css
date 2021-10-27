@@ -15,7 +15,7 @@ html {
   background-color: #c9f7a6;
 }
 
-body {
+.body-container {
   background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   text-size-adjust: 100%;
@@ -24,7 +24,7 @@ body {
   vertical-align: baseline;
 }
 
-main {
+.main-container {
   width: 100%;
   max-width: 1400px;
   padding-right: 15px;
