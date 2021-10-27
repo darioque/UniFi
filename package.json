@@ -1,29 +1,29 @@
 {
-    "name": "unifi",
-    "version": "1.0.0",
-    "description": "UniFi is a comprehensive finance site",
-    "main": "app.js",
-    "scripts": {
-        "start": "node app.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/0921CDFSNCN22LAED/grupo-06.git"
-    },
-    "keywords": [
-        "Crpto",
-        "finance",
-        "DeFi",
-        "CEX",
-        "Stocks"
-    ],
-    "author": "Grupo 06",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/0921CDFSNCN22LAED/grupo-06/issues"
-    },
-    "homepage": "https://github.com/0921CDFSNCN22LAED/grupo-06#readme",
-    "dependencies": {
-        "express": "^4.17.1"
-    }
+  "name": "unifi",
+  "version": "1.0.0",
+  "description": "UniFi is a comprehensive finance site",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0921CDFSNCN22LAED/grupo-06.git"
+  },
+  "keywords": [
+    "Crypto",
+    "finance",
+    "DeFi",
+    "CEX",
+    "Stocks"
+  ],
+  "author": "Grupo 06",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0921CDFSNCN22LAED/grupo-06/issues"
+  },
+  "homepage": "https://github.com/0921CDFSNCN22LAED/grupo-06#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

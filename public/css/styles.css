@@ -75,16 +75,3 @@
   line-height: 42px;
   margin-right: 16px;
 }
-
-.center {
-  text-align: center;
-  margin: auto;
-}
-
-.w-100 {
-  width: 100%;
-}
-
-.viewport-100 {
-  width: 100vw;
-}
