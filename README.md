@@ -15,9 +15,10 @@ Apasionado por las finanzas y el mundo Crypto. Tengo 25 años, estudié Lic. en 
 ### Leonardo Bujan
 
 Soy de Curuzú Cuatiá (Corrientes), tengo 35 años de edad y me gusta mucho la programación. Estudié 3 años de Licenciatura en sistemas y fue ahí donde nació esta pasión. Me decidí a hacer el curso para adquirir más conocimientos acerca de programación y poder dedicarme profesionalmente a lo que me gusta.
+
 ### Lucas Introzzi
 
-Tengo 21 años y si bien estudie nutrición un año se me genero una curiosidad enorme por la programación. Antes de ingresar al curso tenia un leve conocimiento sobre HTML y CSS. Espero dar mi maximo esfuerzo en este proyecto y seguir aprendiendo cada día mas. 
+Tengo 21 años y si bien estudie nutrición un año se me genero una curiosidad enorme por la programación. Antes de ingresar al curso tenia un leve conocimiento sobre HTML y CSS. Espero dar mi maximo esfuerzo en este proyecto y seguir aprendiendo cada día mas.
 
 ## Descripción
 
@@ -41,12 +42,16 @@ El UI del sitio fue inspirado en distintas páginas web de brokers, billeteras y
 
 #### Tipografías
 
--   ['Quicksand'](https://freefontsfamily.com/quicksand-font/) 
--   ['Open Sans'](https://freefontsfamily.com/open-sans-font-free/)
+- ['Quicksand'](https://freefontsfamily.com/quicksand-font/)
+- ['Open Sans'](https://freefontsfamily.com/open-sans-font-free/)
 
 #### Colores
 
--   ![##ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `#ffffff`
--   ![##131013](https://via.placeholder.com/15/131013/000000?text=+) `#131013`
--   ![##c9f7a6](https://via.placeholder.com/15/c9f7a6/000000?text=+) `#c9f7a6`
--   ![##004c66](https://via.placeholder.com/15/004c66/000000?text=+) `#004c66`
+- ![##ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `#ffffff`
+- ![##131013](https://via.placeholder.com/15/131013/000000?text=+) `#131013`
+- ![##c9f7a6](https://via.placeholder.com/15/c9f7a6/000000?text=+) `#c9f7a6`
+- ![##004c66](https://via.placeholder.com/15/004c66/000000?text=+) `#004c66`
+
+#### Tablero de tareas - Trello
+
+[Trello](https://trello.com/b/MMdCS9VY/grupo-6-digital-house)
