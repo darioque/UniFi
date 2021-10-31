@@ -21,7 +21,7 @@
   </head>
 
   <body class=".body-container">
-    <header class="bg-blue">
+    <header>
       <nav>
         <div class="header-options">
           <div class="logo">
@@ -35,132 +35,41 @@
       </nav>
     </header>
 
-    <main class=".main-container">
-      <div class="main-price">
-        <div class="currency-logo">
-          <img src="/img/btc_logo.png" alt="Logo de BTC" />
-        </div>
-        <div class="price-title">
-          <h1 class="heading-font currency-title">Bitcoin (BTC) Price</h1>
-          <span class="percentage-change">1.49%</span>
-          <span>$60.000</span>
-        </div>
-      </div>
-
-      <div>
-        <div>
-          <div>
-            <div style="overflow: hidden" class="converter">
-              <div style="order: 1" class="currency">
-                <img
-                  src="/img/btc_logo.png"
-                  alt="converter-coin-logo"
-                  class="currency-logo"
-                />
-                <div>
-                  <p>BTC</p>
-                  <p>Bitcoin</p>
-                </div>
-                <div>
-                  <input
-                    type="number"
-                    value="1"
-                    pattern="/^-?d+.?d*$/"
-                    maxlength="8"
-                  />
-                </div>
-              </div>
-              <div style="order: 2" class="currency">
-                <img
-                  src="/img/usd.svg"
-                  alt="converter-coin-logo"
-                  class="currency-logo"
-                />
-                <div>
-                  <p>USD</p>
-                  <p>United States Dollar</p>
-                </div>
-                <div>
-                  <input type="number" value="60.000" maxlength="8" />
-                </div>
-              </div>
-              <img src="/img/exchange.png" class="exchange-button" />
+    <main>
+      <div class="main-container">
+          <div class="main-price">
+            <div class="currency-logo">
+              <img src="/img/btc_logo.png" alt="Logo de BTC" />
+            </div>
+            <h1 class="heading-font currency-title">Bitcoin (BTC) Price</h1>
+            <div class="price-title">
+              <span>$60.000</span>
+              <span class="percentage-change">1.49%</span>
             </div>
           </div>
-        </div>
-        <h2>BTC Price Statistics</h2>
-        <table>
-          <caption itemprop="about">
-            BTC Price Today
-          </caption>
-          <tbody>
-            <tr>
-              <th scope="row">
-                <strong>Smooth Love Potion Price</strong>
-              </th>
-              <td>$60.000</td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <span>Price Change<span>24h</span></span>
-              </th>
-              <td>
-                <span>$2.000</span>
-                <div>
-                  <span style="font-size: 12px; font-weight: 600"
-                    ><span></span>3.82%</span
-                  >
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">24h Low / 24h High</th>
-              <td>
-                <div>$0.06283 /</div>
-                <div>$0.06782</div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <span>Trading Volume<span class="badge24h">24h</span></span>
-              </th>
-              <td>
-                <span>$124,755,622.69</span>
-                <div>
-                  <span style="font-size: 12px; font-weight: 600"
-                    ><span></span>31.11%
-                  </span>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Volume / Market Cap</th>
-              <td>0.9021</td>
-            </tr>
-            <tr>
-              <th scope="row">Market Dominance</th>
-              <td>
-                <span class=""
-                  >0.01
-                  <!-- -->%
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Market Rank</th>
-              <td>#355</td>
-            </tr>
-          </tbody>
-        </table>
-        <div>
-          <button>BUY</button>
-        </div>
-      </div>
+          
+          <h3>BTC to USD converter</h3>
+          <div class="converter">
+            <div class="currency">
+              <img class="currency-logo" src="/img/btc_logo.png" alt="BTC logo">
+              <p class="currency-title">Bitcoin</p>
+              <div class="currency-input-div">
+                <input class="currency-input" type="number" value="1" maxlength="8">
+              </div>
 
-      <div>
-        <img src="/img/btc_chart.png" alt="BTC Graph" width="100%" />
+            </div>
+            <div class="currency">
+              <img class="currency-logo" src="/img/usd.svg" alt="BTC logo">
+              <p class="currency-title">USD</p>
+              <div class="currency-input-div">
+                <input class="currency-input" type="number" value="1" maxlength="8">
+              </div>
+            </div>
+            <img class="exchange-icon" src="/img/exchange.png" alt="exchange icon">
+          
+          </div>
+          
       </div>
-    </main>
 
     <footer></footer>
   </body>
