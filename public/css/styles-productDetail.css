@@ -147,9 +147,30 @@ header img {
   color: white;
   padding: 18px;
   flex-direction: column;
+  margin-bottom: 0 0 32px;
 }
 .price-statistics .statistic {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px white solid;
+}
+
+footer {
+  margin: 0px auto;
+  padding: 38px 15px 38px 15px;
+}
+
+.footer {
+  display: flex;
+}
+footer img {
+  width: 120px;
+  height: 100px
+}
+
+
+
+
+@media (min-width: 481px) {
+
 }
