@@ -1,20 +1,23 @@
 .converter {
-  margin: 0px;
+  margin: 10px 0px;
   box-sizing: border-box;
   position: relative;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
-  border: 1px solid rgb(239, 242, 245);
+  border: 2px solid rgb(239, 242, 245);
 }
 
 .converter .currency {
   display: flex;
-  border: 1px solid rgb(239, 242, 245);
   align-items: center;
   padding: 20px 24px;
   flex-grow: 1;
   flex-shrink: 1;
+}
+
+.converter .first-currency {
+  border-bottom: 2px solid rgb(239, 242, 245);
 }
 
 .converter .currency-logo {
@@ -69,6 +72,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 5px solid rgb(239 242 245);
 }
 
 .price-title .percentage-change {
@@ -83,7 +88,6 @@
 .main-price {
   font-size: 32px;
   font-weight: 700;
-  margin-right: 16px;
 }
 
 .body-container {
@@ -132,4 +136,20 @@ header nav {
 header img {
   width: 175px;
   height: 100px;
+}
+
+.statistics-container {
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.price-statistics {
+  display: flex;
+  color: white;
+  padding: 18px;
+  flex-direction: column;
+}
+.price-statistics .statistic {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px white solid;
 }

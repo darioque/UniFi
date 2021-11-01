@@ -15,7 +15,7 @@ html {
   background-color: #c9f7a6;
 }
 
-.heading-font {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Quicksand", sans-serif;
 }
 
