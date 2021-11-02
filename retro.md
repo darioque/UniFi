@@ -3,6 +3,7 @@
 - Acostumbrarnos a codear en equipo utilizando git.
 - Estandarizar nuestras distintas maneras de programar en lo que respecta a las practicas de codigo personales, por ejemplo, utilizar camelCase, guardar valores en variables, comentarios, etc. Para mejorar la sinergia.
 - Usar tablero de tareas para comenzar a recopilar historias de usuario y coordinar lo que tiene que hacer cada miembro del equipo.
+- Utilizar lo realizado en el/los sprints anteriores. En este caso maquetar nuestro sitio en base a los wireframes.
 
 ### Hacer más
 
