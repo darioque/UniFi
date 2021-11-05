@@ -113,7 +113,7 @@ div {
   display: block;
 }
 
-.graph {
+.chart {
   display: none;
 }
 
@@ -131,6 +131,9 @@ header nav {
 .header-options a {
   text-decoration: none;
   color: black;
+}
+.header-options a span {
+  display: none;
 }
 
 .header-options i {
@@ -181,25 +184,30 @@ footer img {
 
 @media (min-width: 481px) {
   .main-container {
-    max-width: none;
-    padding: 0px 40px;
+    max-width: 1600px;
+    padding: 5px 55px;
+    margin: 0 auto;
   }
   .header-options a {
     font-size: 20px;
-
   }
+  .header-options a span {
+    display: inline;
+}
   .main-header {
+    max-width: 1600px;
+    margin: 0 auto;
     padding: 0px 40px
   }
   .price-title {
     font-size: 40px;
   }
-  .flex {
+  .content-container {
     display: flex;
     justify-content: space-between;
   }
-  .graph {
+  .chart {
     display: block;
-    width: 99%;
+    width: 100%;
   }
 }
