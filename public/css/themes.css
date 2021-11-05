@@ -27,6 +27,14 @@ h1, h2, h3, h4, h5, h6 {
   margin: auto;
 }
 
+.m-left{
+  margin-left: 40px;
+}
+
+.m-right {
+  margin-right: 40px;
+}
+
 .w-100 {
   width: 100%;
 }

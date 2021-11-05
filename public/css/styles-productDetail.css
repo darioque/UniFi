@@ -113,6 +113,9 @@ div {
   display: block;
 }
 
+.graph {
+  display: none;
+}
 
 header nav {
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
@@ -124,6 +127,10 @@ header nav {
   align-items: center;
   justify-content: space-between;
   padding: 5px 15px;
+}
+.header-options a {
+  text-decoration: none;
+  color: black;
 }
 
 .header-options i {
@@ -173,5 +180,26 @@ footer img {
 
 
 @media (min-width: 481px) {
+  .main-container {
+    max-width: none;
+    padding: 0px 40px;
+  }
+  .header-options a {
+    font-size: 20px;
 
+  }
+  .main-header {
+    padding: 0px 40px
+  }
+  .price-title {
+    font-size: 40px;
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .graph {
+    display: block;
+    width: 99%;
+  }
 }
