@@ -130,6 +130,11 @@ header img {
   transform: scale(1.5);
 }
 
+.sub-price {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .chart {
   display: none;
 }
