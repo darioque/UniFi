@@ -42,3 +42,8 @@ h1, h2, h3, h4, h5, h6 {
 .viewport-100 {
   width: 100vw;
 }
+
+.no-link {
+  text-decoration: none;
+  color: black;
+}
