@@ -1,1 +1,76 @@
+.main-header {
+  border-bottom: 2px solid rgb(239, 242, 245);
+}
 
+header img {
+  width: 145px;
+  height: 70px;
+}
+
+.converter {
+  margin: 10px 0px;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(239, 242, 245);
+}
+
+.converter .currency {
+  display: flex;
+  align-items: center;
+  padding: 20px 24px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.converter .first-currency {
+  border-bottom: 2px solid rgb(239, 242, 245);
+}
+
+.converter .currency-logo {
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+  margin-right: 5px;
+}
+
+.converter .currency-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.converter .currency-input-div {
+  display: flex;
+  margin: 0px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.converter .currency-input {
+  border: none;
+  padding-left: 10px;
+  text-align: right;
+  font-weight: 600;
+}
+
+.converter .currency-logo {
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+  margin-right: 12px;
+}
+
+.converter .exchange-icon {
+  position: absolute;
+  left: 46%;
+  top: 41%;
+  transition: transform 0.5s;
+}
+
+.converter .exchange-icon:hover {
+  transform: scale(1.5);
+}
