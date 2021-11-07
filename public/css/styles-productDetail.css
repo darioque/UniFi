@@ -59,11 +59,11 @@
   position: absolute;
   left: 46%;
   top: 41%;
-  transition: transform 0.5s;
+  transition: filter 250ms;
 }
 
 .converter .exchange-icon:hover {
-  transform: scale(1.5);
+  filter: brightness(50%);
 }
 .main-price .currency-title {
   color: rgba(91, 97, 110, 1);
