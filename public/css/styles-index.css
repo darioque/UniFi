@@ -1,0 +1,141 @@
+/* ESTILOS ESTANDAR */
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    display: inline-block;
+}
+
+.logo {
+    width: 145px;
+    height: 75px;
+}
+
+/* ESTILOS DE CLASES */
+
+/* ESTILOS DE HEADER */
+.header {
+    padding: 5px 15px;
+    border-bottom: 2px solid rgb(239, 242, 245);
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-navbar-menu {
+    display: flex;
+    align-self: center;
+    padding: 5px 15px;
+    font-size: 18px;
+}
+
+.header-navbar-menu a {
+    padding: 5px 15px;
+}
+
+.container-menu {
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.header-navbar-menu .no-link span { /* Login deshabilitado */
+    display: none;
+}
+
+.header-navbar-list { /* Lista de menu deshabilitada */
+    display: none;
+}
+
+
+/* ESTILOS DE SECTION */
+
+.section-home {
+    padding: 0 15px;
+}
+
+.image-welcome {
+    width: 100%;
+    padding: 15px 0;
+}
+
+.article-welcome {
+    display: flex;
+    padding: 15px 0;
+}
+
+.paragraph-welcome {
+    padding: 0 10px;
+    width: 60%;
+    text-align: center;
+}
+
+.create-account {
+    padding: 0 10px;
+    width: 40%;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* ESTILOS DE ASIDE (BARRA LATERAL) */
+
+.aside {
+    width: 60%;
+    padding: 30px 0 15px;
+    margin: 0 auto;
+}
+
+.aside h3 {
+    text-align: center;
+}
+
+.card {
+    border: 1px solid #000000;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.buy-crypto {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.financial-assets {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ESTILOS DE FOOTER (PIE DE PAGINA) */
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 15px 0;
+    border-top: 2px solid rgb(239, 242, 245);   
+}
+
+.footer-navbar {
+    align-self: center;
+}
+
+.footer-navbar ul {
+    padding: 0;    
+}
+
+.footer-navbar-list {
+    display: flex;
+    
+}
+
+.footer-navbar-list li {
+    padding: 0 15px;
+}
+
+.copyright {
+    width: 100%;
+    padding-left: 30px;
+}
