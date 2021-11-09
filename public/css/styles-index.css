@@ -97,6 +97,10 @@ a {
     border-radius: 10px;
 }
 
+.title-card {
+    text-align: center;
+}
+
 .buy-crypto {
     width: 100%;
     border-radius: 10px;
@@ -190,6 +194,10 @@ a {
         order: 1;
     }
 
+    .container-menu {
+        display: none;
+    }
+
     .header-navbar-menu .no-link span { /* Texto Login habilitado */
         display: block;
     }
@@ -222,7 +230,6 @@ a {
 
     .title-card {
         font-size: 15px;
-        text-align: center;
     }
 
 }
