@@ -1,122 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UniFi</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Quicksand:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/themes.css" />
-    <link rel="stylesheet" href="/css/styles-productDetail.css" />
-  </head>
 
-  <body class="body-container">
-    <header class="main-header">
-      <nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniFi</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/normalize.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Quicksand:wght@700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/themes.css" />
+  <link rel="stylesheet" href="/css/styles-productDetail.css" />
+</head>
+
+<body class="body-container">
+  <header class="main-header">
+    <nav>
+      <div class="header-options">
+        <div class="logo">
+          <a href="/"><img src="/img/logo.svg" alt="Logo de UniFi" /></a>
+        </div>
         <div class="header-options">
-          <div class="logo">
-            <a href="/"><img src="/img/logo.svg" alt="Logo de UniFi" /></a>
-          </div>
-          <div class="header-options">
-            <a class="no-link" href="/wallet"><i class="fas fa-wallet"></i><span>Wallet</span></a>
-            <a class="no-link" href="/login"><i class="fas fa-user-alt"></i><span>Login</span></a>
-          </div>
+          <a class="no-link" href="/wallet"><i class="fas fa-wallet"></i><span>Wallet</span></a>
+          <a class="no-link" href="/login"><i class="fas fa-user-alt"></i><span>Login</span></a>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
-    <main class="main-main">
-      <div class="main-container">
-        <ul class="progressive-links">
-          <li><a class="no-link" href="/cryptocurrencies"><span>Cryptocurrencies</span></a></li>
-          <li>
-            <i class="fas fa-chevron-right"></i>
-            <a class="no-link" href="/cryptocurrencies/bitcoin"><span>Bitcoin</span></a></li>
-        </ul>
-        <div class="main-price">
-          <div class="currency-logo">
-            <img src="/img/btc_logo.png" alt="Logo de BTC" />
-          </div>
-          <h1 class="heading-font currency-title">Bitcoin (BTC) Price</h1>
-          <div class="price-title">
-            <span>$60,000</span>
-            <span class="percentage-change">1.49%</span>
-          </div>
+  <main class="main-main">
+    <div class="main-container">
+      <ul class="progressive-links">
+        <li><a class="no-link" href="/cryptocurrencies"><span>Cryptocurrencies</span></a></li>
+        <li>
+          <i class="fas fa-chevron-right"></i>
+          <a class="no-link" href="/cryptocurrencies/bitcoin"><span>Bitcoin</span></a>
+        </li>
+      </ul>
+      <div class="main-price">
+        <div class="currency-logo">
+          <img src="/img/btc_logo.png" alt="Logo de BTC" />
         </div>
-        <div class="content-container">
-          <div class="chart">
-            <p class="placeholder-text">PLACEHOLDER</p>
-            <img src="/img/chart.png" alt="BTC/USD Chart">
-          </div>
-          <div>
-            <h3 class="converter-title">Buy BTC</h3>
-            <div class="converter">
+        <h1 class="heading-font currency-title">Bitcoin (BTC) Price</h1>
+        <div class="price-title">
+          <span>$60,000</span>
+          <span class="percentage-change">1.49%</span>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="chart">
+          <p class="placeholder-text">PLACEHOLDER</p>
+          <img src="/img/chart.png" alt="BTC/USD Chart">
+        </div>
+        <div>
+          <h3 class="converter-title">Buy BTC</h3>
+          <div class="converter">
+            <form action="/trade-confirmation" method="get">
               <div class="currency first-currency">
                 <img class="currency-logo" src="/img/btc_logo.png" alt="BTC logo">
                 <p class="currency-title">Bitcoin</p>
-                <div class="currency-input-div">
+                <div action="/trade-confirmation" method="POST" class="currency-input-div">
                   <input class="currency-input" type="number" value="1" maxlength="8">
                 </div>
-  
               </div>
               <div class="currency second-currency">
-                <img class="currency-logo" src="/img/USD.svg" alt="USD logo">
+                <img class="currency-logo" src="/img/usd.svg" alt="USD logo">
                 <p class="currency-title">USD</p>
                 <div class="currency-input-div">
                   <input class="currency-input" type="number" value="60000" maxlength="8">
                 </div>
               </div>
-              <img class="exchange-icon" src="/img/exchange.png" alt="exchange icon">
-            
-            </div>
-            
-            <div class="bg-blue statistics-container">
-              <div class="price-statistics">
-                <h2>BTC Price Statistics</h2>
-                <div class="statistic">
-                  <p>Bitcoin Price</p>
-                  <p>$60,000</p>
-                </div>
-                <div class="statistic">
-                  <p>Price Change</p>
-                  <p>$500</p>
-                </div>
-                <div class="statistic">
-                  <p>24h Low / High</p>
-                  <p>$59,000 / $62,280</p>
-                </div>
-                <div class="statistic">
-                  <p>Trading Volume</p>
-                  <p>$30,000,000</p>
-                </div>
-                <div class="statistic">
-                  <p>Market Cap</p>
-                  <p>$1,200,934,362,256.01</p>
-                </div>
-                <div class="statistic">
-                  <p>Market Rank</p>
-                  <p>#1</p>
-                </div>
+              <input type="image" class="exchange-icon" src="/img/exchange.png" alt="Submit">
+            </form>
+          </div>
+
+          <div class="bg-blue statistics-container">
+            <div class="price-statistics">
+              <h2>BTC Price Statistics</h2>
+              <div class="statistic">
+                <p>Bitcoin Price</p>
+                <p>$60,000</p>
               </div>
-            </div>    
+              <div class="statistic">
+                <p>Price Change</p>
+                <p>$500</p>
+              </div>
+              <div class="statistic">
+                <p>24h Low / High</p>
+                <p>$59,000 / $62,280</p>
+              </div>
+              <div class="statistic">
+                <p>Trading Volume</p>
+                <p>$30,000,000</p>
+              </div>
+              <div class="statistic">
+                <p>Market Cap</p>
+                <p>$1,200,934,362,256.01</p>
+              </div>
+              <div class="statistic">
+                <p>Market Rank</p>
+                <p>#1</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </main>
-    <footer>
-      <div class="footer">
-        <a href="/"><img src="/img/logo.svg" alt="Logo de UniFi" /></a>
-      </div>
-    </footer>
-  </body>
+    </div>
+  </main>
+  <footer>
+    <div class="footer">
+      <a href="/"><img src="/img/logo.svg" alt="Logo de UniFi" /></a>
+    </div>
+  </footer>
+</body>
+
 </html>
