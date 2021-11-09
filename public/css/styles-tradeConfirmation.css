@@ -94,6 +94,7 @@ header img {
 .converter .currency-title {
   font-size: 14px;
   font-weight: 600;
+  width: 30vw;
 }
 
 .converter .currency-input-div {
@@ -110,6 +111,7 @@ header img {
   padding-left: 10px;
   text-align: right;
   font-weight: 600;
+  width: 20vw;
 }
 
 .converter .currency-logo {
