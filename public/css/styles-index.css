@@ -49,7 +49,6 @@ a {
     display: none;
 }
 
-
 /* ESTILOS DE SECTION */
 
 .section-home {
@@ -82,8 +81,8 @@ a {
 
 /* ESTILOS DE ASIDE (BARRA LATERAL) */
 
-.aside {
-    width: 60%;
+.aside-card {
+    width: 50%;
     padding: 30px 0 15px;
     margin: 0 auto;
 }
@@ -106,6 +105,41 @@ a {
 .financial-assets {
     width: 100%;
     border-radius: 10px;
+}
+
+/* ESTILOS DE SECCION DE ARTICULOS */
+
+.section-article {
+    padding: 0 15px;   
+}
+
+.article {
+    display: flex;
+    justify-content: space-around;
+    border-top: 2px solid rgb(239, 242, 245);
+}
+
+.image-article {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+}
+
+.price-article {
+    display: none;
+}
+
+.value-article {
+    align-self: center;
+}
+
+.change-article {
+    display: none;
+}
+
+.percentage-article {
+    align-self: center;
+    color: green;
 }
 
 /* ESTILOS DE FOOTER (PIE DE PAGINA) */
@@ -137,5 +171,64 @@ a {
 
 .copyright {
     width: 100%;
-    padding-left: 30px;
+    font-size: 12px;
+}
+
+/* MEDIA QUERY DE PANTALLAS DESDE A 480PX */
+@media (min-width: 481px) {
+
+}
+
+
+/* MEDIA QUERY DE PANTALLAS DESDE A 768PX */
+@media (min-width: 768px) {
+    .icon-login {
+        padding-right: 5px;
+    }
+
+    .header-navbar-menu {
+        order: 1;
+    }
+
+    .header-navbar-menu .no-link span { /* Texto Login habilitado */
+        display: block;
+    }
+    
+    .header-navbar-list { /* Lista de menu habilitada */
+        display: block;
+        width: 50%;
+        align-self: center;
+    }
+
+    .navbar-menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .section-home {
+        display: flex;
+    }
+
+    .container-home {
+        padding-right: 10px;
+    }
+
+    .aside-card {
+        padding: 0 10px;
+        align-self: center;
+        border-left: 2px solid rgb(239, 242, 245);
+    }
+
+    .title-card {
+        font-size: 15px;
+        text-align: center;
+    }
+
+}
+
+
+/* MEDIA QUERY DE PANTALLAS DESDE 1200PX */
+@media (min-width: 1200px) {
+    
 }
