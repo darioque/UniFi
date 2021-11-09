@@ -59,11 +59,11 @@
   position: absolute;
   left: 46%;
   top: 41%;
-  transition: transform 0.5s;
+  transition: filter 450ms;
 }
 
 .converter .exchange-icon:hover {
-  transform: scale(1.5);
+  filter: contrast(50%);
 }
 .main-price .currency-title {
   color: rgba(91, 97, 110, 1);
@@ -97,9 +97,6 @@
 .body-container {
   background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
-  text-size-adjust: 100%;
-  font-size: 15px;
-  line-height: 1.5em;
   vertical-align: baseline;
 }
 
@@ -169,6 +166,7 @@ header img {
 .statistics-container {
   border-radius: 10px;
   margin-top: 20px;
+  margin-bottom: 20px
 }
 .price-statistics {
   display: flex;
@@ -183,17 +181,39 @@ header img {
   border-bottom: 1px white solid;
 }
 
-footer {
-  margin: 0px auto;
-  padding: 38px 15px 38px 15px;
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 15px 0;
+    border-top: 2px solid rgb(239, 242, 245);   
 }
 
-.footer {
-  display: flex;
+.footer-navbar {
+  align-self: center;
+}
+
+.footer-navbar ul {
+  padding: 0;    
+  list-style-type: none;
+}
+
+.footer-navbar-list {
+    display: flex;
+    
+}
+
+.footer-navbar-list li {
+  padding: 0 15px;
+}
+
+.copyright {
+  width: 100%;
+  font-size: 12px;
 }
 footer img {
-  width: 120px;
-  height: 100px
+  width: 145px;
+  height: 75px
 }
 
 
@@ -244,5 +264,10 @@ footer img {
     right: 400px;
     top: 340px;
     font-size: 40px;
+  }
+  .footer {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0px 40px;
   }
 }
