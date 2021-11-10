@@ -125,11 +125,11 @@ header img {
   position: absolute;
   left: 46%;
   top: 41%;
-  transition: transform 0.5s;
+  transition: filter 450ms;
 }
 
 .converter .exchange-icon:hover {
-  transform: scale(1.5);
+  filter: contrast(50%);
 }
 
 .sub-price {
@@ -139,6 +139,24 @@ header img {
 
 .chart {
   display: none;
+}
+
+@media (min-width: 481px) {
+  .converter .currency-title {
+    font-size: 20px;
+  }
+
+  .converter .currency-input-div {
+    font-size: 20px;
+  }
+
+  .converter .exchange-icon {
+    position: absolute;
+    left: 46%;
+    top: 41%;
+    transition: filter 450ms;
+    transform: scale(1.5);
+  }
 }
 
 @media (min-width: 768px) {
