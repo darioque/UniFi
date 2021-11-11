@@ -166,14 +166,13 @@ header img {
 .statistics-container {
   border-radius: 10px;
   margin-top: 20px;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 .price-statistics {
   display: flex;
   color: white;
   padding: 18px;
   flex-direction: column;
-  margin-bottom: 0 0 32px;
 }
 .price-statistics .statistic {
   display: flex;
@@ -217,7 +216,9 @@ footer img {
 }
 
 
-
+@media (min-width: 768px) {
+  
+}
 
 @media (min-width: 1200px) {
   .main-container {
