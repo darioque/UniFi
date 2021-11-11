@@ -20,24 +20,25 @@
     <link rel="stylesheet" href="/css/styles-login.css" />
 </head>
 <body>
-    <div class="container">
+    <div class="container">  
         <div class="card">
-            <div class="inner-box">
-                <div class="card-front"></div>
+            <div class="inner-box">       
                 <header class="main-header">
                     <div class="logo">
-                      <a href="/"><img src="/img/logo.svg" alt="Logo de UniFi" /></a>
+                      <img src="/img/logo.svg" alt="Logo de UniFi" />
                     </div>
                   </header>
 
                     <form>
                         <input type="email" class="input-box" placeholder="Email" required>
                         <input type="password" class="input-box" placeholder="Password" required>
-                        <button type="login" class="login-btm">Login</button>
-                        <input type="checkbox"><span>Remember Me</span> 
+                        <a href="/index"><button type="login" alt="Login">Login</button></a>
+                        <input type="checkbox"><span>Remember Me</span></input>
                     </form>
-                    <button type="button" class="fas fa-wallet">Wallet Connect</button>                  
-                    <div><a href="">Don't have account yet? Register</a></div>                    
-                    <div><a href="/">Forgot Password</a></div>      
-</body>
-<footer></footer>
+                    <div href="/wallet" ><button type="button" class="fas fa-wallet">Wallet Connect</button></div>
+</body>                                 
+<footer>               
+                    <div><a href="/register">Don't have account yet? Register</a></div>                                       
+                    <div><a href="">Forgot Password</a></div>      
+</footer>
+
