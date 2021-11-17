@@ -1,22 +1,20 @@
 const express = require("express");
 const path = require("path");
-
 const app = express();
-
+const mainRouter = require('./routers/mainRouter.js');
+const marketsRouter = require('./routers/marketsRouter.js')
 const publicPath = path.join(__dirname, "./public");
 
-// publicPath es nuestro recurso de archivos estaticos
 app.use(express.static(publicPath));
+app.set('view engine', 'ejs')
 
 // ejecutamos el servidor
 app.listen(process.env.PORT || 3000, () => {
   console.log("El servidor se está ejecutando en el puerto 3000");
 });
 
-// responde al request "get" a root con index.html
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/views/index.html"));
-});
+app.use('/', mainRouter);
+app.use('/markets', marketsRouter)
 
 app.get("/product-detail", (req, res) => {
   res.sendFile(path.join(__dirname, "/views/productDetail.html"));
@@ -26,11 +24,4 @@ app.get("/trade-confirmation", (req, res) => {
   res.sendFile(path.join(__dirname, "/views/tradeConfirmation.html"));
 });
 
-app.get("/login", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/login.html"));
-  });
-
-app.get("/register", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/register.html"));
-  });
 
