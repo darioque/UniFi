@@ -17,7 +17,7 @@ app.use('/', mainRouter);
 app.use('/markets', marketsRouter)
 
 app.get("/product-detail", (req, res) => {
-  res.sendFile(path.join(__dirname, "/views/productDetail.html"));
+  res.render("productDetail");
 });
 
 app.get("/trade-confirmation", (req, res) => {
