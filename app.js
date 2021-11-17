@@ -21,7 +21,7 @@ app.get("/product-detail", (req, res) => {
 });
 
 app.get("/trade-confirmation", (req, res) => {
-  res.sendFile(path.join(__dirname, "/views/tradeConfirmation.html"));
+  res.render("tradeConfirmation");
 });
 
 

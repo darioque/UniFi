@@ -14,6 +14,9 @@ const marketsController = {
             pageTitle: "Invest in UniFi"
         });
     },
+    tradeConfirmation: function(req, res) {
+        res.render('tradeConfirmation')
+    }
 
 };
 
