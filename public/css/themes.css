@@ -15,6 +15,14 @@ html {
   background-color: #c9f7a6;
 }
 
+.bg-gray {
+  background-color: #f5f5f4;;
+}
+
+.bg-dark-gray {
+  background-color: #272b3a;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Quicksand", sans-serif;
 }
