@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <%- include('./partials/head')%>
+    <link rel="stylesheet" href="/css/styles-productDetail.css" />
+  </head>
+
+<body class="body-container">
+  <header class="main-header">
+    <nav>
+      <div class="header-options">
+        <div class="logo">
+          <a href="/"><img src="/img/logo.svg" alt="Logo de UniFi" /></a>
+        </div>
+        <div class="header-options">
+          <a class="no-link" href="/wallet"><i class="fas fa-wallet"></i><span>Wallet</span></a>
+          <a class="no-link" href="/login"><i class="fas fa-user-alt"></i><span>Login</span></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="main-container">
+      <ul class="progressive-links">
+        <li><a class="no-link" href="/markets/<%= asset.type %>"><span><%= asset.type %></span></a></li>
+        <li>
+          <i class="fas fa-chevron-right"></i>
+          <a class="no-link" href="/markets/<%= asset.type %>/<%= asset.name %>"><span><%= asset.name %> </span></a>
+        </li>
+      </ul>
+      <div class="main-price">
+        <div>
+          <img class="currency-logo" src="<%= asset.logo %>" alt="Logo de <%= asset.ticker %>" />
+        </div>
+        <h1 class="heading-font currency-title"><%= asset.name %> (<%= asset.ticker %>) Price</h1>
+        <div class="price-title">
+          <span>$60,000</span>
+          <span class="percentage-change">1.49%</span>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="chart">
+          <p class="placeholder-text">PLACEHOLDER</p>
+          <img src="/img/chart.png" alt="<%= asset.ticker %>/USD Chart">
+        </div>
+        <div>
+          <h3 class="converter-title">Buy <%= asset.ticker %></h3>
+          <div class="converter">
+            <form action="/markets/cryptocurrencies/<%= asset.name %>/trade-confirmation" method="get">
+              <div class="currency first-currency">
+                <img class="currency-logo" src="<%= asset.logo %>" alt="<%= asset.ticker %> logo">
+                <p class="currency-title"><%= asset.name %></p>
+                <div class="currency-input-div">
+                  <input class="currency-input" type="number" value="1" maxlength="8">
+                </div>
+              </div>
+              <div class="currency second-currency">
+                <img class="currency-logo" src="/img/usd.svg" alt="USD logo">
+                <p class="currency-title">USD</p>
+                <div class="currency-input-div">
+                  <input class="currency-input" type="number" value="60000" maxlength="8">
+                </div>
+              </div>
+              <input type="image" class="exchange-icon" src="/img/exchange.png" alt="Submit">
+            </form>
+          </div>
+
+          <div class="bg-blue statistics-container">
+            <div class="price-statistics">
+              <h2><%= asset.ticker %> Price Statistics</h2>
+              <div class="statistic">
+                <p><%= asset.name %> Price</p>
+                <p>$<%= asset.price %></p>
+              </div>
+              <div class="statistic">
+                <p>Price Change</p>
+                <p>$500</p>
+              </div>
+              <div class="statistic">
+                <p>24h Low / High</p>
+                <p>$59,000 / $62,280</p>
+              </div>
+              <div class="statistic">
+                <p>Trading Volume</p>
+                <p>$30,000,000</p>
+              </div>
+              <div class="statistic">
+                <p>Market Cap</p>
+                <p>$1,200,934,362,256.01</p>
+              </div>
+              <div class="statistic">
+                <p>Market Rank</p>
+                <p>#1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div>
+      <a href="/"><img class="logo" src="/img/logo.svg" alt="Logo de UniFi" /></a>
+    </div>
+  
+    <nav class="footer-navbar">
+      <ul class="footer-navbar-list">
+        <li><a class="no-link" href="">Contact</a></li>
+        <li><a class="no-link" href="">Help</a></li>
+      </ul>
+    </nav>
+  
+    <p class="copyright">©Todos los derechos reservados a UniFi</p>
+  
+  </footer>
+</body>
+
+</html>

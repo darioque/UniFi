@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head') %> 
+    <link rel="stylesheet" href="/css/styles-tradeConfirmation.css" />
+  </head>
+</html>
+
+<body class="body-border">
+  <header class="main-header">
+    <div class="logo">
+      <a href="/"><img src="/img/logo.svg" alt="Logo de UniFi" /></a>
+    </div>
+    <button><i class="fas fa-times"></i></button>
+  </header>
+
+  <main class="main-container">
+    <div class="main-price">
+      <div class="currency-logo">
+        <img src="/img/btc_logo.png" alt="Logo de BTC" />
+      </div>
+    </div>
+    <div class="subtitle">
+      <h2>Trade confirmation</h2>
+    </div>
+    <div class="converter-container">
+      <h3 class="converter-title">Do you accept this price?</h3>
+        <form action="/trade-confirmation" method="get">
+          <div class="converter">
+              <div class="currency first-currency">
+                <img class="currency-logo" src="/img/btc_logo.png" alt="BTC logo">
+                <p class="currency-title">Bitcoin</p>
+                <div action="/trade-confirmation" method="POST" class="currency-input-div">
+                  <p class="currency-input">1</p>
+                </div>
+              </div>
+              <div class="currency second-currency">
+                <img class="currency-logo" src="/img/usd.svg" alt="USD logo">
+                <p class="currency-title">USD</p>
+                <div class="currency-input-div">
+                  <p class="currency-input">60000</p>
+                </div>
+              </div>
+          </div>
+          <div class="sub-price">
+            <h4>1 BTC = 60000 USD</h4>
+          </div>
+          <button class="confirm-button" type="submit">Confirm</button>
+        </form>
+    </div>
+    
+    <div class="chart">
+      <img src="/img/chart.png" alt="BTC/USD Chart" />
+    </div>
+  </main>
+</body>
