@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/styles-index2.css" />
+  </head>
+
+  <body>
+    <!-- Encabezado de la página -->
+    <header class="header bg-dark-gray">
+      <div>
+        <!-- logo de encabezado -->
+        <a class="no-link" href="/"
+          ><img class="logo" src="/img/logo.svg" alt="Logo de UniFi"
+        /></a>
+      </div>
+
+      <!-- barra de menu hamburguesa y login -->
+      <nav class="header-navbar-menu">
+          <a class="no-link" class="no-link" href="/login"
+          ><i class="fas fa-user-alt icon-login"></i>Login</a>
+          <div class="container-menu">
+              <i class="hamburguer-menu fas fa-bars"></i>
+          </div>
+      </nav>
+
+      <nav class="header-navbar-list">
+        <!-- barra de navegación del encabezado -->
+        <ul class="navbar-menu">
+          <li><a class="no-link" href="#about-us">About Us</a></li>
+          <li><a class="no-link" href="/markets">Products</a></li>
+          <li><a class="no-link" href="/markets/cryptocurrencies">Cryptocurrency</a></li>
+          <li><a class="no-link" href="/makerts/stocks">Stocks</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="bg-dark-gray">
+      <!-- Sección de bienvenida  -->
+      <section class="welcome">
+        <div class="welcome-wrapper">
+            <h2 class="welcome-title">
+              The home to all your financial needs. We aim to unify the traditional
+              and decentralized markets, come join us!
+            </h2>
+            <img class="welcome-image" src="/img/welcome_image.png" alt="Welcome Image">
+            <a class="no-link main-button" href="/register">Create an account</a>
+        </div>
+      </section>
+      <section class="cards-section">
+          <div class="cards-wrapper">
+              <article class="cards-stock">
+                  <h2>Stocks</h2>
+                  <p>Invest and trade with no fees in the best choice of stocks out there.</p>
+                  <a href="/markets/stocks" class="no-link main-button">Invest in stocks</a>
+                  <div class="cards-image">
+                      <img src="/img/stocks.svg" alt="">
+                  </div>
+              </article>
+              <article class="cards-crypto">
+                  <h2>Crypto</h2>
+                  <p>Buy, sell and hold your favorite cryptocurrencies and tokens. We support all EVM-compatible chains.</p>
+                  <a href="/markets/stocks" class="no-link main-button">Invest in crypto</a>
+                  <div class="cards-image">
+                    <img src="/img/crypto.svg" alt="">
+                  </div>
+              </article>
+          </div>
+      </section>
+      <!-- Sección de artículos -->
+      <section class="section-article">
+        <article class="article">
+          <img
+            class="image-article"
+            src="/img/btc_logo.png"
+            alt="Logo de BTC"
+          />
+          <h3>Currency</h3>
+          <p class="price-article">Price</p>
+          <p class="value-article">$ 60000.80</p>
+          <p class="change-article">Change</p>
+          <p class="percentage-article">+6.95%</p>
+        </article>
+
+        <article class="article">
+          <img
+            class="image-article"
+            src="/img/btc_logo.png"
+            alt="Logo de BTC"
+          />
+          <h3>Currency</h3>
+          <p class="price-article">Price</p>
+          <p class="value-article">$ 60000.80</p>
+          <p class="change-article">Change</p>
+          <p class="percentage-article">+6.95%</p>
+        </article>
+
+        <article class="article">
+          <img
+            class="image-article"
+            src="/img/btc_logo.png"
+            alt="Logo de BTC"
+          />
+          <h3>Currency</h3>
+          <p class="price-article">Price</p>
+          <p class="value-article">$ 60000.80</p>
+          <p class="change-article">Change</p>
+          <p class="percentage-article">+6.95%</p>
+        </article>
+
+        <article class="article">
+          <img
+            class="image-article"
+            src="/img/btc_logo.png"
+            alt="Logo de BTC"
+          />
+          <h3>Currency</h3>
+          <p class="price-article">Price</p>
+          <p class="value-article">$ 60000.80</p>
+          <p class="change-article">Change</p>
+          <p class="percentage-article">+6.95%</p>
+        </article>
+      </section>
+    </main>
+      <!-- Pié de página del Home -->
+      <footer class="footer bg-dark-gray">
+        <div>
+          <!-- imagen de pie de pagina -->
+          <a class="no-link" href="/"
+            ><img class="logo" src="/img/logo.svg" alt="Logo de UniFi"
+          /></a>
+        </div>
+
+        <nav class="footer-navbar">
+          <ul class="footer-navbar-list">
+            <!-- enlaces del pie de pagina -->
+            <li><a class="no-link" href="">Contact</a></li>
+            <li><a class="no-link" href="">Help</a></li>
+          </ul>
+        </nav>
+
+        <p class="copyright">©Todos los derechos reservados a UniFi</p>
+      </footer>
+
+  </body>
+</html>
