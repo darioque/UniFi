@@ -11,13 +11,18 @@
 .converter .currency {
   display: flex;
   align-items: center;
-  padding: 20px 24px;
+  padding: 20px 10px;
   flex-grow: 1;
   flex-shrink: 1;
 }
 
 .converter .first-currency {
   border-bottom: 2px solid rgb(239, 242, 245);
+}
+
+.currency-logo {
+  height: 64px;
+  width: 64px;
 }
 
 .converter .currency-logo {
