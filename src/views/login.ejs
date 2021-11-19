@@ -9,9 +9,7 @@
         <div class="card">
             <div class="inner-box">       
                 <header class="main-header">
-                    <div class="logo">
-                      <img src="/img/logo.svg" alt="Logo de UniFi" />
-                    </div>
+                  <%- include('./partials/header') %>
                 </header>
                     <form>
                         <input type="email" class="input-box" placeholder="Email" required>
@@ -20,9 +18,10 @@
                         <input type="checkbox"><span>Remember Me</span></input>
                     </form>
                     <div href="/wallet" ><button type="button" class="fas fa-wallet">Wallet Connect</button></div>
-                             
-<footer>               
                     <div><a href="/register">Don't have account yet? Register</a></div>                                       
                     <div><a href="">Forgot Password</a></div>      
+                             
+<footer>      
+  <%- include('./partials/footer.ejs') %>          
 </footer>
 </body>

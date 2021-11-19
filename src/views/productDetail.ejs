@@ -48,10 +48,10 @@
         <div>
           <h3 class="converter-title">Buy <%= asset.ticker %></h3>
           <div class="converter">
-            <form action="/markets/cryptocurrencies/<%= asset.name %>/trade-confirmation" method="get">
+            <form action="/markets/cryptocurrencies/<%= asset.name %>/trade-confirmation" method="POST">
               <div class="currency first-currency">
                 <img class="currency-logo" src="<%= asset.logo %>" alt="<%= asset.ticker %> logo">
-                <p class="currency-title"><%= asset.name %></p>
+                <p class="currency-title"><%= asset.ticker %></p>
                 <div class="currency-input-div">
                   <input class="currency-input" type="number" value="1" maxlength="8">
                 </div>
