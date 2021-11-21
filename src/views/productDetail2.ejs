@@ -7,13 +7,13 @@
 </head>
 
 <body class="body-container">
-    <header class="main-header">
+    <header class="main-header bg-dark-gray">
         <nav>
             <div class="header-options">
                 <div class="logo">
                     <a href="/"><img src="/img/logo.svg" alt="Logo de UniFi" /></a>
                 </div>
-                <div class="header-options">
+                <div class="header-options header-options-margin-padding">
                     <a class="no-link" href="/wallet"><i class="fas fa-wallet"></i><span>Wallet</span></a>
                     <a class="no-link" href="/login"><i class="fas fa-user-alt"></i><span>Login</span></a>
                 </div>
@@ -74,7 +74,7 @@
                             </div>
                             <input type="image" id="myBtn" class="exchange-icon" src="/img/exchange.png" alt="Submit">
                             <div id="myModal" class="body-border modal">
-                                
+
                                 <div class="modal-content">
                                     <header class="modal-header">
                                         <div class="logo">
@@ -157,7 +157,7 @@
             </div>
         </div>
     </main>
-    <footer class="footer">
+    <footer class="footer bg-dark-gray">
         <div>
             <a href="/"><img class="logo" src="/img/logo.svg" alt="Logo de UniFi" /></a>
         </div>
@@ -182,7 +182,7 @@
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
-        // When the user clicks the button, open the modal 
+        // When the user clicks the button, open the modal
         btn.onclick = function () {
             modal.style.display = "block";
         }

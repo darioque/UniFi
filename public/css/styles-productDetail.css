@@ -29,7 +29,7 @@
   height: 32px;
   width: 32px;
   border-radius: 16px;
-  margin-right: 5px
+  margin-right: 5px;
 }
 
 .converter .currency-title {
@@ -112,7 +112,6 @@
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-
 }
 
 div {
@@ -123,39 +122,46 @@ div {
   display: none;
 }
 
-
 .main-header {
   border-bottom: 2px solid rgb(239, 242, 245);
+  padding: 5px 15px;
 }
 
 .header-options {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 15px;
 }
 
-.header-options a:hover, .header-options i:hover {
+.header-options-margin-padding {
+  padding: 5px 15px;
+  margin-right: 20px;
+}
+
+.header-options a:hover,
+.header-options i:hover {
   color: #56e404;
 }
 
 .header-options a span {
   display: none;
+  color: white;
+  font-size: 18px;
 }
 
 .header-options i {
   height: 24px;
   width: 24px;
-  color: black;
+  color: white;
   margin-left: 15px;
   font-size: 18px;
 }
 
-
-
 header img {
   width: 145px;
-  height: 70px;
+  height: 75px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(356deg)
+    brightness(101%) contrast(101%);
 }
 
 .progressive-links {
@@ -186,11 +192,12 @@ header img {
 }
 
 .footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 10px 15px 0;
-    border-top: 2px solid rgb(239, 242, 245);   
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 15px 0;
+  border-top: 2px solid rgb(239, 242, 245);
+  color: white;
 }
 
 .footer-navbar {
@@ -198,39 +205,45 @@ header img {
 }
 
 .footer-navbar ul {
-  padding: 0;    
+  padding: 0;
   list-style-type: none;
 }
 
 .footer-navbar-list {
-    display: flex;
-    
+  display: flex;
 }
 
 .footer-navbar-list li {
   padding: 0 15px;
 }
 
+.footer a {
+  color: white;
+}
+
+.footer img {
+  width: 145px;
+  height: 75px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(356deg)
+    brightness(101%) contrast(101%);
+}
+
 .copyright {
   width: 100%;
   font-size: 12px;
 }
-footer img {
-  width: 145px;
-  height: 75px
-}
 
 .modal {
-  display: none; 
+  display: none;
   position: fixed;
-  z-index: 1; 
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%; 
+  height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-header {
@@ -253,7 +266,7 @@ footer img {
 .modal-content {
   border-radius: 20px;
   background-color: #fefefe;
-  margin: 15% auto; 
+  margin: 15% auto;
   padding: 20px;
   max-width: 900px;
   width: 80%;
@@ -295,9 +308,7 @@ footer img {
   cursor: pointer;
 }
 
-
 @media (min-width: 768px) {
-  
 }
 
 @media (min-width: 1200px) {
@@ -306,18 +317,20 @@ footer img {
     padding: 5px 55px;
     margin: 0 auto;
   }
+
   .header-options a {
     font-size: 14px;
     font-weight: 600;
   }
+
   .header-options a span {
     display: inline;
-}
+  }
+
   .main-header {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0px 40px
-    
+    padding: 5px 15px;
   }
   .price-title {
     font-size: 40px;
@@ -349,6 +362,5 @@ footer img {
   .footer {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0px 40px;
   }
 }
