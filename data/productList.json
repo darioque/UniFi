@@ -47,7 +47,7 @@
     {
         "id": 6,
         "name": "theter",
-        "type": "stocks",
+        "type": "cryptocurrencies",
         "ticker": "USDT",
         "price": "1,0007",
         "change": 0.20,
@@ -57,7 +57,7 @@
     {
         "id": 7,
         "name": "solana",
-        "type": "stocks",
+        "type": "cryptocurrencies",
         "ticker": "SOL",
         "price": "218,874",
         "change": -7.31,
@@ -67,7 +67,7 @@
     {
         "id": 8,
         "name": "binance coin",
-        "type": "stocks",
+        "type": "cryptocurrencies",
         "ticker": "BNB",
         "price": "559,57",
         "change": -11.13,
@@ -77,7 +77,7 @@
     {
         "id": 9,
         "name": "cardano",
-        "type": "stocks",
+        "type": "cryptocurrencies",
         "ticker": "ADA",
         "price": "1,7706",
         "change": -11.65,
@@ -87,7 +87,7 @@
     {
         "id": 10,
         "name": "xrp",
-        "type": "stocks",
+        "type": "cryptocurrencies",
         "ticker": "XRP",
         "price": "1,0033",
         "change": -11.61,

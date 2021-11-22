@@ -145,37 +145,6 @@ html {
     color: red;
 }
 
-/* ESTILOS DE FOOTER (PIE DE PAGINA) */
-
-.footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 10px 15px 0;
-    border-top: 2px solid rgb(239, 242, 245);   
-}
-
-.footer-navbar {
-    align-self: center;
-}
-
-.footer-navbar ul {
-    padding: 0;    
-}
-
-.footer-navbar-list {
-    display: flex;
-    
-}
-
-.footer-navbar-list li {
-    padding: 0 15px;
-}
-
-.copyright {
-    width: 100%;
-    font-size: 12px;
-}
 
 /* MEDIA QUERY DE PANTALLAS DESDE A 480PX */
 @media (min-width: 481px) {

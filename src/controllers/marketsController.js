@@ -10,9 +10,10 @@ const marketsController = {
         });
     },
 
-    type: function (req, res) {
+    list: function (req, res) {
         let marketType = req.params.marketType
-        res.render(String(marketType + 'List'), {
+        res.render('products/productList', {
+            marketType: marketType,
             pageTitle: "Invest in UniFi - " + marketType,
             assetList: assetList,
         });
@@ -20,7 +21,7 @@ const marketsController = {
 
     detail: function (req, res) {
         let assetRequested = req.params.asset;
-        res.render(('products/productDetail2'), {
+        res.render(('products/productDetail'), {
             pageTitle: assetRequested + " Details",
             asset: assetList.find(asset => asset.name === assetRequested || asset.ticker.toLowerCase() === assetRequested),
         });

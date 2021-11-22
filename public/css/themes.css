@@ -55,3 +55,92 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   color: black;
 }
+
+.no-list {
+  display: flex;
+  list-style-type: none;
+  color: rgba(91, 97, 110, 1);
+  padding: 0px;
+}
+
+.no-list li {
+  padding-right: 4px;
+}
+
+/* Estilos generales del header */
+.header-img {
+  width: 145px;
+  height: 75px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(356deg)
+    brightness(101%) contrast(101%);
+}
+.main-header {
+  border-bottom: 2px solid rgb(239, 242, 245);
+  padding: 5px 15px;
+}
+
+.header-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-options-margin-padding {
+  padding: 5px 15px;
+  margin-right: 20px;
+}
+
+.header-options a:hover,
+.header-options i:hover {
+  color: #56e404;
+}
+
+.header-options a span {
+  display: none;
+  color: white;
+  font-size: 18px;
+}
+
+.header-options i {
+  height: 24px;
+  width: 24px;
+  color: white;
+  margin-left: 15px;
+  font-size: 18px;
+}
+
+/* Estilos generales de footer */
+.footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 15px 0;
+  border-top: 2px solid rgb(239, 242, 245);
+  color: white;
+}
+
+.footer-img {
+  width: 145px;
+  height: 75px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(356deg)
+    brightness(101%) contrast(101%);
+}
+.footer-navbar ul {
+  padding: 0;
+  list-style-type: none;
+}
+.footer-navbar-list {
+  display: flex;
+}
+.footer-navbar-list li {
+  padding: 0 15px;
+}
+.copyright {
+  width: 100%;
+  font-size: 12px;
+}
+
+.footer a {
+  color: white;
+}

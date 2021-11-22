@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head') %> 
+    <link rel="stylesheet" href="/css/styles-productList.css" />
+</head>
+<body>
+    <header class="bg-dark-gray main-header">
+        <%- include ('../partials/header') %>
+    </header>
+    <main>
+        <section>
+            <ul class="no-list">
+                <li>
+                    <a class="no-link" href="/markets/"><span>markets</span></a>
+                </li>
+                <li>
+                    <i class="fas fa-chevron-right"></i>
+                    <a class="no-link" href="/markets/<%= marketType %>"><span><%= marketType %></span></a>
+                </li>
+            </ul>
+            <div>
+
+            </div>
+        </section>
+        <ul>
+            <% for (asset of assetList) { %>
+                <% if (asset.type == marketType) {%>
+                    <div>
+                        <img class="currency-logo" src="<%= asset.logo %>" alt="Logo de <%= asset.ticker %>"/>
+                        <a class="no-link" href="/markets/<%= marketType %>/<%= asset.name%>"><li class="no-list"><%= asset.name%></li></a>
+                    </div>
+                <% } %>
+            <% } %> 
+        </ul>
+    </main>
+    <footer class="bg-dark-gray footer">
+        <%- include ('../partials/footer') %> 
+    </footer>
+</body>
+</html>

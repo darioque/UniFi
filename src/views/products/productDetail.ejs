@@ -1,124 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <%- include('../partials/head')%>
     <link rel="stylesheet" href="/css/styles-productDetail.css" />
-  </head>
+</head>
 
 <body class="body-container">
-  <header class="main-header">
-    <nav>
-      <div class="header-options">
-        <div class="logo">
-          <a href="/"><img src="/img/logo.svg" alt="Logo de UniFi" /></a>
-        </div>
-        <div class="header-options">
-          <a class="no-link" href="/wallet"><i class="fas fa-wallet"></i><span>Wallet</span></a>
-          <a class="no-link" href="/login"><i class="fas fa-user-alt"></i><span>Login</span></a>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <div class="main-container">
-      <ul class="progressive-links">
-        <li><a class="no-link" href="/markets/<%= asset.type %>"><span><%= asset.type %></span></a></li>
-        <li>
-          <i class="fas fa-chevron-right"></i>
-          <a class="no-link" href="/markets/<%= asset.type %>/<%= asset.name %>"><span><%= asset.name %> </span></a>
-        </li>
-      </ul>
-      <div class="main-price">
-        <div>
-          <img class="currency-logo" src="<%= asset.logo %>" alt="Logo de <%= asset.ticker %>" />
-        </div>
-        <h1 class="heading-font currency-title"><%= asset.name %> (<%= asset.ticker %>) Price</h1>
-        <div class="price-title">
-          <span>$60,000</span>
-          <span class="percentage-change">1.49%</span>
-        </div>
-      </div>
-      <div class="content-container">
-        <div class="chart">
-          <p class="placeholder-text">PLACEHOLDER</p>
-          <img src="/img/chart.png" alt="<%= asset.ticker %>/USD Chart">
-        </div>
-        <div>
-          <h3 class="converter-title">Buy <%= asset.ticker %></h3>
-          <div class="converter">
-            <form action="/markets/cryptocurrencies/<%= asset.name %>/trade-confirmation" method="POST">
-              <div class="currency first-currency">
-                <img class="currency-logo" src="<%= asset.logo %>" alt="<%= asset.ticker %> logo">
-                <p class="currency-title"><%= asset.ticker %></p>
-                <div class="currency-input-div">
-                  <input class="currency-input" type="number" value="1" maxlength="8">
+    <header class="main-header bg-dark-gray">
+        <%- include('../partials/header') %> 
+    </header>
+    <main>
+        <div class="main-container">
+            <ul class="no-list">
+                <li><a class="no-link" href="/markets/<%= asset.type %>"><span>
+                            <%= asset.type %>
+                        </span></a></li>
+                <li>
+                    <i class="fas fa-chevron-right"></i>
+                    <a class="no-link" href="/markets/<%= asset.type %>/<%= asset.name %>"><span>
+                            <%= asset.name %>
+                        </span></a>
+                </li>
+            </ul>
+            <div class="main-price">
+                <div>
+                    <img class="currency-logo" src="<%= asset.logo %>" alt="Logo de <%= asset.ticker %>" />
                 </div>
-              </div>
-              <div class="currency second-currency">
-                <img class="currency-logo" src="/img/usd.svg" alt="USD logo">
-                <p class="currency-title">USD</p>
-                <div class="currency-input-div">
-                  <input class="currency-input" type="number" value="60000" maxlength="8">
+                <h1 class="heading-font currency-title">
+                    <%= asset.name %> (<%= asset.ticker %>) Price
+                </h1>
+                <div class="price-title">
+                    <span>$60,000</span>
+                    <span class="percentage-change">1.49%</span>
                 </div>
-              </div>
-              <input type="image" id="myBtn" class="exchange-icon" src="/img/exchange.png" alt="Submit">
-            </form>
-          </div>
-
-          <div class="bg-blue statistics-container">
-            <div class="price-statistics">
-              <h2><%= asset.ticker %> Price Statistics</h2>
-              <div class="statistic">
-                <p><%= asset.name %> Price</p>
-                <p>$<%= asset.price %></p>
-              </div>
-              <div class="statistic">
-                <p>Price Change</p>
-                <p>$500</p>
-              </div>
-              <div class="statistic">
-                <p>24h Low / High</p>
-                <p>$59,000 / $62,280</p>
-              </div>
-              <div class="statistic">
-                <p>Trading Volume</p>
-                <p>$30,000,000</p>
-              </div>
-              <div class="statistic">
-                <p>Market Cap</p>
-                <p>$1,200,934,362,256.01</p>
-              </div>
-              <div class="statistic">
-                <p>Market Rank</p>
-                <p>#1</p>
-              </div>
             </div>
-          </div>
+            <div class="content-container">
+                <div class="chart">
+                    <p class="placeholder-text">PLACEHOLDER</p>
+                    <img src="/img/chart.png" alt="<%= asset.ticker %>/USD Chart">
+                </div>
+                <div>
+                    <h3 class="converter-title">Buy <%= asset.ticker %>
+                    </h3>
+                    <div class="converter">
+                        <form action="/markets/cryptocurrencies/<%= asset.name %>/trade-confirmation" method="POST"></form>
+                            <div class="currency first-currency">
+                                <img class="currency-logo" src="<%= asset.logo %>" alt="<%= asset.ticker %> logo">
+                                <p class="currency-title">
+                                    <%= asset.ticker %>
+                                </p>
+                                <div class="currency-input-div">
+                                    <input class="currency-input" type="number" value="1" maxlength="8">
+                                </div>
+                            </div>
+                            <div class="currency second-currency">
+                                <img class="currency-logo" src="/img/usd.svg" alt="USD logo">
+                                <p class="currency-title">USD</p>
+                                <div class="currency-input-div">
+                                    <input class="currency-input" type="number" value="60000" maxlength="8">
+                                </div>
+                            </div>
+                            <input type="image" id="myBtn" class="exchange-icon" src="/img/exchange.png" alt="Submit">
+                            <div id="myModal" class="body-border modal">
+
+                                <div class="modal-content">
+                                    <header class="modal-header">
+                                        <div class="logo">
+                                            <a href="/"><img src="/img/logo.svg" alt="Logo de UniFi" /></a>
+                                        </div>
+                                        <button><i class="fas fa-times close"></i></button>
+                                    </header>
+                                    <div class="subtitle">
+                                        <h2>Trade confirmation</h2>
+                                    </div>
+                                    <div class="converter-container">
+                                        <h3 class="converter-title">Do you accept this price?</h3>
+                                        <form action="" method="get">
+                                            <div class="modal-converter">
+                                                <div class="currency first-currency">
+                                                    <img class="currency-logo" src="/img/btc_logo.png" alt="BTC logo">
+                                                    <p class="currency-title">Bitcoin</p>
+                                                    <div class="currency-input-div">
+                                                        <p class="currency-input">1</p>
+                                                    </div>
+                                                </div>
+                                                <div class="currency second-currency">
+                                                    <img class="currency-logo" src="/img/usd.svg" alt="USD logo">
+                                                    <p class="currency-title">USD</p>
+                                                    <div class="currency-input-div">
+                                                        <p class="currency-input">60000</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sub-price">
+                                                <h4>1 BTC = 60000 USD</h4>
+                                            </div>
+                                            <button class="confirm-button" type="submit">Confirm</button>
+                                        </form>
+                                    </div>
+
+                                    <div class="chart">
+                                        <img src="/img/chart.png" alt="BTC/USD Chart" />
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="bg-blue statistics-container">
+                        <div class="price-statistics">
+                            <h2>
+                                <%= asset.ticker %> Price Statistics
+                            </h2>
+                            <div class="statistic">
+                                <p>
+                                    <%= asset.name %> Price
+                                </p>
+                                <p>$<%= asset.price %>
+                                </p>
+                            </div>
+                            <div class="statistic">
+                                <p>Price Change</p>
+                                <p>$500</p>
+                            </div>
+                            <div class="statistic">
+                                <p>24h Low / High</p>
+                                <p>$59,000 / $62,280</p>
+                            </div>
+                            <div class="statistic">
+                                <p>Trading Volume</p>
+                                <p>$30,000,000</p>
+                            </div>
+                            <div class="statistic">
+                                <p>Market Cap</p>
+                                <p>$1,200,934,362,256.01</p>
+                            </div>
+                            <div class="statistic">
+                                <p>Market Rank</p>
+                                <p>#1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </main>
-  <footer class="footer">
-    <div>
-      <a href="/"><img class="logo" src="/img/logo.svg" alt="Logo de UniFi" /></a>
-    </div>
-  
-    <nav class="footer-navbar">
-      <ul class="footer-navbar-list">
-        <li><a class="no-link" href="">Contact</a></li>
-        <li><a class="no-link" href="">Help</a></li>
-      </ul>
-    </nav>
-  
-    <p class="copyright">©Todos los derechos reservados a UniFi</p>
-  
-  </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    </main>
+    <footer class="footer bg-dark-gray">
+        <%- include('../partials/footer') %> 
+    </footer>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>
