@@ -26,7 +26,7 @@
                     <li><a href="#about-us">About Us</a></li>
                     <li><a href="/markets">Products</a></li>
                     <li><a href="/markets/cryptocurrencies">Cryptocurrency</a></li>
-                    <li><a href="/makerts/stocks">Stocks</a></li>
+                    <li><a href="/markets/stocks">Stocks</a></li>
                 </ul>
             </nav>
         </header>
@@ -73,21 +73,21 @@
                 <!-- IMPLEMENTANDO EJS -->
 
                 <article>
-                    <% for (let product of listProducts) { %>
+                    <% for (let asset of assetList) { %>
                         <ul>
                             <li class="article">
-                                <img class="image-article" src="<%= product.logo %>" alt="Logo de BTC"/> 
+                                <img class="image-article" src="<%= asset.logo %>" alt="Logo de BTC"/> 
                                 <h3>Currency</h3>
                                 <div class="box-price">
                                     <p class="price-article">Price</p>
-                                    <p class="value-article"> <%= product.price %></p>
+                                    <p class="value-article"> <%= asset.price %></p>
                                 </div>
                                 <div class="box-price">
                                     <p class="change-article">Change</p>
-                                    <% if (product.change > 0) { %>
-                                        <p class="percentage-article percentage-green"> <%= product.change %>%</p>
+                                    <% if (asset.change > 0) { %>
+                                        <p class="percentage-article percentage-green"> <%= asset.change %>%</p>
                                     <% } else { %>
-                                        <p class="percentage-article percentage-red"> <%= product.change %>%</p>
+                                        <p class="percentage-article percentage-red"> <%= asset.change %>%</p>
                                     <% } %>
                                 </div>
                             </li>

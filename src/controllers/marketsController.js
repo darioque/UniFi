@@ -1,4 +1,6 @@
-let assetList = require("./products");
+const fs = require("fs")
+const assetListJSON = fs.readFileSync("../data/productList.json")
+const assetList = JSON.parse(assetListJSON)
 
 const marketsController = {
     markets: function (req, res) {
