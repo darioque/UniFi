@@ -13,6 +13,7 @@ const marketsController = {
             assetList: assetList,
         });
     },
+
     detail: function (req, res) {
         let assetRequested = req.params.asset;
         res.render(String('productDetail2'), {

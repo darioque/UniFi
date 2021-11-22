@@ -1,7 +1,10 @@
+let assetList = require("./products");
+
 const mainController = {
     index: function (req, res) {
         res.render('index', {
-            pageTitle: "Home - UniFi"
+            pageTitle: "Home - UniFi",
+            listProducts: assetList
         });
     },
     login: function (req, res) {

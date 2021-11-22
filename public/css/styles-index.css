@@ -2,6 +2,8 @@
 
 ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -109,7 +111,7 @@ html {
 .article {
     display: flex;
     justify-content: space-around;
-    border-top: 2px solid rgb(239, 242, 245);
+    border-top: 1px solid rgb(239, 242, 245);
 }
 
 .image-article {
@@ -123,6 +125,7 @@ html {
 }
 
 .value-article {
+    text-align: center;
     align-self: center;
 }
 
@@ -132,7 +135,14 @@ html {
 
 .percentage-article {
     align-self: center;
+}
+
+.percentage-green {
     color: green;
+}
+
+.percentage-red {
+    color: red;
 }
 
 /* ESTILOS DE FOOTER (PIE DE PAGINA) */
@@ -238,15 +248,17 @@ html {
 
     .box-price {
         text-align: center;
+        align-self: center;
     }
   
-    .price-article {
+/*     .price-article {
         display: block;
         margin: 5px 0;
-    }
+    } */
 
     .value-article {
         margin: 5px 0;
+        align-self: center;
     }
 }
 

@@ -69,44 +69,30 @@
 
             <!-- Sección de artículos -->
             <section class="section-article"> 
-                <article class="article">
-                    <img class="image-article" src="/img/btc_logo.png" alt="Logo de BTC"/> 
-                    <h3>Currency</h3>
-                    <div class="box-price">
-                        <p class="price-article">Price</p>
-                        <p class="value-article">$ 60000.80</p>
-                    </div>
-                    <div class="box-price">
-                        <p class="change-article">Change</p>
-                        <p class="percentage-article">+6.95%</p>
-                    </div>
-                </article>
 
-                <article class="article">
-                    <img class="image-article" src="/img/btc_logo.png" alt="Logo de BTC"/> 
-                    <h3>Currency</h3>
-                    <p class="price-article">Price</p>
-                    <p class="value-article">$ 60000.80</p>
-                    <p class="change-article">Change</p>
-                    <p class="percentage-article">+6.95%</p>
-                </article>
+                <!-- IMPLEMENTANDO EJS -->
 
-                <article class="article">
-                    <img class="image-article" src="/img/btc_logo.png" alt="Logo de BTC"/> 
-                    <h3>Currency</h3>
-                    <p class="price-article">Price</p>
-                    <p class="value-article">$ 60000.80</p>
-                    <p class="change-article">Change</p>
-                    <p class="percentage-article">+6.95%</p>
-                </article>
-
-                <article class="article">
-                    <img class="image-article" src="/img/btc_logo.png" alt="Logo de BTC"/> 
-                    <h3>Currency</h3>
-                    <p class="price-article">Price</p>
-                    <p class="value-article">$ 60000.80</p>
-                    <p class="change-article">Change</p>
-                    <p class="percentage-article">+6.95%</p>
+                <article>
+                    <% for (let product of listProducts) { %>
+                        <ul>
+                            <li class="article">
+                                <img class="image-article" src="<%= product.logo %>" alt="Logo de BTC"/> 
+                                <h3>Currency</h3>
+                                <div class="box-price">
+                                    <p class="price-article">Price</p>
+                                    <p class="value-article"> <%= product.price %></p>
+                                </div>
+                                <div class="box-price">
+                                    <p class="change-article">Change</p>
+                                    <% if (product.change > 0) { %>
+                                        <p class="percentage-article percentage-green"> <%= product.change %>%</p>
+                                    <% } else { %>
+                                        <p class="percentage-article percentage-red"> <%= product.change %>%</p>
+                                    <% } %>
+                                </div>
+                            </li>
+                        </ul>
+                    <% } %>
                 </article>
 
             </section>
