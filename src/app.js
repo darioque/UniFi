@@ -19,6 +19,3 @@ app.listen(process.env.PORT || 3000, () => {
 app.use("/", mainRouter);
 app.use("/markets", marketsRouter);
 
-app.get("/trade-confirmation", (req, res) => {
-  res.render("tradeConfirmation");
-});

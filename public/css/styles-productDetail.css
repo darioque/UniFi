@@ -328,7 +328,6 @@ header img {
   }
 
   .main-header {
-    max-width: 1600px;
     margin: 0 auto;
     padding: 5px 15px;
   }
@@ -360,7 +359,6 @@ header img {
     font-size: 40px;
   }
   .footer {
-    max-width: 1600px;
     margin: 0 auto;
   }
 }

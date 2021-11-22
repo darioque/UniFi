@@ -5,18 +5,18 @@ const assetList = JSON.parse(assetListJSON)
 
 const mainController = {
     index: function (req, res) {
-        res.render('index', {
+        res.render('home/index', {
             pageTitle: "Home - UniFi",
             assetList: assetList,
         });
     },
     login: function (req, res) {
-        res.render('login', {
+        res.render('users/login', {
             pageTitle: "Log in"
         });
     },
     register: function (req, res) {
-        res.render('register', {
+        res.render('users/register', {
             pageTitle: "Register"
         });
     },

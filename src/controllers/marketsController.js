@@ -3,11 +3,13 @@ const assetListJSON = fs.readFileSync("../data/productList.json")
 const assetList = JSON.parse(assetListJSON)
 
 const marketsController = {
+
     markets: function (req, res) {
-        res.render('markets', {
+        res.render('products/markets', {
             pageTitle: "Markets"
         });
     },
+
     type: function (req, res) {
         let marketType = req.params.marketType
         res.render(String(marketType + 'List'), {
@@ -18,13 +20,14 @@ const marketsController = {
 
     detail: function (req, res) {
         let assetRequested = req.params.asset;
-        res.render(String('productDetail2'), {
+        res.render(('products/productDetail2'), {
             pageTitle: assetRequested + " Details",
             asset: assetList.find(asset => asset.name === assetRequested || asset.ticker.toLowerCase() === assetRequested),
         });
     },
+    
     tradeConfirmation: function(req, res) {
-        res.render('tradeConfirmation')
+        res.render('products/tradeConfirmation')
     }
 
 };
