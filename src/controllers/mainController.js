@@ -1,6 +1,6 @@
 const mainController = {
     index: function (req, res) {
-        res.render('index2', {
+        res.render('index', {
             pageTitle: "Home - UniFi"
         });
     },
