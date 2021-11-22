@@ -6,13 +6,22 @@ ul {
 
 a {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     display: inline-block;
 }
 
 .logo {
     width: 145px;
     height: 75px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(356deg) brightness(101%) contrast(101%);
+}
+
+body {
+    background-color: #272b3a;
+}
+
+html {
+    color: #ffffff;
 }
 
 /* ESTILOS DE CLASES */
@@ -20,7 +29,7 @@ a {
 /* ESTILOS DE HEADER */
 .header {
     padding: 5px 15px;
-    border-bottom: 2px solid rgb(239, 242, 245);
+    border-bottom: 1px solid rgb(239, 242, 245);
     display: flex;
     justify-content: space-between;
 }
@@ -37,12 +46,15 @@ a {
 }
 
 .container-menu {
-    border: 1px solid #000000;
     border-radius: 5px;
 }
 
 .header-navbar-menu .no-link span { /* Login deshabilitado */
     display: none;
+}
+
+.header-navbar-menu i {
+    padding-right: 5px;
 }
 
 .header-navbar-list { /* Lista de menu deshabilitada */
@@ -55,60 +67,37 @@ a {
     padding: 0 15px;
 }
 
-.image-welcome {
-    width: 100%;
-    padding: 15px 0;
-}
-
-.article-welcome {
-    display: flex;
-    padding: 15px 0;
-}
-
-.paragraph-welcome {
-    padding: 0 10px;
-    width: 60%;
-    text-align: center;
-}
-
-.create-account {
-    padding: 0 10px;
-    width: 40%;
-    border: 1px solid #000000;
-    border-radius: 50%;
-    text-align: center;
-}
-
 /* ESTILOS DE ASIDE (BARRA LATERAL) */
 
 .aside-card {
-    width: 50%;
-    padding: 30px 0 15px;
-    margin: 0 auto;
-}
-
-.aside h3 {
-    text-align: center;
+    margin: 10px auto;
+    padding: 0 15px 0 15px;
 }
 
 .card {
-    border: 1px solid #000000;
-    margin-bottom: 15px;
+    background-color: #ffffff;
+    margin: 0 10px 20px 10px;
     border-radius: 10px;
+    padding: 20px;
 }
 
-.title-card {
+.card h2, .card p {
+    color: #000000;
+}
+
+.main-button{
+    display: inline-block;
+    background-color: #70b429;
+    padding: 0px 24px;
+    border-radius: 3px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.cards-image {
     text-align: center;
-}
-
-.buy-crypto {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.financial-assets {
-    width: 100%;
-    border-radius: 10px;
 }
 
 /* ESTILOS DE SECCION DE ARTICULOS */
@@ -214,24 +203,51 @@ a {
         padding: 0;
     }
 
-    .section-home {
+    .container-home {
+        padding-right: 10px;
+        width: 100%;
+    }
+
+    .box-card-article {
         display: flex;
     }
 
-    .container-home {
-        padding-right: 10px;
-    }
-
     .aside-card {
-        padding: 0 10px;
+        padding: 0;
         align-self: center;
-        border-left: 2px solid rgb(239, 242, 245);
+        width: 40%;
+        order: 1;
     }
 
-    .title-card {
-        font-size: 15px;
+    .card h2 {
+        margin: 5px 0;
     }
 
+    .card p {
+        margin: 5px 0;
+    }
+
+    .cards-image img {
+        width: 90%;
+    }
+
+    .section-article {
+        margin: 10px auto;
+        width: 60%;
+    }
+
+    .box-price {
+        text-align: center;
+    }
+  
+    .price-article {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .value-article {
+        margin: 5px 0;
+    }
 }
 
 
