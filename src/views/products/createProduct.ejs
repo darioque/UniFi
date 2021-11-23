@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/styles-creUpDelProduct.css">
+</head>
+<body>
+    <header class="header">
+        <div> <!-- logo de encabezado -->
+            <a href="/"><img class="logo" src="/img/logo.svg" alt="Logo de UniFi" /></a>
+        </div>
+
+        <h1 class="header-title">Create New Product</h1>
+    </header>
+
+    <form action="">
+        <div class="form">
+            <input type="text" name="id" placeholder="ID" class="input">
+            <input type="text" name="name" placeholder="Name" class="input">
+            <select name="" id="" class="select">
+                <option value=""></option>
+                <option value="cryptocurrencies">cryptocurrencies</option>
+                <option value="stocks">stocks</option>
+            </select>
+            <input type="text" name="ticker" placeholder="Ticker" class="input">
+            <input type="text" name="price" placeholder="Price" class="input">
+            <input type="text" name="change" placeholder="Change" class="input">
+            <div class="input-file">
+                <input type="file" name="file" id="" class="input-file-button">
+            </div>
+            <input type="text" name="active" value="1" class="input">
+            <input type="submit" value="Load product" name="Load product" class="load-product">
+        </div>
+
+    </form>
+
+    <footer class="footer">
+        <%- include('../partials/footer') %>
+    </footer>
+
+</body>
+</html>
