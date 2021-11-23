@@ -15,6 +15,8 @@ app.listen(process.env.PORT || 3000, () => {
   console.log("El servidor se está ejecutando en el puerto 3000");
 });
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 // rutas
 app.use("/", mainRouter);
 app.use("/markets", marketsRouter);

@@ -15,7 +15,7 @@ let mainGainers = stockList.concat(cryptoList).sort(function (a, b) {
   return 0;
 });
 
-//ordena todos los activos con respecto a su cambio de precio (menor a mayor)
+// ordena todos los activos con respecto a su cambio de precio (menor a mayor)
 let mainLosers = [...mainGainers].reverse()
 
 
@@ -50,10 +50,12 @@ const marketsController = {
         });
     },
     
-    tradeConfirmation: function(req, res) {
-        res.render('products/tradeConfirmation')
-    }
-
+    search: function (req, res) {
+        let marketType = req.params.marketType;
+        let assetList = marketType === 'cryptocurrencies'? cryptoList: stockList;
+        let search = req.body.search;
+        res.redirect('/' + 'markets' + '/' + marketType + '/' + search);
+    },
 };
 
 module.exports = marketsController; 
