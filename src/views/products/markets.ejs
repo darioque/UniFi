@@ -18,7 +18,7 @@
                         <% for (let asset of cryptoList.concat(stockList)) {%>
                            <%   if (asset.logo.includes('svg')) {%>
                             <div class="slide">
-                                <a class="no-link" href="<%= asset.type %>/<%= asset.name %>"><img class="slide-img" src="<%= asset.logo %> " alt="<%= asset.ticker %> Logo "></a>
+                                <a class="no-link" href="/markets/<%= asset.type %>/<%= asset.name %>"><img class="slide-img" src="<%= asset.logo %> " alt="<%= asset.ticker %> Logo "></a>
                             </div>
                             <% } %>
                         <% } %> 
@@ -29,15 +29,31 @@
             <section class="explore">
                 <h1>Markets</h1>
                 <section>
-                    <div></div>
-                    <div></div>
+                    <div class="cards-container">
+                        <a class="no-link" href="/markets/cryptocurrencies">
+                            <article class="card bg-gray market-card">
+                                <h2>Cryptocurrencies</h2>
+                                <div class="card-title">
+                                    <img src="/img/stocks2.svg" alt="Crypto Logo">
+                                </div>
+                            </article>
+                        </a>
+                        <a class="no-link" href="/markets/stocks">
+                            <article class="card bg-gray market-card">
+                                <h2>Stocks</h2>
+                                <div class="card-title">
+                                    <img src="/img/crypto2.svg" alt="Crypto Logo">
+                                </div>
+                            </article>
+                        </a>
+                    </div>
                 </section>
-    
+                <h2>Highlighted Assets</h2>
                 <section>
                     <div class="cards-container">
-                        <a class="no-link" href="<%= mainGainers[0].type%>/<%= mainGainers[0].name  %>">
+                        <a class="no-link" href="/markets/<%= mainGainers[0].type%>/<%= mainGainers[0].name  %>">
                             <article class="card bg-gray">
-                                <h2>Main Gainer (24h) </h2>
+                                <h3>Main Gainer (24h) </h3>
                                 <div class="card-title">
                                     <img src="<%= mainGainers[0].logo %>" alt="<%= mainGainers[0].name %> Logo">
                                     <%= mainGainers[0].name %>
@@ -46,9 +62,9 @@
                                 <p class="price"><%= mainGainers[0].price %></p>
                             </article>
                         </a>
-                        <a class="no-link" href="<%= mainLosers[0].type%>/<%= mainLosers[0].name  %>">
+                        <a class="no-link" href="/markets/<%= mainLosers[0].type%>/<%= mainLosers[0].name  %>">
                             <article class="card bg-gray">
-                                <h2>Main Loser (24h) </h2>
+                                <h3>Main Loser (24h) </h3>
                                 <div class="card-title">
                                     <img src="<%= mainLosers[0].logo %>" alt="<%= mainLosers[0].name %> Logo">
                                     <%= mainLosers[0].name %>

@@ -263,13 +263,6 @@ div {
     width: 100%;
     height: 100%;
   }
-  .placeholder-text {
-    position: absolute;
-    z-index: 1;
-    right: 400px;
-    top: 340px;
-    font-size: 40px;
-  }
   .footer {
     margin: 0 auto;
   }
