@@ -23,16 +23,34 @@
 
             </div>
         </section>
-        <ul>
-            <% for (asset of assetList) { %>
-                <% if (asset.type == marketType) {%>
+        <section>
+            <h1>Explore <%=marketType %>  </h1>
+            <div class="cards-container">
+                <div class="card-title">
+                    <i class="fas fa-arrow-circle-down"></i>
+                    <h2>Biggest Gainers</h2>
+                </div>
+                <div class="table">
                     <div>
-                        <img class="currency-logo" src="<%= asset.logo %>" alt="Logo de <%= asset.ticker %>"/>
-                        <a class="no-link" href="/markets/<%= marketType %>/<%= asset.name%>"><li class="no-list"><%= asset.name%></li></a>
+                        <ol>
+                            <% for (let i = 0; i != 10; i++) %> 
+                        </ol>
                     </div>
-                <% } %>
-            <% } %> 
-        </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <ul class="list">
+                <% for (asset of assetList) { %>
+                    <% if (asset.type == marketType) {%>
+                        <div class="list-items">
+                            <img class="currency-logo" src="<%= asset.logo %>" alt="Logo de <%= asset.ticker %>"/>
+                            <a class="no-link" href="/markets/<%= marketType %>/<%= asset.name%>"><li class="no-list"><%= asset.name%></li></a>
+                        </div>
+                    <% } %>
+                <% } %> 
+            </ul>
+        </section>
     </main>
     <footer class="bg-dark-gray footer">
         <%- include ('../partials/footer') %> 

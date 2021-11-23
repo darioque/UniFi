@@ -1,8 +1,16 @@
 .currency-logo {
-  height: 64px;
-  width: 64px;
+  height: 32px;
+  width: 32px;
 }
 
+.list {
+  display: flex;
+  flex-direction: column;
+}
+.list-items {
+  display: flex;
+  align-items: center;
+}
 
 
 

@@ -1,6 +1,8 @@
 const fs = require("fs")
-const assetListJSON = fs.readFileSync("../data/productList.json")
-const assetList = JSON.parse(assetListJSON)
+const stockListJSON = fs.readFileSync("../data/stocksList.json")
+const cryptoListJSON = fs.readFileSync("../data/cryptocurrenciesList.json")
+const stockList = JSON.parse(stockListJSON)
+const cryptoList = JSON.parse(cryptoListJSON)
 
 const marketsController = {
 
@@ -12,6 +14,7 @@ const marketsController = {
 
     list: function (req, res) {
         let marketType = req.params.marketType
+        let assetList = marketType + 'List'
         res.render('products/productList', {
             marketType: marketType,
             pageTitle: "Invest in UniFi - " + marketType,

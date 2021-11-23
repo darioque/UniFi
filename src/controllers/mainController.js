@@ -1,13 +1,16 @@
 const fs = require("fs")
-const assetListJSON = fs.readFileSync("../data/productList.json")
-const assetList = JSON.parse(assetListJSON)
+const stockListJSON = fs.readFileSync("../data/stocksList.json")
+const cryptoListJSON = fs.readFileSync("../data/cryptocurrenciesList.json")
+const stockList = JSON.parse(stockListJSON)
+const cryptoList = JSON.parse(cryptoListJSON)
 
 
 const mainController = {
     index: function (req, res) {
         res.render('home/index', {
             pageTitle: "Home - UniFi",
-            assetList: assetList,
+            cryptoList: cryptoList,
+            stockList: stockList,
         });
     },
     login: function (req, res) {

@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "name": "apple",
+        "type": "stocks",
+        "ticker": "AAPL",
+        "price": "161.02",
+        "change": 5.21,
+        "logo": "/img/aapl_logo.png",
+        "mcap": "2,641,758,519,296"
+    },
+    {
+        "id": 2,
+        "name": "microsoft",
+        "type": "stocks",
+        "ticker": "msft",
+        "price": "339.83",
+        "change": 5.21,
+        "logo": "/img/msft_logo.png",
+        "mcap": "2,551,436,541,952"
+    },
+    {
+        "id": 3,
+        "name": "google",
+        "type": "stocks",
+        "ticker": "GOOGL",
+        "price": "2,941.04",
+        "change": 5.21,
+        "logo": "/img/googl_logo.png",
+        "mcap": "1,948,605,218,816"
+    },
+    {
+        "id": 4,
+        "name": "amazon",
+        "type": "stocks",
+        "ticker": "AMZN",
+        "price": "3,572.57",
+        "change": 4.32,
+        "logo": "/img/amzn_logo.png",
+        "mcap": "1,811,821,756,416" 
+    },
+    {
+        "id": 5,
+        "name": "tesla",
+        "type": "stocks",
+        "ticker": "TSLA",
+        "price": "1,156.87",
+        "change": -2.14,
+        "logo": "/img/tsla_logo.png",
+        "mcap": "1,161,798,221,824" 
+    },
+    {
+        "id": 6,
+        "name": "facebook",
+        "type": "stocks",
+        "ticker": "FB",
+        "price": "341.01",
+        "change": 5.14,
+        "logo": "/img/fb_logo.png",
+        "mcap": "948,607,975,424" 
+    },
+    {
+        "id": 7,
+        "name": "nvidia",
+        "type": "stocks",
+        "ticker": "NVDA",
+        "price": "319.56",
+        "change": -5.40,
+        "logo": "/img/nvda.png",
+        "mcap": "796,343,533,568" 
+    },
+    {
+        "id": 8,
+        "name": "taiwan semiconductor",
+        "type": "stocks",
+        "ticker": "TSM",
+        "price": "124.75",
+        "change": 0.39,
+        "logo": "/img/tsm_logo.png",
+        "mcap": "646,963,462,144" 
+    },
+    {
+        "id": 9,
+        "name": "visa",
+        "type": "stocks",
+        "ticker": "V",
+        "price": "195.58",
+        "change": -2.63,
+        "logo": "/img/v_logo.png",
+        "mcap": "426,933,518,336" 
+    },
+    {
+        "id": 10,
+        "name": "walmart",
+        "type": "stocks",
+        "ticker": "WM",
+        "price": "144.78",
+        "change": 22.20,
+        "logo": "/img/wm_logo.png",
+        "mcap": "403,719,028,736" 
+    }
+]

@@ -73,21 +73,41 @@
                 <!-- IMPLEMENTANDO EJS -->
 
                 <article>
-                    <% for (let asset of assetList) { %>
+                    <% for (let i = 0; i != 5; i++) { %>
                         <ul>
                             <li class="article">
-                                <img class="image-article" src="<%= asset.logo %>" alt="Logo de BTC"/> 
-                                <h3>Currency</h3>
+                                <img class="image-article" src="<%= cryptoList[i].logo %>" alt="Logo de <%= cryptoList[i].name %>"/> 
+                                <h3><%= cryptoList[i].name %></h3>
                                 <div class="box-price">
                                     <p class="price-article">Price</p>
-                                    <p class="value-article"> <%= asset.price %></p>
+                                    <p class="value-article"> <%= cryptoList[i].price %></p>
                                 </div>
                                 <div class="box-price">
                                     <p class="change-article">Change</p>
-                                    <% if (asset.change > 0) { %>
-                                        <p class="percentage-article percentage-green"> <%= asset.change %>%</p>
+                                    <% if (cryptoList[i].change > 0) { %>
+                                        <p class="percentage-article percentage-green"> <%= cryptoList[i].change %>%</p>
                                     <% } else { %>
-                                        <p class="percentage-article percentage-red"> <%= asset.change %>%</p>
+                                        <p class="percentage-article percentage-red"> <%= cryptoList[i].change %>%</p>
+                                    <% } %>
+                                </div>
+                            </li>
+                        </ul>
+                    <% } %>
+                    <% for (let i = 0; i != 5; i++) { %>
+                        <ul>
+                            <li class="article">
+                                <img class="image-article" src="<%= stockList[i].logo %>" alt="Logo de <%= stockList[i].name %>"/> 
+                                <h3><%= stockList[i].name %></h3>
+                                <div class="box-price">
+                                    <p class="price-article">Price</p>
+                                    <p class="value-article"> <%= stockList[i].price %></p>
+                                </div>
+                                <div class="box-price">
+                                    <p class="change-article">Change</p>
+                                    <% if (stockList[i].change > 0) { %>
+                                        <p class="percentage-article percentage-green"> <%= stockList[i].change %>%</p>
+                                    <% } else { %>
+                                        <p class="percentage-article percentage-red"> <%= stockList[i].change %>%</p>
                                     <% } %>
                                 </div>
                             </li>
