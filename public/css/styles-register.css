@@ -14,11 +14,13 @@
     max-width: 900px;
     margin-right: auto;
     margin-left: auto;
+    margin: 20px 0 50px;
   }
 
 header img {
     width: 145px;
     height: 120px;
+    
 }
   
 .card{
@@ -35,18 +37,17 @@ header img {
 }
 
 .input-box{
-    width: 100%;
-    font-family: "Quicksand", sans-serif;
+    width: 80%;
+    font-family:"Quicksand", sans-serif;
     border: 1px solid black;
-    margin: 6px 0;
+    margin: 20px 35px 16px;
     height: 50px;
     border-radius: 20px;
     padding: 0 10px;
     box-sizing: border-box;
     outline: none;
     text-align: center;
-    color: black;
-    display:inline-block;    
+    display:inline-block;      
 }
 
 ::placeholder{
@@ -56,40 +57,47 @@ header img {
 
 .image-article {
     width: 30px;
-    height: 20px;       
+    height: 20px;
+    
 }
 
 button{
-    width: 100%;
+    width: 80%;     
     font-family: "Quicksand", sans-serif;
     background: #fff;
     border: 1px solid black;
-    margin: 35px 0 10px;
+    margin: 20px 35px 16px;
     height: 50px;
     font-size: 15px;
     border-radius: 20px;
     padding: 0 10px;
     box-sizing: border-box;
     outline: none;  
-    text-align: center;
-    color:black;
-    
+    text-align: center;  
 }
 
 .account{
     font-family: "Quicksand", sans-serif;
-    color:black;
-    padding-left: 60px;  
+    color:black; 
+    padding-left: 50px;    
 }    
+
+.account-1{
+    font-family: "Quicksand", sans-serif;
+    color:black; 
+    padding-left: 110px;
+}
 
 span{
     font-size: 15px;
-    margin-left: 10px;
+    margin-left: 10px;   
 }
 
 footer {
     width: 100%;
     font-family: "Quicksand", sans-serif;
+    margin: 50px 0 10px;
+    padding-left: 15px;
     background: transparent;
     font-size: 15px;  
     color:black;
