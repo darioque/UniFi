@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "1",
         "name": "apple",
         "type": "stocks",
         "ticker": "AAPL",
@@ -10,7 +10,7 @@
         "mcap": "2,641,758,519,296"
     },
     {
-        "id": 2,
+        "id": "2",
         "name": "microsoft",
         "type": "stocks",
         "ticker": "msft",
@@ -20,7 +20,7 @@
         "mcap": "2,551,436,541,952"
     },
     {
-        "id": 3,
+        "id": "3",
         "name": "google",
         "type": "stocks",
         "ticker": "GOOGL",
@@ -30,7 +30,7 @@
         "mcap": "1,948,605,218,816"
     },
     {
-        "id": 4,
+        "id": "4",
         "name": "amazon",
         "type": "stocks",
         "ticker": "AMZN",
@@ -40,7 +40,7 @@
         "mcap": "1,811,821,756,416" 
     },
     {
-        "id": 5,
+        "id": "5",
         "name": "tesla",
         "type": "stocks",
         "ticker": "TSLA",
@@ -50,7 +50,7 @@
         "mcap": "1,161,798,221,824" 
     },
     {
-        "id": 6,
+        "id": "6",
         "name": "facebook",
         "type": "stocks",
         "ticker": "FB",
@@ -60,18 +60,18 @@
         "mcap": "948,607,975,424" 
     },
     {
-        "id": 7,
+        "id": "7",
         "name": "nvidia",
         "type": "stocks",
         "ticker": "NVDA",
         "price": "319.56",
         "change": -5.40,
-        "logo": "/img/nvda.png",
+        "logo": "/img/nvda_logo.png",
         "mcap": "796,343,533,568" 
     },
     {
-        "id": 8,
-        "name": "taiwan semiconductor",
+        "id": "8",
+        "name": "taiwan sm",
         "type": "stocks",
         "ticker": "TSM",
         "price": "124.75",
@@ -80,7 +80,7 @@
         "mcap": "646,963,462,144" 
     },
     {
-        "id": 9,
+        "id": "9",
         "name": "visa",
         "type": "stocks",
         "ticker": "V",
@@ -90,7 +90,7 @@
         "mcap": "426,933,518,336" 
     },
     {
-        "id": 10,
+        "id": "10",
         "name": "walmart",
         "type": "stocks",
         "ticker": "WM",

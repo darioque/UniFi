@@ -3,14 +3,35 @@
   width: 32px;
 }
 
+.progressive-links {
+  display: flex;
+}
+
 .list {
   display: flex;
   flex-direction: column;
+  padding-left: 0px;
 }
+
 .list-items {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
 }
 
 
+.list-items .mcap {
+  display: none;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1400px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 

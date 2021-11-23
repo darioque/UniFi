@@ -9,48 +9,71 @@
         <%- include ('../partials/header') %>
     </header>
     <main>
-        <section>
-            <ul class="no-list">
-                <li>
-                    <a class="no-link" href="/markets/"><span>markets</span></a>
-                </li>
-                <li>
-                    <i class="fas fa-chevron-right"></i>
-                    <a class="no-link" href="/markets/<%= marketType %>"><span><%= marketType %></span></a>
-                </li>
-            </ul>
-            <div>
-
-            </div>
-        </section>
-        <section>
-            <h1>Explore <%=marketType %>  </h1>
-            <div class="cards-container">
-                <div class="card-title">
-                    <i class="fas fa-arrow-circle-down"></i>
-                    <h2>Biggest Gainers</h2>
+        <div class="main-container">
+            <section>
+                <ul class="no-list progressive-links">
+                    <li>
+                        <a class="no-link" href="/markets/"><span>markets</span></a>
+                    </li>
+                    <li>
+                        <i class="fas fa-chevron-right"></i>
+                        <a class="no-link" href="/markets/<%= marketType %>"><span><%= marketType %></span></a>
+                    </li>
+                </ul>
+                <div>
+    
                 </div>
-                <div class="table">
-                    <div>
-                        <ol>
-                            <% for (let i = 0; i != 10; i++) %> 
-                        </ol>
+            </section>
+            <section>
+                <h1>Explore <%=marketType %>  </h1>
+                <div class="cards-container">
+                    <div class="card-title">
+                        <i class="fas fa-arrow-circle-down"></i>
+                        <h2>Biggest Gainers</h2>
+                    </div>
+                    <div class="table">
+                        <div>
+                            <ol>
+                                <% for (let i = 0; i != 10; i++) %> 
+                            </ol>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section>
-            <ul class="list">
-                <% for (asset of assetList) { %>
-                    <% if (asset.type == marketType) {%>
-                        <div class="list-items">
-                            <img class="currency-logo" src="<%= asset.logo %>" alt="Logo de <%= asset.ticker %>"/>
-                            <a class="no-link" href="/markets/<%= marketType %>/<%= asset.name%>"><li class="no-list"><%= asset.name%></li></a>
-                        </div>
-                    <% } %>
-                <% } %> 
-            </ul>
-        </section>
+            </section>
+            <section>
+                <form action="/markets/<%= marketType %>/search" method="POST" class="search-form">
+                    <input type="text" name="search" class="search-input">
+                    <button type="submit">
+                        <i class="fas fa-search search-icon"></i>
+                    </button>
+                
+                </form>
+                <ol class="list">
+                    <% for (asset of assetList) { %>
+                        <a class="no-link" href="/markets/<%= marketType %>/<%= asset.name%>">
+                            <li class="no-list">
+                                <div class="list-items">
+                                    <img class="currency-logo" src="<%= asset.logo %>" alt="Logo de <%= asset.ticker %>" />
+                                    <p>
+                                        <%= asset.name%>
+                                    </p>
+                                    <p class="price">
+                                        <%= asset.price %>
+                                    </p>
+                                    <p class="change">
+                                        <%= asset.change %>
+                                    </p>
+                                    <p class="mcap">
+                                        <%= asset.mcap %>
+                                    </p>
+                                </div>
+                            </li>
+                        </a>
+                    <% } %> 
+                </ol>
+            </section>
+
+        </div>
     </main>
     <footer class="bg-dark-gray footer">
         <%- include ('../partials/footer') %> 
