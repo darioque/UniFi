@@ -36,7 +36,11 @@
                 </h1>
                 <div class="price-title">
                     <span>$<%= asset.price %> </span>
-                    <span class="percentage-change"><%= asset.change %>% </span>
+                    <%if (asset.change < 0) { %>
+                        <span class="percentage-change red"><%= asset.change %>%</span>
+                        <% } else {%>
+                            <span class="percentage-change green"><%= asset.change %>%</span>
+                            <% } %>
                 </div>
             </div>
             <div class="content-container">
@@ -112,7 +116,7 @@
                         </form>
                     </div>
 
-                    <div class="bg-blue statistics-container">
+                    <div class="bg-dark-gray statistics-container">
                         <div class="price-statistics">
                             <h2>
                                 <%= asset.ticker %> Price Statistics
@@ -125,8 +129,9 @@
                                 </p>
                             </div>
                             <div class="statistic">
-                                <p>Price Change</p>
-                                <p>$500</p>
+                                <p>24H Price Change</p>
+                                <!-- Cálculo del cambio de precio (pasa de string a float, multiplica precio * porcentaje / 100 y trunca a dos decimales)  -->
+                                <p>$ <%= (parseFloat(asset.price.replace(',', '')) * asset.change / 100).toFixed(2) %> </p>
                             </div>
                             <div class="statistic">
                                 <p>24h Low / High</p>
@@ -138,7 +143,7 @@
                             </div>
                             <div class="statistic">
                                 <p>Market Cap</p>
-                                <p>$1,200,934,362,256.01</p>
+                                <p>$<%= asset.mcap %></p>
                             </div>
                             <div class="statistic">
                                 <p>Market Rank</p>

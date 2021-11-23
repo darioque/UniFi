@@ -31,7 +31,6 @@ html {
 /* ESTILOS DE HEADER */
 .header {
     padding: 5px 15px;
-    border-bottom: 1px solid rgb(239, 242, 245);
     display: flex;
     justify-content: space-between;
 }
@@ -144,7 +143,6 @@ html {
 .percentage-red {
     color: red;
 }
-
 
 /* MEDIA QUERY DE PANTALLAS DESDE A 480PX */
 @media (min-width: 481px) {

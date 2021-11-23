@@ -51,6 +51,7 @@ El UI del sitio fue inspirado en distintas páginas web de brokers, billeteras y
 - ![##131013](https://via.placeholder.com/15/131013/000000?text=+) `#131013`
 - ![##c9f7a6](https://via.placeholder.com/15/c9f7a6/000000?text=+) `#c9f7a6`
 - ![##004c66](https://via.placeholder.com/15/004c66/000000?text=+) `#004c66`
+- ![##272b3a](https://via.placeholder.com/15/272b3a/000000?text=+) `#272b3a`
 
 #### Tablero de tareas - Trello
 

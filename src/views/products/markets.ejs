@@ -10,45 +10,128 @@
     </header>
 
     <main>
-        <section class="slider-container">
-            <div class="slider">
-                <div class="slide-track">
-                    <div class="slide">
-                        <a href="<%= cryptoList[4].type %>/<%= cryptoList[4].name %>"><img src="<%= cryptoList[4].logo %>" height="100" width="250" alt="" /></a>
-                    </div>
-                    <div class="slide">
-                        <a href="<%= cryptoList[3].type %>/<%= cryptoList[3].name %>"><img src="<%= cryptoList[3].logo %>" height="100" width="250" alt="" /></a>
-                    </div>
-                    <div class="slide">
-                        <a href="<%= cryptoList[2].type %>/<%= cryptoList[2].name %>"><img src="<%= cryptoList[2].logo %>" height="100" width="250" alt="" /></a>
-                    </div>
-                    <div class="slide">
-                        <a href="<%= cryptoList[6].type %>/<%= cryptoList[6].name %>"><img src="<%= cryptoList[6].logo %>" height="100" width="250" alt="" /></a>
-                    </div>
-                    <div class="slide">
-                        <a href="<%= stockList[1].type %>/<%= stockList[1].name %>"><img src="<%= stockList[1].logo %>" height="100" width="250" alt="" /></a>
-                    </div>
-                    <div class="slide">
-                        <a href="<%= stockList[4].type %>/<%= stockList[4].name %>"><img src="<%= stockList[4].logo %>" height="100" width="250" alt="" /></a>
-                    </div>
-                    <div class="slide">
-                        <a href="<%= stockList[6].type %>/<%= stockList[6].name %>"><img src="<%= stockList[6].logo %>" height="100" width="250" alt="" /></a>
-                    </div>
-                    <div class="slide">
-                        <a href="<%= stockList[8].type %>/<%= stockList[8].name %>"><img src="<%= stockList[8].logo %>" height="100" width="250" alt="" /></a>
-                    </div>
-                    <div class="slide">
-                        <a href="<%= cryptoList[1].type %>/<%= cryptoList[1].name %>"><img src="<%= cryptoList[1].logo %>" height="100" width="250" alt="" /></a>
-                    </div>
-                    <div class="slide">
-                        <a href=""><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" /></a>
-                    </div>
-                    <div class="slide">
-                        <a href=""><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" /></a>
+        <div class="main-container">
+            <section class="slider-container">
+                <div class="slider">
+                    <div class="slide-track">
+                        <!-- si el activo tiene un logo svg (es decir, escalable), lo agrega al slider -->
+                        <% for (let asset of cryptoList.concat(stockList)) {%>
+                           <%   if (asset.logo.includes('svg')) {%>
+                            <div class="slide">
+                                <a class="no-link" href="<%= asset.type %>/<%= asset.name %>"><img class="slide-img" src="<%= asset.logo %> " alt="<%= asset.ticker %> Logo "></a>
+                            </div>
+                            <% } %>
+                        <% } %> 
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+    
+            <section class="explore">
+                <h1>Markets</h1>
+                <section>
+                    <div></div>
+                    <div></div>
+                </section>
+    
+                <section>
+                    <div class="cards-container">
+                        <a class="no-link" href="<%= mainGainers[0].type%>/<%= mainGainers[0].name  %>">
+                            <article class="card bg-gray">
+                                <h2>Main Gainer (24h) </h2>
+                                <div class="card-title">
+                                    <img src="<%= mainGainers[0].logo %>" alt="<%= mainGainers[0].name %> Logo">
+                                    <%= mainGainers[0].name %>
+                                    <span class="percentage-change green"><%= mainGainers[0].change %>%</span>
+                                </div>
+                                <p class="price"><%= mainGainers[0].price %></p>
+                            </article>
+                        </a>
+                        <a class="no-link" href="<%= mainLosers[0].type%>/<%= mainLosers[0].name  %>">
+                            <article class="card bg-gray">
+                                <h2>Main Loser (24h) </h2>
+                                <div class="card-title">
+                                    <img src="<%= mainLosers[0].logo %>" alt="<%= mainLosers[0].name %> Logo">
+                                    <%= mainLosers[0].name %>
+                                    <span class="percentage-change red"><%= mainLosers[0].change %>%</span>
+                                </div>
+                                <p class="price"><%= mainLosers[0].price %></p>
+                            </article>
+                        </a>
+                    </div>
+                </section>
+            </section>
+            <h2>Copy the portfolio of our professional traders!</h2>
+            <section class="copy-trader">
+                <article class="copy-cards">
+                    <img src="/img/lucas.jpg" alt="Trader Lucas">
+                    <div class="text">
+                        <p class="bold">LucasGallina</p>
+                        <div>
+                            <div>
+                                <span class="green bold">54k</span>
+                                <span class="bold">Users</span>
+    
+                            </div>
+                            <div>
+                                <span class="green bold">20%</span>
+                                <span class="bold">Performance</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="copy-cards">
+                    <img src="/img/tato.jpg" alt="Trader Tato">
+                    <div class="text">
+                        <p class="bold">Tato</p>
+                        <div>
+                            <div>
+                                <span class="green bold">20k</span>
+                                <span class="bold" >Users</span>
+                    
+                            </div>
+                            <div>
+                                <span class="green bold">50%</span>
+                                <span class="bold" >Performance</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="copy-cards">
+                    <img src="/img/dario.jpg" alt="Trader Dario">
+                    <div class="text">
+                        <p class="bold">Darioque</p>
+                        <div>
+                            <div>
+                                <span class="green bold">10</span>
+                                <span class="bold" >Users</span>
+                    
+                            </div>
+                            <div>
+                                <span class="red bold">-20%</span>
+                                <span class="bold" >Performance</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="copy-cards">
+                    <img src="/img/fede.jpg" alt="Trader Fede">
+                    <div class="text">
+                        <p class="bold">Fede Loro Meyer</p>
+                        <div>
+                            <div>
+                                <span class="green bold">180k</span>
+                                <span class="bold" >Users</span>
+                    
+                            </div>
+                            <div>
+                                <span class="green bold">95%</span>
+                                <span class="bold" >Performance</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
     </main>
 
     <footer class="footer bg-dark-gray">

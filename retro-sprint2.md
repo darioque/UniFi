@@ -1,10 +1,12 @@
 ### Comenzar a hacer
 
--
+- Apartar tiempo suficiente para poder completar los sprints.
 
 ### Hacer más
 
 - Mantenernos al dia con respecto a los contenidos para poder aportar y entender.
+
+- Comentar el código para poder entendernos más fácilmente.
 
 ### Continuar haciendo
 
@@ -18,3 +20,5 @@
 - Estar todos presentes en las reuniones para no perder tiempo explicando lo que se trabajó.
 
 ### Dejar de hacer
+
+- Dejar las tareas más complicadas a último momento.

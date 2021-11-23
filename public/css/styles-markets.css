@@ -1,9 +1,86 @@
+.main-container {
+  width: 100%;
+  max-width: 1400px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .slider-container {
 	 align-items: center;
-	 background: #e3e3e3;
-	 height: 100vh;
 	 justify-content: center;
 }
+
+.slide-img {
+    height: 100px;
+    width: 150px;
+}
+
+.card {
+	padding: 10px 16px 16px;
+	border-radius: 8px;
+	margin: 10px 10px;
+}
+.card h2 {
+	font-size: 12px;
+	color: #707A8A;
+	font-weight: 800;
+}
+.card img {
+	height: 24px;
+	width: 24px;
+	margin-right: 8px;
+}
+.card .card-title {
+	display: flex;
+	align-items: center;
+	font-weight: 600;
+}
+.card .card-title .percentage-change{
+	margin-left: auto;
+}
+.card-title .green {
+	color: rgb(14, 203, 129);
+}
+.card-title .red {
+	color: rgb(246, 70, 93);
+}
+.copy-trader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.copy-trader .copy-cards {
+	position: relative;
+	background-color: black;
+	border-radius: 10px;
+}
+.copy-trader .copy-cards .text{
+	color: white;
+	position: absolute;
+	top: 45%;
+	left: 10%;
+}
+
+.text .bold {
+	font-size: 18px;
+	font-weight: 600;
+}
+.text .green {
+	color: #adf68d
+}
+
+.text .red {
+	color: rgb(246, 70, 93);
+}
+.copy-trader .copy-cards img {
+	background-color: black;
+	border-radius: 10px;
+	width: 220px;
+	opacity: 0.5;
+}
+
  @keyframes scroll {
 	 0% {
 		 transform: translateX(0);
@@ -19,6 +96,7 @@
 	 margin: auto;
 	 overflow: hidden;
 	 position: relative;
+     max-width: 1400px;
 }
  .slider::before, .slider::after {
 	 background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
@@ -44,9 +122,27 @@
 }
  .slider .slide {
 	 height: 100px;
-	 width: 250px;
+	 width: 150px;
 }
  
+@media (min-width: 481px) {
+  .slider .slide {
+    transition: width 1s;
+    width: 250px;
+  }
+  .slider-img {
+      width: 250px;
+  }
+  .cards-container {
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+  }
+  .cards-container a {
+	  width: 40%;
+  }
+}
+
 
 
 @media (min-width: 768px) {

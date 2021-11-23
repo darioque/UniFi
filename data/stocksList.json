@@ -51,12 +51,12 @@
     },
     {
         "id": "6",
-        "name": "facebook",
+        "name": "meta",
         "type": "stocks",
         "ticker": "FB",
         "price": "341.01",
         "change": 5.14,
-        "logo": "/img/fb_logo.png",
+        "logo": "/img/fb_logo.svg",
         "mcap": "948,607,975,424" 
     },
     {

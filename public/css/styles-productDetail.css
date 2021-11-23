@@ -85,13 +85,16 @@
   border-bottom: 5px solid rgb(239 242 245);
 }
 
-.price-title .percentage-change {
+.price-title .percentage-change, .green {
   font-size: 14px;
   font-weight: 600;
   padding: 5px 10px;
-  background-color: #56e404;
+  background-color: rgb(14, 203, 129);
   color: #ffff;
   border-radius: 8px;
+}
+.price-title .red {
+  background-color: rgb(246, 70, 93);
 }
 
 .main-price {

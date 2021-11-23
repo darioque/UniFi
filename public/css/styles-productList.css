@@ -39,14 +39,7 @@
   justify-content: left;
 }
 
-.list-items .red {
-  background-color: rgb(246, 70, 93);
-  border-radius: 3px;
-  color: white;
-  justify-content: center;
-}
-.list-items .green {
-  background-color: rgb(14, 203, 129);
+.list-items .green, .list-items .red {
   border-radius: 3px;
   color: white;
   justify-content: center;
