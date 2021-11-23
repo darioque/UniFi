@@ -80,6 +80,14 @@
   .list-items .mcap{
     display: flex;
   }
+  .header-options a {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .header-options a span {
+    display: inline;
+  }
 }
 
 /* MEDIA QUERY DE PANTALLAS DESDE 1200PX */

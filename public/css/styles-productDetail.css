@@ -223,18 +223,18 @@ div {
 }
 
 @media (min-width: 768px) {
-}
-
-@media (min-width: 1200px) {
-
   .header-options a {
     font-size: 14px;
     font-weight: 600;
   }
-
+  
   .header-options a span {
     display: inline;
   }
+}
+
+@media (min-width: 1200px) {
+
 
   .main-header {
     margin: 0 auto;

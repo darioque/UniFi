@@ -35,8 +35,8 @@
                     <%= asset.name %> (<%= asset.ticker %>) Price
                 </h1>
                 <div class="price-title">
-                    <span>$60,000</span>
-                    <span class="percentage-change">1.49%</span>
+                    <span>$<%= asset.price %> </span>
+                    <span class="percentage-change"><%= asset.change %>% </span>
                 </div>
             </div>
             <div class="content-container">
@@ -62,7 +62,7 @@
                                 <img class="currency-logo" src="/img/usd.svg" alt="USD logo">
                                 <p class="currency-title">USD</p>
                                 <div class="currency-input-div">
-                                    <input class="currency-input" type="number" value="60000" maxlength="8">
+                                    <input class="currency-input" type="number" value=<%= asset.price.replace(',', '') %> maxlength="8">
                                 </div>
                             </div>
                             <input type="image" id="myBtn" class="exchange-icon" src="/img/exchange.png" alt="Submit">

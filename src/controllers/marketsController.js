@@ -8,7 +8,9 @@ const marketsController = {
 
     markets: function (req, res) {
         res.render('products/markets', {
-            pageTitle: "Markets"
+            pageTitle: "Markets",
+            cryptoList: cryptoList,
+            stockList: stockList,
         });
     },
 

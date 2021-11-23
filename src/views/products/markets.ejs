@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/styles-markets.css"> 
+</head>
+<body>
+    <header class="main-header bg-dark-gray">
+        <%- include('../partials/header') %> 
+    </header>
+
+    <main>
+        <section class="slider-container">
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide">
+                        <a href="<%= cryptoList[4].type %>/<%= cryptoList[4].name %>"><img src="<%= cryptoList[4].logo %>" height="100" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide">
+                        <a href="<%= cryptoList[3].type %>/<%= cryptoList[3].name %>"><img src="<%= cryptoList[3].logo %>" height="100" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide">
+                        <a href="<%= cryptoList[2].type %>/<%= cryptoList[2].name %>"><img src="<%= cryptoList[2].logo %>" height="100" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide">
+                        <a href="<%= cryptoList[6].type %>/<%= cryptoList[6].name %>"><img src="<%= cryptoList[6].logo %>" height="100" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide">
+                        <a href="<%= stockList[1].type %>/<%= stockList[1].name %>"><img src="<%= stockList[1].logo %>" height="100" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide">
+                        <a href="<%= stockList[4].type %>/<%= stockList[4].name %>"><img src="<%= stockList[4].logo %>" height="100" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide">
+                        <a href="<%= stockList[6].type %>/<%= stockList[6].name %>"><img src="<%= stockList[6].logo %>" height="100" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide">
+                        <a href="<%= stockList[8].type %>/<%= stockList[8].name %>"><img src="<%= stockList[8].logo %>" height="100" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide">
+                        <a href="<%= cryptoList[1].type %>/<%= cryptoList[1].name %>"><img src="<%= cryptoList[1].logo %>" height="100" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide">
+                        <a href=""><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide">
+                        <a href=""><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer bg-dark-gray">
+        <%- include('../partials/footer') %> 
+    </footer>
+</body>
+</html>
