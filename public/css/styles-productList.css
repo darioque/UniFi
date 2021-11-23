@@ -17,10 +17,46 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: solid 1px;
-  border-bottom: solid 1px;
+}
+.list-items-title {
+  padding: 0px 10px;
+  border: none;
+  font-weight: 800;
+  background-color: #FAFAFA;
 }
 
+.list-items .currency-logo{
+  margin-right: 10px;
+}
+.list-items .change,
+.name,
+.price,
+.mcap {
+  display: flex;
+  width: 80px;
+  height: 35px;
+  align-items: center;
+  justify-content: left;
+}
+
+.list-items .red {
+  background-color: rgb(246, 70, 93);
+  border-radius: 3px;
+  color: white;
+  justify-content: center;
+}
+.list-items .green {
+  background-color: rgb(14, 203, 129);
+  border-radius: 3px;
+  color: white;
+  justify-content: center;
+}
+.list-items .red {
+  background-color: rgb(246, 70, 93);
+}
+.list-items .green {
+  background-color: rgb(14, 203, 129);
+}
 
 .list-items .mcap {
   display: none;
@@ -35,3 +71,18 @@
   margin-left: auto;
 }
 
+/* MEDIA QUERY DE PANTALLAS DESDE A 480PX */
+@media (min-width: 481px) {
+
+}
+
+@media (min-width: 768px) {
+  .list-items .mcap{
+    display: flex;
+  }
+}
+
+/* MEDIA QUERY DE PANTALLAS DESDE 1200PX */
+@media (min-width: 1200px) {
+    
+}

@@ -13,9 +13,13 @@
     <main>
         <div class="main-container">
             <ul class="no-list progressive-links">
-                <li><a class="no-link" href="/markets/<%= asset.type %>"><span>
-                            <%= asset.type %>
-                        </span></a></li>
+                <li>
+                    <a class="no-link" href="/markets/"><span>markets</span></a>
+                    <i class="fas fa-chevron-right"></i>
+                </li>
+                <li>
+                    <a class="no-link" href="/markets/<%= asset.type %>"><span><%= asset.type %></span></a>
+                </li>
                 <li>
                     <i class="fas fa-chevron-right"></i>
                     <a class="no-link" href="/markets/<%= asset.type %>/<%= asset.name %>"><span>
@@ -67,7 +71,7 @@
                                 <div class="modal-content">
                                     <header class="modal-header">
                                         <div class="logo">
-                                            <a href="/"><img src="/img/logo.svg" alt="Logo de UniFi" /></a>
+                                            <a href="/"><img class="modal-img"src="/img/logo.svg" alt="Logo de UniFi" /></a>
                                         </div>
                                         <button><i class="fas fa-times close"></i></button>
                                     </header>
@@ -89,7 +93,7 @@
                                                     <img class="currency-logo" src="/img/usd.svg" alt="USD logo">
                                                     <p class="currency-title">USD</p>
                                                     <div class="currency-input-div">
-                                                        <p class="currency-input">60000</p>
+                                                        <p id="price" class="currency-input">60000</p>
                                                     </div>
                                                 </div>
                                             </div>

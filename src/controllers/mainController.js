@@ -8,7 +8,7 @@ const cryptoList = JSON.parse(cryptoListJSON)
 const mainController = {
     index: function (req, res) {
         res.render('home/index', {
-            pageTitle: "Home - UniFi",
+            pageTitle: "UniFi - Home",
             cryptoList: cryptoList,
             stockList: stockList,
         });

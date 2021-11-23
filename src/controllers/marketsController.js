@@ -26,7 +26,7 @@ const marketsController = {
         let assetRequested = req.params.asset;
         let assetList = marketType === 'cryptocurrencies'? cryptoList: stockList
         res.render(('products/productDetail'), {
-            pageTitle: assetRequested + " Details",
+            pageTitle: assetRequested + " - Details",
             asset: assetList.find(asset => asset.name === assetRequested || asset.ticker.toLowerCase() === assetRequested || asset.id === assetRequested),
         });
     },
