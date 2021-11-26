@@ -9,6 +9,7 @@ const marketsRouter = require("./routers/marketsRouter.js");
 // seteamos ruta de archivos estaticos y view engine por defecto
 app.use(express.static(publicPath));
 app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "/views"));
 
 // ejecutamos el servidor
 app.listen(process.env.PORT || 3000, () => {

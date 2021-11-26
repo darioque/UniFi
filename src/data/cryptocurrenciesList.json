@@ -27,19 +27,18 @@
         "price": "559.57",
         "change": -11.13,
         "logo": "/img/bnb_logo.svg",
-        "mcap": "94,415,587,388"  
+        "mcap": "94,415,587,388"
     },
     {
         "id": "4",
-        "name": "theter",
+        "name": "tether",
         "type": "cryptocurrencies",
         "ticker": "USDT",
         "price": "1.0007",
-        "change": 0.10,
+        "change": 0.1,
         "logo": "/img/usdt_logo.svg",
-        "mcap": "72,572,116,991"  
+        "mcap": "72,572,116,991"
     },
-
     {
         "id": "5",
         "name": "solana",
@@ -48,10 +47,8 @@
         "price": "218.874",
         "change": -7.31,
         "logo": "/img/sol_logo.svg",
-        "mcap": "66,539,755,049"  
+        "mcap": "66,539,755,049"
     },
-
-
     {
         "id": "6",
         "name": "cardano",
@@ -60,9 +57,8 @@
         "price": "1.7706",
         "change": 11.65,
         "logo": "/img/ada_logo.svg",
-        "mcap": "59,531,980,773"  
+        "mcap": "59,531,980,773"
     },
-
     {
         "id": "7",
         "name": "xrp",
@@ -71,7 +67,7 @@
         "price": "1.0033",
         "change": 29.61,
         "logo": "/img/xrp_logo.svg",
-        "mcap": "49,296,494,335"  
+        "mcap": "49,296,494,335"
     },
     {
         "id": "8",
@@ -81,7 +77,7 @@
         "price": "39.62",
         "change": 10.61,
         "logo": "/img/dot_logo.png",
-        "mcap": "39,088,113,366"  
+        "mcap": "39,088,113,366"
     },
     {
         "id": "9",
@@ -91,7 +87,7 @@
         "price": "135.84",
         "change": -5.26,
         "logo": "/img/avax_logo.png",
-        "mcap": "30,407,663,043"  
+        "mcap": "30,407,663,043"
     },
     {
         "id": "10",
@@ -101,6 +97,16 @@
         "price": "41.26",
         "change": -2.13,
         "logo": "/img/luna_logo.png",
-        "mcap": "16,473,874,099"  
+        "mcap": "16,473,874,099"
+    },
+    {
+        "id": "11",
+        "name": "Bitcoin Cash",
+        "type": "cryptocurrencies",
+        "ticker": "BCH",
+        "price": "607.47",
+        "change": "-1.57",
+        "logo": "/img/bch_logo.png",
+        "mcap": "11,487,837,836"
     }
 ]

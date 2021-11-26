@@ -15,7 +15,7 @@
                 <div class="slider">
                     <div class="slide-track">
                         <!-- si el activo tiene un logo svg (es decir, escalable), lo agrega al slider -->
-                        <% for (let asset of cryptoList.concat(stockList)) {%>
+                        <% for (let asset of assetList) {%>
                            <%   if (asset.logo.includes('svg')) {%>
                             <div class="slide">
                                 <a class="no-link" href="/markets/<%= asset.type %>/<%= asset.name %>"><img class="slide-img" src="<%= asset.logo %> " alt="<%= asset.ticker %> Logo "></a>
@@ -51,26 +51,26 @@
                 <h2>Highlighted Assets</h2>
                 <section>
                     <div class="cards-container">
-                        <a class="no-link" href="/markets/<%= mainGainers[0].type%>/<%= mainGainers[0].name  %>">
+                        <a class="no-link" href="/markets/<%= mainGainer.type%>/<%= mainGainer.name  %>">
                             <article class="card bg-gray">
                                 <h3>Main Gainer (24h) </h3>
                                 <div class="card-title">
-                                    <img src="<%= mainGainers[0].logo %>" alt="<%= mainGainers[0].name %> Logo">
-                                    <%= mainGainers[0].name %>
-                                    <span class="percentage-change green"><%= mainGainers[0].change %>%</span>
+                                    <img src="<%= mainGainer.logo %>" alt="<%= mainGainer.name %> Logo">
+                                    <%= mainGainer.name %>
+                                    <span class="percentage-change green"><%= mainGainer.change %>%</span>
                                 </div>
-                                <p class="price"><%= mainGainers[0].price %></p>
+                                <p class="price"><%= mainGainer.price %></p>
                             </article>
                         </a>
-                        <a class="no-link" href="/markets/<%= mainLosers[0].type%>/<%= mainLosers[0].name  %>">
+                        <a class="no-link" href="/markets/<%= mainLoser.type%>/<%= mainLoser.name  %>">
                             <article class="card bg-gray">
                                 <h3>Main Loser (24h) </h3>
                                 <div class="card-title">
-                                    <img src="<%= mainLosers[0].logo %>" alt="<%= mainLosers[0].name %> Logo">
-                                    <%= mainLosers[0].name %>
-                                    <span class="percentage-change red"><%= mainLosers[0].change %>%</span>
+                                    <img src="<%= mainLoser.logo %>" alt="<%= mainLoser.name %> Logo">
+                                    <%= mainLoser.name %>
+                                    <span class="percentage-change red"><%= mainLoser.change %>%</span>
                                 </div>
-                                <p class="price"><%= mainLosers[0].price %></p>
+                                <p class="price"><%= mainLoser.price %></p>
                             </article>
                         </a>
                     </div>

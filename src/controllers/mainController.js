@@ -1,16 +1,12 @@
-const fs = require("fs")
-const stockListJSON = fs.readFileSync("../data/stocksList.json")
-const cryptoListJSON = fs.readFileSync("../data/cryptocurrenciesList.json")
-const stockList = JSON.parse(stockListJSON)
-const cryptoList = JSON.parse(cryptoListJSON)
+const assetService = require('../services/assets')
 
 
 const mainController = {
     index: function (req, res) {
         res.render('home/index', {
             pageTitle: "UniFi - Home",
-            cryptoList: cryptoList,
-            stockList: stockList,
+            cryptoList: assetService.getCrypto(),
+            stockList: assetService.getStock(),
         });
     },
     login: function (req, res) {

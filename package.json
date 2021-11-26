@@ -4,7 +4,7 @@
   "description": "UniFi is a comprehensive finance site",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon -e js ./src/app"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "multer": "^1.4.3",
     "nodemon": "^2.0.15"
   }
 }

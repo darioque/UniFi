@@ -1,60 +1,67 @@
-const fs = require("fs")
-const stockListJSON = fs.readFileSync("../data/stocksList.json")
-const cryptoListJSON = fs.readFileSync("../data/cryptocurrenciesList.json")
-const stockList = JSON.parse(stockListJSON)
-const cryptoList = JSON.parse(cryptoListJSON)
-
-// ordena todos los activos con respecto a su cambio de precio (mayor a menor)
-let mainGainers = stockList.concat(cryptoList).sort(function (a, b) {
-  if (a.change < b.change) {
-    return 1;
-  }
-  if (a.change > b.change) {
-    return -1;
-  }
-  return 0;
-});
-
-// ordena todos los activos con respecto a su cambio de precio (menor a mayor)
-let mainLosers = [...mainGainers].reverse()
-
+const assetService = require('../services/assets')
 
 const marketsController = {
-
     markets: function (req, res) {
-        res.render('products/markets', {
+        const assetList = assetService.getAll();
+        res.render("products/markets", {
             pageTitle: "UniFi - Markets",
-            cryptoList: cryptoList,
-            stockList: stockList,
-            mainGainers: mainGainers,
-            mainLosers: mainLosers,
+            mainGainer: assetService.sortByGainers(assetList)[0],
+            mainLoser: assetService.sortByLosers(assetList)[0],
+            assetList,
         });
     },
 
     list: function (req, res) {
-        let marketType = req.params.marketType
-        res.render('products/productList', {
-            marketType: marketType,
+        const marketType = req.params.marketType;
+        res.render("products/productList", {
+            marketType,
             pageTitle: "Invest in UniFi - " + marketType,
-            assetList: marketType === 'cryptocurrencies'? cryptoList: stockList,
+            assetList: assetService.getAssetList(marketType),
         });
     },
 
     detail: function (req, res) {
-        let marketType = req.params.marketType
-        let assetRequested = req.params.asset;
-        let assetList = marketType === 'cryptocurrencies'? cryptoList: stockList
-        res.render(('products/productDetail'), {
+        const assetRequested = req.params.asset;
+        const marketType = req.params.marketType
+        res.render("products/productDetail", {
             pageTitle: assetRequested + " - Details",
-            asset: assetList.find(asset => asset.name === assetRequested || asset.ticker.toLowerCase() === assetRequested || asset.id === assetRequested),
+            asset: assetService.findAsset(marketType, assetRequested),
         });
     },
-    
+
     search: function (req, res) {
-        let marketType = req.params.marketType;
-        let assetList = marketType === 'cryptocurrencies'? cryptoList: stockList;
-        let search = req.body.search;
-        res.redirect('/' + 'markets' + '/' + marketType + '/' + search);
+        const marketType = req.params.marketType;
+        const assetRequested = req.body.search;
+        const asset = assetService.findAsset(marketType, assetRequested);
+        res.redirect("/markets/" + marketType + "/" + asset.id);
+    },
+
+    create: function (req, res) {
+        res.render("products/createProductForm", {
+            pageTitle: "Create Product - UniFi",
+        });
+    },
+
+    store: (req, res) => {
+        const asset = {
+            ...req.body,
+        };
+
+        assetService.saveAssets(asset);
+
+        res.redirect("/markets/" + asset.type);
+    },
+
+    update: function (req, res) {
+        res.render("products/editProductForm", {
+            pageTitle: "Edit Product - UniFi",
+        });
+    },
+
+    delete: function (req, res) {
+        res.render("products/deleteProduct", {
+            pageTitle: "Delete Product - UniFi",
+        });
     },
 };
 
