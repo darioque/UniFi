@@ -23,7 +23,12 @@ html {
   background-color: #272b3a;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Quicksand", sans-serif;
 }
 
@@ -35,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: auto;
 }
 
-.m-left{
+.m-left {
   margin-left: 40px;
 }
 
@@ -64,6 +69,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .no-list li {
   padding-right: 4px;
+}
+
+.color-white {
+  color: white;
 }
 
 /* Estilos generales del header */
@@ -138,8 +147,4 @@ h1, h2, h3, h4, h5, h6 {
 .copyright {
   width: 100%;
   font-size: 12px;
-}
-
-.footer a {
-  color: white;
 }
