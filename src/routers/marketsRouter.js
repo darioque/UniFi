@@ -8,7 +8,8 @@ router.get("/:marketType/create", marketsController.create);
 router.post("/", marketsController.store); 
 router.get('/:marketType/:asset/', marketsController.detail);
 router.post('/:marketType/search', marketsController.search);
-router.put('/:marketType/:id/edit', marketsController.update);
-router.delete('/:marketType/:id/delete', marketsController.delete);
+router.get('/:marketType/:asset/edit', marketsController.edit);
+router.put('/:marketType/:asset/', marketsController.update);
+router.delete('/:marketType/:asset/delete', marketsController.delete);
 
 module.exports = router;
