@@ -5,7 +5,7 @@ const publicPath = path.join(__dirname, "../public");
 
 const mainRouter = require("./routers/mainRouter.js");
 const marketsRouter = require("./routers/marketsRouter.js");
-
+//seteamos method-override aca y con un app.use para poder usar PUT y DELETE
 const methodOverride = require("method-override");
 
 // seteamos ruta de archivos estaticos y view engine por defecto
