@@ -12,15 +12,21 @@
                         <%- include('../partials/header') %>
                       </header>
     
-                        <form>
-                            <input type="email" class="input-box" placeholder="Email" required>
-                            <input type="password" class="input-box" placeholder="Password" required>
-                            <button type="login" class="login-btm">Register</button>
+                        <form method="POST" action="/register">
+                            <input type="email" name="email" class="input-box" placeholder="Email" required>
+                            <input type="password" name="password" class="input-box" placeholder="Password" required>
+                            <button type="submit" class="login-btm">Register</button>
                             <div><span><input type="checkbox">Remember Me</span></div>
                             <button><img class="image-article" src="/img/37784886.jpg" alt="Wallet"/>Wallet Connect</button>
                         </form>
-                        <div><a class="account" href="/login">Already have an account? login</a></div>      
-    </body>
+                        <div><a class="account" href="/login">Already have an account? login</a></div>   
+  </body>
 <footer>   
     <%- include('../partials/footer') %>                                                           
 </footer>
+<!-- Si se enviaron mensajes de error a la vista de registro, mostrarlos -->
+<% if (locals && locals.errorMessages) { %> 
+  <% for(let error in errorMessages) { %>
+    <p><%= errorMessages[error].msg %> </p>
+  <% } %> 
+<% } %> 
