@@ -23,8 +23,8 @@ app.use(express.json());
 app.use(methodOverride("_method")); //para que funcionen methods PUT y DELETE sobreescribiendo POST
 
 // rutas
-app.use("/", mainRouter);
-app.use("/markets", marketsRouter);
+app.use("/", mainRouter); //todas las rutas que defina en mainRouter comenzaran con "/"
+app.use("/markets", marketsRouter); //todas las rutas que defina en marketsRouter comenzaran con "/markets"
 
 //ruta que renderiza página de not-found cada vez que no encuentra una ruta
 app.use((req, res, next) => {

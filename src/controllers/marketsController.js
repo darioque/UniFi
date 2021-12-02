@@ -70,23 +70,16 @@ const marketsController = {
       asset,
     });
   },
+
   // funcion controladora para editar activos existentes en la base de datos
   update: function (req, res) {
-    const id = req.params.id;
+    const assetId = req.params.asset;
     const marketType = req.params.marketType;
-    const index = products.findIndex((asset) => asset.id == id);
+    assetService.updateAsset(req.body);
 
-    const updatedProduct = {
-      id: products[index].id,
-      ...req.body,
-    };
-
-    products[index] = updatedProduct;
-
-    assetService.saveAssets();
-
-    res.redirect(`/markets/${marketType}/${id}`);
+    res.redirect(`/markets/${marketType}/${assetId}`);
   },
+
   // funcion controladora para borrar activos existentes en la base de datos
   delete: function (req, res) {
     res.render("products/deleteProduct", {
