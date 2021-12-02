@@ -77,11 +77,12 @@ button {
 .account {
   font-family: "Quicksand", sans-serif;
   padding-left: 50px;
+  display: block;
 }
 
 .account-1 {
   font-family: "Quicksand", sans-serif;
-  padding-left: 110px;
+  padding-left: 100px;
 }
 
 span {
@@ -101,4 +102,13 @@ footer {
   font-size: 15px;
   color: black;
   border-top: 5px solid black;
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: 370px;
+        height: 950px;
+        box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0);
+        background: #272b3a;
+      }
 }
