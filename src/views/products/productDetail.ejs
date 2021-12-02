@@ -18,7 +18,9 @@
                     <i class="fas fa-chevron-right"></i>
                 </li>
                 <li>
-                    <a class="no-link" href="/markets/<%= asset.type %>"><span><%= asset.type %></span></a>
+                    <a class="no-link" href="/markets/<%= asset.type %>">
+                        <span><%= asset.type %></span>
+                    </a>
                 </li>
                 <li>
                     <i class="fas fa-chevron-right"></i>
@@ -29,7 +31,7 @@
             </ul>
             <div class="main-price">
                 <div>
-                    <img class="currency-logo" src="<%= asset.logo %>" alt="Logo de <%= asset.ticker %>" />
+                    <img class="currency-logo" src="<%= asset.logo ? asset.logo : '/img/lucas.jpg'%>" alt="Logo de <%= asset.ticker %>" />
                 </div>
                 <h1 class="heading-font currency-title">
                     <%= asset.name %> (<%= asset.ticker %>) Price
@@ -53,7 +55,7 @@
                     <div class="converter">
                         <form action="/markets/cryptocurrencies/<%= asset.name %>/trade-confirmation" method="POST"></form>
                             <div class="currency first-currency">
-                                <img class="currency-logo" src="<%= asset.logo %>" alt="<%= asset.ticker %> logo">
+                                <img class="currency-logo" src="<%= asset.logo ? asset.logo : '/img/lucas.jpg' %>" alt="<%= asset.ticker %> logo">
                                 <p class="currency-title">
                                     <%= asset.ticker %>
                                 </p>

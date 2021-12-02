@@ -30,6 +30,6 @@ app.use(logMiddleware);
 // });
 
 // rutas
-app.use("/", mainRouter);
-app.use("/markets", marketsRouter);
+app.use("/", mainRouter); //todas las rutas que defina en mainRouter comenzaran con "/"
+app.use("/markets", marketsRouter); //todas las rutas que defina en marketsRouter comenzaran con "/markets"
 
