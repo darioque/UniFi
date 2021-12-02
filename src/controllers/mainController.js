@@ -26,11 +26,12 @@ const mainController = {
         if (!errors.isEmpty()) {
             return res.render("users/register", {
                 errorMessages: errors.mapped(),
+                old: req.body,
                 pageTitle: "Register",
             });
         }
-        res.redirect('/')
-    }
+        res.redirect("/");
+    },
 };
 
 module.exports = mainController;

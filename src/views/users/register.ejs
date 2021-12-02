@@ -10,11 +10,18 @@
                 <div class="inner-box">
                     <header class="main-header">
                         <%- include('../partials/header') %>
-                      </header>
-    
+                    </header>
+                      <!-- Si se enviaron mensajes de error a la vista de registro, mostrarlos -->
+                        <% if (locals && locals.errorMessages) { %> 
+                          <% for(let error in errorMessages) { %>
+                            <p class="errors"><%= errorMessages[error].msg %> </p>
+                          <% } %> 
+                        <% } %> 
                         <form method="POST" action="/register">
-                            <input type="email" name="email" class="input-box" placeholder="Email" required>
-                            <input type="password" name="password" class="input-box" placeholder="Password" required>
+                          <!-- Si existe la variable old (es decir el usuario se intentó registrar y la validación lo rechazó)
+                          colocarlo como valor por defecto del input para que quede disponible para editar -->
+                            <input type="email" name="email" class="input-box" placeholder="Email" value="<%= locals.old && old.email? old.email: '' %>" required>
+                            <input type="password" name="password" class="input-box" placeholder="Password" value="<%= locals.old && old.password? old.password: '' %>" required>
                             <button type="submit" class="login-btm">Register</button>
                             <div><span><input type="checkbox">Remember Me</span></div>
                             <button><img class="image-article" src="/img/37784886.jpg" alt="Wallet"/>Wallet Connect</button>
@@ -24,9 +31,3 @@
 <footer>   
     <%- include('../partials/footer') %>                                                           
 </footer>
-<!-- Si se enviaron mensajes de error a la vista de registro, mostrarlos -->
-<% if (locals && locals.errorMessages) { %> 
-  <% for(let error in errorMessages) { %>
-    <p><%= errorMessages[error].msg %> </p>
-  <% } %> 
-<% } %> 

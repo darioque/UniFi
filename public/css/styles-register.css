@@ -99,3 +99,7 @@
     border-top: 5px solid black;
   }
   
+  .errors {
+    color: red
+    ;
+  }

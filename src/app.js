@@ -24,12 +24,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride("_method"));
 app.use(logMiddleware);
-//ruta que renderiza página de not-found cada vez que no encuentra una ruta
-// app.use((req, res, next) => {
-//     res.status(404).render("not-found");
-// });
+
 
 // rutas
-app.use("/", mainRouter); //todas las rutas que defina en mainRouter comenzaran con "/"
-app.use("/markets", marketsRouter); //todas las rutas que defina en marketsRouter comenzaran con "/markets"
+app.use("/", mainRouter);
+app.use("/markets", marketsRouter);
 
+// pagina para renderizar cuando se intenta entrar a una ruta inexistente
+app.use((req, res, next) => {
+    res.status(404).render("not-found");
+});

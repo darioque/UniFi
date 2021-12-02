@@ -8,16 +8,16 @@ const { body } = require("express-validator");
 const validateCreateForm = [
     body("email")
         .notEmpty()
-        .withMessage('You need to set an email')
+        .withMessage("You need to set an email")
         .bail()
         .isEmail()
-        .withMessage("You need to set a valid email"),
+        .withMessage("Invalid Email"),
     body("password")
         .notEmpty()
-        .withMessage('You need to set a password')
+        .withMessage("You need to set a password")
         .bail()
         .isLength({ min: 6, max: 15 })
-        .withMessage("You need to set a valid password"),
+        .withMessage("Invalid Password"),
 ];
 
 router.get("/", mainController.index);
