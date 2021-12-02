@@ -1,26 +1,35 @@
 * {
-  box-sizing: border-box;
-  border-spacing: 0px;
+    box-sizing: border-box;
+    border-spacing: 0px;
+}
+
+header {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+a {
+    color: inherit;
 }
 
 html {
-  font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 .bg-blue {
-  background-color: #004c66;
+    background-color: #004c66;
 }
 
 .bg-green {
-  background-color: #c9f7a6;
+    background-color: #c9f7a6;
 }
 
 .bg-gray {
-  background-color: #f5f5f4;
+    background-color: #f5f5f4;
 }
 
 .bg-dark-gray {
-  background-color: #272b3a;
+    background-color: #272b3a;
 }
 
 h1,
@@ -29,122 +38,127 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Quicksand", sans-serif;
+    font-family: "Quicksand", sans-serif;
 }
 
 .text-center {
-  text-align: center;
+    text-align: center;
 }
 
 .margin-auto {
-  margin: auto;
+    margin: auto;
 }
 
 .m-left {
-  margin-left: 40px;
+    margin-left: 40px;
 }
 
 .m-right {
-  margin-right: 40px;
+    margin-right: 40px;
 }
 
 .w-100 {
-  width: 100%;
+    width: 100%;
 }
 
 .viewport-100 {
-  width: 100vw;
+    width: 100vw;
 }
 
 .no-link {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
 }
 
 .no-list {
-  list-style-type: none;
-  color: rgba(91, 97, 110, 1);
-  padding: 0px;
+    list-style-type: none;
+    padding: 0;
 }
 
 .no-list li {
-  padding-right: 4px;
+    padding-right: 4px;
 }
 
 .color-white {
-  color: white;
+    color: white;
 }
 
 /* Estilos generales del header */
+.header-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0px auto;
+    padding: 5px 15px;
+    color: white;
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.index-navbar {
+    display: none;
+    width: 70%;
+}
 .header-img {
-  width: 145px;
-  height: 75px;
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(356deg)
-    brightness(101%) contrast(101%);
+    width: 145px;
+    height: 75px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(356deg)
+        brightness(101%) contrast(101%);
 }
 .main-header {
-  border-bottom: 2px solid rgb(239, 242, 245);
-  padding: 5px 15px;
+    border-bottom: 2px solid rgb(239, 242, 245);
 }
 
-.header-options {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.header-options .universal-options a:hover {
+    color: #56e404;
 }
 
-.header-options-margin-padding {
-  padding: 5px 15px;
-  margin-right: 20px;
-}
-
-.header-options a:hover,
-.header-options i:hover {
-  color: #56e404;
-}
-
-.header-options a span {
-  display: none;
-  color: white;
-  font-size: 18px;
-}
-
-.header-options i {
-  height: 24px;
-  width: 24px;
-  color: white;
-  margin-left: 15px;
-  font-size: 18px;
+.header-options .universal-options i {
+    height: 24px;
+    width: 24px;
+    margin-left: 15px;
+    font-size: 18px;
 }
 
 /* Estilos generales de footer */
-.footer {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 10px 15px 0;
-  border-top: 2px solid rgb(239, 242, 245);
-  color: white;
+.footer-nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    color: white;
+    margin: 0 auto;
+    max-width: 1400px;
 }
 
 .footer-img {
-  width: 145px;
-  height: 75px;
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(356deg)
-    brightness(101%) contrast(101%);
+    width: 145px;
+    height: 75px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(356deg)
+        brightness(101%) contrast(101%);
 }
 .footer-navbar ul {
-  padding: 0;
-  list-style-type: none;
+    padding: 0;
+    list-style-type: none;
 }
 .footer-navbar-list {
-  display: flex;
+    display: flex;
 }
 .footer-navbar-list li {
-  padding: 0 15px;
+    padding: 0 15px;
 }
 .copyright {
-  width: 100%;
-  font-size: 12px;
+    width: 100%;
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    .header-options .universal-options a {
+        display: inline;
+    }
 }

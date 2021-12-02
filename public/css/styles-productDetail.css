@@ -237,12 +237,6 @@ div {
 }
 
 @media (min-width: 1200px) {
-
-
-  .main-header {
-    margin: 0 auto;
-    padding: 5px 15px;
-  }
   .price-title {
     font-size: 40px;
   }

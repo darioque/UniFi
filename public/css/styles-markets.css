@@ -158,9 +158,6 @@
     font-weight: 600;
   }
   
-  .header-options a span {
-    display: inline;
-  }
   .copy-trader {
 	display: flex;
 	align-items: center;

@@ -1,27 +1,3 @@
-/* ESTILOS ESTANDAR */
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    text-decoration: none;
-    color: #ffffff;
-    display: inline-block;
-}
-
-.logo {
-    width: 145px;
-    height: 75px;
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(356deg) brightness(101%) contrast(101%);
-}
-
-body {
-    background-color: #272b3a;
-}
-
 html {
     color: #ffffff;
 }
@@ -29,37 +5,17 @@ html {
 /* ESTILOS DE CLASES */
 
 /* ESTILOS DE HEADER */
-.header {
-    padding: 5px 15px;
-    display: flex;
-    justify-content: space-between;
-}
 
-.header-navbar-menu {
-    display: flex;
-    align-self: center;
-    padding: 5px 15px;
-    font-size: 18px;
-}
 
-.header-navbar-menu a {
-    padding: 5px 15px;
-}
+/* ESTILO DE MAIN */
 
-.container-menu {
-    border-radius: 5px;
-}
-
-.header-navbar-menu .no-link span { /* Login deshabilitado */
-    display: none;
-}
-
-.header-navbar-menu i {
-    padding-right: 5px;
-}
-
-.header-navbar-list { /* Lista de menu deshabilitada */
-    display: none;
+.main-container {
+  width: 100%;
+  max-width: 1400px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* ESTILOS DE SECTION */
@@ -153,32 +109,16 @@ html {
 
 /* MEDIA QUERY DE PANTALLAS DESDE A 768PX */
 @media (min-width: 768px) {
+    .index-navbar {
+        display: block;
+    }
     .icon-login {
         padding-right: 5px;
     }
 
-    .header-navbar-menu {
-        order: 1;
-    }
 
     .container-menu {
         display: none;
-    }
-
-    .header-navbar-menu .no-link span { /* Texto Login habilitado */
-        display: block;
-    }
-    
-    .header-navbar-list { /* Lista de menu habilitada */
-        display: block;
-        width: 50%;
-        align-self: center;
-    }
-
-    .navbar-menu {
-        display: flex;
-        justify-content: space-between;
-        padding: 0;
     }
 
     .container-home {
