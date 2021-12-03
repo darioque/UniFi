@@ -20,9 +20,11 @@ app.listen(process.env.PORT || 3000, () => {
 });
 
 // middlewares
+// nos permite capturar informacion que llega por post
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride("_method"));
+// loguea los ingresos a cada pagina
 app.use(logMiddleware);
 
 
