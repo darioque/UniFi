@@ -113,6 +113,9 @@ h6 {
     border-bottom: 2px solid rgb(239, 242, 245);
 }
 
+.header-options {
+    display: none
+}
 .header-options .universal-options a:hover {
     color: #56e404;
 }
@@ -158,6 +161,9 @@ h6 {
 }
 
 @media (min-width: 768px) {
+    .header-options {
+        display: block;
+    }
     .header-options .universal-options a {
         display: inline;
     }

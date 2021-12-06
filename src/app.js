@@ -1,9 +1,11 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const publicPath = path.join(__dirname, "../public");
-const logMiddleware = require("./middlewares/logMiddleware");
 const session = require('express-session')
+const cookieParser = require("cookie-parser");
+const logMiddleware = require("./middlewares/logMiddleware");
+const rememberMeMiddleware = require('./middlewares/rememberMeMiddleware')
+const publicPath = path.join(__dirname, "../public");
 
 const mainRouter = require("./routers/mainRouter.js");
 const marketsRouter = require("./routers/marketsRouter.js");
@@ -29,7 +31,8 @@ app.use(methodOverride("_method"));
 app.use(logMiddleware);
 //
 app.use(session({secret: 'UniFi'}))
-
+app.use(cookieParser());
+app.use(rememberMeMiddleware)
 // rutas
 app.use("/", mainRouter);
 app.use("/markets", marketsRouter);

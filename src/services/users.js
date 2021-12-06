@@ -22,8 +22,18 @@ function addUser(newUser) {
     fs.writeFileSync(usersFilePath, updatedJSON, "utf-8");
 }
 
+// funcion para buscar y devolver un usuario a partir de su email
+function findUser(userEmail) {
+    const userList = this.getUsers();
+    for (const user of userList) {
+        if (user.email == userToAuthenticate.email) {
+            return user
+        }
+    }
+}
 // funcion para autenticar un usuario especifico y devolverlo
 function authenticate(userToAuthenticate) {
+    const userList = this.getUsers();
     for (const user of userList) {
         if (user.email == userToAuthenticate.email) {
             if (user.password == userToAuthenticate.password) {
@@ -37,4 +47,5 @@ module.exports = {
     getUsers,
     authenticate,
     addUser,
+    findUser,
 }
