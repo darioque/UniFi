@@ -1,4 +1,5 @@
 const assetService = require("../services/assets");
+const userService = require("../services/users");
 const { validationResult } = require("express-validator");
 
 const mainController = {
@@ -21,7 +22,7 @@ const mainController = {
     },
     store: (req, res) => {
         // guardamos los errores en una variable
-        let errors = validationResult(req);
+        const errors = validationResult(req);
         // si hubo errores (la variable NO está vacía) mandarle los mensajes a la vista del formulario
         if (!errors.isEmpty()) {
             return res.render("users/register", {
@@ -30,6 +31,29 @@ const mainController = {
                 pageTitle: "Register",
             });
         }
+        let usersJSON = res.redirect("/");
+    },
+    // función para procesar autenticacion de usuarios
+    processLogin: function (req, res) {
+        const errors = validationResult(req);
+        // si hubo errores (la variable NO está vacía) mandarle los mensajes a la vista del formulario
+        if (!errors.isEmpty()) {
+            return res.render("users/login", {
+                errorMessages: errors.mapped(),
+                old: req.body,
+                pageTitle: "Login",
+            });
+        }
+        // busca al usuario y lo guarda en la variable
+        const user = userService.authenticate(req.body);
+        // si no se encontró ningun usuario que coincida, devolver el sitio de login con mensaje de error
+        if (!user) {
+            return res.render("users/login", {
+                errorMessages: [{ msg: "Invalid Credentials" }],
+            });
+        }
+        // si no hubo problems, guardar al usuario autenticado con session y redirigir a home
+        req.session.authenticatedUser = user;
         res.redirect("/");
     },
 };

@@ -3,6 +3,7 @@ const path = require("path");
 const app = express();
 const publicPath = path.join(__dirname, "../public");
 const logMiddleware = require("./middlewares/logMiddleware");
+const session = require('express-session')
 
 const mainRouter = require("./routers/mainRouter.js");
 const marketsRouter = require("./routers/marketsRouter.js");
@@ -26,7 +27,8 @@ app.use(express.json());
 app.use(methodOverride("_method"));
 // loguea los ingresos a cada pagina
 app.use(logMiddleware);
-
+//
+app.use(session({secret: 'UniFi'}))
 
 // rutas
 app.use("/", mainRouter);

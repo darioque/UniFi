@@ -11,10 +11,16 @@
                 <header class="main-header">
                   <%- include('../partials/header') %>
                 </header>
-                    <form>
-                        <input type="email" class="input-box" placeholder="Email" required>
-                        <input type="password" class="input-box" placeholder="Password" required>
-                        <a href="/index"><button type="login" alt="Login">Login</button></a>
+                    <!-- Si se enviaron mensajes de error a la vista de registro, mostrarlos -->
+                    <% if (locals && locals.errorMessages) { %> 
+                        <% for(let error in errorMessages) { %>
+                        <p class="errors"><%= errorMessages[error].msg %> </p>
+                        <% } %> 
+                    <% } %> 
+                    <form action="/login" method="POST">
+                        <input type="email" name="email" class="input-box" placeholder="Email" required>
+                        <input type="password" name="password" class="input-box" placeholder="Password" required>
+                        <a href="/index"><button type="submit" alt="Login">Login</button></a>
                         <div><span><input type="checkbox">Remember Me</span></div>
                     </form>
                     <button><img class="image-article" src="/img/37784886.jpg" alt="Wallet"/>Wallet Connect</button>
