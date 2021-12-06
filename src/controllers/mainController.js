@@ -22,6 +22,10 @@ const mainController = {
     },
     store: (req, res) => {
         // guardamos los errores en una variable
+        const newUser = {
+            id: 11,
+            ...req.body
+        };
         const errors = validationResult(req);
         // si hubo errores (la variable NO está vacía) mandarle los mensajes a la vista del formulario
         if (!errors.isEmpty()) {
@@ -31,10 +35,13 @@ const mainController = {
                 pageTitle: "Register",
             });
         }
-        let usersJSON = res.redirect("/");
+        // si no hubo errores, añadir el usuario a la lista
+        userService.addUser(newUser);
+        res.redirect("/");
     },
     // función para procesar autenticacion de usuarios
     processLogin: function (req, res) {
+        const userToAuthenticate = req.body;
         const errors = validationResult(req);
         // si hubo errores (la variable NO está vacía) mandarle los mensajes a la vista del formulario
         if (!errors.isEmpty()) {
@@ -45,7 +52,7 @@ const mainController = {
             });
         }
         // busca al usuario y lo guarda en la variable
-        const user = userService.authenticate(req.body);
+        const user = userService.authenticate(userToAuthenticate);
         // si no se encontró ningun usuario que coincida, devolver el sitio de login con mensaje de error
         if (!user) {
             return res.render("users/login", {

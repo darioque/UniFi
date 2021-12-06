@@ -1,8 +1,10 @@
 const express = require("express");
 const router = express.Router();
+const { body } = require("express-validator");
 const mainController = require("../controllers/mainController");
 const logDBMiddleware = require("../middlewares/logDBMiddleware");
-const { body } = require("express-validator");
+const guestMiddleware = require('../middlewares/guestMiddleware')
+const authMiddleware = require('../middlewares/authMiddleware')
 
 // validaciones
 const validateCreateForm = [
@@ -22,8 +24,8 @@ const validateCreateForm = [
 
 router.get("/", mainController.index);
 router.get("/login", mainController.login);
-router.get("/register", mainController.register);
-// cuenta visitas con session
+router.get("/register", guestMiddleware, mainController.register);
+// cuenta visitas con session (test)
 router.get("/pruebaSession", function (req, res) {
     if (req.session.numeroVisitas == undefined) {
         req.session.numeroVisitas = 0;
