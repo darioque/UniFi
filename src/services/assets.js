@@ -36,13 +36,28 @@ function getAssetList(marketType) {
   return assetList;
 }
 
-function saveAssets(newAsset) {
+function generateId(type) {
+    const assetList = this.getAssetList(type);
+    const lastAsset = assetList[assetList.length - 1];
+    if (lastAsset) {
+        return lastAsset.id + 1;
+    }
+    return 1;
+}
+
+
+function saveAssets(assetData) {
   // agrega el nuevo activo a la lista correspondiente usando las funciones getAssetList y push
-  const assetList = this.getAssetList(newAsset.type);
+  const assetList = this.getAssetList(assetData.type);
+  const newAssetId = this.generateId(assetData.type);
+  const newAsset = {
+      id: newAssetId,
+      ...assetData
+  }
   assetList.push(newAsset);
   // selecciona la ruta de archivo correspondiente a actualizar
   const filePath =
-    newAsset.type === "cryptocurrencies" ? cryptoFilePath : stockFilePath;
+    assetData.type === "cryptocurrencies" ? cryptoFilePath : stockFilePath;
   // transforma la lista en formato JSON
   const updatedJSON = JSON.stringify(assetList);
   // escribe el array actualizado al JSON
@@ -67,7 +82,7 @@ function findAsset(marketType, assetRequested) {
     (asset) =>
       asset.name === assetRequested ||
       asset.ticker.toLowerCase() === assetRequested ||
-      asset.id === assetRequested
+      asset.id == assetRequested
   );
   return asset;
 }
@@ -106,4 +121,5 @@ module.exports = {
   deleteAsset,
   sortByGainers,
   sortByLosers,
+  generateId,
 };

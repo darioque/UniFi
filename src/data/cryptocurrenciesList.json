@@ -1,6 +1,6 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "name": "bitcoin",
         "type": "cryptocurrencies",
         "ticker": "BTC",
@@ -10,7 +10,7 @@
         "mcap": "1,072,506,302,664"
     },
     {
-        "id": "2",
+        "id": 2,
         "name": "ethereum",
         "type": "cryptocurrencies",
         "ticker": "ETH",
@@ -20,7 +20,7 @@
         "mcap": "489,591,012,962"
     },
     {
-        "id": "3",
+        "id": 3,
         "name": "binance",
         "type": "cryptocurrencies",
         "ticker": "BNB",
@@ -30,7 +30,7 @@
         "mcap": "94,415,587,388"
     },
     {
-        "id": "4",
+        "id": 4,
         "name": "tether",
         "type": "cryptocurrencies",
         "ticker": "USDT",
@@ -40,7 +40,7 @@
         "mcap": "72,572,116,991"
     },
     {
-        "id": "5",
+        "id": 5,
         "name": "solana",
         "type": "cryptocurrencies",
         "ticker": "SOL",
@@ -50,7 +50,7 @@
         "mcap": "66,539,755,049"
     },
     {
-        "id": "6",
+        "id": 6,
         "name": "cardano",
         "type": "cryptocurrencies",
         "ticker": "ADA",
@@ -60,7 +60,7 @@
         "mcap": "59,531,980,773"
     },
     {
-        "id": "7",
+        "id": 7,
         "name": "xrp",
         "type": "cryptocurrencies",
         "ticker": "XRP",
@@ -70,7 +70,7 @@
         "mcap": "49,296,494,335"
     },
     {
-        "id": "8",
+        "id": 8,
         "name": "polkadot",
         "type": "cryptocurrencies",
         "ticker": "DOT",
@@ -80,7 +80,7 @@
         "mcap": "39,088,113,366"
     },
     {
-        "id": "9",
+        "id": 9,
         "name": "avalanche",
         "type": "cryptocurrencies",
         "ticker": "AVAX",
@@ -90,7 +90,7 @@
         "mcap": "30,407,663,043"
     },
     {
-        "id": "10",
+        "id": 10,
         "name": "terra",
         "type": "cryptocurrencies",
         "ticker": "LUNA",
@@ -100,7 +100,7 @@
         "mcap": "16,473,874,099"
     },
     {
-        "id": "11",
+        "id": 11,
         "name": "Bitcoin Cash",
         "type": "cryptocurrencies",
         "ticker": "BCH",

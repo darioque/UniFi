@@ -5,6 +5,7 @@ const mainController = require("../controllers/mainController");
 const logDBMiddleware = require("../middlewares/logDBMiddleware");
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
+const rememberMeMiddleware = require("../middlewares/rememberMeMiddleware");
 
 // validaciones
 const registerValidations = [
@@ -30,7 +31,7 @@ const loginValidations = [
 ];
 
 router.get("/", mainController.index);
-router.get("/login", guestMiddleware, mainController.login);
+router.get("/login", guestMiddleware, rememberMeMiddleware, mainController.login);
 router.get("/register", guestMiddleware, mainController.register);
 // cuenta visitas con session (test)
 router.get("/pruebaSession", function (req, res) {
@@ -45,7 +46,7 @@ router.post(
     "/register",
     logDBMiddleware,
     registerValidations,
-    mainController.store
+    mainController.processRegister
 );
 router.post(
     "/login",
@@ -53,5 +54,4 @@ router.post(
     loginValidations,
     mainController.processLogin
 );
-
 module.exports = router;

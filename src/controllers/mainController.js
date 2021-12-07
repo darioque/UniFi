@@ -14,6 +14,7 @@ const mainController = {
     login: function (req, res) {
         res.render("users/login", {
             pageTitle: "Log in",
+            old: req.session.rememberMe,
         });
     },
     register: function (req, res) {
@@ -21,30 +22,32 @@ const mainController = {
             pageTitle: "Register",
         });
     },
-    store: (req, res) => {
+    processRegister: (req, res) => {
         // guardamos los errores en una variable
         const errors = validationResult(req);
         // si hubo errores (la variable NO está vacía) mandarle los mensajes a la vista del formulario
         if (!errors.isEmpty()) {
             return res.render("users/register", {
-                errorMessages: errors.mapped(),
-                old: req.body,
                 pageTitle: "Register",
+                old: req.body,
+                errorMessages: errors.mapped(),
             });
         }
 
-        
         // si no hubo errores en el formulario, intentar agregar el usuario a la base de datos
         // si el email utilizado ya existia en la base de datos, retornar el sitio de registro con mensaje de error
         // si no hay errores, redireccionar a login
-        if (userService.addUser(req.body) == -1) {
+        if (!userService.addUser(req.body)) {
             return res.render("users/register", {
-                errorMessages: [{ msg: "There already exists an account with this email" }],
+                pageTitle: "Register",
+                old: req.body,
+                errorMessages: [
+                    { msg: "Email already registered" },
+                ],
             });
         } else {
             res.redirect("/login");
         }
-
     },
     // función para procesar autenticacion de usuarios
     processLogin: function (req, res) {
@@ -72,7 +75,7 @@ const mainController = {
         req.session.authenticatedUser = user;
         // si está tildado el campo de remember me, guardarlo con cookie
         if (req.body.remember) {
-            res.cookie('rememberMe', user.id, { maxAge: 60000})
+            res.cookie("rememberMe", user.id, { maxAge: 60000 });
         }
         res.redirect("/");
     },

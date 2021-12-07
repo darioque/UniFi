@@ -58,13 +58,9 @@ const marketsController = {
 
     // funcion controladora para agregar el nuevo activo a la base de datos y mostrar nuevamente el listado
     store: (req, res) => {
-        const asset = {
-            ...req.body,
-        };
+        assetService.saveAssets(req.body);
 
-        assetService.saveAssets(asset);
-
-        res.redirect("/markets/" + asset.type);
+        res.redirect("/markets/" + req.body.type);
     },
 
     // funcion controladora para renderizar el formulario de edicion de activos

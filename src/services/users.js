@@ -10,7 +10,7 @@ function getUsers() {
     return usersList;
 }
 
-function generateID() {
+function generateId() {
     const userList = this.getUsers();
     const lastUser = userList[userList.length - 1];
     if (lastUser) {
@@ -23,10 +23,10 @@ function addUser(userData) {
     // agrega el nuevo usuario a la lista
     const userList = this.getUsers();
     // chequear que no exista el email en la base de datos
-    if (userList.find(user => user.email == userData.email)) {
-        return -1
+    if (userList.find((user) => user.email == userData.email)) {
+        return false;
     }
-    const newUserId = this.generateID()
+    const newUserId = this.generateId();
     const newUser = {
         id: newUserId,
         email: userData.email,
@@ -38,6 +38,7 @@ function addUser(userData) {
     const updatedJSON = JSON.stringify(userList);
     // escribe el array actualizado al JSON
     fs.writeFileSync(usersFilePath, updatedJSON, null, " ");
+    return newUser;
 }
 
 // funcion para buscar y devolver un usuario a partir de algun campo a determinar como parametro
@@ -66,7 +67,14 @@ function authenticate(userData) {
 
 function editUser(userToEdit) {}
 
-function deleteUser(userToDelete) {}
+// funcion para borrar un usuario a partir de su ID
+function deleteUser(userId) {
+    const userList = this.getUsers();
+    const filteredUserList = userList.filter((user) => user.id != userId);
+    const updatedJSON = JSON.stringify(filteredUserList);
+    // escribe el array actualizado al JSON
+    fs.writeFileSync(usersFilePath, updatedJSON, null, " ");
+}
 
 module.exports = {
     getUsers,
@@ -74,5 +82,5 @@ module.exports = {
     addUser,
     findUser,
     findUserByPk,
-    generateID,
+    generateId,
 };
