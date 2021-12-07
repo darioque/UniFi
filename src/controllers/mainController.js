@@ -8,7 +8,6 @@ const mainController = {
             pageTitle: "UniFi - Home",
             cryptoList: assetService.getCrypto(),
             stockList: assetService.getStock(),
-            user: req.session.authenticatedUser,
         });
     },
     login: function (req, res) {
@@ -41,9 +40,7 @@ const mainController = {
             return res.render("users/register", {
                 pageTitle: "Register",
                 old: req.body,
-                errorMessages: [
-                    { msg: "Email already registered" },
-                ],
+                errorMessages: [{ msg: "Email already registered" }],
             });
         } else {
             res.redirect("/login");
@@ -77,6 +74,11 @@ const mainController = {
         if (req.body.remember) {
             res.cookie("rememberMe", user.id, { maxAge: 60000 });
         }
+        res.redirect("/");
+    },
+    // funcion para cerrar sesión
+    logout: function (req, res) {
+        req.session.destroy();
         res.redirect("/");
     },
 };

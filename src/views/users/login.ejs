@@ -18,7 +18,7 @@
                         <% } %> 
                     <% } %> 
                     <form action="/login" method="POST">
-                        <input type="email" name="email" class="input-box" placeholder="Email" value="<%= locals.old && old.email? old.email: '' %>" required>
+                        <input type="email" name="email" class="input-box" placeholder="Email" value="<%= locals.old? old.email: '' %>" required>
                         <input type="password" name="password" class="input-box" placeholder="Password" required>
                         <span><input type="checkbox" name="remember"> Remember Me</span>
                         <a href="/index"><button type="submit" alt="Login">Login</button></a>

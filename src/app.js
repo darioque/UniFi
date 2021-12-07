@@ -4,6 +4,7 @@ const app = express();
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const logMiddleware = require("./middlewares/logMiddleware");
+const userLoggedMiddleware = require("./middlewares/UserLoggedMiddleware");
 const publicPath = path.join(__dirname, "../public");
 
 const mainRouter = require("./routers/mainRouter.js");
@@ -29,11 +30,13 @@ app.use(methodOverride("_method"));
 // loguea los ingresos a cada pagina
 app.use(logMiddleware);
 
+
 app.use(session({ 
     secret: "UniFi",
     resave: false,
     saveUninitialized: false,
- }));
+}));
+app.use(userLoggedMiddleware)
 app.use(cookieParser());
 
 // rutas

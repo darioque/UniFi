@@ -31,16 +31,14 @@ const loginValidations = [
 ];
 
 router.get("/", mainController.index);
-router.get("/login", guestMiddleware, rememberMeMiddleware, mainController.login);
+router.get(
+    "/login",
+    guestMiddleware,
+    rememberMeMiddleware,
+    mainController.login
+);
 router.get("/register", guestMiddleware, mainController.register);
-// cuenta visitas con session (test)
-router.get("/pruebaSession", function (req, res) {
-    if (req.session.numeroVisitas == undefined) {
-        req.session.numeroVisitas = 0;
-    }
-    req.session.numeroVisitas++;
-    res.send("Session tiene el numero: " + req.session.numeroVisitas);
-});
+router.get("/logout", mainController.logout);
 // con middleware de ruta
 router.post(
     "/register",

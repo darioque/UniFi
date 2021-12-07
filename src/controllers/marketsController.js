@@ -11,7 +11,6 @@ const marketsController = {
             mainGainer: assetService.sortByGainers(assetList)[0],
             mainLoser: assetService.sortByLosers(assetList)[0],
             assetList,
-            user: req.session.authenticatedUser,
         });
     },
 
@@ -22,7 +21,6 @@ const marketsController = {
             marketType,
             pageTitle: "Invest in UniFi - " + marketType,
             assetList: assetService.getAssetList(marketType),
-            user: req.session.authenticatedUser,
         });
     },
 
@@ -34,7 +32,6 @@ const marketsController = {
         res.render("products/productDetail", {
             asset,
             pageTitle: asset.ticker + " - Details",
-            user: req.session.authenticatedUser,
         });
     },
 
@@ -52,7 +49,6 @@ const marketsController = {
         res.render("products/createProductForm", {
             pageTitle: "Create Product - UniFi",
             marketType,
-            user: req.session.authenticatedUser,
         });
     },
 
@@ -71,7 +67,6 @@ const marketsController = {
         res.render("products/editProductForm", {
             pageTitle: "Edit Product - UniFi",
             asset,
-            user: req.session.authenticatedUser,
         });
     },
 
