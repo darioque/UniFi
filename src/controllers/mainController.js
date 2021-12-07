@@ -40,13 +40,14 @@ const mainController = {
         }
         // si no hubo errores, añadir el usuario a la lista
         userService.addUser(newUser);
-        res.redirect("/");
+        res.redirect("/login");
     },
     // función para procesar autenticacion de usuarios
     processLogin: function (req, res) {
+        // se guarda el usuario a autenticar
         const userToAuthenticate = {
             email: req.body.email,
-            password: bcrypt.hashSync(req.body.password, 10),
+            password: req.body.password,
         };
         const errors = validationResult(req);
         // si hubo errores (la variable NO está vacía) mandarle los mensajes a la vista del formulario

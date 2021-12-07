@@ -37,9 +37,7 @@ function authenticate(userToAuthenticate) {
     const userList = this.getUsers();
     for (const user of userList) {
         if (user.email == userToAuthenticate.email) {
-            console.log(user.password)
-            console.log(userToAuthenticate.password)
-            if (bcrypt.compare(user.password, userToAuthenticate.password)) {
+            if (bcrypt.compareSync(userToAuthenticate.password, user.password)) {
                 return user;
             }
         }
