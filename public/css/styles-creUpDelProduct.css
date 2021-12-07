@@ -1,21 +1,3 @@
-.header {
-    padding: 5px 15px;
-    border-bottom: 1px solid rgb(239, 242, 245);
-    background-color: #272b3a;
-    display: flex;
-    justify-content: space-between;
-}
-
-.header-title {
-    color: #ffffff;
-    text-align: center;
-}
-
-.logo {
-    width: 145px;
-    height: 75px;
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(356deg) brightness(101%) contrast(101%);
-}
 
 form {
     margin-top: 25px;

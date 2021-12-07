@@ -30,8 +30,10 @@ const marketsController = {
     const assetRequested = req.params.asset;
     const marketType = req.params.marketType;
     res.render("products/productDetail", {
-        pageTitle: assetRequested + " - Details",
         asset: assetService.findAsset(marketType, assetRequested),
+        pageTitle:
+            assetService.findAsset(marketType, assetRequested).ticker +
+            " - Details",
         user: req.session.authenticatedUser,
     });
   },
