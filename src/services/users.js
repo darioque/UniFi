@@ -2,25 +2,42 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
 const usersJSON = fs.readFileSync(path.join(__dirname, "../data/users.json"));
-const userList = JSON.parse(usersJSON);
+const usersList = JSON.parse(usersJSON);
 const usersFilePath = path.join(__dirname, "../data/users.json");
 
 // funcion para devolver la lista completa de usuarios
 function getUsers() {
-    return userList;
+    return usersList;
 }
 
-function addUser(newUser) {
+function generateID() {
+    const userList = this.getUsers();
+    const lastUser = userList[userList.length - 1];
+    if (lastUser) {
+        return lastUser.id + 1;
+    }
+    return 1;
+}
+
+function addUser(userData) {
     // agrega el nuevo usuario a la lista
     const userList = this.getUsers();
-    const currentLastIdNumber = userList[userList.length - 1].id + 1
-    newUser.id = currentLastIdNumber
+    // chequear que no exista el email en la base de datos
+    if (userList.find(user => user.email == userData.email)) {
+        return -1
+    }
+    const newUserId = this.generateID()
+    const newUser = {
+        id: newUserId,
+        email: userData.email,
+        password: bcrypt.hashSync(userData.password, 10),
+    };
     userList.push(newUser);
 
     // transforma la lista en formato JSON
     const updatedJSON = JSON.stringify(userList);
     // escribe el array actualizado al JSON
-    fs.writeFileSync(usersFilePath, updatedJSON, "utf-8");
+    fs.writeFileSync(usersFilePath, updatedJSON, null, " ");
 }
 
 // funcion para buscar y devolver un usuario a partir de algun campo a determinar como parametro
@@ -37,12 +54,12 @@ function findUserByPk(userID) {
     return user;
 }
 // funcion para autenticar un usuario especifico y devolverlo
-function authenticate(userToAuthenticate) {
+function authenticate(userData) {
     const userList = this.getUsers();
     user = userList.find(
         (user) =>
-            user.email === userToAuthenticate.email &&
-            bcrypt.compareSync(userToAuthenticate.password, user.password)
+            user.email === userData.email &&
+            bcrypt.compareSync(userData.password, user.password)
     );
     return user;
 }
@@ -57,5 +74,5 @@ module.exports = {
     addUser,
     findUser,
     findUserByPk,
-
+    generateID,
 };
