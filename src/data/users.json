@@ -17,5 +17,10 @@
         "id": 11,
         "email": "zorktextgame@gmail.com",
         "password": "$2a$10$fhfLLPfqettAMtd9PGl2Su.jHiXCZ1eEgemvHt9N91zjYfbdNsF4i"
+    },
+    {
+        "id": 12,
+        "email": "dario@UniFi.com",
+        "password": "$2a$10$yFP1bU1Zvjq1w1rdB9aUc.rqrny5SoK9hPorbSlZ7EikpYtGL/ux."
     }
 ]

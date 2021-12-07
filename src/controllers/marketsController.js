@@ -11,6 +11,7 @@ const marketsController = {
             mainGainer: assetService.sortByGainers(assetList)[0],
             mainLoser: assetService.sortByLosers(assetList)[0],
             assetList,
+            user: req.session.authenticatedUser,
         });
     },
 
@@ -51,6 +52,7 @@ const marketsController = {
         res.render("products/createProductForm", {
             pageTitle: "Create Product - UniFi",
             marketType,
+            user: req.session.authenticatedUser,
         });
     },
 
@@ -73,6 +75,7 @@ const marketsController = {
         res.render("products/editProductForm", {
             pageTitle: "Edit Product - UniFi",
             asset,
+            user: req.session.authenticatedUser,
         });
     },
 

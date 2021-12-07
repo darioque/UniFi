@@ -9,6 +9,7 @@ const mainController = {
             pageTitle: "UniFi - Home",
             cryptoList: assetService.getCrypto(),
             stockList: assetService.getStock(),
+            user: req.session.authenticatedUser,
         });
     },
     login: function (req, res) {

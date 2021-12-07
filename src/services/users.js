@@ -1,20 +1,20 @@
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
-const usersJSON = fs.readFileSync(
-    path.join(__dirname, "../data/users.json")
-);
+const usersJSON = fs.readFileSync(path.join(__dirname, "../data/users.json"));
 const userList = JSON.parse(usersJSON);
-const usersFilePath = path.join(__dirname, "../data/users.json")
+const usersFilePath = path.join(__dirname, "../data/users.json");
 
 // funcion para devolver la lista completa de usuarios
 function getUsers() {
-    return userList
+    return userList;
 }
 
 function addUser(newUser) {
     // agrega el nuevo usuario a la lista
     const userList = this.getUsers();
+    const currentLastIdNumber = userList[userList.length - 1].id + 1
+    newUser.id = currentLastIdNumber
     userList.push(newUser);
 
     // transforma la lista en formato JSON
@@ -23,30 +23,39 @@ function addUser(newUser) {
     fs.writeFileSync(usersFilePath, updatedJSON, "utf-8");
 }
 
-// funcion para buscar y devolver un usuario a partir de su email
-function findUser(userEmail) {
+// funcion para buscar y devolver un usuario a partir de algun campo a determinar como parametro
+function findUser(field, text) {
     const userList = this.getUsers();
-    for (const user of userList) {
-        if (user.email == userToAuthenticate.email) {
-            return user
-        }
-    }
+    const user = userList.find((user) => user[field] === text);
+    return user;
+}
+
+// funcion para buscar y devolver un usuario a partir de su ID
+function findUserByPk(userID) {
+    const userList = this.getUsers();
+    const user = userList.find((user) => user.id === userID);
+    return user;
 }
 // funcion para autenticar un usuario especifico y devolverlo
 function authenticate(userToAuthenticate) {
     const userList = this.getUsers();
-    for (const user of userList) {
-        if (user.email == userToAuthenticate.email) {
-            if (bcrypt.compareSync(userToAuthenticate.password, user.password)) {
-                return user;
-            }
-        }
-    }
+    user = userList.find(
+        (user) =>
+            user.email === userToAuthenticate.email &&
+            bcrypt.compareSync(userToAuthenticate.password, user.password)
+    );
+    return user;
 }
+
+function editUser(userToEdit) {}
+
+function deleteUser(userToDelete) {}
 
 module.exports = {
     getUsers,
     authenticate,
     addUser,
     findUser,
-}
+    findUserByPk,
+
+};
