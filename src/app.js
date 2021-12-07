@@ -29,10 +29,11 @@ app.use(express.json());
 app.use(methodOverride("_method"));
 // loguea los ingresos a cada pagina
 app.use(logMiddleware);
-//
+
 app.use(session({ secret: "UniFi" }));
 app.use(cookieParser());
 app.use(rememberMeMiddleware);
+
 // rutas
 app.use("/", mainRouter);
 app.use("/markets", marketsRouter);

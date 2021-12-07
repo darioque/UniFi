@@ -1,7 +1,7 @@
-const assetService = require("../services/assets");
-const userService = require("../services/users");
 const bcrypt = require('bcryptjs')
 const { validationResult } = require("express-validator");
+const assetService = require("../services/assets");
+const userService = require("../services/users");
 
 const mainController = {
     index: function (req, res) {

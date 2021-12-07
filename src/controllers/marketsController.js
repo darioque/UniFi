@@ -21,6 +21,7 @@ const marketsController = {
       marketType,
       pageTitle: "Invest in UniFi - " + marketType,
       assetList: assetService.getAssetList(marketType),
+      user: req.session.authenticatedUser,
     });
   },
 
@@ -29,8 +30,9 @@ const marketsController = {
     const assetRequested = req.params.asset;
     const marketType = req.params.marketType;
     res.render("products/productDetail", {
-      pageTitle: assetRequested + " - Details",
-      asset: assetService.findAsset(marketType, assetRequested),
+        pageTitle: assetRequested + " - Details",
+        asset: assetService.findAsset(marketType, assetRequested),
+        user: req.session.authenticatedUser,
     });
   },
 

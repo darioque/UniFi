@@ -31,11 +31,14 @@
             </ul>
             <div class="main-price">
                 <div>
-                    <img class="currency-logo" src="<%= asset.logo ? asset.logo : '/img/lucas.jpg'%>" alt="Logo de <%= asset.ticker %>" />
+                    <img class="currency-logo" src="<%= asset.logo %>" alt="Logo de <%= asset.ticker %>" />
                 </div>
                 <h1 class="heading-font currency-title">
                     <%= asset.name %> (<%= asset.ticker %>) Price
                 </h1>
+                <% if (locals && locals.user) { %>
+                    <a href="/markets/<%= asset.type %>/<%= asset.name %>/edit"><button type="button">Editar Producto</button></a>
+                <% } %>          
                 <div class="price-title">
                     <span>$<%= asset.price %> </span>
                     <%if (asset.change < 0) { %>

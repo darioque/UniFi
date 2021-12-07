@@ -26,6 +26,7 @@
             </section>
             <section>
                 <h1>Explore <%=marketType %>  </h1>
+
                 <div class="cards-container">
                     <div class="card-title">
                         <i class="fas fa-arrow-circle-down"></i>
@@ -46,8 +47,10 @@
                     <button type="submit">
                         <i class="fas fa-search search-icon"></i>
                     </button>
-                
                 </form>
+                    <% if (locals && locals.user) { %>
+                        <a href="/markets/<%= marketType %>/create"><button type="button">Crear Producto</button></a>
+                    <% } %>                
                 <ol class="list">
                     <div class="list-items list-items-title">
                         <p class="name">

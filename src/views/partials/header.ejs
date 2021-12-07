@@ -14,7 +14,11 @@
         <div class="header-options">
             <div class="universal-options">
                 <a class="no-link" href="/wallet"><i class="fas fa-wallet"></i>Wallet</a>
-                <a class="no-link" href="/login"><i class="fas fa-user-alt"></i>Login</a>
+                <% if (locals && locals.user) { %>
+                    <a class="no-link"><i class="fas fa-user-alt"></i><%= locals.user.email %></a>
+                <% } else { %>
+                    <a class="no-link" href="/login"><i class="fas fa-user-alt"></i>Login</a>
+                <% } %>
             </div>
         </div>
     </nav>
