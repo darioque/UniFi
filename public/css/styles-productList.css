@@ -3,10 +3,6 @@
   width: 32px;
 }
 
-.progressive-links {
-  display: flex;
-}
-
 .list {
   display: flex;
   flex-direction: column;

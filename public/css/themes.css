@@ -82,6 +82,10 @@ h6 {
     color: white;
 }
 
+.progressive-links {
+  display: flex;
+}
+
 /* Estilos generales del header */
 .header-navbar {
     display: flex;

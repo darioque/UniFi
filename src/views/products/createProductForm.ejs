@@ -8,28 +8,45 @@
     <header class="header bg-dark-gray">
         <%- include('../partials/header') %>
     </header>
-    
-    <h1 class="text-center">Create New Product</h1>
-    <form action="/markets" method=POST>
-        <div class="form">
-            <input type="text" name="id" placeholder="ID" class="input">
-            <input type="text" name="name" placeholder="Name" class="input">
-            <select name="type" id="type" class="select" >
-                <option value=""></option>
-                <option value="cryptocurrencies">cryptocurrencies</option>
-                <option value="stocks">stocks</option>
-            </select>
-            <input type="text" name="ticker" placeholder="Ticker" class="input">
-            <input type="text" name="price" placeholder="Price" class="input">
-            <input type="number" step="0.01" name="change" placeholder="Change" class="input">
-            <div class="input-file">
-                <input type="file" name="logo" id="" class="input-file-button">
-            </div>
-            <input type="text" name="mcap" placeholder="Market Cap" class="input">
-            <input type="submit" value="Load product" class="load-product">
-        </div>
 
-    </form>
+    <main class="main-container">
+        <ul class="no-list progressive-links">
+            <li>
+                <a class="no-link" href="/markets/"><span>markets</span></a>
+                <i class="fas fa-chevron-right"></i>
+            </li>
+            <li>
+                <a class="no-link" href="/markets/<%= marketType %>">
+                    <span><%= marketType %></span>
+                </a>
+            </li>
+            <li>
+                <i class="fas fa-chevron-right"></i>
+                <span>create</span>
+            </li>
+        </ul>
+        <h1 class="text-center">Create New Product</h1>
+        <form action="/markets" method=POST>
+            <div class="form">
+                <input type="text" name="id" placeholder="ID" class="input">
+                <input type="text" name="name" placeholder="Name" class="input">
+                <select name="type" id="type" class="select" >
+                    <option value=""></option>
+                    <option value="cryptocurrencies">cryptocurrencies</option>
+                    <option value="stocks">stocks</option>
+                </select>
+                <input type="text" name="ticker" placeholder="Ticker" class="input">
+                <input type="text" name="price" placeholder="Price" class="input">
+                <input type="number" step="0.01" name="change" placeholder="Change" class="input">
+                <div class="input-file">
+                    <input type="file" name="logo" id="" class="input-file-button">
+                </div>
+                <input type="text" name="mcap" placeholder="Market Cap" class="input">
+                <input type="submit" value="Load product" class="load-product">
+            </div>
+        </form>
+
+    </main>
 
     <footer class="footer">
         <%- include('../partials/footer') %>
