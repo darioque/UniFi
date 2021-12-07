@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const bcrypt = require("bcryptjs");
 const usersJSON = fs.readFileSync(
     path.join(__dirname, "../data/users.json")
 );
@@ -36,7 +37,9 @@ function authenticate(userToAuthenticate) {
     const userList = this.getUsers();
     for (const user of userList) {
         if (user.email == userToAuthenticate.email) {
-            if (user.password == userToAuthenticate.password) {
+            console.log(user.password)
+            console.log(userToAuthenticate.password)
+            if (bcrypt.compare(user.password, userToAuthenticate.password)) {
                 return user;
             }
         }

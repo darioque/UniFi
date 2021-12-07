@@ -1,5 +1,6 @@
 const assetService = require("../services/assets");
 const userService = require("../services/users");
+const bcrypt = require('bcryptjs')
 const { validationResult } = require("express-validator");
 
 const mainController = {
@@ -21,11 +22,13 @@ const mainController = {
         });
     },
     store: (req, res) => {
-        // guardamos los errores en una variable
+        // guardamos los datos del formulario en una variable newUser
         const newUser = {
-            id: 11,
-            ...req.body
+            id: 11,            
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 10),
         };
+        // guardamos los errores en una variable
         const errors = validationResult(req);
         // si hubo errores (la variable NO está vacía) mandarle los mensajes a la vista del formulario
         if (!errors.isEmpty()) {
@@ -41,7 +44,10 @@ const mainController = {
     },
     // función para procesar autenticacion de usuarios
     processLogin: function (req, res) {
-        const userToAuthenticate = req.body;
+        const userToAuthenticate = {
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 10),
+        };
         const errors = validationResult(req);
         // si hubo errores (la variable NO está vacía) mandarle los mensajes a la vista del formulario
         if (!errors.isEmpty()) {
