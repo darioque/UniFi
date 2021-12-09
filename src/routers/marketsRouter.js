@@ -5,7 +5,7 @@ const authMiddleware = require("../middlewares/authMiddleware");
 
 router.get("/", marketsController.markets);
 router.get("/:marketType", marketsController.list);
-router.get("/:marketType/create", marketsController.create);
+router.get("/:marketType/create", authMiddleware, marketsController.create);
 router.post("/", authMiddleware, marketsController.store);
 router.get("/:marketType/:asset/", marketsController.detail);
 router.post("/:marketType/search", marketsController.search);

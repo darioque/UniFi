@@ -11,10 +11,10 @@ const mainController = {
         });
     },
     login: function (req, res) {
-        res.render("users/login", {
+          res.render("users/login", {
             pageTitle: "Log in",
             old: req.session.rememberMe,
-        });
+          });
     },
     register: function (req, res) {
         res.render("users/register", {
@@ -74,7 +74,12 @@ const mainController = {
         if (req.body.remember) {
             res.cookie("rememberMe", user.id, { maxAge: 60000 });
         }
-        res.redirect("/");
+        // si hay una url a redireccionar, llevarlo ahi al loguearse
+        if (req.session.redirectUrl) {
+            res.redirect(req.session.redirectUrl)
+        } else {
+            res.redirect("/");
+        }
     },
     // funcion para cerrar sesión
     logout: function (req, res) {
