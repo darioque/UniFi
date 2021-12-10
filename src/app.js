@@ -19,7 +19,7 @@ app.set("views", path.join(__dirname, "/views"));
 
 // ejecutamos el servidor
 app.listen(process.env.PORT || 3000, () => {
-    console.log("El servidor se está ejecutando en el puerto 3000");
+  console.log("El servidor se está ejecutando en el puerto 3000");
 });
 
 // middlewares
@@ -30,13 +30,14 @@ app.use(methodOverride("_method"));
 // loguea los ingresos a cada pagina
 app.use(logMiddleware);
 
-
-app.use(session({ 
+app.use(
+  session({
     secret: "UniFi",
     resave: false,
     saveUninitialized: false,
-}));
-app.use(userLoggedMiddleware)
+  })
+);
+app.use(userLoggedMiddleware);
 app.use(cookieParser());
 
 // rutas
@@ -45,5 +46,5 @@ app.use("/markets", marketsRouter);
 
 // pagina para renderizar cuando se intenta entrar a una ruta inexistente
 app.use((req, res, next) => {
-    res.status(404).render("not-found");
+  res.status(404).render("not-found");
 });

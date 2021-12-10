@@ -33,7 +33,7 @@
         <h1 class="text-center">Edit Product</h1>
         <form
           action="/markets/<%= asset.type %>/<%= asset.id %>?_method=PUT"
-          method="POST"
+          method="POST" enctype='multipart/form-data'
         >
           <div class="form">
             <input

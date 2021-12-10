@@ -58,7 +58,7 @@
                     <div class="converter">
                         <form action="/markets/cryptocurrencies/<%= asset.name %>/trade-confirmation" method="POST"></form>
                             <div class="currency first-currency">
-                                <img class="currency-logo" src="<%= asset.logo ? asset.logo : '/img/lucas.jpg' %>" alt="<%= asset.ticker %> logo">
+                                <img class="currency-logo" src="<%= asset.logo%>" alt="<%= asset.ticker %> logo">
                                 <p class="currency-title">
                                     <%= asset.ticker %>
                                 </p>
