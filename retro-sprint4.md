@@ -1,9 +1,15 @@
 ### Comenzar a hacer
 
+- Testear el código minuciosamente antes de subir al respositorio.
+
 ### Hacer más
+
+- Utilizar el Trello de manera más frecuente.
 
 ### Continuar haciendo
 
+- Apartar tiempo suficiente para poder completar los sprints.
+- Mantenernos al dia con respecto a los contenidos para poder aportar y entender.
 - Comentar el código para poder entendernos más fácilmente.
 - Explayar nuestras ideas sin miedo a que sean rechazadas.
 - Pre-establecer dias, topicos y organizacion de las weeklies para no perder tiempo.
@@ -14,3 +20,5 @@
 ### Hacer menos
 
 ### Dejar de hacer
+
+- No abusar de la inspiración de sitios claves del rubro para poder ser más originales.

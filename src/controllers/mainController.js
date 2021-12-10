@@ -74,6 +74,7 @@ const mainController = {
         if (req.body.remember) {
             res.cookie("rememberMe", user.id, { maxAge: 60000 });
         }
+        
         // si hay una url a redireccionar, llevarlo ahi al loguearse
         if (req.session.redirectUrl) {
             res.redirect(req.session.redirectUrl)

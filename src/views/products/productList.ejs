@@ -48,7 +48,7 @@
                         <i class="fas fa-search search-icon"></i>
                     </button>
                 </form>
-                    <% if (locals && locals.user) { %>
+                    <% if (locals && locals.authenticatedUser) { %>
                         <a href="/markets/<%= marketType %>/create"><button type="button">Crear Producto</button></a>
                     <% } %>                
                 <ol class="list">

@@ -54,6 +54,7 @@ function findUserByPk(userID) {
     const user = userList.find((user) => user.id === userID);
     return user;
 }
+
 // funcion para autenticar un usuario especifico y devolverlo
 function authenticate(userData) {
     const userList = this.getUsers();

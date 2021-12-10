@@ -22,6 +22,10 @@ header img {
   height: 120px;
 }
 
+.errors {
+  color: red
+}
+
 .card {
   width: 370px;
   height: 950px;
