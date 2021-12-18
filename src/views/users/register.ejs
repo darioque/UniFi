@@ -2,33 +2,58 @@
 <html lang="en">
   <head>
     <%- include('../partials/head') %>
-      <link rel="stylesheet" href="/css/styles-register.css" />
+    <link rel="stylesheet" href="/css/styles-login.css" />
   </head>
-    <body>
-        <div class="container">
-            <div class="card">
-                <div class="inner-box">
-                    <header class="main-header">
-                        <%- include('../partials/header') %>
-                    </header>
-                      <!-- Si se enviaron mensajes de error a la vista de registro, mostrarlos -->
-                        <% if (locals && locals.errorMessages) { %>
-                          <% for(let error in errorMessages) { %>
-                            <p class="errors"><%= errorMessages[error].msg %> </p>
-                          <% } %>
-                        <% } %>
-                        <form method="POST" action="/register" enctype="multipart/form-data">
-                          <!-- Si existe la variable old (es decir el usuario se intentó registrar y la validación lo rechazó)
-                          colocarlo como valor por defecto del input para que quede disponible para editar -->
-                            <input type="email" name="email" class="input-box" placeholder="Email" value="<%= locals.old && old.email ? old.email : '' %>" required>
-                            <input type="password" name="password" class="input-box" placeholder="Password" value="<%= locals.old && old.password ? old.password : '' %>" required>
-                            <input type="file" name="avatar" class="input-box" placeholder="Avatar" value="<%= locals.old && old.avatar ? old.avatar : '' %>" required>
-                            <button type="submit" class="login-btm">Register</button>
-                            <div><span><input type="checkbox">Remember Me</span></div>
-                            <button><img class="image-article" src="/img/37784886.jpg" alt="Wallet"/>Wallet Connect</button>
-                        </form>
-                        <div><a class="account" href="/login">Already have an account? login</a></div>
-  </body>
-<footer>
-    <%- include('../partials/footer') %>
-</footer>
+<body class="bg-dark-gray">
+    <header>
+        <nav class="header-navbar">
+            <div class="logo">
+                <a href="/"><img class="header-img" src="/img/logo.svg" alt="Logo de UniFi" /></a>
+            </div>
+        </nav>
+    </header>
+    <main class="main-container color-white">
+        <div class="main-text">
+            <h1>Create your UniFi account</h1>
+            <p>Register with an email and password or just use your wallet</p>
+        </div>
+        <div class="login-form-container">
+            <!-- Si se enviaron mensajes de error a la vista de registro, mostrarlos -->
+            <% if (locals && locals.errorMessages) { %> 
+                <% for(let error in errorMessages) { %>
+                <p class="errors"><%= errorMessages[error].msg %> </p>
+                <% } %> 
+            <% } %> 
+            <form class="login-form" method="POST" action="/register" enctype="multipart/form-data">
+            <!-- Si existe la variable old (es decir el usuario se intentó registrar y la validación lo rechazó)
+            colocarlo como valor por defecto del input para que quede disponible para editar -->
+                <label for="email">Email</label>
+                <div class="input-box">
+                    <input type="email" name="email" value="<%= locals.old && old.email ? old.email : '' %>" required>
+                </div>
+                <label for="password">Password</label>
+                <div class="input-box">
+                    <input  type="password" name="password"  value="<%= locals.old && old.password ? old.password : '' %>" required>
+                </div>
+                <label for="avatar">Profile picture</label>
+                <div>
+                    <input type="file" name="avatar" required>
+                </div>
+                <button type="submit" alt="Register button">Register</button>
+                <div class="other-links">
+                    <a class="no-link" href="/login">Already have an account? Login</a>
+                </div>
+            </form>
+            <div class="wallet-login">
+                <form action="/register" method="POST">
+                    <img src="/img/metamask.svg" alt="Metamask Logo">
+                    <button type="submit" alt="Login with wallet">Register with my wallet</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="copyright color-white text-center">©Todos los derechos reservados a UniFi</p>
+    </footer>
+</body>
+</html>

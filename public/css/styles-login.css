@@ -48,6 +48,11 @@ input {
     height: 100%;
 }
 
+.checkbox {
+    height: auto;
+    width: auto;
+}
+
 button {
     margin-top: 24px;
     background: #fff;
@@ -78,6 +83,10 @@ button:hover {
 .other-links a {
     margin-top: 8px;
     cursor: pointer;
+}
+
+.other-links a:hover {
+    text-decoration: underline;
 }
 
 .wallet-login {
