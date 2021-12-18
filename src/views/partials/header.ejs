@@ -15,10 +15,18 @@
             <div class="universal-options">
                 <a class="no-link" href="/wallet"><i class="fas fa-wallet"></i>Wallet</a>
                 <% if (locals && locals.authenticatedUser) { %>
-                    <!-- Hacer dropdown menu con opcion de logout -->
-                    <a class="no-link"><i class="fas fa-user-alt"></i><%= locals.authenticatedUser.email? locals.authenticatedUser.email: locals.authenticatedUser.address %></a>
+                    <div class="dropdown">
+                        <div class="user">
+                            <img class="avatar" src="<%= authenticatedUser.avatar %>" alt="User Avatar">
+                            <a class="no-link drop-btn"><%= locals.authenticatedUser.email? locals.authenticatedUser.email.substring(0,8) + "...": locals.authenticatedUser.address.substring(0,8) + "..." %></a>
+                        </div>
+                        <div class="dropdown-content">
+                            <a href="/users/<%= authenticatedUser.id %> ">Profile</a>
+                            <a href="/logout">Log out</a>
+                        </div>
+                    </div>
                 <% } else { %>
-                    <a class="no-link" href="/login"><i class="fas fa-user-alt"></i>Login</a>
+                    <a class="no-link drop-btn" href="/login"><i class="fas fa-user-alt"></i>Login</a>
                 <% } %>
             </div>
         </div>

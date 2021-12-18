@@ -12,7 +12,8 @@
   {
     "id": 11,
     "email": "zorktextgame@gmail.com",
-    "password": "$2a$10$fhfLLPfqettAMtd9PGl2Su.jHiXCZ1eEgemvHt9N91zjYfbdNsF4i"
+    "password": "$2a$10$fhfLLPfqettAMtd9PGl2Su.jHiXCZ1eEgemvHt9N91zjYfbdNsF4i",
+    "avatar": "/img/users/11.jpg"
   },
   {
     "id": 12,
