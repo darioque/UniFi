@@ -131,6 +131,10 @@ h6 {
     font-size: 18px;
 }
 
+.errors {
+  color: red
+}
+
 /* Estilos generales de footer */
 .footer-nav-bar {
     display: flex;
