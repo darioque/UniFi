@@ -1,17 +1,17 @@
 const express = require("express");
 const router = express.Router();
-
 const path = require("path");
 const multer = require("multer");
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "../public/img/avatars");
+    cb(null, "./public/img/users");
   },
   filename: (req, file, cb) => {
-    let fileName = `${Date.now()}_img${path.extname(file.originalname)}`;
+    let fileName = `${Date.now()}_avatar${path.extname(file.originalname)}`;
     cb(null, fileName);
   },
 });
+
 const uploadFile = multer({ storage });
 
 const { body } = require("express-validator");
@@ -35,20 +35,6 @@ const registerValidations = [
     .bail()
     .isLength({ min: 6, max: 15 })
     .withMessage("Invalid Password (minimum length is 6 and max length is 15"),
-  body("avatar").custom((value, { req }) => {
-    let file = req.file;
-    let acceptedExtensions = [".jpg", ".png"];
-    if (!file) {
-      throw new Error("You need to upload an image");
-    } else {
-      let fileExtension = path.extname(file.originalname); //no sé por que no me está tomando el file.originalname!
-      if (!acceptedExtensions.includes(fileExtension)) {
-        throw new Error(
-          `The accepted extensions are ${acceptedExtensions.join(", ")}`
-        );
-      }
-    }
-  }),
 ];
 
 const loginValidations = [
@@ -65,7 +51,7 @@ router.get(
 );
 router.get("/register", guestMiddleware, mainController.register);
 router.get("/logout", mainController.logout);
-// con middleware de ruta
+
 router.post(
   "/register",
   uploadFile.single("avatar"),

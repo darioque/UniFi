@@ -29,11 +29,11 @@ const mainController = {
       return res.render("users/register", {
         pageTitle: "Register",
         old: req.body,
-        file: req.file, //no sé si agregarlo dentro del old para que lo traiga también si falla algo.
         errorMessages: errors.mapped(),
       });
     }
-
+    // añade el file al req.body para tenerlo todo en un objeto
+    req.body.file = req.file
     // si no hubo errores en el formulario, intentar agregar el usuario a la base de datos
     // si el email utilizado ya existia en la base de datos, retornar el sitio de registro con mensaje de error
     // si no hay errores, redireccionar a login

@@ -17,13 +17,13 @@
             <h1>Create your UniFi account</h1>
             <p>Register with an email and password or just use your wallet</p>
         </div>
-        <div class="login-form-container">
-            <!-- Si se enviaron mensajes de error a la vista de registro, mostrarlos -->
-            <% if (locals && locals.errorMessages) { %> 
-                <% for(let error in errorMessages) { %>
-                <p class="errors"><%= errorMessages[error].msg %> </p>
-                <% } %> 
+        <!-- Si se enviaron mensajes de error a la vista de registro, mostrarlos -->
+        <% if (locals && locals.errorMessages) { %> 
+            <% for(let error in errorMessages) { %>
+            <p class="errors"><%= errorMessages[error].msg %> </p>
             <% } %> 
+        <% } %> 
+        <div class="login-form-container">
             <form class="login-form" method="POST" action="/register" enctype="multipart/form-data">
             <!-- Si existe la variable old (es decir el usuario se intentó registrar y la validación lo rechazó)
             colocarlo como valor por defecto del input para que quede disponible para editar -->

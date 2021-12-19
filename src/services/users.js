@@ -31,6 +31,7 @@ function addUser(userData) {
         id: newUserId,
         email: userData.email,
         password: bcrypt.hashSync(userData.password, 10),
+        avatar: '/img/users/' + userData.file.filename,
     };
     userList.push(newUser);
 
