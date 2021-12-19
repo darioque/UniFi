@@ -26,7 +26,7 @@
             </li>
         </ul>
         <h1 class="text-center">Create New Product</h1>
-        <form action="/markets" method=POST>
+        <form action="/markets" method="POST" enctype="multipart/form-data">
             <div class="form">
                 <input type="text" name="name" placeholder="Name" class="input">
                 <select name="type" id="type" class="select" >
@@ -38,7 +38,7 @@
                 <input type="text" name="price" placeholder="Price" class="input">
                 <input type="number" step="0.01" name="change" placeholder="Change" class="input">
                 <div class="input-file">
-                    <input type="file" name="logo" id="" class="input-file-button">
+                    <input type="file" name="logo" id="logo" class="input-file-button">
                 </div>
                 <input type="text" name="mcap" placeholder="Market Cap" class="input">
                 <input type="submit" value="Load product" class="load-product">

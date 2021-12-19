@@ -1869,3 +1869,11 @@ Se ingreso en la pagina /register
 Se ingreso en la pagina /login
 Se ingreso en la pagina /login
 Se ingreso en la pagina /
+Se ingreso en la pagina /logout
+Se ingreso en la pagina /
+Se ingreso en la pagina /
+Se ingreso en la pagina /login
+Se ingreso en la pagina /login
+Se ingreso en la pagina /
+Se ingreso en la pagina /markets/stocks
+Se ingreso en la pagina /markets/stocks

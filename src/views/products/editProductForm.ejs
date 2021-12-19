@@ -52,8 +52,8 @@
             />
             <select name="type" id="type" class="select">
               <option value=""></option>
-              <option value="cryptocurrencies">cryptocurrencies</option>
-              <option value="stocks">stocks</option>
+              <option value="cryptocurrencies" <%= asset.type == 'cryptocurrencies'? selected: null %> >cryptocurrencies</option>
+              <option value="stocks" <%= asset.type == 'stocks'? selected: null %>>stocks</option>
             </select>
             <input
               type="text"

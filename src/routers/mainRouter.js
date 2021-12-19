@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const path = require("path");
 const multer = require("multer");
+// implementando multer para fotos de perfil
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "./public/img/users");
@@ -54,9 +55,9 @@ router.get("/logout", mainController.logout);
 
 router.post(
   "/register",
+  registerValidations,
   uploadFile.single("avatar"),
   logDBMiddleware,
-  registerValidations,
   mainController.processRegister
 );
 router.post(
