@@ -10,6 +10,7 @@ function getUsers() {
     return usersList;
 }
 
+// funcion que genera el ID a utilizar a partir del ultimo de la lista
 function generateId() {
     const userList = this.getUsers();
     const lastUser = userList[userList.length - 1];
@@ -26,12 +27,13 @@ function addUser(userData) {
     if (userList.find((user) => user.email == userData.email)) {
         return false;
     }
+    // devuelve el id a utilizar
     const newUserId = this.generateId();
     const newUser = {
         id: newUserId,
         email: userData.email,
         password: bcrypt.hashSync(userData.password, 10),
-        avatar: '/img/users/' + userData.file.filename,
+        avatar: userData.avatar,
     };
     userList.push(newUser);
 

@@ -22,30 +22,30 @@ const mainController = {
     });
   },
   processRegister: (req, res) => {
-    // guardamos los errores en una variable
-    const errors = validationResult(req);
-    // si hubo errores (la variable NO está vacía) mandarle los mensajes a la vista del formulario
-    if (!errors.isEmpty()) {
-      return res.render("users/register", {
-        pageTitle: "Register",
-        old: req.body,
-        errorMessages: errors.mapped(),
-      });
-    }
-    // añade el file al req.body para tenerlo todo en un objeto
-    req.body.file = req.file
-    // si no hubo errores en el formulario, intentar agregar el usuario a la base de datos
-    // si el email utilizado ya existia en la base de datos, retornar el sitio de registro con mensaje de error
-    // si no hay errores, redireccionar a login
-    if (!userService.addUser(req.body)) {
-      return res.render("users/register", {
-        pageTitle: "Register",
-        old: req.body,
-        errorMessages: [{ msg: "Email already registered" }],
-      });
-    } else {
-      res.redirect("/login");
-    }
+      // guardamos los errores en una variable
+      const errors = validationResult(req);
+      // si hubo errores (la variable NO está vacía) mandarle los mensajes a la vista del formulario
+      if (!errors.isEmpty()) {
+          return res.render("users/register", {
+              pageTitle: "Register",
+              old: req.body,
+              errorMessages: errors.mapped(),
+          });
+      }
+      // añade el path de la foto de perfil a una propiedad avatar del body para tenerlo todo en un objeto
+      req.body.avatar = "/img/users/" + req.file.filename;
+      // si no hubo errores en el formulario, intentar agregar el usuario a la base de datos
+      if (!userService.addUser(req.body)) {
+          // si el email utilizado ya existia en la base de datos, retornar el sitio de registro con mensaje de error
+          return res.render("users/register", {
+              pageTitle: "Register",
+              old: req.body,
+              errorMessages: [{ msg: "Email already registered" }],
+          });
+          // si no hay errores, redireccionar a login
+      } else {
+          res.redirect("/login");
+      }
   },
   // función para procesar autenticacion de usuarios
   processLogin: function (req, res) {

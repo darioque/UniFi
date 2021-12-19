@@ -112,6 +112,7 @@ h6 {
     display: none;
     width: 70%;
 }
+
 .header-img {
     width: 145px;
     height: 75px;
@@ -148,7 +149,7 @@ h6 {
     margin-right: 4px;
 }
 
-/* Dropdown Button */
+/* boton de dropwdown */
 .dropbtn {
   background-color: #04AA6D;
   color: white;
@@ -157,13 +158,13 @@ h6 {
   border: none;
 }
 
-/* The container <div> - needed to position the dropdown content */
+/* contenedor div necesario para posicionar el contenido del dropdown */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
+/* contenido del dropdown (escondido por defecto) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -173,21 +174,61 @@ h6 {
   z-index: 1;
 }
 
-/* Links inside the dropdown */
+/* links dentro del dropdown */
 .dropdown-content a {
   color: white;
   padding: 12px 16px;
   text-decoration: none;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: rgba(46, 49, 59, 0.5);}
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+/* estilos del menu de navegacion hamburguesa */
+.burguerMenu {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    z-index: 2;
+    background-color: #272b3a;
+    height: 100vh;
+    width: 95vw;
+}
+/* esconde los links dentro del menu hamburguesa */
+.burguerMenu .myLinks {
+    display: none;
+    background-color: #272b3a;
+}
+
+/* estilo de links del menu hamburguesa */
+.burguerMenu a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.burguerMenu a i {
+    display: none;
+}
+
+/* estilos de links del menu hamburguesa en hover */
+.burguerMenu a:hover {
+    background-color: rgba(46, 49, 59, 0.5);
+    color: #70b429;
+}
+
+/* estilos para links "activos" */
+.active {
+    background-color: #04aa6d;
+    color: white;
+}
 
 
 /* Estilos generales de footer */
@@ -224,6 +265,12 @@ h6 {
 }
 
 @media (min-width: 768px) {
+    .icon {
+        display: none;
+    }
+    .burguerMenu {
+        display: none;
+    }
     .header-options {
         display: block;
     }
