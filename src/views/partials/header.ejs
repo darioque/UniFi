@@ -24,7 +24,7 @@
                         src="<%= authenticatedUser.avatar %>"
                         alt="User Avatar"
                     />
-                    <a class="no-link drop-btn"
+                    <a class="no-link drop-btn" style="padding: 0px;"
                         ><%= locals.authenticatedUser.email?
                         locals.authenticatedUser.email:
                         locals.authenticatedUser.address.substring(0, 5) + "..."

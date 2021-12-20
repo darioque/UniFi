@@ -143,10 +143,11 @@ h6 {
 }
 
 .avatar {
-    width: 32px;
+    width: auto;
     height: 32px;
     border-radius: 50%;
     margin-right: 4px;
+    padding-left: 12px;
 }
 
 /* boton de dropwdown */
@@ -158,6 +159,7 @@ h6 {
   border: none;
   overflow: hidden;
 }
+
 
 /* contenedor div necesario para posicionar el contenido del dropdown */
 .dropdown {
