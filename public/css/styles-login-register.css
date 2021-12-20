@@ -115,7 +115,7 @@ button:hover {
         flex-direction: column;
     }
     #address {
-    display: none;
+        display: none;
     }
     #loginButton {
         display: none;
