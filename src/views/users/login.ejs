@@ -43,9 +43,10 @@
                 </div>
             </form>
             <div class="wallet-login">
-                <form action="/login" method="POST">
+                <form action="/loginP" method="POST">
                     <img src="/img/metamask.svg" alt="Metamask Logo">
-                    <button type="submit" alt="Login with wallet">Log in with my wallet</button>
+                    <input type="text" name="address" id="address" class="address">
+                    <button type="submit" id="metamaskButton" alt="Login with wallet">Log in with my wallet</button>
                 </form>
             </div>
         </div>
@@ -53,5 +54,6 @@
     <footer>
         <p class="copyright color-white text-center">©Todos los derechos reservados a UniFi</p>
     </footer>
+    <%- include ('../partials/metamaskLogin') %> 
 </body>
 </html>

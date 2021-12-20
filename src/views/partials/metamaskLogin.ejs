@@ -1,0 +1,23 @@
+<script>
+    const metamaskButton = document.getElementById("metamaskButton");
+    const address = document.getElementById('address');
+
+    function toggleButton() {
+        if (!window.ethereum) {
+            metamaskButton.innerText = "Metamask is not installed";
+            return false;
+        }
+        metamaskButton.addEventListener("click", loginWithMetamask);
+    }
+
+    async function loginWithMetamask() {
+        const accounts = await window.ethereum.request({
+            method: "eth_requestAccounts",
+        });
+        address.innerText = accounts[0];
+    }
+
+    window.addEventListener("DOMContentLoaded", (event) => {
+        toggleButton();
+    });
+</script>

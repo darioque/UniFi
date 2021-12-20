@@ -30,29 +30,33 @@
         </ul>
         <h1 class="text-center">Edit Profile</h1>
         <form action="/users/profile/edit?_method=PUT" method="POST" enctype='multipart/form-data'>
-          <div class="form">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              class="input"
-              value="<%= user.email %>"
-              required
-            />
-            <label for="password">Password</label>
-            <input
-              type="password"
-              name="password"
-              class="input"
-              required
-            />
-            <div class="input-file">
-              <input type="file" name="avatar" id="avatar" class="input-file-button" />
+            <% if (user.address) { %>
+                <input type="text" value="<%= user.address %> " readonly>
+            <% } else { %>
+            <div class="form">
+                <label for="email">Email</label>
+                <input
+                type="email"
+                name="email"
+                class="input"
+                value="<%= user.email %>"
+                required
+                />
+                <label for="password">Password</label>
+                <input
+                type="password"
+                name="password"
+                class="input"
+                required
+                />
+                <% } %> 
+                <div class="input-file">
+                    <input type="file" name="avatar" id="avatar" class="input-file-button" required />
+                </div>
+                <input type="submit" value="Edit Profile" class="load-product" />
             </div>
-            <input type="submit" value="Edit Profile" class="load-product" />
-          </div>
+        </form>
     </main>
-    </form>
 
     <footer class="footer"><%- include('../partials/footer') %></footer>
   </body>

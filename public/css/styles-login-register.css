@@ -98,6 +98,10 @@ button:hover {
     margin-top: 43px;
 }
 
+.address {
+    display: none;
+}
+
 
 @media (min-width: 768px) {
     .login-form {
