@@ -230,6 +230,12 @@ h6 {
     color: white;
 }
 
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
 
 /* estilos generales de main */
 .main-container {
@@ -239,6 +245,10 @@ h6 {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+}
+
+footer {
+    margin-top: auto;
 }
 
 /* estilos generales de footer */

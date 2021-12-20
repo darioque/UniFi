@@ -93,9 +93,6 @@ html {
 
 /* MEDIA QUERY DE PANTALLAS DESDE A 768PX */
 @media (min-width: 768px) {
-    .index-navbar {
-        display: block;
-    }
     .icon-login {
         padding-right: 5px;
     }
@@ -158,4 +155,7 @@ html {
 
 /* MEDIA QUERY DE PANTALLAS DESDE 1200PX */
 @media (min-width: 1200px) {
+    .index-navbar {
+        display: block;
+    }
 }
