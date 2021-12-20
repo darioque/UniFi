@@ -28,5 +28,10 @@
         "email": "pablo@digitalhouse.com",
         "password": "$2a$10$Tub.tF0r9iyEGmQe/yKbv.mAyNW6MfyxHQTBItTcOAws7GNAfBThm",
         "avatar": "/img/users/1639975116106_avatar.png"
+    },
+    {
+        "id": 6,
+        "address": "0x89baf7a6516be419bac84ae10e7857bc33b25f8a",
+        "avatar": "/img/users/default_avatar.png"
     }
 ]

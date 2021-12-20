@@ -21,6 +21,7 @@ const uploadFile = multer({ storage });
 router.get("/", authMiddleware, usersController.list);
 router.get("/profile", authMiddleware, usersController.profile);
 router.get("/profile/edit/", authMiddleware, usersController.edit);
+router.get('/:id/profile', authMiddleware, usersController.profile)
 router.put("/profile/edit/", authMiddleware, uploadFile.single('avatar'), usersController.update)
 
 module.exports = router;

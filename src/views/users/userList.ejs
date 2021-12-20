@@ -38,7 +38,7 @@
                         </p>
                     </div>
                     <% for (let user of userList) { %>
-                        <a class="no-link" href="/users/<%= user.id%>">
+                        <a class="no-link" href="/users/<%= user.id%>/profile">
                             <li class="no-list">
                                 <div class="list-items">
                                     <div class="name">
@@ -48,7 +48,7 @@
                                         <%= user.id %>
                                     </p>
                                     <p class="mcap">
-                                        <%= user.email || user.address %>
+                                        <%= user.email || user.address.substring(0, 5) + "..." +  user.address.substring(38, 42) %>
                                     </p>
                                 </div>
                             </li>

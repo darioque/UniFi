@@ -286,6 +286,20 @@ footer {
 }
 
 @media (min-width: 768px) {
+    .fa-wallet {
+        display: flex;
+        align-items: center;
+    }
+    .universal-options {
+        display: flex;
+        align-items: center;
+    }
+    .header-options .universal-options a {
+        display: block;
+    }
+}
+
+@media (min-width: 1200px) {
     .icon {
         display: none;
     }
@@ -293,13 +307,6 @@ footer {
         display: none;
     }
     .header-options {
-        display: block;
-    }
-    .universal-options {
-        display: flex;
-        align-items: center;
-    }
-    .header-options .universal-options a {
         display: block;
     }
 }

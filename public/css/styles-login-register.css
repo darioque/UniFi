@@ -98,9 +98,6 @@ button:hover {
     margin-top: 43px;
 }
 
-.address {
-    display: none;
-}
 
 
 @media (min-width: 768px) {
@@ -116,13 +113,15 @@ button:hover {
     .wallet-login {
         display: flex;
         flex-direction: column;
-        margin-left: 86px;
+    }
+    #address {
+    display: none;
+    }
+    #loginButton {
+        display: none;
     }
 }
 
 /* MEDIA QUERY DE PANTALLAS DESDE 1200PX */
 @media (min-width: 1200px) {
-    .login-form-container {
-        max-width: 1400px;
-    }
 }

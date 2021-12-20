@@ -17,7 +17,7 @@
             <h1>Log into your UniFi account</h1>
             <p>Hi there, welcome back! Log in with your email and password or just use your wallet</p>
         </div>
-        <!-- Si se enviaron mensajes de error a la vista de registro, mostrarlos -->
+        <!-- Si se enviaron mensajes de error a la vista de login, mostrarlos -->
         <% if (locals && locals.errorMessages) { %> 
             <% for(let error in errorMessages) { %>
             <p class="errors"><%= errorMessages[error].msg %> </p>
@@ -43,10 +43,11 @@
                 </div>
             </form>
             <div class="wallet-login">
+                <img src="/img/metamask.svg" alt="Metamask Logo">
+                <button type="submit" id="metamaskButton" alt="Connect Metamask Wallet Button">Connect Wallet</button>
                 <form action="/login" method="POST">
-                    <img src="/img/metamask.svg" alt="Metamask Logo">
-                    <input type="text" name="address" id="address" class="address">
-                    <button type="submit" id="metamaskButton" alt="Login with wallet">Log in with my wallet</button>
+                    <input type="text" name="address" id="address" class="input-box" readonly><span id="addressText" class="text-center"></span>
+                    <button type="submit" id="loginButton">Log in With My Wallet</button>   
                 </form>
             </div>
         </div>

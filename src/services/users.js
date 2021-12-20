@@ -21,22 +21,39 @@ function generateId() {
 }
 
 function addUser(userData) {
-    // agrega el nuevo usuario a la lista
+    // guarda la lista completa de usuarios en una variable
     const userList = this.getUsers();
-    // chequear que no exista el email en la base de datos
-    if (userList.find((user) => user.email == userData.email)) {
+    let newUser = {};
+    // chequear que no exista el email/address en la base de datos
+    if (
+        userList.find(
+            (user) =>
+                user.email == userData.email || user.address == userData.address
+        )
+    ) {
         return false;
     }
     // devuelve el id a utilizar
     const newUserId = this.generateId();
-    const newUser = {
-        id: newUserId,
-        email: userData.email,
-        password: bcrypt.hashSync(userData.password, 10),
-        avatar: userData.avatar,
-    };
-    userList.push(newUser);
 
+    // si no es registro con wallet guardar al usuario de esta manera
+    if (!userData.address) {
+        newUser = {
+            id: newUserId,
+            email: userData.email,
+            password: bcrypt.hashSync(userData.password, 10),
+            avatar: userData.avatar,
+        };
+        // si es con wallet guardarlo de esta otra manera
+    } else {
+        newUser = {
+            id: newUserId,
+            address: userData.address,
+            avatar: "/img/users/default_avatar.png",
+        };
+    }
+    // agrega el nuevo usuario a la lista
+    userList.push(newUser);
     // transforma la lista en formato JSON
     const updatedJSON = JSON.stringify(userList, null, 4);
     // escribe el array actualizado al JSON
@@ -61,11 +78,7 @@ function findUserByPk(userID) {
 // funcion para autenticar un usuario especifico y devolverlo
 function authenticate(userData) {
     const userList = this.getUsers();
-    const user = userList.find(
-        (user) =>
-            user.email === userData.email &&
-            bcrypt.compareSync(userData.password, user.password)
-    );
+    const user = userList.find((user) => (user.address == userData.address) || (user.email === userData.email && bcrypt.compareSync(userData.password, user.password)));
     return user;
 }
 

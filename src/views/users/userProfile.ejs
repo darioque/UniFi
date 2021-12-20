@@ -28,9 +28,16 @@
         </ul>
         <section>
             <h1>User Profile</h1>
-            <h2>Welcome <%= user.email || user.address %>! </h2>
+            <% if (locals.authenticatedUser == user) { %>
+                <h2>Welcome <%= user.email || user.address %>!</h2>
+            <% } else { %>
+                <h2><%= user.email || user.address %>'s Profile</h2>
+            <% } %> 
             <img src="<%= user.avatar %> " alt="" class="avatar">
-            <a class="no-link" href="/users/profile/edit"><button>Edit my profile</button></a>
+            <% if (locals.authenticatedUser == user) { %>
+                <a class="no-link" href="/users/profile/edit"><button>Edit my profile</button></a>
+             
+            <% } %>
         </section>
     </main>
     <footer class="footer bg-dark-gray">

@@ -8,9 +8,13 @@ const usersController = {
             userList: userService.getUsers(),
         });
     },
-    // funcion controladora para renderizar el perfil de usuario
+    // funcion controladora para renderizar perfiles de usuario
     profile: function (req, res) {
-        const user = req.session.authenticatedUser;
+        userId = req.params.id;
+        const user =
+            userId != req.session.authenticatedUser.id && userId != undefined
+                ? userService.findUserByPk(userId)
+                : req.session.authenticatedUser;
         res.render("users/userProfile", {
             pageTitle: "Unifi - User Profile",
             user,
