@@ -85,12 +85,21 @@ function authenticate(userData) {
 function updateUser(userData) {
     const userList = this.getUsers();
     userIndex = userList.findIndex((user) => user.id == userData.id);
-    userList[userIndex] = {
-        id: userData.id,
-        email: userData.email,
-        password: bcrypt.hashSync(userData.password, 10),
-        avatar: userData.avatar,
-    };
+    if (!userData.address) {
+        userList[userIndex] = {
+            id: userData.id,
+            email: userData.email,
+            password: bcrypt.hashSync(userData.password, 10),
+            avatar: userData.avatar,
+        };
+    } else {
+        userList[userIndex] = {
+            id: userData.id,
+            address: userData.address,
+            avatar: userData.avatar,
+        };
+    }
+
     const updatedJSON = JSON.stringify(userList, null, 4);
     fs.writeFileSync(usersFilePath, updatedJSON, "utf-8");
 }

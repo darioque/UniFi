@@ -55,7 +55,6 @@ const mainController = {
     // función para procesar autenticacion de usuarios
     processLogin: function (req, res) {
         const errors = validationResult(req);
-        let user = {}
         // si hubo errores (la variable NO está vacía) mandarle los mensajes a la vista del formulario
         if (!errors.isEmpty()) {
             return res.render("users/login", {
@@ -65,12 +64,8 @@ const mainController = {
             });
         }
 
-        // chequear si es login normal o con wallet, autenticar datos de login y guardar al usuario resultante en una variable
-        if (req.body.address) {
-            user = userService.authenticate(req.body);
-        } else {
-            user = userService.authenticate(req.body);
-        }
+        // autenticar datos de login y guardar al usuario resultante en una variable
+        const user = userService.authenticate(req.body);
 
         // si no se encontró ningun usuario que coincida (credenciales invalidas), devolver el sitio de login con mensaje de error
         if (!user) {

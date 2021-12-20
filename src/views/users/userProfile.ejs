@@ -29,9 +29,9 @@
         <section>
             <h1>User Profile</h1>
             <% if (locals.authenticatedUser == user) { %>
-                <h2>Welcome <%= user.email || user.address %>!</h2>
+                <h2>Welcome <%= user.email || user.address.substring(0, 5) + "..." + user.address.substring(38, 42) %>!</h2>
             <% } else { %>
-                <h2><%= user.email || user.address %>'s Profile</h2>
+                <h2><%= user.email || user.address.substring(0, 5) + "..." + user.address.substring(38, 42) %>'s Profile</h2>
             <% } %> 
             <img src="<%= user.avatar %> " alt="" class="avatar">
             <% if (locals.authenticatedUser == user) { %>
