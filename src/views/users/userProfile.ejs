@@ -30,7 +30,7 @@
             <h1>User Profile</h1>
             <h2>Welcome <%= user.email || user.address %>! </h2>
             <img src="<%= user.avatar %> " alt="" class="avatar">
-            <button>Edit my profile</button>
+            <a class="no-link" href="/users/profile/edit"><button>Edit my profile</button></a>
         </section>
     </main>
     <footer class="footer bg-dark-gray">

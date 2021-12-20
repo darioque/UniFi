@@ -1,10 +1,26 @@
 const express = require("express");
 const router = express.Router();
+const multer = require('multer')
+const path = require('path')
 const usersController = require("../controllers/usersController");
 const authMiddleware = require("../middlewares/authMiddleware");
 
+// implementando multer para fotos de perfil
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, "./public/img/users");
+    },
+    filename: (req, file, cb) => {
+        let fileName = `${Date.now()}_avatar${path.extname(file.originalname)}`;
+        cb(null, fileName);
+    },
+});
+
+const uploadFile = multer({ storage });
+
 router.get("/", authMiddleware, usersController.list);
 router.get("/profile", authMiddleware, usersController.profile);
-router.get("/edit/:id", authMiddleware, usersController.edit);
+router.get("/profile/edit/", authMiddleware, usersController.edit);
+router.put("/profile/edit/", authMiddleware, uploadFile.single('avatar'), usersController.update)
 
 module.exports = router;

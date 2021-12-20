@@ -71,14 +71,13 @@ const mainController = {
 
     // si no hubo errores, guardar al usuario autenticado con session y redirigir a home
     req.session.authenticatedUser = user;
-    delete user.password;
     // si está tildado el campo de remember me, guardarlo con cookie
     if (req.body.remember) {
       res.cookie("rememberMe", user.id, { maxAge: 60000 });
     }
 
-    // si hay una url a redireccionar, llevarlo ahi al loguearse
-    if (req.session.redirectUrl) {
+    // si hay una url a redireccionar (y no es logout), llevarlo ahi al loguearse
+    if (req.session.redirectUrl && req.session.redirectUrl != '/logout') {
       res.redirect(req.session.redirectUrl);
     } else {
       res.redirect("/");
@@ -87,7 +86,7 @@ const mainController = {
   // funcion para cerrar sesión
   logout: function (req, res) {
     req.session.destroy();
-    res.redirect("/");
+    res.redirect("/login");
   },
 };
 

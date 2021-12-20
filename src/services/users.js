@@ -69,7 +69,18 @@ function authenticate(userData) {
     return user;
 }
 
-function updateUser(userToUpdate) {}
+function updateUser(userData) {
+    const userList = this.getUsers();
+    userIndex = userList.findIndex((user) => user.id == userData.id);
+    userList[userIndex] = {
+        id: userData.id,
+        email: userData.email,
+        password: bcrypt.hashSync(userData.password, 10),
+        avatar: userData.avatar,
+    };
+    const updatedJSON = JSON.stringify(userList, null, 4);
+    fs.writeFileSync(usersFilePath, updatedJSON, "utf-8");
+}
 
 // funcion para borrar un usuario a partir de su ID
 function deleteUser(userId) {
@@ -88,4 +99,5 @@ module.exports = {
     findUserByPk,
     generateId,
     deleteUser,
+    updateUser,
 };
