@@ -4,7 +4,6 @@ label {
 
 form {
     margin-top: 25px;
-    height: 100vh;
 }
 
 .form {
@@ -43,7 +42,6 @@ form {
 .load-product {
     align-self: center;
     height: 35px;
-    width: 40%;
     border: none;
     border-radius: 10px;
     background-color: #56e404;

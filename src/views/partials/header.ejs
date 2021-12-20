@@ -14,7 +14,7 @@
                     <div class="dropdown">
                         <div class="user">
                             <img class="avatar" src="<%= authenticatedUser.avatar %>" alt="User Avatar">
-                            <a class="no-link drop-btn"><%= locals.authenticatedUser.email? locals.authenticatedUser.email.substring(0,8) + "...": locals.authenticatedUser.address.substring(0,8) + "..." %></a>
+                            <a class="no-link drop-btn"><%= locals.authenticatedUser.email? locals.authenticatedUser.email: locals.authenticatedUser.address %></a>
                         </div>
                         <div class="dropdown-content">
                             <a href="/users/<%= authenticatedUser.id %> ">Profile</a>
@@ -45,7 +45,7 @@
                     <div class="dropdown">
                         <div class="user">
                             <img class="avatar" src="<%= authenticatedUser.avatar %>" alt="User Avatar">
-                            <a class="no-link drop-btn"><%= locals.authenticatedUser.email? locals.authenticatedUser.email.substring(0,8) + "...": locals.authenticatedUser.address.substring(0,8) + "..." %></a>
+                            <a class="no-link drop-btn"><%= locals.authenticatedUser.email? locals.authenticatedUser.email: locals.authenticatedUser.address %></a>
                         </div>
                         <div class="dropdown-content">
                             <a href="/users/profile">Profile</a>
