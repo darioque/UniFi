@@ -59,7 +59,7 @@ function saveAssets(assetData) {
   const filePath =
     assetData.type === "cryptocurrencies" ? cryptoFilePath : stockFilePath;
   // transforma la lista en formato JSON
-  const updatedJSON = JSON.stringify(assetList);
+  const updatedJSON = JSON.stringify(assetList, null, 4);
   // escribe el array actualizado al JSON
   fs.writeFileSync(filePath, updatedJSON, "utf-8");
 }
@@ -72,7 +72,7 @@ function updateAsset(updatedAsset) {
   assetList[assetIndex] = updatedAsset;
   const filePath =
     updatedAsset.type === "cryptocurrencies" ? cryptoFilePath : stockFilePath;
-  const updatedJSON = JSON.stringify(assetList);
+  const updatedJSON = JSON.stringify(assetList, null, 4);
   fs.writeFileSync(filePath, updatedJSON, "utf-8");
 }
 

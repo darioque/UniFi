@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head') %> 
+    <link rel="stylesheet" href="/css/styles-productList.css" />
+</head>
+<body>
+    <header class="bg-dark-gray main-header">
+        <%- include ('../partials/header') %>
+    </header>
+    <main>
+        <div class="main-container">
+            <section>
+                <ul class="no-list progressive-links">
+                    <li>
+                        <a class="no-link" href="/"><span>home</span></a>
+                    </li>
+                    <li>
+                        <i class="fas fa-chevron-right"></i>
+                        <a class="no-link" href="/users/"><span>users</span></a>
+                    </li>
+                </ul>
+                <div>
+    
+                </div>
+            </section>
+            <section>            
+                <ol class="list">
+                    <div class="list-items list-items-title">
+                        <p class="name">
+                            Avatar
+                        </p>
+                        <p class="price">
+                            User ID
+                        </p>
+                        <p class="mcap">
+                            Email/Address
+                        </p>
+                    </div>
+                    <% for (let user of userList) { %>
+                        <a class="no-link" href="/users/<%= user.id%>">
+                            <li class="no-list">
+                                <div class="list-items">
+                                    <div class="name">
+                                        <img class="avatar" style="width: 50px; height: 50px;" src="<%= user.avatar %>" alt="avatar of <%= user.email %>" />
+                                    </div>
+                                    <p class="mcap">
+                                        <%= user.id %>
+                                    </p>
+                                    <p class="mcap">
+                                        <%= user.email || user.address %>
+                                    </p>
+                                </div>
+                            </li>
+                        </a>
+                    <% } %> 
+                </ol>
+            </section>
+        </div>
+    </main>
+    <footer class="bg-dark-gray footer">
+        <%- include ('../partials/footer') %> 
+    </footer>
+</body>
+</html>

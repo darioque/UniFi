@@ -1,39 +1,32 @@
 [
-    { "id": 1, "email": "kballentime0@histats.com", "password": "BtNqPPnp" },
-    { "id": 2, "email": "gpirson1@theatlantic.com", "password": "Cwp0GsRE" },
-    { "id": 3, "email": "bsweetnam2@github.io", "password": "f94OHvqvgiC" },
-    { "id": 4, "email": "eprior3@fda.gov", "password": "jPVIiVOrU" },
-    { "id": 5, "email": "egiacomozzo4@cnn.com", "password": "1ruh4D" },
-    { "id": 6, "email": "maylmore5@gravatar.com", "password": "Lyh0q26S3yn" },
     {
-        "id": 7,
-        "email": "lmaccari6@ycombinator.com",
-        "password": "9dpnnip1X2mv"
-    },
-    { "id": 8, "email": "rcoorington7@friendfeed.com", "password": "twKDHP" },
-    { "id": 9, "email": "dcomelli8@apple.com", "password": "ssMMBLohNgod" },
-    { "id": 10, "email": "dkoppes9@de.vu", "password": "glEFJdC0VtKb" },
-    {
-        "id": 11,
-        "email": "zorktextgame@gmail.com",
-        "password": "$2a$10$fhfLLPfqettAMtd9PGl2Su.jHiXCZ1eEgemvHt9N91zjYfbdNsF4i",
-        "avatar": "/img/users/11.jpg"
+        "id": 1,
+        "email": "dario@unifi.com",
+        "password": "$2a$10$dV6yer7W5z4izpkg3Un1X.pXX0uKcWRthhgQ5l8aaEOZyIi7.vKTW",
+        "avatar": "/img/users/1639974112494_avatar.jpg"
     },
     {
-        "id": 12,
-        "email": "dario@UniFi.com",
-        "password": "$2a$10$yFP1bU1Zvjq1w1rdB9aUc.rqrny5SoK9hPorbSlZ7EikpYtGL/ux.",
-        "avatar": "/img/users/11.jpg"
-    },
-    {
-        "id": 13,
+        "id": 2,
         "email": "fede@unifi.com",
-        "password": "$2a$10$sQVt7fUovYD7GR4Rqv.ceu32Vcox6S0YDmzViFuOxdmtvpgNLl5Zq"
+        "password": "$2a$10$y2uSOKBj724exdV3nOXJ3OnBhAC8Of3P73.HkCYT9/DE9YmQO8miu",
+        "avatar": "/img/users/1639974886827_avatar.jpg"
     },
     {
-        "id": 14,
+        "id": 3,
         "email": "lucas@unifi.com",
-        "password": "$2a$10$/iV20kIEiMLNOX08fK4d5.nB/3umDMHqAjWugqO1SI5XrRqBaJ736",
-        "avatar": "/img/users/1639873173216_avatar.jpg"
+        "password": "$2a$10$YVSAHWb0iOCisMqz8pWpceGtDnjYl84UC9Qux0ibLzFTa4UpFGiwi",
+        "avatar": "/img/users/1639974897521_avatar.jpg"
+    },
+    {
+        "id": 4,
+        "email": "tato@unifi.com",
+        "password": "$2a$10$dRbhC15lnDWc8RU2EDxTnOJosbSKxd1CP7UtSRCMvxKUAEFouETxG",
+        "avatar": "/img/users/1639974916699_avatar.jpg"
+    },
+    {
+        "id": 5,
+        "email": "pablo@digitalhouse.com",
+        "password": "$2a$10$Tub.tF0r9iyEGmQe/yKbv.mAyNW6MfyxHQTBItTcOAws7GNAfBThm",
+        "avatar": "/img/users/1639975116106_avatar.png"
     }
 ]

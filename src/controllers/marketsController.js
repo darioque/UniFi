@@ -65,7 +65,7 @@ const marketsController = {
         const marketType = req.params.marketType;
         const asset = assetService.findAsset(marketType, assetRequested);
         res.render("products/editProductForm", {
-            pageTitle: "Edit Product - UniFi",
+            pageTitle: "UniFi - Edit Product",
             asset,
         });
     },

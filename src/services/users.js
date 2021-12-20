@@ -38,7 +38,7 @@ function addUser(userData) {
     userList.push(newUser);
 
     // transforma la lista en formato JSON
-    const updatedJSON = JSON.stringify(userList);
+    const updatedJSON = JSON.stringify(userList, null, 4);
     // escribe el array actualizado al JSON
     fs.writeFileSync(usersFilePath, updatedJSON, null, " ");
     return newUser;
@@ -54,14 +54,14 @@ function findUser(field, text) {
 // funcion para buscar y devolver un usuario a partir de su ID
 function findUserByPk(userID) {
     const userList = this.getUsers();
-    const user = userList.find((user) => user.id === userID);
+    const user = userList.find((user) => user.id == userID);
     return user;
 }
 
 // funcion para autenticar un usuario especifico y devolverlo
 function authenticate(userData) {
     const userList = this.getUsers();
-    user = userList.find(
+    const user = userList.find(
         (user) =>
             user.email === userData.email &&
             bcrypt.compareSync(userData.password, user.password)
@@ -69,13 +69,13 @@ function authenticate(userData) {
     return user;
 }
 
-function editUser(userToEdit) {}
+function updateUser(userToUpdate) {}
 
 // funcion para borrar un usuario a partir de su ID
 function deleteUser(userId) {
     const userList = this.getUsers();
     const filteredUserList = userList.filter((user) => user.id != userId);
-    const updatedJSON = JSON.stringify(filteredUserList);
+    const updatedJSON = JSON.stringify(filteredUserList, null, 4);
     // escribe el array actualizado al JSON
     fs.writeFileSync(usersFilePath, updatedJSON, null, " ");
 }
@@ -87,4 +87,5 @@ module.exports = {
     findUser,
     findUserByPk,
     generateId,
+    deleteUser,
 };

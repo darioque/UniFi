@@ -71,6 +71,7 @@ const mainController = {
 
     // si no hubo errores, guardar al usuario autenticado con session y redirigir a home
     req.session.authenticatedUser = user;
+    delete user.password;
     // si está tildado el campo de remember me, guardarlo con cookie
     if (req.body.remember) {
       res.cookie("rememberMe", user.id, { maxAge: 60000 });

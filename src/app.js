@@ -7,8 +7,9 @@ const logMiddleware = require("./middlewares/logMiddleware");
 const userLoggedMiddleware = require("./middlewares/UserLoggedMiddleware");
 const publicPath = path.join(__dirname, "../public");
 
-const mainRouter = require("./routers/mainRouter.js");
-const marketsRouter = require("./routers/marketsRouter.js");
+const mainRouter = require("./routers/mainRouter");
+const usersRouter = require('./routers/usersRouter')
+const marketsRouter = require("./routers/marketsRouter");
 //seteamos method-override aca y con un app.use debajo para poder usar PUT y DELETE
 const methodOverride = require("method-override");
 
@@ -42,6 +43,7 @@ app.use(cookieParser());
 
 // rutas
 app.use("/", mainRouter);
+app.use('/users', usersRouter)
 app.use("/markets", marketsRouter);
 
 // pagina para renderizar cuando se intenta entrar a una ruta inexistente

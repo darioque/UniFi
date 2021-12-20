@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head')%>
+    <link rel="stylesheet" href="/css/styles-userProfile.css" />
+</head>
+
+<body class="body-container">
+    <header class="main-header bg-dark-gray">
+        <%- include('../partials/header') %>
+    </header>
+    <main class="main-container">
+        <ul class="no-list progressive-links">
+            <li>
+                <a class="no-link" href="/"><span>home</span></a>
+                <i class="fas fa-chevron-right"></i>
+            </li>
+            <li>
+                <a class="no-link" href="/users/"><span>users</span></a>
+                <i class="fas fa-chevron-right"></i>
+            </li>
+            <li>
+                <a class="no-link" href="/users/profile">
+                    <span>profile</span>
+                </a>
+            </li>
+        </ul>
+        <section>
+            <h1>User Profile</h1>
+            <h2>Welcome <%= user.email || user.address %>! </h2>
+            <img src="<%= user.avatar %> " alt="" class="avatar">
+            <button>Edit my profile</button>
+        </section>
+    </main>
+    <footer class="footer bg-dark-gray">
+        <%- include('../partials/footer') %>
+    </footer>
+</body>
+
+</html>

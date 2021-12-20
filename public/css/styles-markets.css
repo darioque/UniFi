@@ -1,15 +1,7 @@
-.main-container {
-  width: 100%;
-  max-width: 1400px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
 
 .slider-container {
-	 align-items: center;
-	 justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .slide-img {
@@ -18,145 +10,148 @@
 }
 
 .card {
-	padding: 10px 16px 16px;
-	border-radius: 8px;
-	margin: 10px 10px;
-	border: 1px solid lightgray;
+    padding: 10px 16px 16px;
+    border-radius: 8px;
+    margin: 10px 10px;
+    border: 1px solid lightgray;
 }
 .card h3 {
-	font-size: 12px;
-	color: #707A8A;
-	font-weight: 800;
+    font-size: 12px;
+    color: #707a8a;
+    font-weight: 800;
 }
 .card img {
-	height: 24px;
-	width: 24px;
-	margin-right: 8px;
+    height: 24px;
+    width: 24px;
+    margin-right: 8px;
 }
 .card .card-title {
-	display: flex;
-	align-items: center;
-	font-weight: 600;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
 }
-.card .card-title .percentage-change{
-	margin-left: auto;
+.card .card-title .percentage-change {
+    margin-left: auto;
 }
 .card-title .green {
-	color: rgb(14, 203, 129);
+    color: rgb(14, 203, 129);
 }
 .card-title .red {
-	color: rgb(246, 70, 93);
+    color: rgb(246, 70, 93);
 }
 
 .market-card {
     background-color: white;
-	box-shadow: 0 10px 20px -5px rgb(0 0 0 / 13%)
+    box-shadow: 0 10px 20px -5px rgb(0 0 0 / 13%);
+    overflow: hidden;
 }
 .copy-trader {
-	padding: 10px;
-	text-align: center;
+    padding: 10px;
+    text-align: center;
 }
 .copy-trader .copy-cards {
-	position: relative;
-	display: inline-block;
-	background-color: black;
-	border-radius: 10px;
-	margin: 10px 0px;
+    position: relative;
+    display: inline-block;
+    background-color: black;
+    border-radius: 10px;
+    margin: 10px 0px;
 }
-.copy-trader .copy-cards .text{
-	color: white;
-	position: absolute;
-	top: 45%;
-	left: 10%;
+.copy-trader .copy-cards .text {
+    color: white;
+    position: absolute;
+    top: 45%;
+    left: 10%;
 }
 
 .text .bold {
-	font-size: 18px;
-	font-weight: 600;
+    font-size: 18px;
+    font-weight: 600;
 }
 .text .green {
-	color: #adf68d
+    color: #adf68d;
 }
 
 .text .red {
-	color: rgb(246, 70, 93);
+    color: rgb(246, 70, 93);
 }
 .copy-trader .copy-cards img {
-	background-color: black;
-	border-radius: 10px;
-	width: 220px;
-	opacity: 0.5;
+    background-color: black;
+    border-radius: 10px;
+    width: 220px;
+    opacity: 0.5;
 }
 
- @keyframes scroll {
-	 0% {
-		 transform: translateX(0);
-	}
-	 100% {
-		 transform: translateX(calc(-250px * 7));
-	}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
 }
- .slider {
-	 background: white;
-	 box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-	 height: 100px;
-	 margin: auto;
-	 overflow: hidden;
-	 position: relative;
-     max-width: 1400px;
+.slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    max-width: 1400px;
 }
- .slider::before, .slider::after {
-	 background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-	 content: "";
-	 height: 100px;
-	 position: absolute;
-	 width: 200px;
-	 z-index: 2;
+.slider::before,
+.slider::after {
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
 }
- .slider::after {
-	 right: 0;
-	 top: 0;
-	 transform: rotateZ(180deg);
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
 }
- .slider::before {
-	 left: 0;
-	 top: 0;
+.slider::before {
+    left: 0;
+    top: 0;
 }
- .slider .slide-track {
-	 animation: scroll 40s linear infinite;
-	 display: flex;
-	 width: calc(250px * 14);
+.slider .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
 }
- .slider .slide {
-	 height: 100px;
-	 width: 150px;
+.slider .slide {
+    height: 100px;
+    width: 150px;
 }
- 
+
 @media (min-width: 481px) {
-  .slider .slide {
-    transition: width 1s;
-    width: 250px;
-  }
-  .slider-img {
-      width: 250px;
-  }
-  .cards-container {
-	  display: flex;
-	  align-items: center;
-	  justify-content: space-between;
-  }
-  .cards-container a {
-	  width: 40%;
-  }
+    .slider .slide {
+        transition: width 1s;
+        width: 250px;
+    }
+    .slider-img {
+        width: 250px;
+    }
+    .cards-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .cards-container a {
+        width: 40%;
+    }
 }
-
-
 
 @media (min-width: 768px) {
-  
-  .copy-trader {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	}
+    .copy-trader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }

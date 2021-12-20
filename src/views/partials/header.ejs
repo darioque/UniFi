@@ -48,7 +48,7 @@
                             <a class="no-link drop-btn"><%= locals.authenticatedUser.email? locals.authenticatedUser.email.substring(0,8) + "...": locals.authenticatedUser.address.substring(0,8) + "..." %></a>
                         </div>
                         <div class="dropdown-content">
-                            <a href="/users/<%= authenticatedUser.id %> ">Profile</a>
+                            <a href="/users/profile">Profile</a>
                             <a href="/logout">Log out</a>
                         </div>
                     </div>
