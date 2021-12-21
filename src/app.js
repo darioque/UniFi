@@ -3,8 +3,6 @@ const path = require("path");
 const app = express();
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
-const logMiddleware = require("./middlewares/logMiddleware");
-const userLoggedMiddleware = require("./middlewares/UserLoggedMiddleware");
 const publicPath = path.join(__dirname, "../public");
 
 const mainRouter = require("./routers/mainRouter");
