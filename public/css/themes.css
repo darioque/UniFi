@@ -143,11 +143,11 @@ h6 {
 }
 
 .avatar {
-    width: auto;
+    width: 32px;
     height: 32px;
     border-radius: 50%;
     margin-right: 4px;
-    padding-left: 12px;
+    margin-left: 12px;
 }
 
 /* boton de dropwdown */
@@ -309,6 +309,9 @@ footer {
         display: none;
     }
     .header-options {
+        display: block;
+    }
+    .index-navbar {
         display: block;
     }
 }
