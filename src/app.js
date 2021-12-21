@@ -4,7 +4,7 @@ const app = express();
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const publicPath = path.join(__dirname, "../public");
-
+const userLoggedMiddleware = require('./middlewares/UserLoggedMiddleware')
 const mainRouter = require("./routers/mainRouter");
 const usersRouter = require('./routers/usersRouter')
 const marketsRouter = require("./routers/marketsRouter");
