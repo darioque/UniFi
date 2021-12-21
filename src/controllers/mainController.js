@@ -32,20 +32,17 @@ const mainController = {
                 errorMessages: errors.mapped(),
             });
         }
-        // si es registro con wallet, guardar el usuario y redireccionar a login
-        if (req.body.address) {
-            userService.addUser(req.body);
-            res.redirect("/login");
-        }
         // añade el path de la foto de perfil a una propiedad avatar del body para tenerlo todo en un objeto
-        req.body.avatar = "/img/users/" + req.file.filename;
+        if (req.file) {
+            req.body.avatar = "/img/users/" + req.file.filename;
+        }
         // si no hubo errores en el formulario, intentar agregar el usuario a la base de datos
         if (!userService.addUser(req.body)) {
             // si el email utilizado ya existia en la base de datos, retornar el sitio de registro con mensaje de error
             return res.render("users/register", {
                 pageTitle: "Register",
                 old: req.body,
-                errorMessages: [{ msg: "Email already registered" }],
+                errorMessages: [{ msg: "Email or address already registered" }],
             });
             // si no hay errores, redireccionar a login
         } else {
