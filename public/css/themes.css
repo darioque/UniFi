@@ -288,7 +288,7 @@ footer {
 
 @media (min-width: 768px) {
     .fa-wallet {
-        display: flex;
+        display: inline-flex;
         align-items: center;
     }
     .universal-options {

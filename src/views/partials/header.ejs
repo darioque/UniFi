@@ -13,7 +13,7 @@
                 >Cryptocurrencies</a
             >
             <a class="no-link" href="/markets/stocks">Stocks</a>
-            <a class="no-link" style="margin-right: 10px" href="/wallet"
+            <a class="no-link" href="/wallet"
                 ><i class="fas fa-wallet"></i>Wallet</a
             >
             <% if (locals && locals.authenticatedUser) { %>
@@ -62,10 +62,7 @@
     </nav>
     <div class="header-options">
         <div class="universal-options">
-            <i class="fas fa-wallet"></i>
-            <a class="no-link" style="margin-right: 10px" href="/wallet"
-                >Wallet</a
-            >
+            <a class="no-link" href="/wallet"> <i class="fas fa-wallet"></i>Wallet</a>
             <% if (locals && locals.authenticatedUser) { %>
             <div class="dropdown">
                 <div class="user">

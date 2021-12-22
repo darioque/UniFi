@@ -42,6 +42,7 @@
               placeholder="ID"
               class="input"
               value="<%= asset.id %>"
+              required
             />
             <input
               type="text"
@@ -49,8 +50,9 @@
               placeholder="Name"
               class="input"
               value="<%= asset.name %>"
+              required
             />
-            <select name="type" id="type" class="select">
+            <select name="type" id="type" class="select" required>
               <option value=""></option>
               <option value="cryptocurrencies" <%= asset.type == 'cryptocurrencies'? "selected": null %> >cryptocurrencies</option>
               <option value="stocks" <%= asset.type == 'stocks'? "selected": null %>>stocks</option>
@@ -61,6 +63,7 @@
               placeholder="Ticker"
               class="input"
               value="<%= asset.ticker %>"
+              required
             />
             <input
               type="text"
@@ -68,6 +71,7 @@
               placeholder="Price"
               class="input"
               value="<%= asset.price %>"
+              required
             />
             <input
               type="number"
@@ -76,9 +80,10 @@
               placeholder="Change"
               class="input"
               value="<%= asset.change %>"
+              required
             />
             <div class="input-file">
-              <input type="file" name="logo" id="" class="input-file-button" />
+              <input type="file" name="logo" id="" class="input-file-button" value="<%= asset.logo %>" required/>
             </div>
             <input
               type="text"
@@ -86,6 +91,7 @@
               placeholder="Market Cap"
               class="input"
               value="<%= asset.mcap %>"
+              required
             />
             <input type="submit" value="Edit Product" class="load-product" />
           </div>
