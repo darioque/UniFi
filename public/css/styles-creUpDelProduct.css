@@ -26,6 +26,7 @@ form {
     height: 35px;
     border-radius: 5px;
     border: 1px solid grey;
+    padding-left: 4px;
 }
 
 .input-file {

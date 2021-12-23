@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const marketsController = require("../controllers/marketsController");
 const authMiddleware = require("../middlewares/authMiddleware");
+const path = require('path')
 const multer = require("multer");
 // implementando multer para logos de activos
 const storage = multer.diskStorage({

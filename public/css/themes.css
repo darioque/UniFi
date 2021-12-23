@@ -286,6 +286,10 @@ footer {
     font-size: 12px;
 }
 
+.hidden {
+    display: none;
+}
+
 @media (min-width: 768px) {
     .fa-wallet {
         display: inline-flex;

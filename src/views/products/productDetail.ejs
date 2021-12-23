@@ -70,7 +70,7 @@
                                 <img class="currency-logo" src="/img/usd.svg" alt="USD logo">
                                 <p class="currency-title">USD</p>
                                 <div class="currency-input-div">
-                                    <input class="currency-input" type="number" value=<%= asset.price.replace(',', '')%> maxlength="8">
+                                    <input class="currency-input" type="number" value=<%= asset.price%> maxlength="8">
                                 </div>
                             </div>
                             <input type="image" id="myBtn" class="exchange-icon" src="/img/exchange.png" alt="Submit">
@@ -134,8 +134,7 @@
                             </div>
                             <div class="statistic">
                                 <p>24H Price Change</p>
-                                <!-- Cálculo del cambio de precio (pasa de string a float, multiplica precio * porcentaje / 100 y trunca a dos decimales)  -->
-                                <p>$ <%= (parseFloat(asset.price.replace(',', '')) * asset.change / 100).toFixed(2) %> </p>
+                                <p>$ <%= (asset.price * asset.change / 100).toFixed(2) %> </p>
                             </div>
                             <div class="statistic">
                                 <p>24h Low / High</p>

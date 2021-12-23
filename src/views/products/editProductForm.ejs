@@ -40,7 +40,7 @@
               type="text"
               name="id"
               placeholder="ID"
-              class="input"
+              class="input hidden"
               value="<%= asset.id %>"
               required
             />
@@ -52,7 +52,7 @@
               value="<%= asset.name %>"
               required
             />
-            <select name="type" id="type" class="select" required>
+            <select name="type" id="type" class="select hidden" required>
               <option value=""></option>
               <option value="cryptocurrencies" <%= asset.type == 'cryptocurrencies'? "selected": null %> >cryptocurrencies</option>
               <option value="stocks" <%= asset.type == 'stocks'? "selected": null %>>stocks</option>
@@ -83,10 +83,10 @@
               required
             />
             <div class="input-file">
-              <input type="file" name="logo" id="" class="input-file-button" value="<%= asset.logo %>" required/>
+              <input type="file" name="logo" id="logo" class="input-file-button"/>
             </div>
             <input
-              type="text"
+              type="number"
               name="mcap"
               placeholder="Market Cap"
               class="input"
