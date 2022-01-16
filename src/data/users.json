@@ -33,5 +33,17 @@
         "id": 6,
         "address": "0x89baf7a6516be419bac84ae10e7857bc33b25f8a",
         "avatar": "/img/users/1640022825878_avatar.svg"
+    },
+    {
+        "id": 7,
+        "email": "checkthis@gmail.com",
+        "password": "$2a$10$F1ibnEZ6T5N9ulddPZRtc.JM23CmLvV.NHdS.7/SNNA9ZwgOZwDKq",
+        "avatar": "/img/users/1642363164979_avatar.jpg"
+    },
+    {
+        "id": 8,
+        "email": "dario@unifi.com.ar",
+        "password": "$2a$10$iU31VRsfCtcSpbf68pJjMOmySZY67zMl91/pQ51inSOucIys53vdC",
+        "avatar": "/img/users/1642363306830_avatar.jpg"
     }
 ]

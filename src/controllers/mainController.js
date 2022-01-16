@@ -24,6 +24,7 @@ const mainController = {
     processRegister: (req, res) => {
         // guarda los errores en una variable
         const errors = validationResult(req);
+        console.log(req.body)
         // si hubo errores (la variable NO está vacía) mandarle los mensajes a la vista del formulario
         if (!errors.isEmpty()) {
             return res.render("users/register", {

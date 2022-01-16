@@ -23,7 +23,7 @@ const uploadFile = multer({ storage });
 
 // validaciones
 const registerValidations = [
-    body("address").notEmpty() ||
+    body("address").notEmpty() &&
         (body("email")
             .notEmpty()
             .withMessage("You need to set an email")

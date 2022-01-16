@@ -28,7 +28,7 @@ function addUser(userData) {
     if (
         userList.find(
             (user) =>
-                user.email == userData.email || user.address == userData.address
+                user.email == userData.email || (user.address && user.address == userData.address)
         )
     ) {
         return false;
