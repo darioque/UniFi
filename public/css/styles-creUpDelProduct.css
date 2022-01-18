@@ -1,15 +1,9 @@
-.main-container {
-  width: 100%;
-  max-width: 1400px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+label {
+    font-weight: 600;
 }
 
 form {
     margin-top: 25px;
-    height: 100vh;
 }
 
 .form {
@@ -32,6 +26,7 @@ form {
     height: 35px;
     border-radius: 5px;
     border: 1px solid grey;
+    padding-left: 4px;
 }
 
 .input-file {
@@ -48,7 +43,6 @@ form {
 .load-product {
     align-self: center;
     height: 35px;
-    width: 40%;
     border: none;
     border-radius: 10px;
     background-color: #56e404;

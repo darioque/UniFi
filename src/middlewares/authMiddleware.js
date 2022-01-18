@@ -4,7 +4,7 @@ function authMiddleware(req, res, next) {
         next();
     } else {
         req.session.redirectUrl = req.originalUrl;
-        res.send('This site is only for users');
+        res.redirect('/login');
     }
 }
 module.exports = authMiddleware;

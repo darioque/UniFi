@@ -54,8 +54,8 @@ const marketsController = {
 
     // funcion controladora para agregar el nuevo activo a la base de datos y mostrar nuevamente el listado
     store: (req, res) => {
+        req.body.logo = "/img/" + req.file.filename;
         assetService.saveAssets(req.body);
-
         res.redirect("/markets/" + req.body.type);
     },
 
@@ -65,7 +65,7 @@ const marketsController = {
         const marketType = req.params.marketType;
         const asset = assetService.findAsset(marketType, assetRequested);
         res.render("products/editProductForm", {
-            pageTitle: "Edit Product - UniFi",
+            pageTitle: "UniFi - Edit Product",
             asset,
         });
     },
@@ -74,8 +74,10 @@ const marketsController = {
     update: function (req, res) {
         const assetId = req.params.asset;
         const marketType = req.params.marketType;
+        if (req.file) {
+            req.body.logo = "/img/" + req.file.filename;
+        }
         assetService.updateAsset(req.body);
-
         res.redirect(`/markets/${marketType}/${assetId}`);
     },
 

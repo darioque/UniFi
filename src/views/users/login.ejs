@@ -2,34 +2,59 @@
 <html lang="en">
   <head>
     <%- include('../partials/head') %>
-      <link rel="stylesheet" href="/css/styles-login.css" />
+    <link rel="stylesheet" href="/css/styles-login-register.css" />
   </head>
-<body>
-    <div class="container">
-        <div class="card">
-            <div class="inner-box">
-                <header class="main-header">
-                  <%- include('../partials/header') %>
-                </header>
-                    <!-- Si se enviaron mensajes de error a la vista de registro, mostrarlos -->
-                    <% if (locals && locals.errorMessages) { %> 
-                        <% for(let error in errorMessages) { %>
-                        <p class="errors"><%= errorMessages[error].msg %> </p>
-                        <% } %> 
-                    <% } %> 
-                    <form action="/login" method="POST">
-                        <input type="email" name="email" class="input-box" placeholder="Email" value="<%= locals.old? old.email: '' %>" required>
-                        <input type="password" name="password" class="input-box" placeholder="Password" required>
-                        <span><input type="checkbox" name="remember"> Remember Me</span>
-                        <a href="/index"><button type="submit" alt="Login">Login</button></a>
-                    </form>
-                    <button><img class="image-article" src="/img/37784886.jpg" alt="Wallet"/>Wallet Connect</button>
-                    <div><a class="account color-white" href="/register">Don't have account yet? Register</a></div>
-                    <div><a class="account-1 color-white" href="">Forgot Password</a></div>
+<body class="bg-dark-gray">
+    <header>
+        <nav class="header-navbar">
+            <div class="logo">
+                <a href="/"><img class="header-img" src="/img/logo.svg" alt="Logo de UniFi" /></a>
+            </div>
+        </nav>
+    </header>
+    <main class="main-container color-white">
+        <div class="main-text">
+            <h1>Log into your UniFi account</h1>
+            <p>Hi there, welcome back! Log in with your email and password or just use your wallet</p>
+        </div>
+        <!-- Si se enviaron mensajes de error a la vista de login, mostrarlos -->
+        <% if (locals && locals.errorMessages) { %> 
+            <% for(let error in errorMessages) { %>
+            <p class="errors"><%= errorMessages[error].msg %> </p>
+            <% } %> 
+        <% } %> 
+        <div class="login-form-container">
+            <form class="login-form" action="/login" method="POST">
+                <label for="email">Email</label>
+                <div class="input-box">
+                    <input type="email" name="email" value="<%= locals.old? old.email: '' %>" required>
+                </div>
+                <label for="password">Password</label>
+                <div class="input-box">
+                    <input  type="password" name="password" required>
+                </div>
+                <label for="remember">
+                    <input type="checkbox" class="checkbox" name="remember"> Remember Me
+                </label>
+                <button type="submit" alt="Login">Log in</button>
+                <div class="other-links">
+                    <a class="no-link" href="">Forgot your password?</a>
+                    <a class="no-link" href="/register">Don't have account yet? Register</a>
+                </div>
+            </form>
+            <div class="wallet-login">
+                <img src="/img/metamask.svg" alt="Metamask Logo">
+                <button type="submit" id="metamaskButton" alt="Connect Metamask Wallet Button">Connect Wallet</button>
+                <form action="/login" method="POST">
+                    <input type="text" name="address" id="address" class="input-box" readonly><span id="addressText" class="text-center"></span>
+                    <button type="submit" id="loginButton">Log in With My Wallet</button>   
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="copyright color-white text-center">©Todos los derechos reservados a UniFi</p>
+    </footer>
+    <%- include ('../partials/metamaskLogin') %> 
 </body>
-<footer>
-    <%- include('../partials/footer') %>
-</footer>
-
-
-
+</html>

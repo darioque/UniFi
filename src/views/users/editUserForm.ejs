@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/styles-creUpDelProduct.css" />
+  </head>
+  <body>
+    <header class="header bg-dark-gray">
+        <%- include('../partials/header') %>
+    </header>
+    <main class="main-container">
+        <ul class="no-list progressive-links">
+            <li>
+                <a class="no-link" href="/"><span>home</span></a>
+                <i class="fas fa-chevron-right"></i>
+            </li>
+            <li>
+                <a class="no-link" href="/users/">
+                    <span>users</span>
+                </a>
+            </li>
+            <li>
+                <i class="fas fa-chevron-right"></i>
+                <a class="no-link" href="/users/profile/"><span>profile</span></a>
+            </li>
+            <li>
+                <i class="fas fa-chevron-right"></i>
+                <a class="no-link" href="/users/profile/edit"><span>edit</span></a>
+            </li>
+        </ul>
+        <h1 class="text-center">Edit Profile</h1>
+        <form action="/users/profile/edit?_method=PUT" method="POST" enctype='multipart/form-data'>
+            <% if (user.address) { %>
+                <input type="text" name="address" value="<%= user.address%> " readonly>
+            <% } else { %>
+            <div class="form">
+                <label for="email">Email</label>
+                <input
+                type="email"
+                name="email"
+                class="input"
+                value="<%= user.email %>"
+                required
+                />
+                <label for="password">Password</label>
+                <input
+                type="password"
+                name="password"
+                class="input"
+                required
+                />
+                <% } %> 
+                <div class="input-file">
+                    <input type="file" name="avatar" id="avatar" class="input-file-button" required />
+                </div>
+                <input type="submit" value="Edit Profile" class="load-product" />
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer"><%- include('../partials/footer') %></footer>
+  </body>
+</html>

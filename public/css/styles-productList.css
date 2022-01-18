@@ -51,14 +51,6 @@
   display: none;
 }
 
-.main-container {
-  width: 100%;
-  max-width: 1400px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
 
 /* MEDIA QUERY DE PANTALLAS DESDE A 480PX */
 @media (min-width: 481px) {

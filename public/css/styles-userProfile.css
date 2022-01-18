@@ -1,0 +1,18 @@
+.main-container .avatar {
+    height: 35%;
+    width: 35%;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 50%;
+}
+
+button {
+    display: block;
+    margin-top: 10px;
+    width: 35%;
+    min-height: 30px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+}
+

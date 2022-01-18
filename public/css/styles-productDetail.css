@@ -108,14 +108,6 @@
   vertical-align: baseline;
 }
 
-.main-container {
-  width: 100%;
-  max-width: 1400px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
 
 div {
   display: block;
@@ -249,8 +241,5 @@ div {
   .chart img {
     width: 100%;
     height: 100%;
-  }
-  .footer {
-    margin: 0 auto;
   }
 }

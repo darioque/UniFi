@@ -1,0 +1,127 @@
+
+.main-text {
+    max-width: 1200px;
+    padding: 24px 0px 24px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    line-height: 1.6;
+    border: 1px solid rgb(234, 236, 239);
+    border-radius: 4px;
+    height: 48px;
+    background-color: transparent;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+label {
+    margin-bottom: 4px;
+}
+
+input {
+    background-color: inherit;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.checkbox {
+    height: auto;
+    width: auto;
+}
+
+.file {
+    padding: 0;
+}
+
+
+button {
+    margin-top: 24px;
+    background: #fff;
+    border: none;
+    height: 50px;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
+    transition: 200ms;
+}
+
+button:hover {
+    background-color: #70b429;
+}
+
+.other-links {
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+.other-links a {
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.other-links a:hover {
+    text-decoration: underline;
+}
+
+.wallet-login {
+    display: none;
+    max-width: 210px;
+}
+.wallet-login img {
+    width: 180px;
+    height: 180px;
+}
+
+.wallet-login button {
+    margin-top: 43px;
+}
+
+
+
+@media (min-width: 768px) {
+    .login-form {
+        width: 60%;
+    }
+    .login-form-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1000px;
+    }
+    .wallet-login {
+        display: flex;
+        flex-direction: column;
+    }
+    #address {
+        display: none;
+    }
+    #loginButton {
+        display: none;
+    }
+}
+
+/* MEDIA QUERY DE PANTALLAS DESDE 1200PX */
+@media (min-width: 1200px) {
+}

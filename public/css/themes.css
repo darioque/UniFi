@@ -86,6 +86,11 @@ h6 {
   display: flex;
 }
 
+.errors {
+  color: red
+}
+
+
 /* Estilos generales del header */
 .header-navbar {
     display: flex;
@@ -107,6 +112,7 @@ h6 {
     display: none;
     width: 70%;
 }
+
 .header-img {
     width: 145px;
     height: 75px;
@@ -125,13 +131,129 @@ h6 {
 }
 
 .header-options .universal-options i {
-    height: 24px;
     width: 24px;
     margin-left: 15px;
     font-size: 18px;
 }
 
-/* Estilos generales de footer */
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 4px;
+    margin-left: 12px;
+}
+
+/* boton de dropwdown */
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  overflow: hidden;
+}
+
+
+/* contenedor div necesario para posicionar el contenido del dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* contenido del dropdown (escondido por defecto) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #272b3a;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 3;
+}
+
+/* links dentro del dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {background-color: rgba(46, 49, 59, 0.5);}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+/* estilos del menu de navegacion hamburguesa */
+.burguerMenu {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    z-index: 3;
+    background-color: #272b3a;
+    height: 100vh;
+    width: 95vw;
+}
+/* esconde los links dentro del menu hamburguesa */
+.burguerMenu .myLinks {
+    display: none;
+    background-color: #272b3a;
+}
+
+/* estilo de links del menu hamburguesa */
+.burguerMenu a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.burguerMenu a i {
+    display: none;
+}
+
+/* estilos de links del menu hamburguesa en hover */
+.burguerMenu a:hover {
+    background-color: rgba(46, 49, 59, 0.5);
+    color: #70b429;
+}
+
+/* estilos para links "activos" */
+.active {
+    background-color: #04aa6d;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* estilos generales de main */
+.main-container {
+    width: 100%;
+    max-width: 1400px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* estilos generales de footer */
 .footer-nav-bar {
     display: flex;
     flex-wrap: wrap;
@@ -164,11 +286,35 @@ h6 {
     font-size: 12px;
 }
 
+.hidden {
+    display: none;
+}
+
 @media (min-width: 768px) {
+    .fa-wallet {
+        display: inline-flex;
+        align-items: center;
+    }
+    .universal-options {
+        display: flex;
+        align-items: center;
+    }
+    .header-options .universal-options a {
+        display: block;
+    }
+}
+
+@media (min-width: 1200px) {
+    .icon {
+        display: none;
+    }
+    .burguerMenu {
+        display: none;
+    }
     .header-options {
         display: block;
     }
-    .header-options .universal-options a {
-        display: inline;
+    .index-navbar {
+        display: block;
     }
 }

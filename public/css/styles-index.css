@@ -2,21 +2,6 @@ html {
     color: #ffffff;
 }
 
-/* ESTILOS DE CLASES */
-
-/* ESTILOS DE HEADER */
-
-
-/* ESTILO DE MAIN */
-
-.main-container {
-  width: 100%;
-  max-width: 1400px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
 
 /* ESTILOS DE SECTION */
 
@@ -38,11 +23,12 @@ html {
     padding: 20px;
 }
 
-.card h2, .card p {
+.card h2,
+.card p {
     color: #000000;
 }
 
-.main-button{
+.main-button {
     display: inline-block;
     background-color: #70b429;
     padding: 0px 24px;
@@ -59,9 +45,8 @@ html {
 
 /* ESTILOS DE SECCION DE ARTICULOS */
 
-
 .section-article {
-    padding: 0 15px;   
+    padding: 0 15px;
 }
 
 .article {
@@ -101,21 +86,16 @@ html {
     color: red;
 }
 
+
 /* MEDIA QUERY DE PANTALLAS DESDE A 480PX */
 @media (min-width: 481px) {
-
 }
-
 
 /* MEDIA QUERY DE PANTALLAS DESDE A 768PX */
 @media (min-width: 768px) {
-    .index-navbar {
-        display: block;
-    }
     .icon-login {
         padding-right: 5px;
     }
-
 
     .container-menu {
         display: none;
@@ -158,11 +138,11 @@ html {
         text-align: center;
         align-self: center;
     }
-    
+
     .stock-section {
         display: flex;
     }
-/*     .price-article {
+    /*     .price-article {
         display: block;
         margin: 5px 0;
     } */
@@ -173,8 +153,9 @@ html {
     }
 }
 
-
 /* MEDIA QUERY DE PANTALLAS DESDE 1200PX */
 @media (min-width: 1200px) {
-    
+    .index-navbar {
+        display: block;
+    }
 }

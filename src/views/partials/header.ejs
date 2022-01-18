@@ -1,25 +1,111 @@
-
-    <nav class="header-navbar">
-        <div class="logo">
-            <a href="/"><img class="header-img" src="/img/logo.svg" alt="Logo de UniFi" /></a>
-        </div>
-        <nav class="index-navbar">
-            <ul class="navbar-menu no-list">
-                <li><a class="no-link" href="#about-us">About Us</a></li>
-                <li><a class="no-link"href="/markets">Discover</a></li>
-                <li><a class="no-link"href="/markets/cryptocurrencies">Cryptocurrencies</a></li>
-                <li><a class="no-link"href="/markets/stocks">Stocks</a></li>
-            </ul>
-        </nav>
-        <div class="header-options">
-            <div class="universal-options">
-                <a class="no-link" href="/wallet"><i class="fas fa-wallet"></i>Wallet</a>
-                <% if (locals && locals.authenticatedUser) { %>
-                    <!-- Hacer dropdown menu con opcion de logout -->
-                    <a class="no-link"><i class="fas fa-user-alt"></i><%= locals.authenticatedUser.email %></a>
-                <% } else { %>
-                    <a class="no-link" href="/login"><i class="fas fa-user-alt"></i>Login</a>
-                <% } %>
+<nav class="header-navbar" style="position: relative">
+    <div class="logo">
+        <a href="/"
+            ><img class="header-img" src="/img/logo.svg" alt="Logo de UniFi"
+        /></a>
+    </div>
+    <!-- estilos de menu hamburguesa -->
+    <div class="burguerMenu" id="burguerMenu">
+        <div class="myLinks" id="myLinks">
+            <a class="no-link" href="#about-us">About Us</a>
+            <a class="no-link" href="/markets">Discover</a>
+            <a class="no-link" href="/markets/cryptocurrencies"
+                >Cryptocurrencies</a
+            >
+            <a class="no-link" href="/markets/stocks">Stocks</a>
+            <a class="no-link" href="/wallet"
+                ><i class="fas fa-wallet"></i>Wallet</a
+            >
+            <% if (locals && locals.authenticatedUser) { %>
+            <div class="dropdown">
+                <div class="user">
+                    <img
+                        class="avatar"
+                        src="<%= authenticatedUser.avatar %>"
+                        alt="User Avatar"
+                    />
+                    <a class="no-link drop-btn" style="padding: 0px;"
+                        ><%= locals.authenticatedUser.email?
+                        locals.authenticatedUser.email:
+                        locals.authenticatedUser.address.substring(0, 5) + "..."
+                        + locals.authenticatedUser.address.substring(38,
+                        42)%></a
+                    >
+                </div>
+                <div class="dropdown-content">
+                    <a href="/users/profile">Profile</a>
+                    <a href="/logout">Log out</a>
+                </div>
             </div>
+            <% } else { %>
+            <a class="no-link drop-btn" href="/login"
+                ><i class="fas fa-user-alt"></i>Login</a
+            >
+            <% } %>
         </div>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+    <!-- estilos de header normal (min width 768 en themes) -->
+    <nav class="index-navbar">
+        <ul class="navbar-menu no-list">
+            <li><a class="no-link" href="#about-us">About Us</a></li>
+            <li><a class="no-link" href="/markets">Discover</a></li>
+            <li>
+                <a class="no-link" href="/markets/cryptocurrencies"
+                    >Cryptocurrencies</a
+                >
+            </li>
+            <li><a class="no-link" href="/markets/stocks">Stocks</a></li>
+        </ul>
     </nav>
+    <div class="header-options">
+        <div class="universal-options">
+            <a class="no-link" href="/wallet"> <i class="fas fa-wallet"></i>Wallet</a>
+            <% if (locals && locals.authenticatedUser) { %>
+            <div class="dropdown">
+                <div class="user">
+                    <img
+                        class="avatar"
+                        src="<%= authenticatedUser.avatar %>"
+                        alt="User Avatar"
+                    />
+                    <a class="no-link drop-btn"
+                        ><%= locals.authenticatedUser.email?
+                        locals.authenticatedUser.email:
+                        locals.authenticatedUser.address.substring(0, 5) + "..."
+                        + locals.authenticatedUser.address.substring(38,
+                        42)%></a
+                    >
+                </div>
+                <div class="dropdown-content">
+                    <a href="/users/profile">Profile</a>
+                    <a href="/logout">Log out</a>
+                </div>
+            </div>
+            <% } else { %>
+            <a class="no-link drop-btn" href="/login"
+                ><i class="fas fa-user-alt"></i>Login</a
+            >
+            <% } %>
+        </div>
+    </div>
+</nav>
+<script>
+    /* script para mostrar/esconder barra de navegacion lateral (boton de menu hamburguesa) */
+    function myFunction() {
+        var x = document.getElementById("myLinks");
+        var y = document.getElementById("burguerMenu");
+        var m = document.getElementById("body");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+            y.style.display = "none";
+            m.style.backgroundColor = "#272b3a";
+        } else {
+            x.style.display = "block";
+            y.style.display = "block";
+            m.style.backgroundColor = "rgba(39, 43, 58, 0.3)";
+        }
+    }
+</script>

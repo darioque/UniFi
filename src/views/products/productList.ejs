@@ -49,7 +49,7 @@
                     </button>
                 </form>
                     <% if (locals && locals.authenticatedUser) { %>
-                        <a href="/markets/<%= marketType %>/create"><button type="button">Crear Producto</button></a>
+                        <a href="/markets/<%= marketType %>/create"><button type="button">Add <%= marketType %></button></a>
                     <% } %>                
                 <ol class="list">
                     <div class="list-items list-items-title">
@@ -78,7 +78,6 @@
 
                                     </div>
                                     <p class="price">
-                                        <% asset.price[0] = asset.price[0].toUpperCase() %> 
                                         $<%= asset.price %>
                                     </p>
                                     <p class="mcap">
