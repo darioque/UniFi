@@ -61,6 +61,10 @@ module.exports = (sequelize, dataTypes) => {
             otherKey: "asset_id",
             timestamps: false,
         });
+        User.hasMany(models.Transaction, {
+            as: 'transactions',
+            foreignKey: 'user_id'
+        })
     };
 
     return User;
