@@ -1,3 +1,5 @@
+// se importan las bases de datos
+const db = require('../database/models')
 // se importa el servicio de activos
 const assetService = require("../services/assets");
 
@@ -15,7 +17,33 @@ const marketsController = {
     },
 
     // funcion controladora para listar los activos de los mercados individuales
-    list: function (req, res) {
+    list: async function (req, res) {
+        // test de modelos y asociaciones
+        try {
+            const transaction = await db.Transaction.findByPk(1, {
+                include: [
+                    { association: "inputAsset" },
+                    { association: "outputAsset" },
+                    { association: "user" },
+                ],
+            });
+            console.log(transaction.user)
+
+        } catch (error) {
+            console.log(error);
+        }
+        // test de modelos y asociaciones
+        try {
+            const user = await db.User.findByPk(1, {
+                include: [{ association: "assets" }],
+            });
+            for (const activo of user.assets) {
+                //console.log(activo.AssetUser.amount);
+            }
+        } catch (error) {
+            console.log(error);
+        }
+
         const marketType = req.params.marketType;
         res.render("products/productList", {
             marketType,

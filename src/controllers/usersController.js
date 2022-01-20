@@ -1,8 +1,11 @@
+// se importan las bases de datos
+const db = require("../database/models");
+// se importa el servicio de usuarios
 const userService = require("../services/users");
 
 const usersController = {
     // funcion controladora para renderizar el listado de usuarios
-    list: function (req, res) {
+    list: async function (req, res) {
         res.render("users/userList", {
             pageTitle: "UniFi - Users",
             userList: userService.getUsers(),
