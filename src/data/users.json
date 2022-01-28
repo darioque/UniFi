@@ -45,5 +45,11 @@
         "email": "dario@unifi.com.ar",
         "password": "$2a$10$iU31VRsfCtcSpbf68pJjMOmySZY67zMl91/pQ51inSOucIys53vdC",
         "avatar": "/img/users/1642363306830_avatar.jpg"
+    },
+    {
+        "id": 9,
+        "email": "test@account.com",
+        "password": "$2a$10$L.BiJ6drugOzpGz3.QinMOL6mtotHWS7eU74aTC8SHDh5TnMIKmNa",
+        "avatar": "/img/users/1643404834881_avatar.png"
     }
 ]

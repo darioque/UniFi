@@ -23,21 +23,18 @@ const uploadFile = multer({ storage });
 
 // validaciones
 const registerValidations = [
-    body("address").notEmpty() &&
-        (body("email")
-            .notEmpty()
-            .withMessage("You need to set an email")
-            .bail()
-            .isEmail()
-            .withMessage("Invalid Email"),
-        body("password")
-            .notEmpty()
-            .withMessage("You need to set a password")
-            .bail()
-            .isLength({ min: 6, max: 15 })
-            .withMessage(
-                "Invalid Password (minimum length is 6 and max length is 15"
-            )),
+    body("email").custom((value, {req}) => {
+        if (req.body.address) {
+            return true
+        }
+        return body('email').notEmpty().withMessage("You need to set an email").bail().isEmail().withMessage("Invalid Email")
+    }),
+    body("password").custom((value, {req}) => {
+        if (req.body.address) {
+            return true
+        }
+        return body("password").notEmpty().withMessage("You need to set a password").bail().isLength({ min: 6, max: 15 }).withMessage("Minimum length is 6 and max length is 15")
+    })
 ];
 
 router.get("/", mainController.index);

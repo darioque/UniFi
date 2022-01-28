@@ -3,6 +3,7 @@
   <head>
     <%- include('../partials/head') %>
     <link rel="stylesheet" href="/css/styles-login-register.css" />
+    <script src="/js/metamaskLogin.js" type="text/javascript"></script>
   </head>
 <body class="bg-dark-gray">
     <header>
@@ -46,10 +47,10 @@
             </form>
             <div class="wallet-login">
                 <img src="/img/metamask.svg" alt="Metamask Logo">
+                <span id="addressText" class="text-center"></span>
                 <button type="submit" id="metamaskButton" alt="Connect Metamask Wallet Button">Connect Wallet</button>
-                <form action="/register" method="POST">
-                    <input type="text" name="address" id="address" class="input-box" readonly><span id="addressText" class="text-center"></span>
-                    <button type="submit" id="loginButton">Register With My Wallet</button>   
+                <form action="/register" method="POST" id="metamaskLoginForm">
+                    <input type="text" name="address" id="address" class="input-box" readonly>
                 </form>
             </div>
         </div>
@@ -57,6 +58,5 @@
     <footer>
         <p class="copyright color-white text-center">©Todos los derechos reservados a UniFi</p>
     </footer>
-    <script src="/js/metamaskLogin.js" type="text/javascript"></script>
 </body>
 </html>

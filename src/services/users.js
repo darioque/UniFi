@@ -24,11 +24,12 @@ function addUser(userData) {
     // guarda la lista completa de usuarios en una variable
     const userList = this.getUsers();
     let newUser = {};
-    // chequear que no exista el email/address en la base de datos
+    // chequear que no exista el usuario en la base de datos
     if (
         userList.find(
             (user) =>
-                user.email == userData.email || (user.address && user.address == userData.address)
+                (user.email && user.email == userData.email) ||
+                (user.address && user.address == userData.address)
         )
     ) {
         return false;
@@ -78,7 +79,12 @@ function findUserByPk(userID) {
 // funcion para autenticar un usuario especifico y devolverlo
 function authenticate(userData) {
     const userList = this.getUsers();
-    const user = userList.find((user) => (user.address == userData.address) || (user.email === userData.email && bcrypt.compareSync(userData.password, user.password)));
+    const user = userList.find(
+        (user) =>
+            user.address == userData.address ||
+            (user.email === userData.email &&
+                bcrypt.compareSync(userData.password, user.password))
+    );
     return user;
 }
 
