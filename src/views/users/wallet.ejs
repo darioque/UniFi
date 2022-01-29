@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../partials/head') %>
+        <link rel="stylesheet" href="/css/styles-productList.css" />
+</head>
+
+<body>
+    <header class="bg-dark-gray main-header">
+        <%- include ('../partials/header') %>
+    </header>
+    <main>
+        <div class="main-container">
+            <section>
+                <ul class="no-list progressive-links">
+                    <li>
+                        <a class="no-link" href="/users/"><span>wallet</span></a>
+                    </li>
+                    <li>
+                        <i class="fas fa-chevron-right"></i>
+                        <a class="no-link" href="/users/wallet"><span>
+                                wallet
+                            </span></a>
+                    </li>
+                </ul>
+                <div>
+
+                </div>
+            </section>
+            <section>
+                <h1>Explore wallet
+                </h1>
+
+                <div class="cards-container">
+                    <div class="card-title">
+                        <i class="fas fa-arrow-circle-down"></i>
+                        <h2>Biggest Gainers</h2>
+                    </div>
+                    <div class="table">
+                        <div>
+                            <ol>
+                                <% for (let i=0; i !=10; i++) %>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <form action="/users/wallet/search" method="POST" class="search-form">
+                    <input type="text" name="search" placeholder="Search Asset" class="search-input">
+                    <button type="submit">
+                        <i class="fas fa-search search-icon"></i>
+                    </button>
+                </form>
+                <% if (locals && locals.authenticatedUser) { %>
+                    <a href="/users/wallet/create"><button type="button">Add wallet</button></a>
+                    <% } %>
+                        <ol class="list">
+                            <div class="list-items list-items-title">
+                                <p class="name">
+                                    Name
+                                </p>
+                                <p class="price">
+                                    Price
+                                </p>
+                                <p class="mcap">
+                                    Market Cap
+                                </p>
+                                <p class="change">
+                                    24H Price Change
+                                </p>
+                            </div>
+                            <% for (let asset of assetList) { %>
+                                <a class="no-link" href="/users/wallet/<%= asset.name%>">
+                                    <li class="no-list">
+                                        <div class="list-items">
+                                            <div class="name">
+                                                <img class="currency-logo" src="<%= asset.logo %>"
+                                                    alt="Logo de <%= asset.ticker %>" />
+                                                <p>
+                                                    <%= asset.name%>
+                                                </p>
+
+                                            </div>
+                                            <p class="price">
+                                                $<%= asset.price %>
+                                            </p>
+                                            <p class="mcap">
+                                                $<%= asset.mcap %>
+                                            </p>
+                                            <% if (asset.change < 0) { %>
+                                                <p class="change red">
+                                                    <%= asset.change %>%
+                                                </p>
+                                                <% } else {%>
+                                                    <p class="change green">
+                                                        <%= asset.change %>%
+                                                    </p>
+                                                    <% } %>
+                                        </div>
+                                    </li>
+                                </a>
+                                <% } %>
+                        </ol>
+            </section>
+
+
+        </div>
+    </main>
+    <footer class="bg-dark-gray footer">
+        <%- include ('../partials/footer') %>
+    </footer>
+</body>
+
+</html>

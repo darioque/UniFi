@@ -55,6 +55,7 @@ module.exports = (sequelize, dataTypes) => {
         createdAt: "created_at",
         updatedAt: "updated_at",
         deletedAt: false,
+        tableName: 'assets'
     };
     const Asset = sequelize.define(alias, cols, config);
 

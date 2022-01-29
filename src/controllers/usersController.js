@@ -38,6 +38,18 @@ const usersController = {
         userService.updateUser(req.body);
         res.redirect("/users/profile");
     },
+    wallet: async function (req, res) {
+        const userId = req.session.authenticatedUser.id
+        try {
+            const user = await db.User.findByPk(userId, {
+                include: [{ association: 'assets' }],
+            });
+            const assetList = user.assets
+            res.render('users/wallet', {assetList})
+        } catch (err) {
+            console.log(error)
+        }
+    }
 };
 
 module.exports = usersController;

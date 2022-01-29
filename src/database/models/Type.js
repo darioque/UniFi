@@ -15,6 +15,7 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         timestamps: false,
         deletedAt: false,
+        tableName: 'types'
     };
     const Type = sequelize.define(alias, cols, config);
 

@@ -33,7 +33,7 @@ CREATE TABLE `assets` (
   `price_change_24` float DEFAULT NULL,
   `supply` bigint(20) DEFAULT NULL,
   `mcap` bigint(20) DEFAULT NULL,
-  `logo` varchar(255) NOT NULL DEFAULT '/img/default_logo.svg',
+  `logo` varchar(255) NOT NULL DEFAULT '/img/assets/default_logo.svg',
   `type_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `assets_type_id_foreign` (`type_id`),
