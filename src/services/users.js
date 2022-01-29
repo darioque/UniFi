@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
 const jdenticon = require('jdenticon')
+const crypto = require('crypto')
 const usersJSON = fs.readFileSync(path.join(__dirname, "../data/users.json"));
 const usersList = JSON.parse(usersJSON);
 const usersFilePath = path.join(__dirname, "../data/users.json");
@@ -124,10 +125,10 @@ function deleteUser(userId) {
     fs.writeFileSync(usersFilePath, updatedJSON, null, " ");
 }
 
-// funcion para generar un avatar "identicon" aleatorio
+// funcion para generar un avatar "identicon" a partir de un hash
 function generateAvatar() {
     const size = 200
-    const value = 'icon value'
+    const value = crypto.randomBytes(20).toString("hex");
     const svg = jdenticon.toSvg(value, size)
     const fileName = `${Date.now()}_avatar.svg`;
     fs.writeFileSync(`${avatarsFilePath}${fileName}`, svg)

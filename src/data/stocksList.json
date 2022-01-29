@@ -6,7 +6,7 @@
         "ticker": "AAPL",
         "price": "161.02",
         "change": 5.21,
-        "logo": "/img/aapl_logo.png",
+        "logo": "/img/assets/aapl_logo.png",
         "mcap": "2,641,758,519,296"
     },
     {
@@ -16,7 +16,7 @@
         "ticker": "msft",
         "price": 339.83,
         "change": 5.21,
-        "logo": "/img/msft_logo.svg",
+        "logo": "/img/assets/msft_logo.svg",
         "mcap": "2,501,659,066,368"
     },
     {
@@ -26,7 +26,7 @@
         "ticker": "GOOGL",
         "price": "2,941.04",
         "change": 5.21,
-        "logo": "/img/googl_logo.png",
+        "logo": "/img/assets/googl_logo.png",
         "mcap": "1,948,605,218,816"
     },
     {
@@ -36,7 +36,7 @@
         "ticker": "AMZN",
         "price": "3,572.57",
         "change": 4.32,
-        "logo": "/img/amzn_logo.svg",
+        "logo": "/img/assets/amzn_logo.svg",
         "mcap": "1,811,821,756,416"
     },
     {
@@ -46,7 +46,7 @@
         "ticker": "TSLA",
         "price": "1,156.87",
         "change": -2.14,
-        "logo": "/img/tsla_logo.svg",
+        "logo": "/img/assets/tsla_logo.svg",
         "mcap": "1,161,798,221,824"
     },
     {
@@ -56,7 +56,7 @@
         "ticker": "FB",
         "price": "341.01",
         "change": 5.14,
-        "logo": "/img/fb_logo.svg",
+        "logo": "/img/assets/fb_logo.svg",
         "mcap": "948,607,975,424"
     },
     {
@@ -66,7 +66,7 @@
         "ticker": "NVDA",
         "price": "319.56",
         "change": -5.4,
-        "logo": "/img/nvda_logo.svg",
+        "logo": "/img/assets/nvda_logo.svg",
         "mcap": "796,343,533,568"
     },
     {
@@ -76,7 +76,7 @@
         "ticker": "TSM",
         "price": "124.75",
         "change": 0.39,
-        "logo": "/img/tsm_logo.png",
+        "logo": "/img/assets/tsm_logo.png",
         "mcap": "646,963,462,144"
     },
     {
@@ -86,7 +86,7 @@
         "ticker": "V",
         "price": "195.58",
         "change": -2.63,
-        "logo": "/img/v_logo.svg",
+        "logo": "/img/assets/v_logo.svg",
         "mcap": "426,933,518,336"
     },
     {
@@ -96,7 +96,7 @@
         "ticker": "WM",
         "price": "144.78",
         "change": 22.2,
-        "logo": "/img/wm_logo.png",
+        "logo": "/img/assets/wm_logo.png",
         "mcap": "403,719,028,736"
     }
 ]

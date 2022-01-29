@@ -38,7 +38,7 @@
         "id": 7,
         "email": "checkthis@gmail.com",
         "password": "$2a$10$F1ibnEZ6T5N9ulddPZRtc.JM23CmLvV.NHdS.7/SNNA9ZwgOZwDKq",
-        "avatar": "/img/users/1642363164979_avatar.jpg"
+        "avatar": "/img/users/1640022825878_avatar.svg"
     },
     {
         "id": 8,
@@ -50,5 +50,20 @@
         "id": 9,
         "address": "0x1f29bb2cf5f425f57c20474cd7a84a903207e2ec",
         "avatar": "/img/users/1643424469846_avatar.svg"
+    },
+    {
+        "id": 10,
+        "address": "0x32fcb884f312c69037c5b59f8fecbdd9d983521f",
+        "avatar": "/img/users/1643436050224_avatar.svg"
+    },
+    {
+        "id": 11,
+        "address": "0x8de390521410ad6c828708788633d1f1bc5cc184",
+        "avatar": "/img/users/1643436107059_avatar.svg"
+    },
+    {
+        "id": 12,
+        "address": "0xc90c50e1d407fe882a2b9d789ed2faf9cea89893",
+        "avatar": "/img/users/1643436161447_avatar.svg"
     }
 ]

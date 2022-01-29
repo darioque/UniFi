@@ -32,6 +32,7 @@
         <form action="/users/profile/edit?_method=PUT" method="POST" enctype='multipart/form-data'>
             <% if (user.address) { %>
                 <input type="text" name="address" value="<%= user.address%> " readonly>
+                <input type="text" name="username">
             <% } else { %>
             <div class="form">
                 <label for="email">Email</label>

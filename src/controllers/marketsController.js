@@ -82,7 +82,7 @@ const marketsController = {
 
     // funcion controladora para agregar el nuevo activo a la base de datos y mostrar nuevamente el listado
     store: (req, res) => {
-        req.body.logo = "/img/" + req.file.filename;
+        req.body.logo = "/img/assets/" + req.file.filename;
         assetService.saveAssets(req.body);
         res.redirect("/markets/" + req.body.type);
     },

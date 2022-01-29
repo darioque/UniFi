@@ -4,6 +4,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const addressText = document.getElementById("addressText");
     const loginForm = document.getElementById("metamaskLoginForm");
 
+    let clickCounter = 0;
+
     toggleButton();
 
     function toggleButton() {
@@ -15,7 +17,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
 
     async function signIn() {
-
+        // al clickear el boton por primera vez se aumenta el contador y se intenta conectar a la billetera
+        clickCounter++;
         try {
             var accounts = await window.ethereum.request({
                 method: "eth_requestAccounts",
@@ -24,24 +27,32 @@ window.addEventListener("DOMContentLoaded", (event) => {
             alert(`Error: ${err.message}`);
             return false;
         }
+
+        // coloca la wallet address como valor del input del formulario
         address.value = accounts[0];
-        metamaskButton.style.marginTop = '24px'
+        // disminuye el margen tomando en cuenta el texto a agregar
+        metamaskButton.style.marginTop = "24px";
+        // muestra parte de la address encima del boton con formato "0x355...5645A4"
         addressText.innerText =
             accounts[0].substring(0, 5) + "..." + accounts[0].substring(38, 42);
+        // cambia el texto del boton a "sign in"
         metamaskButton.innerText = "Sign In";
+        // variables para la transacción
         const from = accounts[0];
-        const msg = `UniFi login with wallet address ${accounts[0]}`;
+        const msg = `UniFi sign-in with wallet address ${accounts[0]}`;
 
-        try {
-            await ethereum.request({
-                method: "personal_sign",
-                params: [msg, from, "Example password"],
-            });
+        // al clickear el boton por segunda vez, pide al usuario confirmar una transacción de firma
+        if (clickCounter >= 2) {
+            try {
+                await ethereum.request({
+                    method: "personal_sign",
+                    params: [msg, from, "Example password"],
+                });
+            } catch (err) {
+                alert(`Error: ${err.message}`);
+                return false;
+            }
+            loginForm.submit();
         }
-        catch (err) {
-            alert(`Error: ${err.message}`);
-            return false
-        }
-        loginForm.submit();
     }
 });
