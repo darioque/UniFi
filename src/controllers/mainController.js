@@ -51,15 +51,6 @@ const mainController = {
     },
     // función para procesar autenticacion de usuarios
     processLogin: function (req, res) {
-        const errors = validationResult(req);
-        // si hubo errores (la variable NO está vacía) mandarle los mensajes a la vista del formulario
-        if (!errors.isEmpty()) {
-            return res.render("users/login", {
-                errorMessages: errors.mapped(),
-                old: req.body,
-                pageTitle: "Login",
-            });
-        }
 
         // autenticar datos de login y guardar al usuario resultante en una variable
         const user = userService.authenticate(req.body);
@@ -70,7 +61,6 @@ const mainController = {
                 errorMessages: [{ msg: "Invalid Credentials" }],
             });
         }
-
         // si no hubo errores, guardar al usuario autenticado con session y redirigir a home
         req.session.authenticatedUser = user;
         // si está tildado el campo de remember me, guardarlo con cookie

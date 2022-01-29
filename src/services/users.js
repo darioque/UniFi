@@ -50,7 +50,7 @@ function addUser(userData) {
         newUser = {
             id: newUserId,
             address: userData.address,
-            avatar: "/img/users/default_avatar.png",
+            avatar: "/img/users/default_avatar.svg",
         };
     }
     // agrega el nuevo usuario a la lista
@@ -79,11 +79,14 @@ function findUserByPk(userID) {
 // funcion para autenticar un usuario especifico y devolverlo
 function authenticate(userData) {
     const userList = this.getUsers();
+    if (userData.address) {
+        const user = userList.find((user) => user.address == userData.address);
+        return user;
+    }
     const user = userList.find(
         (user) =>
-            user.address == userData.address ||
-            (user.email === userData.email &&
-                bcrypt.compareSync(userData.password, user.password))
+            user.email === userData.email &&
+            bcrypt.compareSync(userData.password, user.password)
     );
     return user;
 }
