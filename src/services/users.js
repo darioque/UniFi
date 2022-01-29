@@ -1,9 +1,11 @@
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
+const jdenticon = require('jdenticon')
 const usersJSON = fs.readFileSync(path.join(__dirname, "../data/users.json"));
 const usersList = JSON.parse(usersJSON);
 const usersFilePath = path.join(__dirname, "../data/users.json");
+const avatarsFilePath = path.join(__dirname, '../../public/img/users/')
 
 // funcion para devolver la lista completa de usuarios
 function getUsers() {
@@ -50,7 +52,7 @@ function addUser(userData) {
         newUser = {
             id: newUserId,
             address: userData.address,
-            avatar: "/img/users/default_avatar.svg",
+            avatar: generateAvatar(),
         };
     }
     // agrega el nuevo usuario a la lista
@@ -120,6 +122,16 @@ function deleteUser(userId) {
     const updatedJSON = JSON.stringify(filteredUserList, null, 4);
     // escribe el array actualizado al JSON
     fs.writeFileSync(usersFilePath, updatedJSON, null, " ");
+}
+
+// funcion para generar un avatar "identicon" aleatorio
+function generateAvatar() {
+    const size = 200
+    const value = 'icon value'
+    const svg = jdenticon.toSvg(value, size)
+    const fileName = `${Date.now()}_avatar.svg`;
+    fs.writeFileSync(`${avatarsFilePath}${fileName}`, svg)
+    return `/img/users/${fileName}`
 }
 
 module.exports = {

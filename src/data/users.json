@@ -48,8 +48,7 @@
     },
     {
         "id": 9,
-        "email": "test@account.com",
-        "password": "$2a$10$L.BiJ6drugOzpGz3.QinMOL6mtotHWS7eU74aTC8SHDh5TnMIKmNa",
-        "avatar": "/img/users/1643404834881_avatar.png"
+        "address": "0x1f29bb2cf5f425f57c20474cd7a84a903207e2ec",
+        "avatar": "/img/users/1643424469846_avatar.svg"
     }
 ]
