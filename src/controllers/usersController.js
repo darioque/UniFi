@@ -13,7 +13,7 @@ const usersController = {
     },
     // funcion controladora para renderizar perfiles de usuario
     profile: function (req, res) {
-        userId = req.params.id;
+        const userId = req.params.id;
         const user =
             userId != req.session.authenticatedUser.id && userId != undefined
                 ? userService.findUserByPk(userId)
@@ -47,7 +47,8 @@ const usersController = {
             const assetList = user.assets
             res.render('users/wallet', {assetList})
         } catch (err) {
-            console.log(error)
+            console.log(err)
+            res.status(404).render("not-found");
         }
     }
 };

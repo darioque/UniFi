@@ -51,7 +51,6 @@ const mainController = {
     },
     // función para procesar autenticacion de usuarios
     processLogin: function (req, res) {
-
         // autenticar datos de login y guardar al usuario resultante en una variable
         const user = userService.authenticate(req.body);
 
@@ -80,6 +79,15 @@ const mainController = {
         req.session.destroy();
         res.redirect("/login");
     },
+
+    resetPassword: function (req, res) {
+        res.render("users/resetPassword");
+    },
+    // funcion para resetear la contraseña de un usuario
+    processResetPassword: async function (req, res) {
+        searchUser = req.body.email
+        user = userService.findUser(email, searchUser)
+    }
 };
 
 module.exports = mainController;

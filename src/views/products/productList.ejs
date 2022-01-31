@@ -42,8 +42,8 @@
                 </div>
             </section>
             <section>
-                <form action="/markets/<%= marketType %>/search" method="POST" class="search-form">
-                    <input type="text" name="search" placeholder="Search Asset" class="search-input">
+                <form action="/markets/<%= marketType %>/results" method="GET" class="search-form">
+                    <input type="text" name="search" id="search" placeholder="Search Asset" class="search-input">
                     <button type="submit">
                         <i class="fas fa-search search-icon"></i>
                     </button>
@@ -71,7 +71,7 @@
                             <li class="no-list">
                                 <div class="list-items">
                                     <div class="name">
-                                        <img class="currency-logo" src="<%= asset.logo %>" alt="Logo de <%= asset.ticker %>" />
+                                        <img class="currency-logo" src="<%= asset.logo %>" alt="<%= asset.ticker %>'s Logo" />
                                         <p>
                                             <%= asset.name%>
                                         </p>

@@ -1,5 +1,5 @@
 // se importan las bases de datos
-const db = require('../database/models')
+const db = require("../database/models");
 // se importa el servicio de activos
 const assetService = require("../services/assets");
 
@@ -27,19 +27,6 @@ const marketsController = {
                     { association: "user" },
                 ],
             });
-            console.log(transaction.user)
-
-        } catch (error) {
-            console.log(error);
-        }
-        // test de modelos y asociaciones
-        try {
-            const user = await db.User.findByPk(1, {
-                include: [{ association: "assets" }],
-            });
-            for (const activo of user.assets) {
-                //console.log(activo.AssetUser.amount);
-            }
         } catch (error) {
             console.log(error);
         }
@@ -66,9 +53,14 @@ const marketsController = {
     // funcion controladora para el search bar del listado de activos que redirecciona al detalle
     search: function (req, res) {
         const marketType = req.params.marketType;
-        const assetRequested = req.body.search;
+        const assetRequested = req.query.search;
         const asset = assetService.findAsset(marketType, assetRequested);
-        res.redirect("/markets/" + marketType + "/" + asset.id);
+        const assetList = assetService.getAssetList(marketType);
+        res.render("products/productList", {
+            marketType,
+            pageTitle: "Invest in UniFi - " + marketType,
+            assetList: asset?[asset]:assetList,
+        });
     },
 
     // funcion controladora para el renderizado del formulario de creacion de activos

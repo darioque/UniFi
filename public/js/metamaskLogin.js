@@ -25,6 +25,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
             });
         } catch (err) {
             alert(`Error: ${err.message}`);
+            clickCounter--
             return false;
         }
 

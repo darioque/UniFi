@@ -46,6 +46,8 @@ router.get(
 );
 router.get("/register", guestMiddleware, mainController.register);
 router.get("/logout", authMiddleware, mainController.logout);
+router.get('/login/reset-password', guestMiddleware, mainController.resetPassword)
+router.post('/login/reset-password', mainController.processResetPassword)
 
 router.post(
     "/register",

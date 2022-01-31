@@ -29,24 +29,6 @@
                 </div>
             </section>
             <section>
-                <h1>Explore wallet
-                </h1>
-
-                <div class="cards-container">
-                    <div class="card-title">
-                        <i class="fas fa-arrow-circle-down"></i>
-                        <h2>Biggest Gainers</h2>
-                    </div>
-                    <div class="table">
-                        <div>
-                            <ol>
-                                <% for (let i=0; i !=10; i++) %>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section>
                 <form action="/users/wallet/search" method="POST" class="search-form">
                     <input type="text" name="search" placeholder="Search Asset" class="search-input">
                     <button type="submit">
@@ -62,10 +44,13 @@
                                     Name
                                 </p>
                                 <p class="price">
+                                    Balance
+                                </p>
+                                <p class="price">
                                     Price
                                 </p>
                                 <p class="mcap">
-                                    Market Cap
+                                    Holdings
                                 </p>
                                 <p class="change">
                                     24H Price Change
@@ -84,10 +69,13 @@
 
                                             </div>
                                             <p class="price">
+                                                <%= asset.AssetUser.amount %>
+                                            </p>
+                                            <p class="price">
                                                 $<%= asset.price %>
                                             </p>
                                             <p class="mcap">
-                                                $<%= asset.mcap %>
+                                                $<%= asset.AssetUser.amount * asset.price %>
                                             </p>
                                             <% if (asset.change < 0) { %>
                                                 <p class="change red">
