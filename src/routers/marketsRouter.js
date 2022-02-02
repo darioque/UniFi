@@ -23,7 +23,6 @@ router.post("/", authMiddleware, uploadFile.single('logo'), marketsController.st
 
 router.get("/:marketType", marketsController.list);
 router.get("/:marketType/create", authMiddleware, marketsController.create);
-router.get("/:marketType/results", marketsController.search);
 
 router.get("/:marketType/:asset/", marketsController.detail);
 router.get("/:marketType/:asset/edit", authMiddleware, marketsController.edit);

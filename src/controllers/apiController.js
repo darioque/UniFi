@@ -3,7 +3,7 @@ const db = require("../database/models");
 // se importa el servicio de activos
 const assetService = require("../services/assets");
 
-const marketsController = {
+const apiController = {
     // funcion controladora para la pagina de "descubrir"/"mercados"
     markets: function (req, res) {
         const assetList = assetService.getAll();
@@ -18,24 +18,19 @@ const marketsController = {
 
     // funcion controladora para listar los activos de los mercados individuales
     list: async function (req, res) {
-        // test de modelos y asociaciones
-        try {
-            const transaction = await db.Transaction.findByPk(1, {
-                include: [
-                    { association: "inputAsset" },
-                    { association: "outputAsset" },
-                    { association: "user" },
-                ],
-            });
-        } catch (error) {
-            console.log(error);
-        }
-
-        const marketType = req.params.marketType;
-        res.render("products/productList", {
-            marketType,
-            pageTitle: "Invest in UniFi - " + marketType,
-        });
+        const assetList = await db.Asset.findAll({
+            where: {
+                type_id: 1,
+            },
+            limit: 15,
+        })
+        res.status(200).json({
+            meta: {
+                status: 200,
+                count: assetList.length
+            },
+            data: assetList
+        })
     },
 
     // funcion controladora para la pagina de detalle de cada activo
@@ -46,6 +41,19 @@ const marketsController = {
         res.render("products/productDetail", {
             asset,
             pageTitle: asset.ticker + " - Details",
+        });
+    },
+
+    // funcion controladora para el search bar del listado de activos que redirecciona al detalle
+    search: function (req, res) {
+        const marketType = req.params.marketType;
+        const assetRequested = req.query.search;
+        const asset = assetService.findAsset(marketType, assetRequested);
+        const assetList = assetService.getAssetList(marketType);
+        res.render("products/productList", {
+            marketType,
+            pageTitle: "Invest in UniFi - " + marketType,
+            assetList: asset ? [asset] : assetList,
         });
     },
 
@@ -95,4 +103,4 @@ const marketsController = {
     },
 };
 
-module.exports = marketsController;
+module.exports = apiController;

@@ -8,6 +8,7 @@ const userLoggedMiddleware = require("./middlewares/UserLoggedMiddleware");
 const mainRouter = require("./routers/mainRouter");
 const usersRouter = require("./routers/usersRouter");
 const marketsRouter = require("./routers/marketsRouter");
+const apiRouter = require('./routers/apiRouter')
 //seteamos method-override aca y con un app.use debajo para poder usar PUT y DELETE
 const methodOverride = require("method-override");
 
@@ -36,6 +37,7 @@ app.use(cookieParser());
 app.use("/", mainRouter);
 app.use("/users", usersRouter);
 app.use("/markets", marketsRouter);
+app.use('/api', apiRouter)
 
 // pagina para renderizar cuando se intenta entrar a una ruta inexistente
 app.use((req, res, next) => {

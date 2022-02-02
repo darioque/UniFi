@@ -38,6 +38,7 @@ const usersController = {
         userService.updateUser(req.body);
         res.redirect("/users/profile");
     },
+    
     wallet: async function (req, res) {
         const userId = req.session.authenticatedUser.id
         try {
@@ -50,7 +51,22 @@ const usersController = {
             console.log(err)
             res.status(404).render("not-found");
         }
-    }
+    },
+    list: async function (req, res) {
+    const assetList = await db.Asset.findAll({
+        where: {
+            type_id: 1,
+        },
+        limit: 15,
+    })
+    res.status(200).json({
+        meta: {
+            status: 200,
+            count: assetList.length
+        },
+        data: assetList
+    })
+},
 };
 
 module.exports = usersController;

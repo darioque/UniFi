@@ -3,7 +3,8 @@
 
 <head>
     <%- include ('../partials/head') %>
-        <link rel="stylesheet" href="/css/styles-productList.css" />
+    <link rel="stylesheet" href="/css/styles-productList.css" />
+    <script src="/js/productList.js"></script>
 </head>
 
 <body>
@@ -15,12 +16,12 @@
             <section>
                 <ul class="no-list progressive-links">
                     <li>
-                        <a class="no-link" href="/users/"><span>wallet</span></a>
+                        <a class="no-link" href="/users/"><span>Users</span></a>
                     </li>
                     <li>
                         <i class="fas fa-chevron-right"></i>
                         <a class="no-link" href="/users/wallet"><span>
-                                wallet
+                                Wallet
                             </span></a>
                     </li>
                 </ul>
@@ -35,9 +36,6 @@
                         <i class="fas fa-search search-icon"></i>
                     </button>
                 </form>
-                <% if (locals && locals.authenticatedUser) { %>
-                    <a href="/users/wallet/create"><button type="button">Add wallet</button></a>
-                    <% } %>
                         <ol class="list">
                             <div class="list-items list-items-title">
                                 <p class="name">

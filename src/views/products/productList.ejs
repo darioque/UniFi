@@ -3,6 +3,7 @@
 <head>
     <%- include ('../partials/head') %> 
     <link rel="stylesheet" href="/css/styles-productList.css" />
+    <script src="/js/productList.js"></script>
 </head>
 <body>
     <header class="bg-dark-gray main-header">
@@ -42,12 +43,7 @@
                 </div>
             </section>
             <section>
-                <form action="/markets/<%= marketType %>/results" method="GET" class="search-form">
-                    <input type="text" name="search" id="search" placeholder="Search Asset" class="search-input">
-                    <button type="submit">
-                        <i class="fas fa-search search-icon"></i>
-                    </button>
-                </form>
+                <input type="text" name="search" id="search" placeholder="Search Asset" class="search-input">
                     <% if (locals && locals.authenticatedUser) { %>
                         <a href="/markets/<%= marketType %>/create"><button type="button">Add <%= marketType %></button></a>
                     <% } %>                
@@ -66,36 +62,8 @@
                             24H Price Change
                         </p>
                     </div>
-                    <% for (let asset of assetList) { %>
-                        <a class="no-link" href="/markets/<%= marketType %>/<%= asset.name%>">
-                            <li class="no-list">
-                                <div class="list-items">
-                                    <div class="name">
-                                        <img class="currency-logo" src="<%= asset.logo %>" alt="<%= asset.ticker %>'s Logo" />
-                                        <p>
-                                            <%= asset.name%>
-                                        </p>
-
-                                    </div>
-                                    <p class="price">
-                                        $<%= asset.price %>
-                                    </p>
-                                    <p class="mcap">
-                                        $<%= asset.mcap %>
-                                    </p>
-                                    <% if (asset.change < 0) { %> 
-                                        <p class="change red">
-                                            <%= asset.change %>%
-                                        </p>
-                                        <% } else {%>
-                                        <p class="change green">
-                                            <%= asset.change %>%
-                                        </p>
-                                    <% } %>
-                                </div>
-                            </li>
-                        </a>
-                    <% } %> 
+                    <div id="assetList">
+                    </div>
                 </ol>
             </section>
 
