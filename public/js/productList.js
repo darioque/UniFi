@@ -7,9 +7,13 @@ window.onload = async () => {
     const assets = response.data
     listAssets(assets)
     searchInput.addEventListener("input", function (e) {
+
         const assetListDiv = document.querySelector("#assetList");
+
         const filteredAssets = assets.filter((asset) => asset.name.toLowerCase().includes(this.value.toLowerCase()))
+        
         assetListDiv.innerHTML = ''
+
         listAssets(filteredAssets)
     });
 };
@@ -19,7 +23,7 @@ function listAssets(assets) {
         const assetListDiv = document.querySelector("#assetList");
         const link = document.createElement("a");
         link.classList.add("no-link");
-        link.setAttribute("href", `/markets/${asset.type}/${asset.name}`);
+        link.setAttribute("href", `/markets/${asset.type.name}/${asset.id}`);
 
         const list = document.createElement("li");
         list.classList.add("no-list");

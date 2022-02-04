@@ -4,6 +4,7 @@
 <head>
     <%- include('../partials/head')%>
     <link rel="stylesheet" href="/css/styles-productDetail.css" />
+    <script src="/js/purchase.js"></script>
 </head>
 
 <body class="body-container">
@@ -56,21 +57,21 @@
                     <h3 class="converter-title">Buy <%= asset.ticker %>
                     </h3>
                     <div class="converter">
-                        <form action="/markets/cryptocurrencies/<%= asset.name %>/trade-confirmation" method="POST"></form>
+                        <form action="/markets/cryptocurrencies/<%= asset.name %>/trade-confirmation" method="POST" id="form"></form>
                             <div class="currency first-currency">
-                                <img class="currency-logo" src="<%= asset.logo%>" alt="<%= asset.ticker %> logo">
-                                <p class="currency-title">
+                                <img class="currency-logo" src="<%= asset.logo%>" alt="<%= asset.ticker %> logo" id="currencyLogo"> 
+                                <p class="currency-title" id="currencyTitle">
                                     <%= asset.ticker %>
                                 </p>
                                 <div class="currency-input-div">
-                                    <input class="currency-input" type="number" value="1" maxlength="8">
+                                    <input class="currency-input" type="number" value="1" maxlength="8" id="amount">
                                 </div>
                             </div>
                             <div class="currency second-currency">
                                 <img class="currency-logo" src="/img/usd.svg" alt="USD logo">
                                 <p class="currency-title">USD</p>
                                 <div class="currency-input-div">
-                                    <input class="currency-input" type="number" value=<%= asset.price%> maxlength="8">
+                                    <input class="currency-input" type="number" value=<%= asset.price.replace(',', '.')%> maxlength="8" id="price">
                                 </div>
                             </div>
                             <input type="image" id="myBtn" class="exchange-icon" src="/img/exchange.png" alt="Submit">
@@ -91,17 +92,17 @@
                                         <form action="" method="get">
                                             <div class="modal-converter">
                                                 <div class="currency first-currency">
-                                                    <img class="currency-logo" src="/img/btc_logo.png" alt="BTC logo">
-                                                    <p class="currency-title">Bitcoin</p>
+                                                    <img class="currency-logo" src="/img/btc_logo.png" alt="BTC logo" id="confirmationCurrencyLogo">
+                                                    <p class="currency-title" id="confirmationCurrencyTitle"></p>
                                                     <div class="currency-input-div">
-                                                        <p class="currency-input">1</p>
+                                                        <p class="currency-input" id="amountConfirmation"></p>
                                                     </div>
                                                 </div>
                                                 <div class="currency second-currency">
                                                     <img class="currency-logo" src="/img/usd.svg" alt="USD logo">
                                                     <p class="currency-title">USD</p>
                                                     <div class="currency-input-div">
-                                                        <p id="price" class="currency-input">60000</p>
+                                                        <p class="currency-input" id="priceConfirmation"></p>
                                                     </div>
                                                 </div>
                                             </div>

@@ -22,6 +22,7 @@ const apiController = {
             where: {
                 type_id: 1,
             },
+            include: [{association: 'type'}],
             limit: 15,
         })
         res.status(200).json({
