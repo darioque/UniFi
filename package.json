@@ -25,6 +25,7 @@
   "homepage": "https://github.com/0921CDFSNCN22LAED/grupo-06#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "chart.js": "^3.7.0",
     "cookie-parser": "^1.4.6",
     "crypto": "^1.0.1",
     "ejs": "^3.1.6",

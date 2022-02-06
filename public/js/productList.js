@@ -4,17 +4,18 @@ window.onload = async () => {
     const response = await fetch(
         "http://localhost:3000/api/markets/cryptocurrencies"
     ).then((assets) => assets.json());
-    const assets = response.data
-    listAssets(assets)
+    const assets = response.data;
+    listAssets(assets);
     searchInput.addEventListener("input", function (e) {
-
         const assetListDiv = document.querySelector("#assetList");
-
-        const filteredAssets = assets.filter((asset) => asset.name.toLowerCase().includes(this.value.toLowerCase()))
         
-        assetListDiv.innerHTML = ''
+        const filteredAssets = assets.filter((asset) =>
+            asset.name.toLowerCase().includes(this.value.toLowerCase())
+        );
 
-        listAssets(filteredAssets)
+        assetListDiv.innerHTML = "";
+
+        listAssets(filteredAssets);
     });
 };
 
@@ -43,7 +44,7 @@ function listAssets(assets) {
         mcap.innerText = `${asset.mcap}`;
 
         if (!asset.change) {
-            asset.change = 'N/A'
+            asset.change = "N/A";
         }
         const change = document.createElement("p");
         change.innerText = `${asset.change}`;
