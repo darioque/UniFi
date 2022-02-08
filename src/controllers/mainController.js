@@ -1,4 +1,6 @@
 const { validationResult } = require("express-validator");
+const { unlink } = require("fs/promises");
+const path = require("path");
 const assetService = require("../services/assets");
 const userService = require("../services/users");
 
@@ -21,11 +23,18 @@ const mainController = {
             pageTitle: "Register",
         });
     },
-    processRegister: (req, res) => {
+    processRegister: async (req, res) => {
         // guarda los errores en una variable
         const errors = validationResult(req);
-        // si hubo errores (el array no está vacío) mandar los mensajes a la vista del formulario
+        console.log(errors);
+        // si hubo errores (el array no está vacío) mandar los mensajes a la vista del formulario y borrar la imagen subida
         if (!errors.isEmpty()) {
+            try {
+                await unlink(path.resolve(__dirname, `../../${req.file.path}`));
+                console.log("Successfully deleted pfp");
+            } catch (error) {
+                console.error("There was an error deleting the image: ", error);
+            }
             return res.render("users/register", {
                 pageTitle: "Register",
                 old: req.body,
@@ -36,18 +45,9 @@ const mainController = {
         if (req.file) {
             req.body.avatar = "/img/users/" + req.file.filename;
         }
-        // si no hubo errores en el formulario, intentar agregar el usuario a la base de datos
-        if (!userService.addUser(req.body)) {
-            // si el email utilizado ya existia en la base de datos, retornar el sitio de registro con mensaje de error
-            return res.render("users/register", {
-                pageTitle: "Register",
-                old: req.body,
-                errorMessages: [{ msg: "Email or address already registered" }],
-            });
-            // si no hay errores, redireccionar a login
-        } else {
-            res.redirect("/login");
-        }
+        // si no hubo errores en el formulario, agregar el usuario a la base de datos
+        userService.addUser(req.body);
+        res.redirect("/login");
     },
     // función para procesar autenticacion de usuarios
     processLogin: function (req, res) {
@@ -85,9 +85,9 @@ const mainController = {
     },
     // funcion para resetear la contraseña de un usuario
     processResetPassword: async function (req, res) {
-        searchUser = req.body.email
-        user = userService.findUser(email, searchUser)
-    }
+        searchUser = req.body.email;
+        user = userService.findUser(email, searchUser);
+    },
 };
 
 module.exports = mainController;

@@ -1,12 +1,12 @@
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
-const jdenticon = require('jdenticon')
-const crypto = require('crypto')
+const jdenticon = require("jdenticon");
+const crypto = require("crypto");
 const usersJSON = fs.readFileSync(path.join(__dirname, "../data/users.json"));
 const usersList = JSON.parse(usersJSON);
 const usersFilePath = path.join(__dirname, "../data/users.json");
-const avatarsFilePath = path.join(__dirname, '../../public/img/users/')
+const avatarsFilePath = path.join(__dirname, "../../public/img/users/");
 
 // funcion para devolver la lista completa de usuarios
 function getUsers() {
@@ -27,16 +27,6 @@ function addUser(userData) {
     // guarda la lista completa de usuarios en una variable
     const userList = this.getUsers();
     let newUser = {};
-    // chequear que no exista el usuario en la base de datos
-    if (
-        userList.find(
-            (user) =>
-                (user.email && user.email == userData.email) ||
-                (user.address && user.address == userData.address)
-        )
-    ) {
-        return false;
-    }
     // devuelve el id a utilizar
     const newUserId = this.generateId();
 
@@ -127,12 +117,12 @@ function deleteUser(userId) {
 
 // funcion para generar un avatar "identicon" a partir de un hash
 function generateAvatar() {
-    const size = 200
+    const size = 200;
     const value = crypto.randomBytes(20).toString("hex");
-    const svg = jdenticon.toSvg(value, size)
+    const svg = jdenticon.toSvg(value, size);
     const fileName = `${Date.now()}_avatar.svg`;
-    fs.writeFileSync(`${avatarsFilePath}${fileName}`, svg)
-    return `/img/users/${fileName}`
+    fs.writeFileSync(`${avatarsFilePath}${fileName}`, svg);
+    return `/img/users/${fileName}`;
 }
 
 module.exports = {
