@@ -15,9 +15,17 @@ module.exports = (sequelize, dataTypes) => {
         },
         amount: {
             type: dataTypes.DECIMAL(24, 12),
+            get() {
+                const value = this.getDataValue("amount");
+                return value === null ? null : Number(value);
+            },
         },
         price: {
             type: dataTypes.DECIMAL(24, 12),
+            get() {
+                const value = this.getDataValue("price");
+                return value === null ? null : Number(value);
+            },
         },
         user_id: {
             type: dataTypes.INTEGER(10).UNSIGNED,

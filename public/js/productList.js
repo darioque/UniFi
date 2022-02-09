@@ -8,7 +8,7 @@ window.onload = async () => {
     listAssets(assets);
     searchInput.addEventListener("input", function (e) {
         const assetListDiv = document.querySelector("#assetList");
-        
+
         const filteredAssets = assets.filter((asset) =>
             asset.name.toLowerCase().includes(this.value.toLowerCase())
         );
@@ -37,21 +37,38 @@ function listAssets(assets) {
 
         const price = document.createElement("p");
         price.classList.add("price");
-        price.innerText = `${asset.price}`;
+        if (asset.price < 0.00000001) {
+            price.innerText = `${asset.price.toFixed(13)}`;
+        } else {
+            price.innerText = `${asset.price.toFixed(5)}`;
+        }
 
         const mcap = document.createElement("p");
         mcap.classList.add("mcap");
-        mcap.innerText = `${asset.mcap}`;
+        mcap.innerText = `N/A`;
+        if (asset.mcap == null && asset.supply && asset.price) {
+            mcap.innerText = `${asset.price * asset.supply}`;
+        } else {
+             mcap.innerText = `${asset.mcap}`
+        }
+
+
 
         if (!asset.change) {
             asset.change = "N/A";
         }
         const change = document.createElement("p");
-        change.innerText = `${asset.change}`;
-        if (asset.change > 0) {
-            change.classList.add("change", "red");
-        } else {
-            change.classList.add("change", "green");
+        change.classList.add("change", "green");
+        change.innerText = `N/A`;
+
+        if (asset.price_change_24) {
+            if (asset.price_change_24 > 0) {
+                change.innerText = `${asset.price_change_24}`;
+            } else {
+                change.classList.remove("green");
+                change.classList.add("red");
+                change.innerText = `-${asset.price_change_24}`;
+            }
         }
 
         const img = document.createElement("img");
@@ -60,10 +77,22 @@ function listAssets(assets) {
         img.setAttribute("alt", `${asset.ticker}'s Logo`);
 
         const p = document.createElement("p");
-        p.innerText = `${asset.name}`;
+        p.innerText = `${asset.ticker}`;
+        p.setAttribute('id', 'ticker')
+
+        const span = document.createElement("p");
+        span.innerHTML = `${asset.name}`;
+        span.setAttribute("id", "fullName");
+        span.style.color = "rgb(128, 138, 157)";
+        span.style.fontSize = "12px";
+
+        const nameDiv = document.createElement("div");
+        nameDiv.classList.add("nameDiv");
+        nameDiv.appendChild(p);
+        nameDiv.appendChild(span);
 
         name.appendChild(img);
-        name.appendChild(p);
+        name.appendChild(nameDiv);
         listDiv.appendChild(name);
         listDiv.appendChild(price);
         listDiv.appendChild(mcap);

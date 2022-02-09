@@ -24,25 +24,37 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
         },
         price: {
-            type: dataTypes.DECIMAL(24,12),
+            type: dataTypes.DECIMAL(24, 12),
             allowNull: true,
+            get() {
+                const value = this.getDataValue("price");
+                return value === null ? null : Number(value);
+            },
         },
         price_change_24: {
             type: dataTypes.FLOAT,
             allowNull: true,
         },
         supply: {
-            type: dataTypes.INTEGER(20),
+            type: dataTypes.BIGINT(20),
             allowNull: true,
+            get() {
+                const value = this.getDataValue("supply");
+                return value === null ? null : Number(value);
+            },
         },
         mcap: {
-            type: dataTypes.    INTEGER(20),
+            type: dataTypes.BIGINT(20),
             allowNull: true,
+            get() {
+                const value = this.getDataValue("mcap");
+                return value === null ? null : Number(value);
+            },
         },
         logo: {
             type: dataTypes.STRING(255),
+            defaultValue: "/img/assets/default_logo.svg",
             allowNull: false,
-            default: "/img/assets/default_logo.svg",
         },
         type_id: {
             type: dataTypes.INTEGER(10).UNSIGNED,

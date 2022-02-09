@@ -1,73 +1,92 @@
 .currency-logo {
-  height: 32px;
-  width: 32px;
+    height: 32px;
+    width: 32px;
 }
 
 .list {
-  display: flex;
-  flex-direction: column;
-  padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
 }
 
 .list-items {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .list-items-title {
-  padding: 0px 10px;
-  border: none;
-  font-weight: 800;
-  background-color: #FAFAFA;
+    padding: 0px 10px;
+    border: none;
+    font-weight: 800;
+    background-color: #fafafa;
 }
 
-.list-items .currency-logo{
-  margin-right: 10px;
+.list-items .currency-logo {
+    margin-right: 10px;
 }
 .list-items .change,
 .name,
 .price,
 .mcap {
-  display: flex;
-  width: 80px;
-  height: 35px;
-  align-items: center;
-  justify-content: left;
+    display: flex;
+    width: 80px;
+    height: 35px;
+    align-items: center;
+    justify-content: left;
 }
 
-.list-items .green, .list-items .red {
-  border-radius: 3px;
-  color: white;
-  justify-content: center;
+.list-items .green,
+.list-items .red {
+    border-radius: 3px;
+    color: white;
+    justify-content: center;
 }
 .list-items .red {
-  background-color: rgb(246, 70, 93);
+    background-color: rgb(246, 70, 93);
 }
 .list-items .green {
-  background-color: rgb(14, 203, 129);
+    background-color: rgb(14, 203, 129);
 }
 
 .list-items .mcap {
-  display: none;
+    display: none;
 }
 
+.nameDiv {
+	display: flex;
+	align-items: flex-start;
+    flex-direction: column;
+    line-height: 0;
+}
 
+#assetList {
+    max-height: 100vh;
+    overflow: auto;
+}
 /* MEDIA QUERY DE PANTALLAS DESDE A 480PX */
 @media (min-width: 481px) {
-
 }
 
 @media (min-width: 768px) {
-  .list-items .mcap{
-    display: flex;
-  }
+    .list-items .mcap {
+        display: flex;
+    }
 
-  .header-options a span {
-    display: inline;
-  }
+    .nameDiv {
+        flex-direction: row;
+        align-items: center;
+    }
+    #fullName {
+        margin-left: 5px;
+    }
+    #ticker {
+        font-weight: bolder;
+    }
+    .header-options a span {
+        display: inline;
+    }
 }
 
 /* MEDIA QUERY DE PANTALLAS DESDE 1200PX */
 @media (min-width: 1200px) {
-    
 }

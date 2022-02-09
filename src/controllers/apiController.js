@@ -19,11 +19,7 @@ const apiController = {
     // funcion controladora para listar los activos de los mercados individuales
     list: async function (req, res) {
         const assetList = await db.Asset.findAll({
-            where: {
-                type_id: 1,
-            },
-            include: [{association: 'type'}],
-            limit: 15,
+            include: [{association: 'type'}]
         })
         res.status(200).json({
             meta: {

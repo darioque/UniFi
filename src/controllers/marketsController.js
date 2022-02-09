@@ -59,9 +59,19 @@ const marketsController = {
     },
 
     // funcion controladora para agregar el nuevo activo a la base de datos y mostrar nuevamente el listado
-    store: (req, res) => {
-        req.body.logo = "/img/assets/" + req.file.filename;
-        assetService.saveAssets(req.body);
+    store: async (req, res) => {
+        if (req.file) {
+            req.body.logo = "/img/assets/" + req.file.filename;
+        }
+        // esto funciona para añadir un activo (con poco testeo)
+        try {
+            await db.Asset.create({
+                ...req.body
+            })
+        } catch (error) {
+            console.error(error);
+        }
+        //assetService.saveAssets(req.body);
         res.redirect("/markets/" + req.body.type);
     },
 

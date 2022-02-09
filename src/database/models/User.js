@@ -42,7 +42,7 @@ module.exports = (sequelize, dataTypes) => {
         avatar: {
             type: dataTypes.STRING(255),
             allowNull: false,
-            default: '/img/users/default_avatar.svg'
+            defaultValue: '/img/users/default_avatar.svg'
         },
     };
     let config = {

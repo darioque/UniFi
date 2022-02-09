@@ -4,6 +4,10 @@ module.exports = (sequelize, dataTypes) => {
         amount: {
             type: dataTypes.DECIMAL(24, 12),
             allowNull: false,
+            get() {
+                const value = this.getDataValue("amount");
+                return value === null ? null : Number(value);
+            },
         },
     };
     let config = {
