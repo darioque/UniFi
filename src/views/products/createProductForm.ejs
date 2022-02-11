@@ -16,8 +16,8 @@
                 <i class="fas fa-chevron-right"></i>
             </li>
             <li>
-                <a class="no-link" href="/markets/<%= marketType %>">
-                    <span><%= marketType %></span>
+                <a class="no-link" href="/markets/">
+                    <span></span>
                 </a>
             </li>
             <li>
@@ -26,23 +26,28 @@
             </li>
         </ul>
         <h1 class="text-center">Create New Product</h1>
-        <form action="/markets" method="POST" enctype="multipart/form-data">
+
+
+        <form method="POST" enctype="multipart/form-data" action="/markets/create">
             <div class="form">
                 <input type="text" name="name" placeholder="Name" class="input">
+
+                <input type="text" name="ticker" placeholder="Ticker" class="input">
+                <input type="number" name="price" placeholder="Price" class="input">
+                <input type="number" step="0.01" name="change" placeholder="Change" class="input">
+                <input type="number" name="supply" placeholder="Supply" class="input">
+                <input type="number" name="mcap" placeholder="MarketCap" class="input">
                 <select name="type_id" id="type_id" class="select">
                     <option value=""></option>
-                    <option value="1" <%= marketType == 'cryptocurrencies'? "selected": null %> >cryptocurrencies</option>
-                    <option value="2" <%= marketType == 'stocks'? "selected": null %>>stocks</option>
                 </select>
-                <input type="text" name="ticker" placeholder="Ticker" class="input">
-                <input type="text" name="price" placeholder="Price" class="input">
-                <input type="number" step="0.01" name="change" placeholder="Change" class="input">
                 <div class="input-file">
                     <input type="file" name="logo" id="logo" class="input-file-button">
                 </div>
-                <input type="number" name="mcap" placeholder="Market Cap" class="input">
-                <input type="submit" value="Load product" class="load-product">
+                
+                
+
             </div>
+            <button type="submit" class="load-product">Create</button>
         </form>
 
     </main>

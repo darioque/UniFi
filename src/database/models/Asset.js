@@ -88,7 +88,7 @@ module.exports = (sequelize, dataTypes) => {
             as: "users",
             through: models.AssetUser,
             foreignKey: "asset_id",
-            otherKey: "user_id",
+            otherKey: "",
             timestamps: false,
         });
     };

@@ -27,11 +27,11 @@ module.exports = (sequelize, dataTypes) => {
                 return value === null ? null : Number(value);
             },
         },
-        user_id: {
-            type: dataTypes.INTEGER(10).UNSIGNED,
-            allowNull: false,
-            foreignKey: true,
-        },
+        // user_id: {
+        //     type: dataTypes.INTEGER(10).UNSIGNED,
+        //     allowNull: false,
+        //     foreignKey: true,
+        // },
         input_asset_id: {
             type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false,
@@ -52,20 +52,20 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Transaction = sequelize.define(alias, cols, config);
 
-    Transaction.associate = function (models) {
-        Transaction.belongsTo(models.Asset, {
-            as: "inputAsset",
-            foreignKey: "input_asset_id",
-        });
-        Transaction.belongsTo(models.Asset, {
-            as: "outputAsset",
-            foreignKey: "output_asset_id",
-        });
-        Transaction.belongsTo(models.User, {
-            as: 'user',
-            foreignKey: 'user_id'
-        })
-    };
+    // Transaction.associate = function (models) {
+    //     Transaction.belongsTo(models.Asset, {
+    //         as: "inputAsset",
+    //         foreignKey: "input_asset_id",
+    //     });
+    //     Transaction.belongsTo(models.Asset, {
+    //         as: "outputAsset",
+    //         foreignKey: "output_asset_id",
+    //     });
+    //     Transaction.belongsTo(models.User, {
+    //         as: 'user',
+    //         foreignKey: 'user_id'
+    //     })
+    // };
 
     return Transaction;
 };
