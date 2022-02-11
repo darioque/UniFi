@@ -25,6 +25,7 @@
   "homepage": "https://github.com/0921CDFSNCN22LAED/grupo-06#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
     "chart.js": "^3.7.0",
     "cookie-parser": "^1.4.6",
     "crypto": "^1.0.1",
@@ -36,7 +37,9 @@
     "method-override": "^3.0.0",
     "multer": "^1.4.4",
     "mysql2": "^2.3.3",
-    "nodemon": "^2.0.15",
     "sequelize": "^6.14.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
