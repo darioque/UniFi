@@ -1,3 +1,6 @@
+// se importan las bases de datos
+const db = require("../database/models");
+
 const fs = require("fs");
 const path = require("path");
 const stockListJSON = fs.readFileSync(
@@ -46,7 +49,7 @@ function generateId(type) {
     return 1;
 }
 
-function saveAssets(assetData) {
+function saveAssets(assetData, ) {
     // agrega el nuevo activo a la lista correspondiente usando las funciones getAssetList y push
     const assetList = this.getAssetList(assetData.type);
     const newAssetId = this.generateId(assetData.type);
@@ -85,15 +88,21 @@ function updateAsset(assetData) {
     fs.writeFileSync(filePath, updatedJSON, "utf-8");
 }
 
-function findAsset(marketType, assetRequested) {
-    const assetList = this.getAssetList(marketType);
-    const asset = assetList.find(
-        (asset) =>
-            asset.name === assetRequested ||
-            asset.ticker.toLowerCase() === assetRequested ||
-            asset.id == assetRequested
-    );
-    return asset;
+async function findAsset(marketType, assetRequested) {
+    try {
+
+        const asset = await db.Asset.findByPk(assetRequested, {
+            include: [                
+                { association: "transactionInput" },
+                { association: "transactionOutput" },
+                { association: "type" },
+                { association: "users"}
+            ],
+        });
+        return asset;
+    } catch(error){
+        console.log(error);
+    };    
 }
 
 function deleteAsset(assetId) {}

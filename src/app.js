@@ -1,18 +1,16 @@
 const express = require("express");
 const path = require("path");
-const bodyParser = require('body-parser');
+const app = express();
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const publicPath = path.join(__dirname, "../public");
 const userLoggedMiddleware = require("./middlewares/UserLoggedMiddleware");
 const mainRouter = require("./routers/mainRouter");
 const usersRouter = require("./routers/usersRouter");
-const marketsRouter = require("../src/routers/marketsRouter");
+const marketsRouter = require("./routers/marketsRouter");
 const apiRouter = require('./routers/apiRouter')
 //seteamos method-override aca y con un app.use debajo para poder usar PUT y DELETE
 const methodOverride = require("method-override");
-
-const app = express();
 
 // seteamos ruta de archivos estaticos y view engine por defecto
 app.use(express.static(publicPath));
@@ -21,8 +19,8 @@ app.set("views", path.join(__dirname, "/views"));
 
 // middlewares
 // nos permite capturar informacion que llega por post
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(methodOverride("_method"));
 
 app.use(

@@ -31,7 +31,7 @@ const apiController = {
     },
 
     // funcion controladora para la pagina de detalle de cada activo
-    detail: function (req, res) {
+    /* detail: function (req, res) {
         const assetRequested = req.params.asset;
         const marketType = req.params.marketType;
         const asset = assetService.findAsset(marketType, assetRequested);
@@ -39,7 +39,7 @@ const apiController = {
             asset,
             pageTitle: asset.ticker + " - Details",
         });
-    },
+    }, */
 
     // funcion controladora para el search bar del listado de activos que redirecciona al detalle
     search: function (req, res) {

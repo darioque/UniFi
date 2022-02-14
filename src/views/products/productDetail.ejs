@@ -20,8 +20,8 @@
                     <i class="fas fa-chevron-right"></i>
                 </li>
                 <li>
-                    <a class="no-link" href="/markets/<%= asset.type %>">
-                        <span><%= asset.type %></span>
+                    <a class="no-link" href="/markets/<%= asset.nameType %>">
+                        <span><%= nameType %></span>
                     </a>
                 </li>
                 <li>
@@ -44,9 +44,9 @@
                 <div class="price-title">
                     <span>$<%= asset.price %> </span>
                     <%if (asset.change < 0) { %>
-                        <span class="percentage-change red"><%= asset.change %>%</span>
+                        <span class="percentage-change red"><%= asset.price_change_24 %>%</span>
                         <% } else {%>
-                            <span class="percentage-change green"><%= asset.change %>%</span>
+                            <span class="percentage-change green"><%= asset.price_change_24 %>%</span>
                             <% } %>
                 </div>
             </div>
@@ -136,7 +136,7 @@
                             </div>
                             <div class="statistic">
                                 <p>24H Price Change</p>
-                                <p>$ <%= (asset.price * asset.change / 100).toFixed(2) %> </p>
+                                <p>$ <%= (asset.price * asset.price_change_24 / 100).toFixed(2) %> </p>
                             </div>
                             <div class="statistic">
                                 <p>24h Low / High</p>
