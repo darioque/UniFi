@@ -67,7 +67,23 @@ function saveAssets(assetData, ) {
     fs.writeFileSync(filePath, updatedJSON, "utf-8");
 }
 
-function createAsset(formBody) {}
+async function createAsset(assetRequested) {
+    try {
+        const create = await db.Asset.create({
+            name: assetRequested.name,
+            ticker: assetRequested.ticker,
+            price: assetRequested.price,
+            price_change_24: assetRequested.change,
+            supply: assetRequested.price * assetRequested.change,
+            mcap: assetRequested.mcap,
+            logo: assetRequested.logo,
+            type_id: assetRequested.type_id
+        });
+        return create;
+    } catch (error) {
+        console.error(error);
+    }
+}
 
 function updateAsset(assetData) {
     const assetList = this.getAssetList(assetData.type);
@@ -88,9 +104,8 @@ function updateAsset(assetData) {
     fs.writeFileSync(filePath, updatedJSON, "utf-8");
 }
 
-async function findAsset(marketType, assetRequested) {
+async function findAsset(assetRequested) {
     try {
-
         const asset = await db.Asset.findByPk(assetRequested, {
             include: [                
                 { association: "transactionInput" },
@@ -103,6 +118,15 @@ async function findAsset(marketType, assetRequested) {
     } catch(error){
         console.log(error);
     };    
+}
+
+async function findTypeId(id) {
+    try {
+        const nameType = await db.Type.findByPk(id);
+        return nameType;
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 function deleteAsset(assetId) {}
@@ -136,6 +160,7 @@ module.exports = {
     createAsset,
     updateAsset,
     findAsset,
+    findTypeId,
     deleteAsset,
     sortByGainers,
     sortByLosers,

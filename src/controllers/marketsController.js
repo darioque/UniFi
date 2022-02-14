@@ -45,11 +45,11 @@ const marketsController = {
             const assetRequested = req.params.asset;
             const marketType = req.params.marketType;           
             //obtiene el objeto de la consulta a la BD 
-            const objectAsset = await assetService.findAsset(marketType, assetRequested);
+            const objectAsset = await assetService.findAsset(assetRequested);
             const asset = objectAsset.dataValues;
-            //obtiene el objeto type de la asociacion Asset - Type para recuperar el nombre del id de type
-            const objectTypeAsset = asset.type;
-            const nameType = objectTypeAsset.dataValues.name;
+            //obtiene el objeto type de la tabla Types
+            const typeId = await assetService.findTypeId(asset.type_id);
+            const nameType = typeId.dataValues.name;
             res.render("products/productDetail", {
                 asset,
                 pageTitle: asset.ticker + " - Details",
@@ -74,24 +74,21 @@ const marketsController = {
         if (req.file) {
             req.body.logo = "/img/assets/" + req.file.filename;
         }
-        // esto funciona para añadir un activo (con poco testeo)
+        // invoca a función createAsset de Services - assets para crear un producto
         try {
-            await db.Asset.create({
-                name: req.body.name,
-                ticker: req.body.ticker,
-                price: req.body.price,
-                price_change_24: req.body.change,
-                supply: req.body.price * req.body.change,
-                mcap: req.body.mcap,
-                logo: req.body.logo,
-                type_id: req.body.type_id
-                //...req.body
-            })
+            const assetRequested = req.body;
+            const createAsset = await assetService.createAsset(assetRequested);
+            //obtiene el type_id de la creación de producto en la BD
+            const typeId = createAsset.dataValues.type_id;
+            //busca el nombre de type correspondiente con el id
+            const objectType = await assetService.findTypeId(typeId);
+            const nameType = objectType.dataValues.name;
+
+            res.redirect("/markets/" + nameType);
+
         } catch (error) {
-            console.error(error);
+            console.log (error);
         }
-        //assetService.saveAssets(req.body);
-        res.redirect("/markets/" + req.body.type);
     },
 
     // funcion controladora para renderizar el formulario de edicion de activos
