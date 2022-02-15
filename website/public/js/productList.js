@@ -9,8 +9,10 @@ window.onload = async () => {
     searchInput.addEventListener("input", function (e) {
         const assetListDiv = document.querySelector("#assetList");
 
-        const filteredAssets = assets.filter((asset) =>
-            asset.name.toLowerCase().includes(this.value.toLowerCase())
+        const filteredAssets = assets.filter(
+            (asset) =>
+                asset.name.toLowerCase().includes(this.value.toLowerCase()) ||
+                asset.ticker.toLowerCase().includes(this.value.toLowerCase())
         );
 
         assetListDiv.innerHTML = "";
@@ -49,10 +51,8 @@ function listAssets(assets) {
         if (asset.mcap == null && asset.supply && asset.price) {
             mcap.innerText = `${asset.price * asset.supply}`;
         } else {
-             mcap.innerText = `${asset.mcap}`
+            mcap.innerText = `${asset.mcap}`;
         }
-
-
 
         if (!asset.change) {
             asset.change = "N/A";
@@ -78,7 +78,7 @@ function listAssets(assets) {
 
         const p = document.createElement("p");
         p.innerText = `${asset.ticker}`;
-        p.setAttribute('id', 'ticker')
+        p.setAttribute("id", "ticker");
 
         const span = document.createElement("p");
         span.innerHTML = `${asset.name}`;
