@@ -23,8 +23,11 @@
             all your investments in one place. Choose one of our available
             services to start:
           </p>
-  
-          <a class="main-button no-link" href="/register">Create an account</a>
+          <% if (locals && locals.authenticatedUser) { %>
+          <a class="main-button no-link" style="display: none;" href="/register">Create an account</a>
+          <% } else { %>
+            <a class="main-button no-link" href="/register">Create an account</a>
+          <% } %>
         </div>
       </section>
   

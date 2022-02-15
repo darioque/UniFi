@@ -71,7 +71,7 @@ const apiController = {
     },
 
     // funcion controladora para renderizar el formulario de edicion de activos
-    edit: function (req, res) {
+   /*  edit: function (req, res) {
         const assetRequested = req.params.asset;
         const marketType = req.params.marketType;
         const asset = assetService.findAsset(marketType, assetRequested);
@@ -79,10 +79,10 @@ const apiController = {
             pageTitle: "UniFi - Edit Product",
             asset,
         });
-    },
+    }, */
 
     // funcion controladora para editar activos existentes en la base de datos
-    update: function (req, res) {
+    /* update: function (req, res) {
         const assetId = req.params.asset;
         const marketType = req.params.marketType;
         if (req.file) {
@@ -90,7 +90,7 @@ const apiController = {
         }
         assetService.updateAsset(req.body);
         res.redirect(`/markets/${marketType}/${assetId}`);
-    },
+    }, */
 
     // funcion controladora para borrar activos existentes en la base de datos
     delete: function (req, res) {

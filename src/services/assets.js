@@ -85,48 +85,53 @@ async function createAsset(assetRequested) {
     }
 }
 
-function updateAsset(assetData) {
-    const assetList = this.getAssetList(assetData.type);
-    assetIndex = assetList.findIndex((asset) => asset.id == assetData.id);
-    assetList[assetIndex] = {
-        id: assetList[assetIndex].id,
-        name: assetData.name,
-        type: assetList[assetIndex].type,
-        ticker: assetData.ticker,
-        price: parseFloat(assetData.price),
-        change: parseFloat(assetData.change),
-        logo: assetData.logo ? assetData.logo : assetList[assetIndex].logo,
-        mcap: parseInt(assetData.mcap).toLocaleString("en"),
-    };
-    const filePath =
-        assetData.type === "cryptocurrencies" ? cryptoFilePath : stockFilePath;
-    const updatedJSON = JSON.stringify(assetList, null, 4);
-    fs.writeFileSync(filePath, updatedJSON, "utf-8");
+async function updateAsset(assetRequested, assetId, idMarketType) {
+    try {
+        const update = await db.Asset.update({
+            name: assetRequested.name,
+            ticker: assetRequested.ticker,
+            price: assetRequested.price,
+            price_change_24: assetRequested.price_change_24,
+            supply: assetRequested.price * assetRequested.price_change_24,
+            mcap: assetRequested.mcap,
+            logo: assetRequested.logo,
+            type_id: idMarketType,
+        },{
+            where: {id: assetId},
+        });
+        return update;
+    } catch (error) {
+        console.log (error);
+    };    
 }
 
 async function findAsset(assetRequested) {
     try {
-        const asset = await db.Asset.findByPk(assetRequested, {
-            include: [                
-                { association: "transactionInput" },
-                { association: "transactionOutput" },
-                { association: "type" },
-                { association: "users"}
-            ],
-        });
+        const asset = await db.Asset.findByPk(assetRequested);
         return asset;
     } catch(error){
         console.log(error);
     };    
 }
 
-async function findTypeId(id) {
+async function findTypeName(id) {
+    //Busca el nombre, a partir del id, correspondiente en la tabla Types de activos
     try {
         const nameType = await db.Type.findByPk(id);
         return nameType;
     } catch (error) {
         console.log(error);
+    };
+}
+
+async function findTypeId(name){
+    try {
+        const idType = await db.Type.findOne({ where: { name: name } });
+        return idType;
+    } catch (error) {
+        console.log(error);
     }
+
 }
 
 function deleteAsset(assetId) {}
@@ -160,6 +165,7 @@ module.exports = {
     createAsset,
     updateAsset,
     findAsset,
+    findTypeName,
     findTypeId,
     deleteAsset,
     sortByGainers,

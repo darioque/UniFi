@@ -25,8 +25,10 @@ router.get("/:marketType", marketsController.list);
 router.get("/:marketType/create", authMiddleware, marketsController.create);
 
 router.get("/:marketType/:asset/", marketsController.detail);
-router.get("/:marketType/:asset/edit", authMiddleware, marketsController.edit);
-router.put("/:marketType/:asset/", authMiddleware, uploadFile.single('logo'), marketsController.update);
+router.get("/:marketType/:asset/edit/:id", authMiddleware, marketsController.edit);
+
+router.post("/:marketType/:id", authMiddleware, uploadFile.single('logo'), marketsController.update);
+
 router.delete("/:marketType/:asset/delete", authMiddleware, marketsController.delete);
 
 module.exports = router;

@@ -26,7 +26,7 @@
                 </li>
                 <li>
                     <i class="fas fa-chevron-right"></i>
-                    <a class="no-link" href="/markets/<%= asset.type %>/<%= asset.name %>"><span>
+                    <a class="no-link" href="/markets/<%= asset.nameType %>/<%= asset.name %>"><span>
                             <%= asset.name %>
                         </span></a>
                 </li>
@@ -39,7 +39,7 @@
                     <%= asset.name %> (<%= asset.ticker %>) Price
                 </h1>
                 <% if (locals && locals.authenticatedUser) { %>
-                    <a href="/markets/<%= asset.type %>/<%= asset.name %>/edit"><button type="button">Editar Producto</button></a>
+                    <a href="/markets/<%= nameType %>/<%= asset.name %>/edit/<%= asset.id %>"><button type="button">Editar Producto</button></a>
                 <% } %>          
                 <div class="price-title">
                     <span>$<%= asset.price %> </span>
