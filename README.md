@@ -38,7 +38,7 @@ El UI del sitio fue inspirado en distintas páginas web de brokers, billeteras y
 
 #### Logo
 
-![logo](/public/img/logo.png)
+![logo](/website/public/img/logo.png)
 
 #### Tipografías
 
