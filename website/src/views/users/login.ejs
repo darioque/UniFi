@@ -24,24 +24,36 @@
             <p class="errors"><%= errorMessages[error].msg %> </p>
             <% } %> 
         <% } %> 
+
+                <div class="errores">
+                    <ul></ul>
+                </div>
+
+
         <div class="login-form-container">
             <form class="login-form" action="/login" method="POST">
+
                 <label for="email">Email</label>
                 <div class="input-box">
-                    <input type="email" name="email" value="<%= locals.old? old.email: '' %>" required>
+                    <input class="email" type="email" name="email" value="<%= locals.old? old.email: '' %>">
                 </div>
+
                 <label for="password">Password</label>
                 <div class="input-box">
-                    <input  type="password" name="password" required>
+                    <input class="password" type="password" name="password">
                 </div>
+
                 <label for="remember">
                     <input type="checkbox" class="checkbox" name="remember"> Remember Me
                 </label>
-                <button type="submit">Log in</button>
+
+                <button class="button" type="submit">Log in</button>
+
                 <div class="other-links">
                     <a class="no-link" href="/login/reset-password">Forgot your password?</a>
                     <a class="no-link" href="/register">Don't have account yet? Register</a>
                 </div>
+
             </form>
             <div class="wallet-login">
                 <img src="/img/metamask.svg" alt="Metamask Logo">
@@ -56,5 +68,6 @@
     <footer>
         <p class="copyright color-white text-center">©Todos los derechos reservados a UniFi</p>
     </footer>
+    <script src="/js/validationsLogin.js"></script>
 </body>
 </html>

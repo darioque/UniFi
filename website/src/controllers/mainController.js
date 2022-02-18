@@ -57,7 +57,7 @@ const mainController = {
         // si no se encontró ningun usuario que coincida (credenciales invalidas), devolver el sitio de login con mensaje de error
         if (!user) {
             return res.render("users/login", {
-                errorMessages: [{ msg: "Invalid Credentials" }],
+                errorMessages: [{ msg: "Invalid username or password" }],
             });
         }
         // si no hubo errores, guardar al usuario autenticado con session y redirigir a home
