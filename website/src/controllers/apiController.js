@@ -5,7 +5,7 @@ const assetService = require("../services/assets");
 
 const apiController = {
     // funcion controladora para la pagina de "descubrir"/"mercados"
-    types: async function (req, res) {
+    listTypes: async function (req, res) {
         const types = await db.Type.findAll();
         res.status(200).json({
             meta: {
@@ -17,7 +17,7 @@ const apiController = {
     },
 
     // funcion controladora para listar los activos de los mercados individuales
-    list: async function (req, res) {
+    listAssets: async function (req, res) {
         const assetList = await db.Asset.findAll({
             include: [{ association: "type" }],
         });
@@ -27,6 +27,28 @@ const apiController = {
                 count: assetList.length,
             },
             data: assetList,
+        });
+    },
+
+    listTransactions: async function (req, res) {
+        const transactionList = await db.Transaction.findAll();
+        res.status(200).json({
+            meta: {
+                status: 200,
+                count: transactionList.length,
+            },
+            data: transactionList,
+        });
+    },
+
+    listUsers: async function (req, res) {
+        const userList = await db.User.findAll();
+        res.status(200).json({
+            meta: {
+                status: 200,
+                count: userList.length,
+            },
+            data: userList,
         });
     },
 

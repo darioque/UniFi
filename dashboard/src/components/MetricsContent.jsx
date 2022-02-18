@@ -5,24 +5,50 @@ const array = [
 	{
 		title: 'ASSETS IN DATA BASE',
 		color: 'primary',
-		number: '21',
-		icon: 'fa-film'
+		icon: 'fa-coin',
+		number: 0,
 	},
 	{
 		title: 'TOTAL USERS',
 		color: 'success',
-		number: '79',
-		icon: 'fa-award'
+		icon: 'fa-user',
+		number: 0,
 	},
 	{
 		title: 'TOTAL TRANSACTIONS',
 		color: 'warning',
-		number: '49',
-		icon: 'fa-user'
+		icon: 'fa-sync-alt',
+		number: 0,
 	},
 ]
 
 class MetricsContent extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			data: array,
+		}
+	}
+
+
+	async getData() {
+		const assetsResponse = await fetch('http://localhost:3001/api/markets/')
+		const usersResponse = await fetch('http://localhost:3001/api/users/')
+		const transactionsResponse = await fetch('http://localhost:3001/api/transactions')
+		const assets = await assetsResponse.json().meta.count
+		const users = await usersResponse.json().meta.count
+		const transactions = await transactionsResponse.json().meta.count;
+		this.setState({
+			assets: assets,
+			users: users,
+			transactions: transactions,
+		})
+	}
+
+	componentDidMount() {
+		this.getData()
+	}
+
 	render() {
 		return (
 			<div className="row">
