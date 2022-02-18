@@ -92,8 +92,8 @@ async function updateAsset(assetRequested, assetId, idMarketType) {
             ticker: assetRequested.ticker,
             price: assetRequested.price,
             price_change_24: assetRequested.price_change_24,
-            supply: assetRequested.price * assetRequested.price_change_24,
-            mcap: assetRequested.mcap,
+            supply: assetRequested.supply,
+            mcap: assetRequested.mcap || assetRequested.price * assetRequested.supply,
             logo: assetRequested.logo,
             type_id: idMarketType,
         },{

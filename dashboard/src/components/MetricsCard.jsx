@@ -41,4 +41,5 @@ MetricsCard.defaultProps = {
     color: "primary",
     icon: "fa-film",
 };
+
 export default MetricsCard

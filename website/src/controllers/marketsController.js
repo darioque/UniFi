@@ -18,19 +18,6 @@ const marketsController = {
 
     // funcion controladora para listar los activos de los mercados individuales
     list: async function (req, res) {
-        // test de modelos y asociaciones
-        try {
-            const transaction = await db.Transaction.findByPk(1, {
-                include: [
-                    { association: "inputAsset" },
-                    { association: "outputAsset" },
-                    { association: "user" },
-                ],
-            });
-            
-        } catch (error) {
-            console.log(error);
-        }
 
         const marketType = req.params.marketType;
         res.render("products/productList", {
@@ -40,8 +27,7 @@ const marketsController = {
     },
 
     // funcion controladora para la pagina de detalle de cada activo
-    detail: async function (req, res) {
-        console.log ("paso por Detail");        
+    detail: async function (req, res) {      
         try {
             const assetRequested = req.params.asset; //id del producto
             const marketType = req.params.marketType; //tipo de producto          
@@ -73,7 +59,6 @@ const marketsController = {
 
     // funcion controladora para agregar el nuevo activo a la base de datos y mostrar nuevamente el listado
     store: async function (req, res) {
-        console.log ("PASO POR DETAIL");
         if (req.file) {
             req.body.logo = "/img/assets/" + req.file.filename;
         }
@@ -96,7 +81,6 @@ const marketsController = {
 
     // funcion controladora para renderizar el formulario de edicion de activos
     edit: async function (req, res) {
-        console.log ("PASO POR EDIT");
         try {
             const assetRequested = req.params.id;
             //obtiene el objeto de la consulta a la BD 
@@ -118,7 +102,6 @@ const marketsController = {
 
     // funcion controladora para editar activos existentes en la base de datos
     update: async function (req, res) {
-        console.log ("PASO POR UPDATE");
         if (req.file) {
             req.body.logo = "/img/" + req.file.filename;
         }

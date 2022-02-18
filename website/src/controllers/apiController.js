@@ -5,29 +5,29 @@ const assetService = require("../services/assets");
 
 const apiController = {
     // funcion controladora para la pagina de "descubrir"/"mercados"
-    markets: function (req, res) {
-        const assetList = assetService.getAll();
-        res.render("products/markets", {
-            pageTitle: "UniFi - Markets",
-            // recibe lista ordenada y devuelve el primer activo (mayor ganador y mayor perdedor)
-            mainGainer: assetService.sortByGainers(assetList)[0],
-            mainLoser: assetService.sortByLosers(assetList)[0],
-            assetList,
+    types: async function (req, res) {
+        const types = await db.Type.findAll();
+        res.status(200).json({
+            meta: {
+                status: 200,
+                count: types.length,
+            },
+            data: types,
         });
     },
 
     // funcion controladora para listar los activos de los mercados individuales
     list: async function (req, res) {
         const assetList = await db.Asset.findAll({
-            include: [{association: 'type'}]
-        })
+            include: [{ association: "type" }],
+        });
         res.status(200).json({
             meta: {
                 status: 200,
-                count: assetList.length
+                count: assetList.length,
             },
-            data: assetList
-        })
+            data: assetList,
+        });
     },
 
     // funcion controladora para la pagina de detalle de cada activo
@@ -71,7 +71,7 @@ const apiController = {
     },
 
     // funcion controladora para renderizar el formulario de edicion de activos
-   /*  edit: function (req, res) {
+    /*  edit: function (req, res) {
         const assetRequested = req.params.asset;
         const marketType = req.params.marketType;
         const asset = assetService.findAsset(marketType, assetRequested);

@@ -3,6 +3,7 @@ const path = require("path");
 const app = express();
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
+const cors = require('cors')
 const publicPath = path.join(__dirname, "../public");
 const userLoggedMiddleware = require("./middlewares/UserLoggedMiddleware");
 const mainRouter = require("./routers/mainRouter");
@@ -12,6 +13,9 @@ const apiRouter = require('./routers/apiRouter')
 //seteamos method-override aca y con un app.use debajo para poder usar PUT y DELETE
 const methodOverride = require("method-override");
 
+app.use(cors({
+    origin: '*',
+}))
 // seteamos ruta de archivos estaticos y view engine por defecto
 app.use(express.static(publicPath));
 app.set("view engine", "ejs");
@@ -45,6 +49,6 @@ app.use((req, res, next) => {
 });
 
 // ejecutamos el servidor
-app.listen(process.env.PORT || 3000, () => {
-    console.log("El servidor se está ejecutando en el puerto 3000");
+app.listen(process.env.PORT || 3001, () => {
+    console.log("El servidor se está ejecutando en el puerto 3001");
 });

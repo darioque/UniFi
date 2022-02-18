@@ -2,7 +2,7 @@ window.onload = async () => {
     const searchInput = document.querySelector("#search");
 
     const response = await fetch(
-        "http://localhost:3000/api/markets/cryptocurrencies"
+        "http://localhost:3001/api/markets/cryptocurrencies"
     ).then((assets) => assets.json());
     const assets = response.data;
     listAssets(assets);
