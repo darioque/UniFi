@@ -4,9 +4,10 @@ const apiController = require("../controllers/apiController");
 const authMiddleware = require("../middlewares/authMiddleware");
 const path = require("path");
 
-router.get("/markets/", apiController.listAssets);
+router.get("/markets/", apiController.listAllAssets);
 router.get("/markets/types", apiController.listTypes);
-router.get("/markets/:marketType", apiController.listTransactions);
+router.get("/transactions", apiController.listTransactions);
+router.get("/markets/:marketType", apiController.listAssets);
 
 
 

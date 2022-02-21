@@ -1,8 +1,8 @@
 window.onload = async () => {
     const searchInput = document.querySelector("#search");
-
+    const marketType = location.href.split("/markets/")[1]
     const response = await fetch(
-        "http://localhost:3001/api/markets/cryptocurrencies"
+        `http://localhost:3001/api/markets/${marketType}`
     ).then((assets) => assets.json());
     const assets = response.data;
     listAssets(assets);

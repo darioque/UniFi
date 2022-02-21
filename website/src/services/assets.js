@@ -134,6 +134,10 @@ async function findTypeId(name){
 
 }
 
+function parseMarketType(market) {
+    return market == 1 || market == 2? market: market == 'cryptocurrencies'? 1: 2
+}
+
 function deleteAsset(assetId) {}
 
 // ordena todos los activos con respecto a su cambio de precio (mayor a menor)
@@ -171,4 +175,5 @@ module.exports = {
     sortByGainers,
     sortByLosers,
     generateId,
+    parseMarketType,
 };
