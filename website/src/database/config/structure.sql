@@ -17,6 +17,20 @@ CREATE TABLE `types` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `states`
+--
+
+DROP TABLE IF EXISTS `states`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `states` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `assets`
 --
 
@@ -35,10 +49,13 @@ CREATE TABLE `assets` (
   `mcap` bigint(20) DEFAULT NULL,
   `logo` varchar(255) NOT NULL DEFAULT '/img/assets/default_logo.svg',
   `type_id` int(10) unsigned NOT NULL,
+  `state_id` int(10) unsigned NOT NULL,
   `description` TEXT DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `assets_type_id_foreign` (`type_id`),
-  CONSTRAINT `assets_type_id_foreign` FOREIGN KEY (`type_id`) REFERENCES `types` (`id`)
+  KEY `states_id_foreign` (`state_id`),
+  CONSTRAINT `assets_type_id_foreign` FOREIGN KEY (`type_id`) REFERENCES `types` (`id`),
+  CONSTRAINT `states_id_foreign` FOREIGN KEY (`state_id`) REFERENCES `states` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
