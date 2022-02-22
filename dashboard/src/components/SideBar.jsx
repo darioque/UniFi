@@ -1,5 +1,7 @@
 import React from "react";
 import logo from "../assets/images/logo.svg";
+import {Link} from "react-router-dom"
+
 function SideBar() {
     return (
         <ul
@@ -19,10 +21,10 @@ function SideBar() {
             <hr className="sidebar-divider my-0" />
 
             <li className="nav-item active">
-                <a className="nav-link" href="/">
+                <Link to="/" className="nav-link">
                     <i className="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard - UniFi</span>
-                </a>
+                </Link>
             </li>
 
             <hr className="sidebar-divider" />
@@ -30,24 +32,24 @@ function SideBar() {
             <div className="sidebar-heading">Actions</div>
 
             <li className="nav-item">
-                <a className="nav-link collapsed" href="/">
+                <Link to="/types" className="nav-link collapsed">
                     <i className="fas fa-fw fa-folder"></i>
                     <span>Pages</span>
-                </a>
+                </Link>
             </li>
 
             <li className="nav-item">
-                <a className="nav-link" href="/">
+                <Link to="/charts" className="nav-link">
                     <i className="fas fa-fw fa-chart-area"></i>
                     <span>Charts</span>
-                </a>
+                </Link>
             </li>
 
             <li className="nav-item">
-                <a className="nav-link" href="/">
+                <Link to="/tables" className="nav-link" href="/">
                     <i className="fas fa-fw fa-table"></i>
                     <span>Tables</span>
-                </a>
+                </Link>
             </li>
 
             <hr className="sidebar-divider d-none d-md-block" />

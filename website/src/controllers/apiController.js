@@ -21,7 +21,9 @@ const apiController = {
         try {
             const assetList = await db.Asset.findAll({
                 include: [{ association: "type" }],
-                where: { type_id: await assetService.parseMarketType(req.params.marketType) }
+                where: { 
+                    type_id: await assetService.parseMarketType(req.params.marketType)
+                }
             });
             res.status(200).json({
                 meta: {

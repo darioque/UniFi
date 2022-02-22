@@ -8,6 +8,7 @@ router.get("/markets/", apiController.listAllAssets);
 router.get("/markets/types", apiController.listTypes);
 router.get("/transactions", apiController.listTransactions);
 router.get("/markets/:marketType", apiController.listAssets);
+router.get('/users', apiController.listUsers);
 
 
 

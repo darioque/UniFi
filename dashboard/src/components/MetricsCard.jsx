@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from 'prop-types'
 
 function MetricsCard(props) {
     return (
@@ -11,7 +10,7 @@ function MetricsCard(props) {
                             <div className={`text-xs font-weight-bold text-${props.color} text-uppercase mb-1`}>
                                 {props.title}
                             </div>
-                            <div className="h5 mb-0 font-weight-bold text-gray-800">
+                            <div className="h5 mb-0 font-weight-bold text-gray-800" id="card">
                                 {props.number}
                             </div>
                         </div>
@@ -26,20 +25,5 @@ function MetricsCard(props) {
 
 }
 
-MetricsCard.propTypes = {
-	title: PropTypes.string.isRequired,
-	number: PropTypes.string.isRequired,
-	color: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-	icon: PropTypes.oneOf([
-		'fa-film', 'fa-award', 'fa-user'
-	]).isRequired,
-};
-
-MetricsCard.defaultProps = {
-    title: "Unknown Data",
-    number: "Undefined number",
-    color: "primary",
-    icon: "fa-film",
-};
 
 export default MetricsCard

@@ -46,7 +46,7 @@ const mainController = {
             req.body.avatar = "/img/users/" + req.file.filename;
         }
         // si no hubo errores en el formulario, agregar el usuario a la base de datos
-        userService.addUser(req.body);
+        userService.createUser(req.body);
         res.redirect("/login");
     },
     // función para procesar autenticacion de usuarios

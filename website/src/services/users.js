@@ -1,4 +1,5 @@
 const fs = require("fs");
+const db = require("../database/models");
 const path = require("path");
 const bcrypt = require("bcryptjs");
 const jdenticon = require("jdenticon");
@@ -21,6 +22,30 @@ function generateId() {
         return lastUser.id + 1;
     }
     return 1;
+}
+
+async function createUser(userRequested) {
+    try {
+        let create;
+        if (userRequested.address) {
+            create = await db.User.create({
+                ...userRequested,
+                avatar: generateAvatar(),
+            });
+        } else {
+            create = await db.User.create({
+                first_name: userRequested.first_name,
+                last_name: userRequested.last_name,
+                user_name: userRequested.user_name,
+                email: userRequested.email,
+                password: bcrypt.hashSync(userRequested.password, 10),
+                avatar: userRequested.avatar,
+            })
+        }
+        return create;
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 function addUser(userData) {
@@ -128,7 +153,7 @@ function generateAvatar() {
 module.exports = {
     getUsers,
     authenticate,
-    addUser,
+    createUser,
     findUser,
     findUserByPk,
     generateId,
