@@ -77,7 +77,8 @@ async function createAsset(assetRequested) {
             supply: assetRequested.price * assetRequested.change,
             mcap: assetRequested.mcap,
             logo: assetRequested.logo,
-            type_id: assetRequested.type_id
+            type_id: assetRequested.type_id,
+            state_id: 1
         });
         return create;
     } catch (error) {
