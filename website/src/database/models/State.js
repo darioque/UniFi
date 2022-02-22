@@ -19,12 +19,12 @@ module.exports = (sequelize, dataTypes) => {
     };
     const State = sequelize.define(alias, cols, config);
 
-    State.associate = function (models) {
-        State.hasOne(models.Asset, {
-            as: "asset",
-            foreignKey: "state_id",
-        });
-    };
+    // State.associate = function (models) {
+    //     State.hasOne(models.Asset, {
+    //         as: "asset",
+    //         foreignKey: "state_id",
+    //     });
+    // };
 
     return State;
 };
