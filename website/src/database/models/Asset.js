@@ -81,15 +81,19 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "output_asset_id",
         });
         Asset.belongsTo(models.Type, {
-            as: 'type',
+            as: "type",
             foreignKey: 'type_id'
-        })
+        });
         Asset.belongsToMany(models.User, {
             as: "users",
             through: models.AssetUser,
             foreignKey: "asset_id",
             otherKey: "user_id",
             timestamps: false,
+        });
+        Asset.belongsTo(models.State, {
+            as: "states",
+            foreignKey: "state_id",
         });
     };
     return Asset;

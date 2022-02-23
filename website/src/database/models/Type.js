@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
     const Type = sequelize.define(alias, cols, config);
 
     Type.associate = function (models) {
-        Type.hasOne(models.Asset, {
+        Type.hasMany(models.Asset, {
             as: "asset",
             foreignKey: "type_id",
         });

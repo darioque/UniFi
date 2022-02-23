@@ -17,14 +17,15 @@ module.exports = (sequelize, dataTypes) => {
         deletedAt: false,
         tableName: 'states'
     };
+
     const State = sequelize.define(alias, cols, config);
 
-    // State.associate = function (models) {
-    //     State.hasOne(models.Asset, {
-    //         as: "asset",
-    //         foreignKey: "state_id",
-    //     });
-    // };
+    State.associate = function (models) {
+         State.hasMany(models.Asset, {
+            as: "asset",
+            foreignKey: "state_id",
+        });
+    };
 
     return State;
 };
