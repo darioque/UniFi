@@ -1,84 +1,66 @@
 // se importan las bases de datos
 const db = require("../database/models");
 
-const fs = require("fs");
-const path = require("path");
-const stockListJSON = fs.readFileSync(
-    path.join(__dirname, "../data/stocksList.json")
-);
-const cryptoListJSON = fs.readFileSync(
-    path.join(__dirname, "../data/cryptocurrenciesList.json")
-);
-const cryptoFilePath = path.join(
-    __dirname,
-    "../data/cryptocurrenciesList.json"
-);
-const stockFilePath = path.join(__dirname, "../data/stocksList.json");
-const stockList = JSON.parse(stockListJSON);
-const cryptoList = JSON.parse(cryptoListJSON);
-const assetList = stockList.concat(cryptoList);
-
-// devuelve lista de criptomonedas
-function getCrypto() {
-    return cryptoList;
+async function generateId() {
+    const count = await db.Asset.count();
+    return count + 1;
 }
 
-// devuelve lista de acciones
-function getStock() {
-    return stockList;
-}
 
-// devuelve lista de todos los activos juntos
-function getAll() {
-    return assetList;
-}
-
-// devuelve lista dependiendo del tipo solicitado
-function getAssetList(marketType) {
-    const assetList =
-        marketType === "cryptocurrencies" ? cryptoList : stockList;
-    return assetList;
-}
-
-function generateId(type) {
-    const assetList = this.getAssetList(type);
-    const lastAsset = assetList[assetList.length - 1];
-    if (lastAsset) {
-        return lastAsset.id + 1;
+async function getAssets() {
+    try {
+        const cryptos = await db.Asset.findAll({
+            include: [{
+                association: 'type',
+            }],
+            order: [
+                ['price_change_24', 'DESC']
+            ],
+        });
+        return cryptos;
+    } catch (err) {
+        console.error("there was an error retrieving assets", err);
     }
-    return 1;
 }
 
-function saveAssets(assetData, ) {
-    // agrega el nuevo activo a la lista correspondiente usando las funciones getAssetList y push
-    const assetList = this.getAssetList(assetData.type);
-    const newAssetId = this.generateId(assetData.type);
-    const newAsset = {
-        id: newAssetId,
-        ...assetData,
-    };
-    assetList.push(newAsset);
-    // selecciona la ruta de archivo correspondiente a actualizar
-    const filePath =
-        assetData.type === "cryptocurrencies" ? cryptoFilePath : stockFilePath;
-    // transforma la lista en formato JSON
-    const updatedJSON = JSON.stringify(assetList, null, 4);
-    // escribe el array actualizado al JSON
-    fs.writeFileSync(filePath, updatedJSON, "utf-8");
+async function getCrypto() {
+    try {
+        const cryptos = await db.Asset.findAll({
+            where: {
+                type_id: 1,
+            }
+        })
+        return cryptos
+    } catch (err) {
+        console.error("there was an error retrieving cryptos", err)
+    }
+}
+async function getStock() {
+    try {
+        const stocks = await db.Asset.findAll({
+            where: {
+                type_id: 2,
+            }
+        })
+        return stocks
+    } catch (err) {
+        console.error("there was an error retrieving stocks", err)
+    }
 }
 
 async function createAsset(assetRequested) {
     try {
         const create = await db.Asset.create({
+            id: await this.generateId(),
             name: assetRequested.name,
             ticker: assetRequested.ticker,
             price: assetRequested.price,
-            price_change_24: assetRequested.change,
+            price_change_24: assetRequested.change ?? 0,
             supply: assetRequested.price * assetRequested.change,
             mcap: assetRequested.mcap,
             logo: assetRequested.logo,
             type_id: assetRequested.type_id,
-            state_id: 1
+            state_id: 1,
         });
         return create;
     } catch (error) {
@@ -141,40 +123,16 @@ function parseMarketType(market) {
 
 function deleteAsset(assetId) {}
 
-// ordena todos los activos con respecto a su cambio de precio (mayor a menor)
-function sortByGainers(assetList) {
-    gainers = assetList.sort(function (a, b) {
-        if (a.change < b.change) {
-            return 1;
-        }
-        if (a.change > b.change) {
-            return -1;
-        }
-        return 0;
-    });
-    return gainers;
-}
-
-// ordena todos los activos con respecto a su cambio de precio (menor a mayor)
-function sortByLosers(assetList) {
-    losers = [...sortByGainers(assetList)].reverse();
-    return losers;
-}
 
 module.exports = {
-    getAll,
-    getCrypto,
     getStock,
-    getAssetList,
-    saveAssets,
+    getCrypto,
+    getAssets,
     createAsset,
     updateAsset,
     findAsset,
     findTypeName,
     findTypeId,
     deleteAsset,
-    sortByGainers,
-    sortByLosers,
-    generateId,
     parseMarketType,
 };

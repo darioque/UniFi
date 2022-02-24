@@ -8,7 +8,7 @@ const usersController = {
     list: async function (req, res) {
         res.render("users/userList", {
             pageTitle: "UniFi - Users",
-            userList: userService.getUsers(),
+            userList: await userService.getUsers(),
         });
     },
     // funcion controladora para renderizar perfiles de usuario
@@ -32,25 +32,32 @@ const usersController = {
         });
     },
     // funcion controladora para procesar los nuevos datos de usuario
-    update: function (req, res) {
+    update: async function (req, res) {
         req.body.id = req.session.authenticatedUser.id;
-        req.body.avatar = "/img/users/" + req.file.filename;
-        userService.updateUser(req.body);
+        if (req.file) {
+            req.body.avatar = "/img/users/" + req.file.filename;
+        }
+        await userService.updateUser(req.body);
         res.redirect("/users/profile");
     },
-    
+
     wallet: async function (req, res) {
-        const userId = req.session.authenticatedUser.id
+        const userId = req.session.authenticatedUser.id;
         try {
-            const user = await db.User.findByPk(userId, {
-                include: [{ association: 'assets' }],
-            });
-            const assetList = user.assets
-            res.render('users/wallet', {assetList})
+            const user = await userService.getWalletAssets(userId);
+            const walletAssets = user.assets
+            res.render("users/wallet", { walletAssets });
         } catch (err) {
-            console.log(err)
+            console.error(err);
             res.status(404).render("not-found");
         }
+    },
+
+    delete: async function (req, res) {
+        const userId = req.session.authenticatedUser.id;
+        const user = await userService.deleteUser(userId);
+        req.session.destroy();
+        res.redirect("/login");
     },
 };
 

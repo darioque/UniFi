@@ -44,8 +44,8 @@ const registerValidations = [
         .isEmail()
         .withMessage("Invalid Email Address")
         .bail()
-        .custom((value) => {
-            return userService.findUser("email", value) == null;
+        .custom(async (value) => {
+            return await userService.findUser("email", value) == null;
         })
         .withMessage("E-mail already in use"),
 ];
@@ -59,11 +59,7 @@ router.get(
 );
 router.get("/register", guestMiddleware, mainController.register);
 router.get("/logout", authMiddleware, mainController.logout);
-router.get(
-    "/login/reset-password",
-    guestMiddleware,
-    mainController.resetPassword
-);
+router.get("/reset-password", guestMiddleware, mainController.resetPassword);
 router.post("/login/reset-password", mainController.processResetPassword);
 
 router.post(

@@ -31,10 +31,10 @@
                             Avatar
                         </p>
                         <p class="price">
-                            User ID
+                            ID
                         </p>
                         <p class="mcap">
-                            Email/Address
+                            User
                         </p>
                     </div>
                     <% for (let user of userList) { %>
@@ -48,7 +48,7 @@
                                         <%= user.id %>
                                     </p>
                                     <p class="mcap">
-                                        <%= user.email || user.address.substring(0, 5) + "..." +  user.address.substring(38, 42) %>
+                                        <%= user.user_name ?? user.email ?? (user.address? user.address.substring(0, 5) + "..." + user.address.substring(38, 42): 'N/A')%>
                                     </p>
                                 </div>
                             </li>

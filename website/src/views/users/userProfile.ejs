@@ -29,7 +29,7 @@
         <section>
             <h1>User Profile</h1>
             <% if (locals.authenticatedUser == user) { %>
-                <h2>Welcome <%= user.email || user.address.substring(0, 5) + "..." + user.address.substring(38, 42) %>!</h2>
+                <h2>Welcome <%= user.user_name?? user.email?? user.address.substring(0, 5) + "..." + user.address.substring(38, 42) %>!</h2>
             <% } else { %>
                 <h2><%= user.email || user.address.substring(0, 5) + "..." + user.address.substring(38, 42) %>'s Profile</h2>
             <% } %> 

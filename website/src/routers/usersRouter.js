@@ -23,6 +23,7 @@ router.get("/profile", authMiddleware, usersController.profile);
 router.get("/profile/edit/", authMiddleware, usersController.edit);
 router.get('/:id/profile', authMiddleware, usersController.profile)
 router.put("/profile/edit/", authMiddleware, uploadFile.single('avatar'), usersController.update)
+router.delete("/profile/edit/", authMiddleware, usersController.delete)
 router.get('/wallet', authMiddleware, usersController.wallet)
 
 module.exports = router;

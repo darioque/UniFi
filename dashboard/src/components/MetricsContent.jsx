@@ -5,7 +5,7 @@ const array = [
 	{
 		title: 'ASSETS IN DATA BASE',
 		color: 'primary',
-		icon: 'fa-coin',
+		icon: 'fa-solid fa-coins',
 	},
 	{
 		title: 'TOTAL USERS',

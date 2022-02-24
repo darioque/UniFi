@@ -5,13 +5,13 @@ const assetService = require("../services/assets");
 
 const marketsController = {
     // funcion controladora para la pagina de "descubrir"/"mercados"
-    markets: function (req, res) {
-        const assetList = assetService.getAll();
+    markets: async function (req, res) {
+        const assetList = await assetService.getAssets();
         res.render("products/markets", {
             pageTitle: "UniFi - Markets",
             // recibe lista ordenada y devuelve el primer activo (mayor ganador y mayor perdedor)
-            mainGainer: assetService.sortByGainers(assetList)[0],
-            mainLoser: assetService.sortByLosers(assetList)[0],
+            mainGainer: assetList[0],
+            mainLoser: assetList[assetList.length - 1],
             assetList,
         });
     },
@@ -32,11 +32,10 @@ const marketsController = {
             const assetRequested = req.params.asset; //id del producto
             const marketType = req.params.marketType; //tipo de producto          
             //obtiene el objeto de la consulta a la BD 
-            const objectAsset = await assetService.findAsset(assetRequested);
-            const asset = objectAsset.dataValues;
+            const asset = await assetService.findAsset(assetRequested);
             //obtiene el objeto type de la tabla Types
             const typeId = await assetService.findTypeName(asset.type_id);
-            const nameType = typeId.dataValues.name;
+            const nameType = typeId.name;
 
             res.render("products/productDetail", {
                 asset,
@@ -67,10 +66,10 @@ const marketsController = {
             const assetRequested = req.body;
             const createAsset = await assetService.createAsset(assetRequested);
             //obtiene el type_id de la creación de producto en la BD
-            const typeId = createAsset.dataValues.type_id;
+            const typeId = createAsset.type_id;
             //busca el nombre de type correspondiente con el id
             const objectType = await assetService.findTypeName(typeId);
-            const nameType = objectType.dataValues.name;
+            const nameType = objectType.name;
 
             res.redirect("/markets/" + nameType);
 
@@ -84,11 +83,10 @@ const marketsController = {
         try {
             const assetRequested = req.params.id;
             //obtiene el objeto de la consulta a la BD 
-            const objectAsset = await assetService.findAsset(assetRequested);
-            const asset = objectAsset.dataValues;
+            const asset = await assetService.findAsset(assetRequested);
              //obtiene el objeto type de la tabla Types
             const typeId = await assetService.findTypeName(asset.type_id);
-            const nameType = typeId.dataValues.name;
+            const nameType = typeId.name;
 
             res.render("products/editProductForm", {
                 pageTitle: "UniFi - Edit Product",
@@ -109,7 +107,7 @@ const marketsController = {
         try {
             const marketType = req.params.marketType;
             const ObjectIdMarketType = await assetService.findTypeId(marketType); //obtiene el objeto de la tabla Types
-            const idMarketType = ObjectIdMarketType.dataValues.id; //obtiene el id de la variable de consulta a la BD
+            const idMarketType = ObjectIdMarketType.id; //obtiene el id de la variable de consulta a la BD
             const assetId = req.params.id;       
             const update = await assetService.updateAsset(req.body, assetId, idMarketType);
             res.redirect("/markets/" + marketType + "/" + assetId);

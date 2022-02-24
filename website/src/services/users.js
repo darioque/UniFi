@@ -1,27 +1,38 @@
 const fs = require("fs");
 const db = require("../database/models");
+const Op = db.Sequelize.Op
 const path = require("path");
 const bcrypt = require("bcryptjs");
 const jdenticon = require("jdenticon");
 const crypto = require("crypto");
-const usersJSON = fs.readFileSync(path.join(__dirname, "../data/users.json"));
-const usersList = JSON.parse(usersJSON);
-const usersFilePath = path.join(__dirname, "../data/users.json");
 const avatarsFilePath = path.join(__dirname, "../../public/img/users/");
 
-// funcion para devolver la lista completa de usuarios
-function getUsers() {
-    return usersList;
+
+async function generateId() {
+    const count = await db.User.count();
+    return count + 1
 }
 
-// funcion que genera el ID a utilizar a partir del ultimo de la lista
-function generateId() {
-    const userList = this.getUsers();
-    const lastUser = userList[userList.length - 1];
-    if (lastUser) {
-        return lastUser.id + 1;
+
+async function getUsers() {
+    try {
+        const users = await db.User.findAll()
+        return users
+    } catch (err) {
+        console.error("there was an error getting all the users: ", err)
     }
-    return 1;
+}
+
+async function getWalletAssets(userId) {
+    try {
+        const user = await db.User.findByPk(userId, {
+            include: [{ association: "assets" }],
+        });
+        return user;
+    } catch (err) {
+        console.log(err);
+        res.status(404).render("not-found");
+    }
 }
 
 async function createUser(userRequested) {
@@ -30,6 +41,7 @@ async function createUser(userRequested) {
         if (userRequested.address) {
             create = await db.User.create({
                 ...userRequested,
+                id: await generateId(),
                 avatar: generateAvatar(),
             });
         } else {
@@ -40,104 +52,115 @@ async function createUser(userRequested) {
                 email: userRequested.email,
                 password: bcrypt.hashSync(userRequested.password, 10),
                 avatar: userRequested.avatar,
-            })
+            });
         }
         return create;
     } catch (error) {
-        console.error(error);
+        console.error(
+            `%cthere was an error creating the user: ${error}`,
+            "color: red"
+        );
     }
-}
-
-function addUser(userData) {
-    // guarda la lista completa de usuarios en una variable
-    const userList = this.getUsers();
-    let newUser = {};
-    // devuelve el id a utilizar
-    const newUserId = this.generateId();
-
-    // si no es registro con wallet guardar al usuario de esta manera
-    if (!userData.address) {
-        newUser = {
-            id: newUserId,
-            email: userData.email,
-            password: bcrypt.hashSync(userData.password, 10),
-            avatar: userData.avatar,
-        };
-        // si es con wallet guardarlo de esta otra manera
-    } else {
-        newUser = {
-            id: newUserId,
-            address: userData.address,
-            avatar: generateAvatar(),
-        };
-    }
-    // agrega el nuevo usuario a la lista
-    userList.push(newUser);
-    // transforma la lista en formato JSON
-    const updatedJSON = JSON.stringify(userList, null, 4);
-    // escribe el array actualizado al JSON
-    fs.writeFileSync(usersFilePath, updatedJSON, null, " ");
-    return newUser;
 }
 
 // funcion para buscar y devolver un usuario a partir de algun campo a determinar como parametro
-function findUser(field, text) {
-    const userList = this.getUsers();
-    const user = userList.find((user) => user[field] === text);
-    return user;
-}
-
-// funcion para buscar y devolver un usuario a partir de su ID
-function findUserByPk(userID) {
-    const userList = this.getUsers();
-    const user = userList.find((user) => user.id == userID);
-    return user;
+async function findUser(field, text) {
+    try {
+        const user = await db.User.findOne({
+            where: {
+                [field]: text,
+            },
+        });
+        return user;
+    } catch (err) {
+        console.error(err);
+    }
 }
 
 // funcion para autenticar un usuario especifico y devolverlo
-function authenticate(userData) {
-    const userList = this.getUsers();
+async function authenticate(userData) {
     if (userData.address) {
-        const user = userList.find((user) => user.address == userData.address);
-        return user;
+        try {
+            const user = await this.findUser("address", userData.address);
+            return user;
+        } catch (err) {
+            console.error("there was an error while authenticating user with address: ", err);
+        }
     }
-    const user = userList.find(
-        (user) =>
-            user.email === userData.email &&
-            bcrypt.compareSync(userData.password, user.password)
-    );
-    return user;
+    try {
+        const userToCheck = await db.User.findOne({
+            where: {
+                [Op.or]: [{
+                    user_name: userData.user_name??'@'
+                },{
+                    email: userData.email??'x'
+                }]
+            }
+        })
+        const user = userToCheck
+            ? bcrypt.compareSync(userData.password, userToCheck.password)
+                ? userToCheck
+                : null
+            : userToCheck;
+        return user;
+    } catch (err) {
+        console.error("there was an error authenticating user with email: ", err);
+    }
 }
 
-function updateUser(userData) {
-    const userList = this.getUsers();
-    userIndex = userList.findIndex((user) => user.id == userData.id);
-    if (!userData.address) {
-        userList[userIndex] = {
-            id: userData.id,
-            email: userData.email,
-            password: bcrypt.hashSync(userData.password, 10),
-            avatar: userData.avatar,
-        };
+async function updateUser(userData) {
+    if (userData.address) {
+        try {
+            const user = await db.User.update({
+                user_name: userData.user_name,
+                avatar: userData.avatar,
+            }, {
+                where: { 
+                    id: userData.id
+                }
+            })
+            return user
+        } catch (err) {
+            console.error("there was an error updating crypto-user: ", err);
+        }
     } else {
-        userList[userIndex] = {
-            id: userData.id,
-            address: userData.address,
-            avatar: userData.avatar,
-        };
-    }
+        try {
+            const user = await db.User.update(
+                {
+                    id: userData.id,
+                    first_name: userData.first_name,
+                    last_name: userData.last_name,
+                    user_name: userData.user_name,
+                    email: userData.email,
+                    password: bcrypt.hashSync(userData.password, 10),
+                    avatar: userData.avatar,
 
-    const updatedJSON = JSON.stringify(userList, null, 4);
-    fs.writeFileSync(usersFilePath, updatedJSON, "utf-8");
+                },
+                {
+                    where: {
+                        id: userData.id,
+                    },
+                }
+            );
+            return user;
+        } catch (err) {
+            console.error("there was an error updating crypto-user: ", err);
+        }
+    }
 }
 
 // funcion para borrar un usuario a partir de su ID
-function deleteUser(userId) {
-    const userList = this.getUsers();
-    const filteredUserList = userList.filter((user) => user.id != userId);
-    const updatedJSON = JSON.stringify(filteredUserList, null, 4);
-    // escribe el array actualizado al JSON
-    fs.writeFileSync(usersFilePath, updatedJSON, null, " ");
+async function deleteUser(userId) {
+    try {
+        const user = await db.User.destroy({
+            where: {
+                id: userId,
+            },
+        });
+        return user
+    } catch (err) {
+        console.error("there was an error trying to delete user: ", err);
+    }
 }
 
 // funcion para generar un avatar "identicon" a partir de un hash
@@ -151,12 +174,11 @@ function generateAvatar() {
 }
 
 module.exports = {
-    getUsers,
+    getWalletAssets,
     authenticate,
     createUser,
     findUser,
-    findUserByPk,
-    generateId,
     deleteUser,
     updateUser,
+    getUsers,
 };

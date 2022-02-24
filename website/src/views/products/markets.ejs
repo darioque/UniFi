@@ -14,13 +14,10 @@
             <section class="slider-container">
                 <div class="slider">
                     <div class="slide-track">
-                        <!-- si el activo tiene un logo svg (es decir, escalable), lo agrega al slider -->
                         <% for (let asset of assetList) {%>
-                           <%   if (asset.logo.includes('svg')) {%>
                             <div class="slide">
-                                <a class="no-link" href="/markets/<%= asset.type %>/<%= asset.name %>"><img class="slide-img" src="<%= asset.logo %> " alt="<%= asset.ticker %> Logo "></a>
+                                <a class="no-link" href="/markets/<%= asset.type.name %>/<%= asset.id %>"><img class="slide-img" src="<%= asset.logo %> " alt="<%= asset.ticker %> Logo "></a>
                             </div>
-                            <% } %>
                         <% } %> 
                     </div>
                 </div>
@@ -59,25 +56,25 @@
                 <h2>Highlighted Assets</h2>
                 <section>
                     <div class="cards-container">
-                        <a class="no-link" href="/markets/<%= mainGainer.type%>/<%= mainGainer.name  %>">
+                        <a class="no-link" href="/markets/<%= mainGainer.type.name%>/<%= mainGainer.id  %>">
                             <article class="card bg-gray">
                                 <h3>Main Gainer (24h) </h3>
                                 <div class="card-title">
                                     <img src="<%= mainGainer.logo %>" alt="<%= mainGainer.name %> Logo">
                                     <%= mainGainer.name %>
                                     
-                                    <span class="percentage-change green"><i class="fas fa-arrow-circle-up" style="margin-right: 4px;"></i><%= mainGainer.change %>%</span>
+                                    <span class="percentage-change green"><i class="fas fa-arrow-circle-up" style="margin-right: 4px;"></i><%= mainGainer.price_change_24 %>%</span>
                                 </div>
                                 <p class="price"><%= mainGainer.price %></p>
                             </article>
                         </a>
-                        <a class="no-link" href="/markets/<%= mainLoser.type%>/<%= mainLoser.name  %>">
+                        <a class="no-link" href="/markets/<%= mainLoser.type.name%>/<%= mainLoser.id  %>">
                             <article class="card bg-gray">
                                 <h3>Main Loser (24h) </h3>
                                 <div class="card-title">
                                     <img src="<%= mainLoser.logo %>" alt="<%= mainLoser.name %> Logo">
                                     <%= mainLoser.name %>
-                                    <span class="percentage-change red"><i class="fas fa-arrow-circle-down" style="margin-right: 4px;"></i><%= mainLoser.change %>%</span>
+                                    <span class="percentage-change red"><i class="fas fa-arrow-circle-down" style="margin-right: 4px;"></i><%= mainLoser.price_change_24?? '0' %>%</span>
                                 </div>
                                 <p class="price"><%= mainLoser.price %></p>
                             </article>

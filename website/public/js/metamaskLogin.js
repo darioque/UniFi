@@ -49,11 +49,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
                     method: "personal_sign",
                     params: [msg, from, "Example password"],
                 });
+                loginForm.submit();
             } catch (err) {
                 alert(`Error: ${err.message}`);
                 return false;
             }
-            loginForm.submit();
         }
     }
 });
