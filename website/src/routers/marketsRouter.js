@@ -26,7 +26,7 @@ router.get("/:marketType/create", authMiddleware, marketsController.create);
 
 router.get("/:marketType/:asset/", marketsController.detail);
 
-router.post("/:marketType/", marketsController.transaction);
+router.post("/:marketType/", authMiddleware, marketsController.transaction);
 
 router.get("/:marketType/edit/:id", authMiddleware, marketsController.edit);
 

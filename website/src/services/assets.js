@@ -1,9 +1,9 @@
 // se importan las bases de datos
 const db = require("../database/models");
 
-async function generateId() {
+async function generateId(model) {
     try {
-        const count = await db.Asset.count();
+        const count = await model.count();
         return count + 1;
     } catch (err) {
         console.error("there was an error generating the id: ", err);
@@ -94,8 +94,10 @@ function parseMarketType(market) {
 
 async function generateTransaction(purchase) {
     const transaction = await db.Transaction.create({
-        ...purchase
+        ...purchase,
+        id: await generateId(db.Transaction)
     })
+    return transaction
 }
 
 function deleteAsset(assetId) {}

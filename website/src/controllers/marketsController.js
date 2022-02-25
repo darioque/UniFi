@@ -103,23 +103,22 @@ const marketsController = {
     },
 
     // funcion controladora para borrar activos existentes en la base de datos
-    delete: function (req, res) {
-        res.render("products/deleteProduct", {
-            pageTitle: "Delete Product - UniFi",
-        });
-    },
+    delete: function (req, res) {},
 
+    // funcion controladora para generar transacciones en la base de datos
     transaction: async function (req, res) {
-        const purchase = req.body
-        
+        const purchase = req.body;
+
         try {
-            req.body.user_id = req.session.authenticatedUser.id
-            const transaction = await assetService.generateTransaction(purchase)
+            req.body.user_id = req.session.authenticatedUser.id;
+            const transaction = await assetService.generateTransaction(
+                purchase
+            );
             return res.redirect(`/markets${req.url}`);
         } catch (err) {
-            console.error(err)
+            console.error(err);
         }
-    }
+    },
 };
 
 module.exports = marketsController;
