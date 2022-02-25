@@ -63,11 +63,11 @@ function listAssets(assets) {
 
         if (asset.price_change_24) {
             if (asset.price_change_24 > 0) {
-                change.innerText = `${asset.price_change_24}`;
+                change.innerText = `${asset.price_change_24}%`;
             } else {
                 change.classList.remove("green");
                 change.classList.add("red");
-                change.innerText = `-${asset.price_change_24}`;
+                change.innerText = `${asset.price_change_24}%`;
             }
         }
 

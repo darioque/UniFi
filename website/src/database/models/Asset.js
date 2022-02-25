@@ -91,10 +91,10 @@ module.exports = (sequelize, dataTypes) => {
             otherKey: "user_id",
             timestamps: false,
         });
-        Asset.belongsTo(models.State, {
-            as: "states",
-            foreignKey: "state_id",
-        });
+        // Asset.belongsTo(models.State, {
+        //     as: "state",
+        //     foreignKey: "state_id",
+        // });
     };
     return Asset;
 };

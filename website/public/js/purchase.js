@@ -1,5 +1,6 @@
 window.onload = () => {
     // Get the modal
+    console.log('this is getting executed');
     const modal = document.getElementById("myModal");
 
     // Get the button that opens the modal

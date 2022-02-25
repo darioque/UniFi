@@ -6,19 +6,22 @@ const assetService = require("../services/assets");
 const marketsController = {
     // funcion controladora para la pagina de "descubrir"/"mercados"
     markets: async function (req, res) {
-        const assetList = await assetService.getAssets();
-        res.render("products/markets", {
-            pageTitle: "UniFi - Markets",
-            // recibe lista ordenada y devuelve el primer activo (mayor ganador y mayor perdedor)
-            mainGainer: assetList[0],
-            mainLoser: assetList[assetList.length - 1],
-            assetList,
-        });
+        try {
+            const assetList = await assetService.getAssets();
+            res.render("products/markets", {
+                pageTitle: "UniFi - Markets",
+                // recibe lista ordenada y devuelve el primer activo (mayor ganador y mayor perdedor)
+                mainGainer: assetList[0],
+                mainLoser: assetList[assetList.length - 1],
+                assetList,
+            });
+        } catch (err) {
+            console.error(err);
+        }
     },
 
     // funcion controladora para listar los activos de los mercados individuales
     list: async function (req, res) {
-
         const marketType = req.params.marketType;
         res.render("products/productList", {
             marketType,
@@ -27,24 +30,18 @@ const marketsController = {
     },
 
     // funcion controladora para la pagina de detalle de cada activo
-    detail: async function (req, res) {      
+    detail: async function (req, res) {
         try {
             const assetRequested = req.params.asset; //id del producto
-            const marketType = req.params.marketType; //tipo de producto          
-            //obtiene el objeto de la consulta a la BD 
             const asset = await assetService.findAsset(assetRequested);
-            //obtiene el objeto type de la tabla Types
-            const typeId = await assetService.findTypeName(asset.type_id);
-            const nameType = typeId.name;
 
             res.render("products/productDetail", {
                 asset,
                 pageTitle: asset.ticker + " - Details",
-                nameType,
             });
         } catch (error) {
             console.log(error);
-        }        
+        }
     },
 
     // funcion controladora para el renderizado del formulario de creacion de activos
@@ -65,16 +62,12 @@ const marketsController = {
         try {
             const assetRequested = req.body;
             const createAsset = await assetService.createAsset(assetRequested);
-            //obtiene el type_id de la creación de producto en la BD
-            const typeId = createAsset.type_id;
             //busca el nombre de type correspondiente con el id
-            const objectType = await assetService.findTypeName(typeId);
-            const nameType = objectType.name;
+            const type = assetService.parseMarketType(createAsset.type_id);
 
-            res.redirect("/markets/" + nameType);
-
-        } catch (error) {
-            console.log (error);
+            res.redirect("/markets/" + type);
+        } catch (err) {
+            console.log("there was an error creating the asset: ", err);
         }
     },
 
@@ -82,20 +75,16 @@ const marketsController = {
     edit: async function (req, res) {
         try {
             const assetRequested = req.params.id;
-            //obtiene el objeto de la consulta a la BD 
+            //obtiene el objeto de la consulta a la BD
             const asset = await assetService.findAsset(assetRequested);
-             //obtiene el objeto type de la tabla Types
-            const typeId = await assetService.findTypeName(asset.type_id);
-            const nameType = typeId.name;
 
             res.render("products/editProductForm", {
                 pageTitle: "UniFi - Edit Product",
                 asset,
-                nameType,
             });
-        } catch (error) {
-            console.log(error);
-        }        
+        } catch (err) {
+            console.log(err);
+        }
     },
 
     // funcion controladora para editar activos existentes en la base de datos
@@ -105,16 +94,12 @@ const marketsController = {
         }
 
         try {
-            const marketType = req.params.marketType;
-            const ObjectIdMarketType = await assetService.findTypeId(marketType); //obtiene el objeto de la tabla Types
-            const idMarketType = ObjectIdMarketType.id; //obtiene el id de la variable de consulta a la BD
-            const assetId = req.params.id;       
-            const update = await assetService.updateAsset(req.body, assetId, idMarketType);
-            res.redirect("/markets/" + marketType + "/" + assetId);
-
-        } catch (error) {
-            console.log(error);
-        }        
+            req.body.id = req.params.id;
+            const update = await assetService.updateAsset(req.body);
+            res.redirect("/markets/" + req.body.type + "/" + req.body.id);
+        } catch (err) {
+            console.error(err);
+        }
     },
 
     // funcion controladora para borrar activos existentes en la base de datos
@@ -123,6 +108,18 @@ const marketsController = {
             pageTitle: "Delete Product - UniFi",
         });
     },
+
+    transaction: async function (req, res) {
+        const purchase = req.body
+        
+        try {
+            req.body.user_id = req.session.authenticatedUser.id
+            const transaction = await assetService.generateTransaction(purchase)
+            return res.redirect(`/markets${req.url}`);
+        } catch (err) {
+            console.error(err)
+        }
+    }
 };
 
 module.exports = marketsController;

@@ -20,13 +20,13 @@
                     <i class="fas fa-chevron-right"></i>
                 </li>
                 <li>
-                    <a class="no-link" href="/markets/<%= asset.nameType %>">
-                        <span><%= nameType %></span>
+                    <a class="no-link" href="/markets/<%= asset.type.name %>">
+                        <span><%= asset.type.name %></span>
                     </a>
                 </li>
                 <li>
                     <i class="fas fa-chevron-right"></i>
-                    <a class="no-link" href="/markets/<%= asset.nameType %>/<%= asset.name %>"><span>
+                    <a class="no-link" href="/markets/<%= asset.type.name %>/<%= asset.name %>"><span>
                             <%= asset.name %>
                         </span></a>
                 </li>
@@ -39,7 +39,7 @@
                     <%= asset.name %> (<%= asset.ticker %>) Price
                 </h1>
                 <% if (locals && locals.authenticatedUser) { %>
-                    <a href="/markets/<%= nameType %>/<%= asset.name %>/edit/<%= asset.id %>"><button type="button">Editar Producto</button></a>
+                    <a href="/markets/<%= asset.type.name %>/edit/<%= asset.id %>"><button type="button">Editar Producto</button></a>
                 <% } %>          
                 <div class="price-title">
                     <span>$<%= asset.price %> </span>
@@ -75,7 +75,7 @@
                                     <input class="currency-input" type="number" value=<%=asset.price%> maxlength="8" id="price" readonly>
                                 </div>
                             </div>
-                            <input type="image" id="myBtn" class="exchange-icon" src="/img/exchange.png" alt="Submit">
+                            <input type="image" id="myBtn" class="exchange-icon" src="/img/exchange.png" alt="Submit" style="display: <%= locals.authenticatedUser?'block':'none' %> ">
                             <div id="myModal" class="body-border modal">
 
                                 <div class="modal-content">
@@ -90,20 +90,22 @@
                                     </div>
                                     <div class="converter-container">
                                         <h3 class="converter-title">Do you accept this price?</h3>
-                                        <form action="" method="get">
+                                        <form action="/markets/<%= asset.type.name %>" method="POST" id="modalForm">
                                             <div class="modal-converter">
                                                 <div class="currency first-currency">
                                                     <img class="currency-logo" src="<%= asset.logo %> " alt="BTC logo" id="confirmationCurrencyLogo">
                                                     <p class="currency-title" id="confirmationCurrencyTitle"></p>
                                                     <div class="currency-input-div">
-                                                        <p class="currency-input" id="amountConfirmation"></p>
+                                                        <input class="currency-input" name="amount" id="amountConfirmation" readonly></input>
+                                                        <input class="currency-input" name="input_asset_id" id="input_asset_id" style="display: none;" value="<%= asset.id %> "></input>
                                                     </div>
                                                 </div>
                                                 <div class="currency second-currency">
                                                     <img class="currency-logo" src="/img/usd.svg" alt="USD logo">
                                                     <p class="currency-title">USD</p>
                                                     <div class="currency-input-div">
-                                                        <p class="currency-input" id="priceConfirmation"></p>
+                                                        <input class="currency-input" id="priceConfirmation" name="price" readonly></input>
+                                                        <input class="currency-input" id="output_asset_id" name="output_asset_id" style="display: none;" value="<%= 1 %> "></input>
                                                     </div>
                                                 </div>
                                             </div>

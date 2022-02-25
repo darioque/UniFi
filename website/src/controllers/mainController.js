@@ -6,11 +6,18 @@ const userService = require("../services/users");
 
 const mainController = {
     index: async function (req, res) {
-        res.render("home/index", {
-            pageTitle: "UniFi - Home",
-            cryptoList: await assetService.getCrypto(),
-            stockList: await assetService.getStock(),
-        });
+        try {
+            const cryptoList = await assetService.getCrypto()
+            const stockList = await assetService.getStock()
+            res.render("home/index", {
+                pageTitle: "UniFi - Home",
+                cryptoList,
+                stockList
+            });
+            
+        } catch (err) {
+            console.error("there was an error retrieving the assets list: ", err)
+        }
     },
     login: function (req, res) {
         res.render("users/login", {
