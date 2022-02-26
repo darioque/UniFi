@@ -51,11 +51,24 @@
                 <input type="number" name="mcap" placeholder="Market Cap" class="input" value="<%= asset.mcap %>">
 
                 <input type="submit" value="Edit Product" class="load-product">
-          </div>
-
+            </div>
+            
+        </form>
+        <form class="form" action="/markets/<%= asset.type.name %>/<%= asset.id %>?_method=DELETE" method="POST" id="delete">
+            <input type="submit" value="Delete Product" class="load-product">
         </form>
     </main>
 
     <footer class="footer"><%- include('../partials/footer') %></footer>
+    <script>
+        document.querySelector("#delete").addEventListener("submit", (e) => {
+            e.preventDefault();
+            const confirmation = confirm(
+                "This is an irreversible operation. Continue anyway?"
+            );
+            confirmation? e.target.submit():''
+        });
+    </script>
   </body>
+
 </html>

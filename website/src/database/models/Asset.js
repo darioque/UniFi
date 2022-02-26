@@ -73,11 +73,11 @@ module.exports = (sequelize, dataTypes) => {
 
     Asset.associate = function (models) {
         Asset.hasMany(models.Transaction, {
-            as: "transactionInput",
+            as: "input",
             foreignKey: "input_asset_id",
         });
         Asset.hasMany(models.Transaction, {
-            as: "transactionOutput",
+            as: "output",
             foreignKey: "output_asset_id",
         });
         Asset.belongsTo(models.Type, {

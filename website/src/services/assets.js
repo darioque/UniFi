@@ -100,7 +100,19 @@ async function generateTransaction(purchase) {
     return transaction
 }
 
-function deleteAsset(assetId) {}
+async function deleteAsset(assetId) {
+    try {
+        const asset = await this.findAsset(assetId);
+        await asset.setInput([]);
+        await asset.setOutput([]);
+        await asset.setUsers([]);
+        await asset.destroy();
+        return asset;
+    } catch (err) {
+        console.error("there was an error trying to delete asset: ", err);
+    }
+}
+
 
 module.exports = {
     getStock,

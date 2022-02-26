@@ -33,12 +33,10 @@ module.exports = (sequelize, dataTypes) => {
         },
         input_asset_id: {
             type: dataTypes.INTEGER(10).UNSIGNED,
-            allowNull: false,
             foreignKey: true,
         },
         output_asset_id: {
             type: dataTypes.INTEGER(10).UNSIGNED,
-            allowNull: false,
             foreignKey: true,
         },
     };

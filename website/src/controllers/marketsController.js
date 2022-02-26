@@ -32,7 +32,7 @@ const marketsController = {
     // funcion controladora para la pagina de detalle de cada activo
     detail: async function (req, res) {
         try {
-            const assetRequested = req.params.asset; //id del producto
+            const assetRequested = req.params.id; //id del producto
             const asset = await assetService.findAsset(assetRequested);
 
             res.render("products/productDetail", {
@@ -96,14 +96,20 @@ const marketsController = {
         try {
             req.body.id = req.params.id;
             const update = await assetService.updateAsset(req.body);
-            res.redirect("/markets/" + req.body.type + "/" + req.body.id);
+            const marketType = assetService.parseMarketType(req.body.type_id)
+            res.redirect("/markets/" + marketType + "/" + req.body.id);
         } catch (err) {
             console.error(err);
         }
     },
 
     // funcion controladora para borrar activos existentes en la base de datos
-    delete: function (req, res) {},
+    delete: async function (req, res) {
+        const assetId = req.params.id;
+        const asset = await assetService.deleteAsset(assetId);
+
+        return res.redirect("/markets/" + req.params.marketType)
+    },
 
     // funcion controladora para generar transacciones en la base de datos
     transaction: async function (req, res) {

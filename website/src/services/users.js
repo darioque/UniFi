@@ -142,7 +142,7 @@ async function deleteUser(userId) {
     try {
         const user = await this.findUser('id', userId)
         await user.setAssets([])
-        await user.setTransactions(1001);
+        await user.setTransactions([]);
         await user.destroy()
         return user;
     } catch (err) {
