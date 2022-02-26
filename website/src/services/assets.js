@@ -67,19 +67,20 @@ async function updateAsset(assetRequested) {
     return update;
 }
 
-async function findAsset(assetRequested) {
-    try {
-        const asset = await db.Asset.findByPk(assetRequested, {
-            include: [
-                {
-                    association: "type",
-                },
-            ],
-        });
-        return asset;
-    } catch (err) {
-        console.error(err);
-    }
+async function findAsset(assetRequested, marketType = 1 || 2) {
+    console.log(marketType);
+    const asset = await db.Asset.findOne({
+        where: {
+            id: assetRequested,
+            type_id: marketType,
+        },
+        include: [
+            {
+                association: "type",
+            },
+        ],
+    });
+    return asset;
 }
 
 function parseMarketType(market) {
@@ -95,24 +96,19 @@ function parseMarketType(market) {
 async function generateTransaction(purchase) {
     const transaction = await db.Transaction.create({
         ...purchase,
-        id: await generateId(db.Transaction)
-    })
-    return transaction
+        id: await generateId(db.Transaction),
+    });
+    return transaction;
 }
 
 async function deleteAsset(assetId) {
-    try {
-        const asset = await this.findAsset(assetId);
-        await asset.setInput([]);
-        await asset.setOutput([]);
-        await asset.setUsers([]);
-        await asset.destroy();
-        return asset;
-    } catch (err) {
-        console.error("there was an error trying to delete asset: ", err);
-    }
+    const asset = await this.findAsset(assetId);
+    await asset.setInput([]);
+    await asset.setOutput([]);
+    await asset.setUsers([]);
+    await asset.destroy();
+    return asset;
 }
-
 
 module.exports = {
     getStock,

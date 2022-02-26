@@ -13,24 +13,15 @@ async function generateId() {
 }
 
 async function getUsers() {
-    try {
-        const users = await db.User.findAll();
-        return users;
-    } catch (err) {
-        console.error("there was an error getting all the users: ", err);
-    }
+    const users = await db.User.findAll();
+    return users;
 }
 
 async function getWalletAssets(userId) {
-    try {
-        const user = await db.User.findByPk(userId, {
-            include: [{ association: "assets" }],
-        });
-        return user;
-    } catch (err) {
-        console.log(err);
-        res.status(404).render("not-found");
-    }
+    const user = await db.User.findByPk(userId, {
+        include: [{ association: "assets" }],
+    });
+    return user;
 }
 
 async function createUser(userRequested) {
@@ -56,16 +47,12 @@ async function createUser(userRequested) {
 
 // funcion para buscar y devolver un usuario a partir de algun campo a determinar como parametro
 async function findUser(field, text) {
-    try {
-        const user = await db.User.findOne({
-            where: {
-                [field]: text,
-            },
-        });
-        return user;
-    } catch (err) {
-        console.error(err);
-    }
+    const user = await db.User.findOne({
+        where: {
+            [field]: text,
+        },
+    });
+    return user;
 }
 
 // funcion para autenticar un usuario especifico y devolverlo
@@ -96,58 +83,46 @@ async function authenticate(userData) {
 
 async function updateUser(userData) {
     if (userData.address) {
-        try {
-            const user = await db.User.update(
-                {
-                    user_name: userData.user_name,
-                    avatar: userData.avatar,
-                },
-                {
-                    where: {
-                        id: userData.id,
-                    },
-                }
-            );
-            return user;
-        } catch (err) {
-            console.error("there was an error updating crypto-user: ", err);
-        }
-    } else {
-        try {
-            const user = await db.User.update(
-                {
+        const user = await db.User.update(
+            {
+                user_name: userData.user_name,
+                avatar: userData.avatar,
+            },
+            {
+                where: {
                     id: userData.id,
-                    first_name: userData.first_name,
-                    last_name: userData.last_name,
-                    user_name: userData.user_name,
-                    email: userData.email,
-                    password: bcrypt.hashSync(userData.password, 10),
-                    avatar: userData.avatar,
                 },
-                {
-                    where: {
-                        id: userData.id,
-                    },
-                }
-            );
-            return user;
-        } catch (err) {
-            console.error("there was an error updating crypto-user: ", err);
-        }
+            }
+        );
+        return user;
+    } else {
+        const user = await db.User.update(
+            {
+                id: userData.id,
+                first_name: userData.first_name,
+                last_name: userData.last_name,
+                user_name: userData.user_name,
+                email: userData.email,
+                password: bcrypt.hashSync(userData.password, 10),
+                avatar: userData.avatar,
+            },
+            {
+                where: {
+                    id: userData.id,
+                },
+            }
+        );
+        return user;
     }
 }
 
 // funcion para borrar un usuario a partir de su ID
 async function deleteUser(userId) {
-    try {
-        const user = await this.findUser('id', userId)
-        await user.setAssets([])
-        await user.setTransactions([]);
-        await user.destroy()
-        return user;
-    } catch (err) {
-        console.error("there was an error trying to delete user: ", err);
-    }
+    const user = await this.findUser("id", userId);
+    await user.setAssets([]);
+    await user.setTransactions([]);
+    await user.destroy();
+    return user;
 }
 
 // funcion para generar un avatar "identicon" a partir de un hash

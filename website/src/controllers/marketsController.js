@@ -17,6 +17,7 @@ const marketsController = {
             });
         } catch (err) {
             console.error(err);
+            res.status(404).render("not-found");
         }
     },
 
@@ -33,14 +34,16 @@ const marketsController = {
     detail: async function (req, res) {
         try {
             const assetRequested = req.params.id; //id del producto
-            const asset = await assetService.findAsset(assetRequested);
+            const marketType = assetService.parseMarketType(req.params.marketType);
+            const asset = await assetService.findAsset(assetRequested, marketType);
 
             res.render("products/productDetail", {
                 asset,
                 pageTitle: asset.ticker + " - Details",
             });
-        } catch (error) {
-            console.log(error);
+        } catch (err) {
+            console.error(err);
+            res.status(404).render("not-found");
         }
     },
 
@@ -68,6 +71,7 @@ const marketsController = {
             res.redirect("/markets/" + type);
         } catch (err) {
             console.log("there was an error creating the asset: ", err);
+            res.status(404).render("not-found");
         }
     },
 
@@ -83,7 +87,8 @@ const marketsController = {
                 asset,
             });
         } catch (err) {
-            console.log(err);
+            console.error(err);
+            res.status(404).render("not-found");
         }
     },
 
@@ -100,15 +105,21 @@ const marketsController = {
             res.redirect("/markets/" + marketType + "/" + req.body.id);
         } catch (err) {
             console.error(err);
+            res.status(404).render("not-found");
         }
     },
 
     // funcion controladora para borrar activos existentes en la base de datos
     delete: async function (req, res) {
-        const assetId = req.params.id;
-        const asset = await assetService.deleteAsset(assetId);
-
-        return res.redirect("/markets/" + req.params.marketType)
+        try {
+            const assetId = req.params.id;
+            const asset = await assetService.deleteAsset(assetId);
+    
+            res.redirect("/markets/" + req.params.marketType)
+        } catch (err) {
+            console.error("there was an error deleting the asset", err);
+            res.status(404).render("not-found");
+        }
     },
 
     // funcion controladora para generar transacciones en la base de datos
@@ -123,6 +134,7 @@ const marketsController = {
             return res.redirect(`/markets${req.url}`);
         } catch (err) {
             console.error(err);
+            res.status(404).render("not-found");
         }
     },
 };

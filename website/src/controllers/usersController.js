@@ -6,10 +6,16 @@ const userService = require("../services/users");
 const usersController = {
     // funcion controladora para renderizar el listado de usuarios
     list: async function (req, res) {
-        res.render("users/userList", {
-            pageTitle: "UniFi - Users",
-            userList: await userService.getUsers(),
-        });
+        try {
+            const userList = await userService.getUsers()
+            res.render("users/userList", {
+                pageTitle: "UniFi - Users",
+                userList,
+            });
+        } catch (err) {
+            console.error("there was an error getting users in the list function: ", err);
+            res.status(404).render("not-found");
+        }
     },
     // funcion controladora para renderizar perfiles de usuario
     profile: function (req, res) {
@@ -37,8 +43,13 @@ const usersController = {
         if (req.file) {
             req.body.avatar = "/img/users/" + req.file.filename;
         }
-        await userService.updateUser(req.body);
-        res.redirect("/users/profile");
+        try {
+            await userService.updateUser(req.body);
+            res.redirect("/users/profile");
+        } catch (err) {
+            console.error("There was an error updating user: ", err)
+            res.status(404).render("not-found");
+        }
     },
 
     wallet: async function (req, res) {
@@ -54,10 +65,15 @@ const usersController = {
     },
 
     delete: async function (req, res) {
-        const userId = req.session.authenticatedUser.id;
-        const user = await userService.deleteUser(userId);
-        req.session.destroy();
-        res.redirect("/login");
+        try {
+            const userId = req.session.authenticatedUser.id;
+            const user = await userService.deleteUser(userId);
+            req.session.destroy();
+            res.redirect("/login");
+        } catch (err) {
+            console.error("there was an error deleting the user: ", err);
+            res.status(404).render("not-found");
+        }
     },
 };
 
