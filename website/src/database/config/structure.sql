@@ -17,20 +17,6 @@ CREATE TABLE `types` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `states`
---
-
-DROP TABLE IF EXISTS `states`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `states` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Table structure for table `assets`
 --
 
@@ -48,14 +34,11 @@ CREATE TABLE `assets` (
   `supply` bigint(20) DEFAULT NULL,
   `mcap` bigint(20) DEFAULT NULL,
   `logo` varchar(255) NOT NULL DEFAULT '/img/assets/default_logo.svg',
-  `type_id` int(10) unsigned NOT NULL,
-  `state_id` int(10) unsigned NOT NULL DEFAULT 1,
+  `type_id` int(10) unsigned,
   `description` TEXT DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `assets_type_id_foreign` (`type_id`),
-  KEY `states_id_foreign` (`state_id`),
-  CONSTRAINT `assets_type_id_foreign` FOREIGN KEY (`type_id`) REFERENCES `types` (`id`),
-  CONSTRAINT `states_id_foreign` FOREIGN KEY (`state_id`) REFERENCES `states` (`id`)
+  CONSTRAINT `assets_type_id_foreign` FOREIGN KEY (`type_id`) REFERENCES `types` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -94,8 +77,8 @@ DROP TABLE IF EXISTS `assets_users`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `assets_users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `user_id` int(10) unsigned NOT NULL,
-  `asset_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned
+  `asset_id` int(10) unsigned
   `amount` decimal(24,12) NOT NULL DEFAULT 0.000000000000,
   PRIMARY KEY (`id`),
   KEY `assets_users_user_id_foreign` (`user_id`),
@@ -118,9 +101,9 @@ CREATE TABLE `transactions` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `amount` decimal(24,12) NOT NULL,
   `price` decimal(24,12) NOT NULL,
-  `user_id` int(10) unsigned NOT NULL,
-  `input_asset_id` int(10) unsigned NOT NULL,
-  `output_asset_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned,
+  `input_asset_id` int(10) unsigned,
+  `output_asset_id` int(10) unsigned,
   PRIMARY KEY (`id`),
   KEY `input_asset_id` (`input_asset_id`),
   KEY `output_asset_id` (`output_asset_id`),

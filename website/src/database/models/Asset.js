@@ -90,10 +90,7 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "asset_id",
             otherKey: "user_id",
             timestamps: false,
-        });
-        Asset.belongsTo(models.State, {
-            as: "state",
-            foreignKey: "state_id",
+            onDelete: 'CASCADE',
         });
     };
     return Asset;

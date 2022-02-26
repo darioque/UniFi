@@ -29,7 +29,6 @@ module.exports = (sequelize, dataTypes) => {
         },
         user_id: {
             type: dataTypes.INTEGER(10).UNSIGNED,
-            allowNull: false,
             foreignKey: true,
         },
         input_asset_id: {

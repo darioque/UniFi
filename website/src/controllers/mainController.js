@@ -52,33 +52,42 @@ const mainController = {
             req.body.avatar = "/img/users/" + req.file.filename;
         }
         // si no hubo errores en el formulario, agregar el usuario a la base de datos
-        userService.createUser(req.body);
-        res.redirect("/login");
+        try {
+            await userService.createUser(req.body);
+            res.redirect("/login");
+
+        } catch (err) {
+            console.error("There was an error creating the user: ", err)
+        }
     },
     // función para procesar autenticacion de usuarios
     processLogin: async function (req, res) {
         // autenticar datos de login y guardar al usuario resultante en una variable
-        const user = await userService.authenticate(req.body);
+        try {
+            const user = await userService.authenticate(req.body);
+            // si no se encontró ningun usuario que coincida (credenciales invalidas), devolver el sitio de login con mensaje de error
+            if (!user) {
+                return res.render("users/login", {
+                    errorMessages: [{ msg: "Invalid credentials" }],
+                });
+            }
+            // si no hubo errores, guardar al usuario autenticado con session y redirigir a home
+            req.session.authenticatedUser = user;
+            // si está tildado el campo de remember me, guardarlo con cookie
+            if (req.body.remember) {
+                res.cookie("rememberMe", user.id, { maxAge: 60000 });
+            }
+    
+            // si hay una url a redireccionar (y no es logout), llevarlo ahi al loguearse
+            if (req.session.redirectUrl && req.session.redirectUrl != "/logout") {
+                res.redirect(req.session.redirectUrl);
+            } else {
+                res.redirect("/");
+            }
+        } catch (err) {
+            console.error("there was an erro authenticating the user: ", err)
+        }
 
-        // si no se encontró ningun usuario que coincida (credenciales invalidas), devolver el sitio de login con mensaje de error
-        if (!user) {
-            return res.render("users/login", {
-                errorMessages: [{ msg: "Invalid credentials" }],
-            });
-        }
-        // si no hubo errores, guardar al usuario autenticado con session y redirigir a home
-        req.session.authenticatedUser = user;
-        // si está tildado el campo de remember me, guardarlo con cookie
-        if (req.body.remember) {
-            res.cookie("rememberMe", user.id, { maxAge: 60000 });
-        }
-
-        // si hay una url a redireccionar (y no es logout), llevarlo ahi al loguearse
-        if (req.session.redirectUrl && req.session.redirectUrl != "/logout") {
-            res.redirect(req.session.redirectUrl);
-        } else {
-            res.redirect("/");
-        }
     },
     // funcion para cerrar sesión
     logout: function (req, res) {
@@ -93,7 +102,7 @@ const mainController = {
     processResetPassword: async function (req, res) {
         const searchUser = req.body.email;
         const field = searchUser.includes('@')?'email':'user_name'
-        user = await userService.findUser(field, searchUser);
+        const user = await userService.findUser(field, searchUser);
         res.redirect('/login')
     },
 };
