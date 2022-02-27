@@ -31,14 +31,22 @@ async function getWalletBalances(userId) {
 
 async function getWalletTransactions(userId) {
     const user = await db.User.findByPk(userId, {
-        include: [{
-            association: 'transactions',
-            include: [
-                {association: 'input'},
-                {association: 'output'},
-            ]
-        }],
-        order: [['created_at', 'DESC']]
+        include: [
+            {
+                association: "transactions",
+                include: [
+                    {
+                        association: "input",
+                        include: [{ association: "type" }],
+                    },
+                    {
+                        association: "output",
+                        include: [{ association: "type" }],
+                    },
+                ],
+            },
+        ],
+        order: [["created_at", "DESC"]],
     });
     return user;
 }

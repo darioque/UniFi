@@ -30,12 +30,6 @@
                 </div>
             </section>
             <section>
-                <form action="/users/wallet/search" method="POST" class="search-form">
-                    <input type="text" name="search" placeholder="Search Asset" class="search-input">
-                    <button type="submit">
-                        <i class="fas fa-search search-icon"></i>
-                    </button>
-                </form>
                         <ol class="list">
                             <div class="list-items list-items-title">
                                 <p class="name">
@@ -54,6 +48,9 @@
                                     24H Price Change
                                 </p>
                             </div>
+                            <% if (walletAssets.length == 0) { %>
+                                <p class="text-center">No assets found</p>
+                            <% } %>
                             <% for (let asset of walletAssets) { %>
                                 <a class="no-link" href="/markets/<%= asset.type.name%>/<%= asset.id%>">
                                     <li class="no-list">

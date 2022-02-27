@@ -18,11 +18,11 @@ const usersController = {
         }
     },
     // funcion controladora para renderizar perfiles de usuario
-    profile: function (req, res) {
+    profile: async function (req, res) {
         const userId = req.params.id;
         const user =
             userId != req.session.authenticatedUser.id && userId != undefined
-                ? userService.findUserByPk(userId)
+                ? await userService.findUser("id", userId)
                 : req.session.authenticatedUser;
         res.render("users/userProfile", {
             pageTitle: "Unifi - User Profile",

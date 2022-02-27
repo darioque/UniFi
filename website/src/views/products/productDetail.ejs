@@ -60,7 +60,7 @@
                     <div class="converter">
                         <form action="/markets/cryptocurrencies/<%= asset.name %>/trade-confirmation" method="POST" id="form"></form>
                             <div class="currency first-currency">
-                                <img class="currency-logo" src="<%= asset.logo%>" alt="<%= asset.ticker %> logo" id="currencyLogo"> 
+                                <img class="currency-logo" src="<%= asset.logo%>" alt="<%= asset.ticker %>'s logo" id="currencyLogo"> 
                                 <p class="currency-title" id="currencyTitle">
                                     <%= asset.ticker %>
                                 </p>
@@ -69,8 +69,8 @@
                                 </div>
                             </div>
                             <div class="currency second-currency">
-                                <img class="currency-logo" src="/img/usd.svg" alt="USD logo">
-                                <p class="currency-title">USD</p>
+                                <img class="currency-logo" src="/img/assets/usdt_logo.svg" alt="USDT logo">
+                                <p class="currency-title">USDT</p>
                                 <div class="currency-input-div">
                                     <input class="currency-input" type="number" value=<%=asset.price%> maxlength="8" id="price" readonly>
                                 </div>
@@ -99,7 +99,7 @@
                                         <form action="/markets/<%= asset.type.name %>" method="POST" id="modalForm">
                                             <div class="modal-converter">
                                                 <div class="currency first-currency">
-                                                    <img class="currency-logo" src="<%= asset.logo %> " alt="BTC logo" id="confirmationCurrencyLogo">
+                                                    <img class="currency-logo" src="<%= asset.logo %> " alt="<%= asset.ticker %>'s logo" id="confirmationCurrencyLogo">
                                                     <p class="currency-title" id="confirmationCurrencyTitle"></p>
                                                     <div class="currency-input-div">
                                                         <input class="currency-input" name="amount" id="amountConfirmation" readonly></input>
@@ -107,8 +107,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="currency second-currency">
-                                                    <img class="currency-logo" src="/img/usd.svg" alt="USD logo">
-                                                    <p class="currency-title">USD</p>
+                                                    <img class="currency-logo" src="/img/assets/usdt_logo.svg" alt="USDT logo">
+                                                    <p class="currency-title">USDT</p>
                                                     <div class="currency-input-div">
                                                         <input class="currency-input" id="priceConfirmation" name="price" readonly></input>
                                                         <input class="currency-input" id="input_asset_id" name="input_asset_id" style="display: none;" value="<%= 1 %> "></input>
@@ -116,14 +116,10 @@
                                                 </div>
                                             </div>
                                             <div class="sub-price">
-                                                <h4>1 BTC = 60000 USD</h4>
+                                                <h4>1 <%= asset.name %> = <%= asset.price %> USD</h4>
                                             </div>
                                             <button class="confirm-button" type="submit">Confirm</button>
                                         </form>
-                                    </div>
-
-                                    <div class="chart">
-                                        <img src="/img/chart.png" alt="BTC/USD Chart" />
                                     </div>
                                 </div>
                             </div>

@@ -89,46 +89,51 @@ function parseMarketType(market) {
 }
 
 async function generateTransaction(purchase) {
-    const transaction = await db.Transaction.create({
-        ...purchase,
-        id: await generateId(db.Transaction),
-    });
-    return transaction;
+    if (await updateBalance(purchase)) {
+        const transaction = await db.Transaction.create({
+            ...purchase,
+            id: await generateId(db.Transaction),
+        });
+        return transaction;
+    }
+    return null
 }
 
-async function updateBalance(transaction) {
+async function updateBalance(transactionData) {
     const inputAssetBalance = await db.AssetUser.findOne({
         where: {
-            user_id: transaction.user_id,
-            asset_id: transaction.input_asset_id,
+            user_id: transactionData.user_id,
+            asset_id: transactionData.input_asset_id,
         },
     });
     if (!inputAssetBalance) {
         throw new Error('Insufficient Balance')
     }
+    if ((inputAssetBalance.amount - transactionData.price) < 1) {
+        throw new Error('Insufficient Balance')
+    }
     await inputAssetBalance.update({
-        amount: inputAssetBalance.amount - transaction.price,
+        amount: inputAssetBalance.amount - transactionData.price
     });
 
     const outputAssetBalance = await db.AssetUser.findOne({
         where: {
-            user_id: transaction.user_id,
-            asset_id: transaction.output_asset_id,
+            user_id: transactionData.user_id,
+            asset_id: transactionData.output_asset_id,
         },
     });
     if (outputAssetBalance) {
-        await outputAssetBalance.update({
-            amount: outputAssetBalance.amount + transaction.amount,
+        return await outputAssetBalance.update({
+            amount: outputAssetBalance.amount + transactionData.amount,
         });
     } else {
-        await db.AssetUser.create({
+        return await db.AssetUser.create({
             id: await generateId(db.AssetUser),
-            user_id: transaction.user_id,
-            asset_id: transaction.output_asset_id,
-            amount: transaction.amount,
+            user_id: transactionData.user_id,
+            asset_id: transactionData.output_asset_id,
+            amount: transactionData.amount,
         });
     }
-    return;
 }
 
 async function deleteAsset(assetId) {
@@ -149,6 +154,5 @@ module.exports = {
     findAsset,
     deleteAsset,
     parseMarketType,
-    updateBalance,
     generateTransaction,
 };

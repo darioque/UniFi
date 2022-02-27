@@ -1,6 +1,6 @@
 window.onload = async () => {
     const searchInput = document.querySelector("#search");
-    const marketType = location.href.split("/markets/")[1]
+    const marketType = location.href.split("/markets/")[1];
     const response = await fetch(
         `http://localhost:3001/api/markets/${marketType}`
     ).then((assets) => assets.json());
@@ -101,4 +101,11 @@ function listAssets(assets) {
         link.appendChild(list);
         assetListDiv.appendChild(link);
     });
+    if (assets.length == 0) {
+        const assetListDiv = document.querySelector("#assetList");
+        const p = document.createElement("p");
+        p.innerHTML = "No assets match";
+        assetListDiv.appendChild(p);
+    }
+    return;
 }

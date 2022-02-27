@@ -36,12 +36,6 @@
                 </div>
             </section>
             <section>
-                <form action="/users/wallet/search" method="POST" class="search-form">
-                    <input type="text" name="search" placeholder="Search Asset" class="search-input">
-                    <button type="submit">
-                        <i class="fas fa-search search-icon"></i>
-                    </button>
-                </form>
                         <ol class="list">
                             <div class="list-items list-items-title">
                                 <p class="price">
@@ -60,35 +54,38 @@
                                     Price
                                 </p>
                             </div>
+                            <% if (transactions.length == 0) { %>
+                                <p class="text-center">No transactions found</p>
+                            <% } %>
                             <% for (let transaction of transactions) { %>
                                 <span class="no-link" href="/users/wallet/<%= transaction.id%>">
                                     <li class="no-list">
                                         <div class="list-items">
                                             <p class="mcap">
-                                                <%= moment(transaction.created_at).format('D MMM, YYYY HH:MM') %> 
+                                                <%= moment(transaction.created_at).format('D MMM, YYYY HH:mm') %> 
                                             </p>
                                             <div class="name">
                                                 <img class="currency-logo" src="<%= transaction.input.logo %>"
                                                     alt="Logo de <%= transaction.input.ticker %>" />
-                                                <p>
+                                                <a class="no-link" href="/markets/<%= transaction.input.type.name %>/<%= transaction.input.id %>">
                                                     <%= transaction.input.name%>
-                                                </p>
+                                                </a>
 
                                             </div>
 
                                             <div class="name">
                                                 <img class="currency-logo" src="<%= transaction.output.logo %>"
                                                     alt="Logo de <%= transaction.output.ticker %>" />
-                                                <p>
+                                                <a class="no-link" href="/markets/<%= transaction.output.type.name %>/<%= transaction.output.id %>">
                                                     <%= transaction.output.name%>
-                                                </p>
+                                                </a>
 
                                             </div>
                                             <p class="price">
                                                 <%= transaction.amount %>
                                             </p>
                                             <p class="price">
-                                                <%= transaction.price %>
+                                                <%= transaction.price / transaction.amount %>
                                             </p>
                                         </div>
                                     </li>
