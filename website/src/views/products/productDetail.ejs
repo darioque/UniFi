@@ -26,7 +26,7 @@
                 </li>
                 <li>
                     <i class="fas fa-chevron-right"></i>
-                    <a class="no-link" href="/markets/<%= asset.type.name %>/<%= asset.name %>"><span>
+                    <a class="no-link" href="/markets/<%= asset.type.name %>/<%= asset.id %>"><span>
                             <%= asset.name %>
                         </span></a>
                 </li>
@@ -75,7 +75,13 @@
                                     <input class="currency-input" type="number" value=<%=asset.price%> maxlength="8" id="price" readonly>
                                 </div>
                             </div>
-                            <input type="image" id="myBtn" class="exchange-icon" src="/img/exchange.png" alt="Submit" style="display: <%= locals.authenticatedUser?'block':'none' %> ">
+                            <% if (locals && locals.authenticatedUser) { %> 
+                                <input type="image" id="myBtn" class="exchange-icon" src="/img/exchange.png" alt="Submit">
+                            <% } else { %> 
+                                <i class="fa-solid fa-lock tooltip" alt="You need to be logged in to purchase!">
+                                    <span class="tooltip-text">You need to be logged in to purchase!</span>
+                                </i>
+                            <% } %> 
                             <div id="myModal" class="body-border modal">
 
                                 <div class="modal-content">
@@ -97,7 +103,7 @@
                                                     <p class="currency-title" id="confirmationCurrencyTitle"></p>
                                                     <div class="currency-input-div">
                                                         <input class="currency-input" name="amount" id="amountConfirmation" readonly></input>
-                                                        <input class="currency-input" name="input_asset_id" id="input_asset_id" style="display: none;" value="<%= asset.id %> "></input>
+                                                        <input class="currency-input" name="output_asset_id" id="output_asset_id" style="display: none;" value="<%= asset.id %> "></input>
                                                     </div>
                                                 </div>
                                                 <div class="currency second-currency">
@@ -105,7 +111,7 @@
                                                     <p class="currency-title">USD</p>
                                                     <div class="currency-input-div">
                                                         <input class="currency-input" id="priceConfirmation" name="price" readonly></input>
-                                                        <input class="currency-input" id="output_asset_id" name="output_asset_id" style="display: none;" value="<%= 1 %> "></input>
+                                                        <input class="currency-input" id="input_asset_id" name="input_asset_id" style="display: none;" value="<%= 1 %> "></input>
                                                     </div>
                                                 </div>
                                             </div>

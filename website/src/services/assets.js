@@ -2,12 +2,8 @@
 const db = require("../database/models");
 
 async function generateId(model) {
-    try {
-        const count = await model.count();
-        return count + 1;
-    } catch (err) {
-        console.error("there was an error generating the id: ", err);
-    }
+    const id = await model.max("id");
+    return id + 1;
 }
 
 async function getAssets() {
@@ -68,7 +64,6 @@ async function updateAsset(assetRequested) {
 }
 
 async function findAsset(assetRequested, marketType = 1 || 2) {
-    console.log(marketType);
     const asset = await db.Asset.findOne({
         where: {
             id: assetRequested,
@@ -101,6 +96,41 @@ async function generateTransaction(purchase) {
     return transaction;
 }
 
+async function updateBalance(transaction) {
+    const inputAssetBalance = await db.AssetUser.findOne({
+        where: {
+            user_id: transaction.user_id,
+            asset_id: transaction.input_asset_id,
+        },
+    });
+    if (!inputAssetBalance) {
+        throw new Error('Insufficient Balance')
+    }
+    await inputAssetBalance.update({
+        amount: inputAssetBalance.amount - transaction.price,
+    });
+
+    const outputAssetBalance = await db.AssetUser.findOne({
+        where: {
+            user_id: transaction.user_id,
+            asset_id: transaction.output_asset_id,
+        },
+    });
+    if (outputAssetBalance) {
+        await outputAssetBalance.update({
+            amount: outputAssetBalance.amount + transaction.amount,
+        });
+    } else {
+        await db.AssetUser.create({
+            id: await generateId(db.AssetUser),
+            user_id: transaction.user_id,
+            asset_id: transaction.output_asset_id,
+            amount: transaction.amount,
+        });
+    }
+    return;
+}
+
 async function deleteAsset(assetId) {
     const asset = await this.findAsset(assetId);
     await asset.setInput([]);
@@ -119,5 +149,6 @@ module.exports = {
     findAsset,
     deleteAsset,
     parseMarketType,
+    updateBalance,
     generateTransaction,
 };

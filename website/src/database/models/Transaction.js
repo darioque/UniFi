@@ -51,11 +51,11 @@ module.exports = (sequelize, dataTypes) => {
 
     Transaction.associate = function (models) {
         Transaction.belongsTo(models.Asset, {
-            as: "inputAsset",
+            as: "input",
             foreignKey: "input_asset_id",
         });
         Transaction.belongsTo(models.Asset, {
-            as: "outputAsset",
+            as: "output",
             foreignKey: "output_asset_id",
         });
         Transaction.belongsTo(models.User, {

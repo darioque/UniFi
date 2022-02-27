@@ -163,7 +163,6 @@ h6 {
 /* contenedor div necesario para posicionar el contenido del dropdown */
 .dropdown {
   position: relative;
-  display: inline-block;
 }
 
 /* contenido del dropdown (escondido por defecto) */

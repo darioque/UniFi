@@ -55,9 +55,21 @@ const usersController = {
     wallet: async function (req, res) {
         const userId = req.session.authenticatedUser.id;
         try {
-            const user = await userService.getWalletAssets(userId);
+            const user = await userService.getWalletBalances(userId);
             const walletAssets = user.assets
-            res.render("users/wallet", { walletAssets });
+            res.render("users/walletOverview", { walletAssets });
+        } catch (err) {
+            console.error(err);
+            res.status(404).render("not-found");
+        }
+    },
+
+    transactions: async function (req, res) {
+        const userId = req.session.authenticatedUser.id;
+        try {
+            const user = await userService.getWalletTransactions(userId);
+            const transactions = user.transactions
+            res.render("users/transactionHistory", { transactions });
         } catch (err) {
             console.error(err);
             res.status(404).render("not-found");

@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
+const moment = require("moment");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const cors = require('cors')
@@ -26,6 +27,11 @@ app.set("views", path.join(__dirname, "/views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(methodOverride("_method"));
+
+app.use((req, res, next) => {
+    res.locals.moment = moment;
+    next();
+});
 
 app.use(
     session({

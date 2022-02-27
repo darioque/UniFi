@@ -13,33 +13,41 @@
                 >Cryptocurrencies</a
             >
             <a class="no-link" href="/markets/stocks">Stocks</a>
-            <a class="no-link" href="/wallet"
-                ><i class="fas fa-wallet"></i>Wallet</a
-            >
             <% if (locals && locals.authenticatedUser) { %>
-            <div class="dropdown">
-                <div class="user">
-                    <img
-                        class="avatar"
-                        src="<%= authenticatedUser.avatar %>"
-                        alt="User Avatar"
-                    />
-                    <a class="no-link drop-btn" style="padding: 0px;"
-                        ><%= locals.authenticatedUser.user_name ?? locals.authenticatedUser.email??
-                        locals.authenticatedUser.address.substring(0, 5) + "..."
-                        + locals.authenticatedUser.address.substring(38,
-                        42)%></a
-                    >
+                <div class="dropdown">
+                    <div class="user">
+                        <a class="no-link drop-btn"> <i class="fas fa-wallet"></i>Wallet</a>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="/users/wallet/">Wallet Overview</a>
+                        <a href="/users/wallet/transactions">Transaction History</a>
+                    </div>
                 </div>
-                <div class="dropdown-content">
-                    <a href="/users/profile">Profile</a>
-                    <a href="/logout">Log out</a>
+                <div class="dropdown">
+                    <div class="user">
+                        <img
+                            class="avatar"
+                            src="<%= authenticatedUser.avatar %>"
+                            alt="User Avatar"
+                        />
+                        <a class="no-link drop-btn" style="padding: 0px;"
+                            ><%= locals.authenticatedUser.user_name ?? locals.authenticatedUser.email??
+                            locals.authenticatedUser.address.substring(0, 5) + "..."
+                            + locals.authenticatedUser.address.substring(38,
+                            42)%></a
+                        >
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="/users/profile">Profile</a>
+                        <a href="/logout">Log out</a>
+                    </div>
                 </div>
-            </div>
+            
             <% } else { %>
-            <a class="no-link drop-btn" href="/login"
-                ><i class="fas fa-user-alt"></i>Login</a
-            >
+                <a class="no-link" href="/users/wallet"> <i class="fas fa-wallet"></i>Wallet</a>
+                <a class="no-link drop-btn" href="/login"
+                    ><i class="fas fa-user-alt"></i>Login</a
+                >
             <% } %>
         </div>
     </div>
@@ -61,32 +69,41 @@
     </nav>
     <div class="header-options">
         <div class="universal-options">
-            <a class="no-link" href="/users/wallet"> <i class="fas fa-wallet"></i>Wallet</a>
             <% if (locals && locals.authenticatedUser) { %>
-            <div class="dropdown">
-                <div class="user">
-                    <img
-                        class="avatar"
-                        src="<%= authenticatedUser.avatar %>"
-                        alt="User Avatar"
-                    />
-                    <a class="no-link drop-btn"
-                        ><%= locals.authenticatedUser.user_name??
-                        locals.authenticatedUser.email??
-                        locals.authenticatedUser.address.substring(0, 5) + "..."
-                        + locals.authenticatedUser.address.substring(38,
-                        42)%></a
-                    >
+                <div class="dropdown">
+                    <div class="user">
+                        <a class="no-link drop-btn"> <i class="fas fa-wallet"></i>Wallet</a>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="/users/wallet/">Wallet Overview</a>
+                        <a href="/users/wallet/transactions">Transactions</a>
+                    </div>
                 </div>
-                <div class="dropdown-content">
-                    <a href="/users/profile">Profile</a>
-                    <a href="/logout">Log out</a>
+                <div class="dropdown">
+                    <div class="user">
+                        <img
+                            class="avatar"
+                            src="<%= authenticatedUser.avatar %>"
+                            alt="User Avatar"
+                        />
+                        <a class="no-link drop-btn"
+                            ><%= locals.authenticatedUser.user_name??
+                            locals.authenticatedUser.email??
+                            locals.authenticatedUser.address.substring(0, 5) + "..."
+                            + locals.authenticatedUser.address.substring(38,
+                            42)%></a
+                        >
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="/users/profile">Profile</a>
+                        <a href="/logout">Log out</a>
+                    </div>
                 </div>
-            </div>
             <% } else { %>
-            <a class="no-link drop-btn" href="/login"
-                ><i class="fas fa-user-alt"></i>Login</a
-            >
+                <a class="no-link" href="/users/wallet"> <i class="fas fa-wallet"></i>Wallet</a>
+                <a class="no-link drop-btn" href="/login"
+                    ><i class="fas fa-user-alt"></i>Login</a
+                >
             <% } %>
         </div>
     </div>

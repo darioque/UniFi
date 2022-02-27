@@ -131,6 +131,7 @@ const marketsController = {
             const transaction = await assetService.generateTransaction(
                 purchase
             );
+            await assetService.updateBalance(transaction);
             return res.redirect(`/markets${req.url}`);
         } catch (err) {
             console.error(err);

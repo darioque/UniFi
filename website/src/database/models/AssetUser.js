@@ -9,6 +9,20 @@ module.exports = (sequelize, dataTypes) => {
                 return value === null ? null : Number(value);
             },
         },
+        user_id: {
+            type: dataTypes.INTEGER(10).UNSIGNED,
+            foreignKey: true,
+        },
+        id: {
+            type: dataTypes.INTEGER(10).UNSIGNED,
+            primaryKey: true,
+            allowNull: false,
+            autoIncrement: true,
+        },
+        asset_id: {
+            type: dataTypes.INTEGER(10).UNSIGNED,
+            foreignKey: true,
+        },
     };
     let config = {
         timestamps: false,

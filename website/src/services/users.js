@@ -7,9 +7,9 @@ const jdenticon = require("jdenticon");
 const crypto = require("crypto");
 const avatarsFilePath = path.join(__dirname, "../../public/img/users/");
 
-async function generateId() {
-    const count = await db.User.count();
-    return count + 1;
+async function generateId(db) {
+    const id = await db.max('id');
+    return id + 1;
 }
 
 async function getUsers() {
@@ -17,9 +17,28 @@ async function getUsers() {
     return users;
 }
 
-async function getWalletAssets(userId) {
+async function getWalletBalances(userId) {
     const user = await db.User.findByPk(userId, {
-        include: [{ association: "assets" }],
+        include: [{
+            association: 'assets',
+            include: [{
+                association: 'type',
+            }]
+        }]
+    })
+    return user;
+}
+
+async function getWalletTransactions(userId) {
+    const user = await db.User.findByPk(userId, {
+        include: [{
+            association: 'transactions',
+            include: [
+                {association: 'input'},
+                {association: 'output'},
+            ]
+        }],
+        order: [['created_at', 'DESC']]
     });
     return user;
 }
@@ -29,7 +48,7 @@ async function createUser(userRequested) {
     if (userRequested.address) {
         create = await db.User.create({
             ...userRequested,
-            id: await generateId(),
+            id: await generateId(db.User),
             avatar: generateAvatar(),
         });
     } else {
@@ -136,11 +155,12 @@ function generateAvatar() {
 }
 
 module.exports = {
-    getWalletAssets,
+    getWalletBalances,
     authenticate,
     createUser,
     findUser,
     deleteUser,
     updateUser,
     getUsers,
+    getWalletTransactions,
 };

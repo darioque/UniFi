@@ -24,6 +24,12 @@
                                 Wallet
                             </span></a>
                     </li>
+                    <li>
+                        <i class="fas fa-chevron-right"></i>
+                        <a class="no-link" href="/users/wallet/transactions"><span>
+                                Transactions
+                            </span></a>
+                    </li>
                 </ul>
                 <div>
 
@@ -38,55 +44,55 @@
                 </form>
                         <ol class="list">
                             <div class="list-items list-items-title">
+                                <p class="price">
+                                    Date
+                                </p>
                                 <p class="name">
-                                    Name
+                                    Input Asset
                                 </p>
-                                <p class="price">
-                                    Balance
-                                </p>
-                                <p class="price">
-                                    Price
-                                </p>
-                                <p class="mcap">
-                                    Holdings
+                                <p class="name">
+                                    Output Asset
                                 </p>
                                 <p class="change">
-                                    24H Price Change
+                                    Amount Purchased
+                                </p>
+                                <p class="mcap">
+                                    Price
                                 </p>
                             </div>
-                            <% for (let asset of walletAssets) { %>
-                                <a class="no-link" href="/users/wallet/<%= asset.name%>">
+                            <% for (let transaction of transactions) { %>
+                                <span class="no-link" href="/users/wallet/<%= transaction.id%>">
                                     <li class="no-list">
                                         <div class="list-items">
+                                            <p class="mcap">
+                                                <%= moment(transaction.created_at).format('D MMM, YYYY HH:MM') %> 
+                                            </p>
                                             <div class="name">
-                                                <img class="currency-logo" src="<%= asset.logo %>"
-                                                    alt="Logo de <%= asset.ticker %>" />
+                                                <img class="currency-logo" src="<%= transaction.input.logo %>"
+                                                    alt="Logo de <%= transaction.input.ticker %>" />
                                                 <p>
-                                                    <%= asset.name%>
+                                                    <%= transaction.input.name%>
+                                                </p>
+
+                                            </div>
+
+                                            <div class="name">
+                                                <img class="currency-logo" src="<%= transaction.output.logo %>"
+                                                    alt="Logo de <%= transaction.output.ticker %>" />
+                                                <p>
+                                                    <%= transaction.output.name%>
                                                 </p>
 
                                             </div>
                                             <p class="price">
-                                                <%= asset.AssetUser.amount %>
+                                                <%= transaction.amount %>
                                             </p>
                                             <p class="price">
-                                                $<%= asset.price %>
+                                                <%= transaction.price %>
                                             </p>
-                                            <p class="mcap">
-                                                $<%= asset.AssetUser.amount * asset.price %>
-                                            </p>
-                                            <% if (asset.change < 0) { %>
-                                                <p class="change red">
-                                                    <%= asset.change %>%
-                                                </p>
-                                                <% } else {%>
-                                                    <p class="change green">
-                                                        <%= asset.change %>%
-                                                    </p>
-                                                    <% } %>
                                         </div>
                                     </li>
-                                </a>
+                                </span>
                                 <% } %>
                         </ol>
             </section>
