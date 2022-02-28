@@ -1,6 +1,8 @@
 window.onload = async () => {
     const searchInput = document.querySelector("#search");
+    const nameFilter = document.querySelector(".name");
     const marketType = location.href.split("/markets/")[1];
+
     const response = await fetch(
         `http://localhost:3001/api/markets/${marketType}`
     ).then((assets) => assets.json());
@@ -18,6 +20,20 @@ window.onload = async () => {
         assetListDiv.innerHTML = "";
 
         listAssets(filteredAssets);
+    });
+
+    nameFilter.setAttribute('sort', 'ASC')
+
+    nameFilter.addEventListener("click", async function (e) {
+        const assetListDiv = document.querySelector("#assetList");
+        const sortBy = this.getAttribute('sort') == 'ASC'?'DESC':'ASC'
+        this.setAttribute('sort', sortBy)
+        const response = await fetch(
+            `http://localhost:3001/api/markets/${marketType}?orderBy=ticker&sortBy=${sortBy}`
+        ).then((assets) => assets.json());
+        const assets = response.data;
+        assetListDiv.innerHTML = "";
+        listAssets(assets);
     });
 };
 

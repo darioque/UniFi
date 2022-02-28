@@ -7,7 +7,10 @@ const marketsController = {
     // funcion controladora para la pagina de "descubrir"/"mercados"
     markets: async function (req, res) {
         try {
-            const assetList = await assetService.getAssets();
+            const assetList = await assetService.getAssets([
+                "price_change_24",
+                "DESC",
+            ]);
             res.render("products/markets", {
                 pageTitle: "UniFi - Markets",
                 // recibe lista ordenada y devuelve el primer activo (mayor ganador y mayor perdedor)

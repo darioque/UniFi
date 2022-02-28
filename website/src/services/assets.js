@@ -6,31 +6,55 @@ async function generateId(model) {
     return id + 1;
 }
 
-async function getAssets() {
+
+
+async function listTypes() {
+    const types = await db.Type.findAll();
+    return types
+}
+
+async function getTransactions() {
+    const transactions = await db.Transaction.findAll();
+    return transactions
+}
+
+async function getAssets(order = ["ticker", "ASC"]) {
     const cryptos = await db.Asset.findAll({
         include: [
             {
                 association: "type",
             },
         ],
-        order: [["price_change_24", "DESC"]],
+        order: [order],
     });
     return cryptos;
 }
 
-async function getCrypto() {
+async function getCrypto(order = ['ticker', 'ASC']) {
     const cryptos = await db.Asset.findAll({
+        include: [
+            {
+                association: "type",
+            },
+        ],
         where: {
             type_id: 1,
         },
+        order: [order],
     });
     return cryptos;
 }
-async function getStock() {
+async function getStock(order = ["ticker", "ASC"]) {
     const stocks = await db.Asset.findAll({
+        include: [
+            {
+                association: "type",
+            },
+        ],
         where: {
             type_id: 2,
         },
+        order: [order],
     });
     return stocks;
 }
@@ -96,7 +120,7 @@ async function generateTransaction(purchase) {
         });
         return transaction;
     }
-    return null
+    return null;
 }
 
 async function updateBalance(transactionData) {
@@ -107,13 +131,13 @@ async function updateBalance(transactionData) {
         },
     });
     if (!inputAssetBalance) {
-        throw new Error('Insufficient Balance')
+        throw new Error("Insufficient Balance");
     }
-    if ((inputAssetBalance.amount - transactionData.price) < 1) {
-        throw new Error('Insufficient Balance')
+    if (inputAssetBalance.amount - transactionData.price < 1) {
+        throw new Error("Insufficient Balance");
     }
     await inputAssetBalance.update({
-        amount: inputAssetBalance.amount - transactionData.price
+        amount: inputAssetBalance.amount - transactionData.price,
     });
 
     const outputAssetBalance = await db.AssetUser.findOne({
@@ -153,6 +177,8 @@ module.exports = {
     updateAsset,
     findAsset,
     deleteAsset,
+    listTypes,
     parseMarketType,
     generateTransaction,
+    getTransactions,
 };
