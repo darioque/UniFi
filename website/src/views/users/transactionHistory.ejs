@@ -67,18 +67,20 @@
                                             <div class="name">
                                                 <img class="currency-logo" src="<%= transaction.input.logo %>"
                                                     alt="Logo de <%= transaction.input.ticker %>" />
-                                                <a class="no-link" href="/markets/<%= transaction.input.type.name %>/<%= transaction.input.id %>">
+                                                <a style="margin-right: 4px; font-weight: bold" class="no-link" href="/markets/<%= transaction.input.type.name %>/<%= transaction.input.id %>">
                                                     <%= transaction.input.name%>
                                                 </a>
+                                                <p style="font-size:12px; color:rgb(128, 138,157);"><%= transaction.input.ticker%></p>
 
                                             </div>
 
                                             <div class="name">
                                                 <img class="currency-logo" src="<%= transaction.output.logo %>"
                                                     alt="Logo de <%= transaction.output.ticker %>" />
-                                                <a class="no-link" href="/markets/<%= transaction.output.type.name %>/<%= transaction.output.id %>">
+                                                <a style="margin-right: 4px; font-weight: bold" class="no-link" href="/markets/<%= transaction.output.type.name %>/<%= transaction.output.id %>">
                                                     <%= transaction.output.name%>
                                                 </a>
+                                                <p style="font-size:12px; color:rgb(128, 138,157);"><%= transaction.output.ticker%></p>
 
                                             </div>
                                             <p class="price">

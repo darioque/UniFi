@@ -21,6 +21,10 @@ window.onload = () => {
         "#confirmationCurrencyLogo"
     );
 
+    const transactionConfirmationButton = document.querySelector(
+        "#transactionConfirmationButton"
+    );
+
     function createChart() {
         const labels = ["January", "February", "March", "April", "May", "June"];
 
@@ -78,55 +82,30 @@ window.onload = () => {
                 `http://localhost:3001/api/markets/${marketType}`
             ).then((assets) => assets.json());
             const assets = response.data;
-
             const assetList = document.querySelector("#assetList");
-            assetList.style.overflow = "scroll";
-            assets.forEach((asset) => {
-                const link = document.createElement("a");
-                link.classList.add("no-link");
-                link.onclick = (e) => {
-                    e.preventDefault();
-                    modal.style.display = "none";
-                    currencyTitle.innerHTML = p.innerText;
-                    currencyLogo.setAttribute("src", img.getAttribute("src"));
-                    priceInput.value = asset.price;
-                    output_asset_id.value = asset.id
-                };
-                const list = document.createElement("li");
-                list.classList.add("no-list");
-                const listDiv = document.createElement("div");
-                listDiv.classList.add("list-items");
+            listAssets(assets);
 
-                const name = document.createElement("div");
-                name.classList.add("name");
+            searchInput.addEventListener("input", function (e) {
+                const filteredAssets = assets.filter(
+                    (asset) =>
+                        asset.name
+                            .toLowerCase()
+                            .includes(this.value.toLowerCase()) ||
+                        asset.ticker
+                            .toLowerCase()
+                            .includes(this.value.toLowerCase())
+                );
 
-                const img = document.createElement("img");
-                img.classList.add("currency-logo");
-                img.setAttribute("src", `${asset.logo}`);
-                img.setAttribute("alt", `${asset.ticker}'s Logo`);
+                assetList.innerHTML = "";
 
-                const p = document.createElement("p");
-                p.innerText = `${asset.ticker}`;
-                p.setAttribute("id", "ticker");
-
-                const span = document.createElement("p");
-                span.innerHTML = `${asset.name}`;
-                span.setAttribute("id", "fullName");
-                span.style.color = "rgb(128, 138, 157)";
-                span.style.fontSize = "12px";
-
-                const nameDiv = document.createElement("div");
-                nameDiv.classList.add("nameDiv");
-                nameDiv.appendChild(p);
-                nameDiv.appendChild(span);
-
-                name.appendChild(img);
-                name.appendChild(nameDiv);
-                listDiv.appendChild(name);
-                list.appendChild(listDiv);
-                link.appendChild(list);
-                assetList.appendChild(link);
+                listAssets(filteredAssets);
             });
+        };
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
         };
     }
 
@@ -162,7 +141,6 @@ window.onload = () => {
                 const src = currencyLogo.getAttribute("src");
 
                 confirmationCurrencyLogo.setAttribute("src", src);
-
             };
         }
 
@@ -170,7 +148,6 @@ window.onload = () => {
             modal.style.display = "none";
         };
 
-        // When the user clicks anywhere outside of the modal, close it
         window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
@@ -185,6 +162,83 @@ window.onload = () => {
 
         amountInput.addEventListener("input", function () {
             priceInput.value = price * this.value;
+        });
+
+        if (window.ethereum) {
+            transactionConfirmationButton.addEventListener("click", async (e) => {
+                e.preventDefault();
+                try {
+                    var accounts = await window.ethereum.request({
+                        method: "eth_requestAccounts",
+                    });
+                } catch (err) {
+                    alert(`Error: ${err.message}`);
+                    clickCounter--;
+                    return false;
+                }
+                // variables para la transacción
+                const from = accounts[0];
+                const msg = `UniFi purchase with wallet address ${accounts[0]}`;
+                try {
+                    await ethereum.request({
+                        method: "personal_sign",
+                        params: [msg, from, "Example password"],
+                    });
+                    modalForm.submit()
+                } catch (err) {
+                    alert(`Error: ${err.message}`);
+                    return false;
+                }
+            });
+        }
+    }
+
+    function listAssets(assets) {
+        assets.forEach((asset) => {
+            const link = document.createElement("a");
+            link.classList.add("no-link");
+            link.onclick = (e) => {
+                e.preventDefault();
+                document.querySelector("#listModal").style.display = "none";
+                currencyTitle.innerHTML = p.innerText;
+                currencyLogo.setAttribute("src", img.getAttribute("src"));
+                priceInput.value = asset.price;
+                output_asset_id.value = asset.id;
+            };
+            const list = document.createElement("li");
+            list.classList.add("no-list");
+            const listDiv = document.createElement("div");
+            listDiv.classList.add("list-items");
+
+            const name = document.createElement("div");
+            name.classList.add("name");
+
+            const img = document.createElement("img");
+            img.classList.add("currency-logo");
+            img.setAttribute("src", `${asset.logo}`);
+            img.setAttribute("alt", `${asset.ticker}'s Logo`);
+
+            const p = document.createElement("p");
+            p.innerText = `${asset.ticker}`;
+            p.setAttribute("id", "ticker");
+
+            const span = document.createElement("p");
+            span.innerHTML = `${asset.name}`;
+            span.setAttribute("id", "fullName");
+            span.style.color = "rgb(128, 138, 157)";
+            span.style.fontSize = "12px";
+
+            const nameDiv = document.createElement("div");
+            nameDiv.classList.add("nameDiv");
+            nameDiv.appendChild(p);
+            nameDiv.appendChild(span);
+
+            name.appendChild(img);
+            name.appendChild(nameDiv);
+            listDiv.appendChild(name);
+            list.appendChild(listDiv);
+            link.appendChild(list);
+            assetList.appendChild(link);
         });
     }
 
