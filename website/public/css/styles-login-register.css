@@ -105,6 +105,9 @@ button:hover {
 
 
 @media (min-width: 768px) {
+    #metamaskLogo {
+        display: none;
+    }
     .login-form {
         width: 60%;
     }

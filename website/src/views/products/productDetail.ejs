@@ -60,12 +60,25 @@
                     <div class="converter">
                         <form action="/markets/cryptocurrencies/<%= asset.name %>/trade-confirmation" method="POST" id="form"></form>
                             <div class="currency first-currency">
-                                <img class="currency-logo" src="<%= asset.logo%>" alt="<%= asset.ticker %>'s logo" id="currencyLogo"> 
-                                <p class="currency-title" id="currencyTitle">
-                                    <%= asset.ticker %>
-                                </p>
+                                <div class="currency-selector" id="listBtn">
+
+                                    <img class="currency-logo" src="<%= asset.logo%>" alt="<%= asset.ticker %>'s logo" id="currencyLogo"> 
+                                    <p class="currency-title" id="currencyTitle">
+                                        <%= asset.ticker %>
+                                    </p>
+                                    <i class="fas fa-arrow-down"></i>
+                                </div>
+                                <div class="body-border modal" id="listModal">
+                                    <div class="modal-content">
+                                        <input type="text" name="search" id="search" placeholder="Search Asset" class="search-input">
+                                        <hr>
+                                        <div id="assetList">
+    
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="currency-input-div">
-                                    <input class="currency-input" type="number" value="1" maxlength="8" id="amount">
+                                    <input class="currency-input" type="number" value="1" min="0" maxlength="8" id="amount">
                                 </div>
                             </div>
                             <div class="currency second-currency">

@@ -1,5 +1,6 @@
-window.addEventListener("DOMContentLoaded", (event) => {
+window.addEventListener("load", (event) => {
     const metamaskButton = document.getElementById("metamaskButton");
+    const metamaskLogo = document.querySelector('#metamaskLogo');
     const address = document.getElementById("address");
     const addressText = document.getElementById("addressText");
     const loginForm = document.getElementById("metamaskLoginForm");
@@ -13,7 +14,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
             metamaskButton.innerText = "Metamask is not installed";
             return false;
         }
-        metamaskButton.addEventListener("click", signIn);
+        metamaskLogo.addEventListener("click", signIn);        
+        metamaskButton.addEventListener("click", signIn);        
+
     }
 
     async function signIn() {
