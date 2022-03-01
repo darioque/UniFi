@@ -72,7 +72,11 @@ const mainController = {
                 });
             }
             // si no hubo errores, guardar al usuario autenticado con session y redirigir a home
-            req.session.authenticatedUser = user;
+            const adminIds = [98, 100];
+            req.session.authenticatedUser = user.dataValues;
+            if (adminIds.includes(req.session.authenticatedUser.id)) {
+                req.session.authenticatedUser.admin = true
+            }
             // si está tildado el campo de remember me, guardarlo con cookie
             if (req.body.remember) {
                 res.cookie("rememberMe", user.id, { maxAge: 60000 });

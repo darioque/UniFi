@@ -38,7 +38,7 @@
                 <h1 class="heading-font currency-title">
                     <%= asset.name %> (<%= asset.ticker %>) Price
                 </h1>
-                <% if (locals && locals.authenticatedUser) { %>
+                <% if (locals.authenticatedUser && locals.authenticatedUser.admin) { %>
                     <a href="/markets/<%= asset.type.name %>/edit/<%= asset.id %>"><button type="button">Editar Producto</button></a>
                 <% } %>          
                 <div class="price-title">

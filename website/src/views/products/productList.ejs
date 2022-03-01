@@ -44,24 +44,24 @@
             </section>
             <section>
                 <input type="text" name="search" id="search" placeholder="Search Asset" class="search-input">
-                    <% if (locals && locals.authenticatedUser) { %>
+                    <% if (locals.authenticatedUser && locals.authenticatedUser.admin) { %>
                         <a href="/markets/<%= marketType %>/create"><button type="button">Add <%= marketType %></button></a>
                     <% } %>                
                 <ol class="list">
                     <div class="list-items list-items-title">
-                        <p class="name">
+                        <p class="name" id="nameFilter">
                             Name
                             <i class="fa-solid fa-sort"></i>
                         </p>
-                        <p class="price">
+                        <p class="price" id="priceFilter">
                             Price
                             <i class="fa-solid fa-sort"></i>
                         </p>
-                        <p class="mcap">
+                        <p class="mcap" id="mcapFilter">
                             Market Cap
                             <i class="fa-solid fa-sort"></i>
                         </p>
-                        <p class="change">
+                        <p class="change" id="changeFilter">
                             Price Change
                             <i class="fa-solid fa-sort"></i>
                         </p>

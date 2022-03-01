@@ -1,6 +1,9 @@
 window.onload = async () => {
     const searchInput = document.querySelector("#search");
-    const nameFilter = document.querySelector(".name");
+    const nameFilter = document.querySelector("#nameFilter");
+    const mcapFilter = document.querySelector("#mcapFilter");
+    const changeFilter = document.querySelector("#changeFilter")
+    const priceFilter = document.querySelector("#priceFilter");
     const marketType = location.href.split("/markets/")[1];
 
     const response = await fetch(
@@ -22,20 +25,36 @@ window.onload = async () => {
         listAssets(filteredAssets);
     });
 
-    nameFilter.setAttribute('sort', 'ASC')
+    nameFilter.setAttribute("order", "ASC");
+    nameFilter.setAttribute("sort", "ticker");
+    priceFilter.setAttribute("order", "ASC");
+    priceFilter.setAttribute("sort", "price");
+    changeFilter.setAttribute("order", "ASC");
+    changeFilter.setAttribute("sort", "price_change_24");
+    mcapFilter.setAttribute("order", "ASC");
+    mcapFilter.setAttribute("sort", "mcap");
 
-    nameFilter.addEventListener("click", async function (e) {
+    nameFilter.addEventListener("click", sortBy)
+    priceFilter.addEventListener("click", sortBy)
+    changeFilter.addEventListener("click", sortBy)
+    mcapFilter.addEventListener("click", sortBy)
+
+
+
+    async function sortBy() {
         const assetListDiv = document.querySelector("#assetList");
-        const sortBy = this.getAttribute('sort') == 'ASC'?'DESC':'ASC'
-        this.setAttribute('sort', sortBy)
+        const sort = this.getAttribute("sort");
+        const order = this.getAttribute("order") == "ASC" ? "DESC" : "ASC";
+        this.setAttribute("order", order);
         const response = await fetch(
-            `http://localhost:3001/api/markets/${marketType}?orderBy=ticker&sortBy=${sortBy}`
+            `http://localhost:3001/api/markets/${marketType}?sortBy=${sort}&orderBy=${order}`
         ).then((assets) => assets.json());
         const assets = response.data;
         assetListDiv.innerHTML = "";
         listAssets(assets);
-    });
+    }
 };
+
 
 function listAssets(assets) {
     assets.forEach((asset) => {

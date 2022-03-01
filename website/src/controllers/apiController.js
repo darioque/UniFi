@@ -31,8 +31,10 @@ const apiController = {
     listAssets: async function (req, res) {
         try {
             const marketType = req.params.marketType;
-            const order = [req.query.orderBy??'ticker', req.query.sortBy??'ASC']
-            console.log(req.query);
+            const order = [
+                req.query.sortBy ?? "ticker",
+                req.query.orderBy ?? "ASC",
+            ];
             const assetList =
                 marketType == "stocks"
                     ? await assetService.getStock(order)
