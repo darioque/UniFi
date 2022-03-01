@@ -2,7 +2,7 @@ window.onload = async () => {
     const searchInput = document.querySelector("#search");
     const nameFilter = document.querySelector("#nameFilter");
     const mcapFilter = document.querySelector("#mcapFilter");
-    const changeFilter = document.querySelector("#changeFilter")
+    const changeFilter = document.querySelector("#changeFilter");
     const priceFilter = document.querySelector("#priceFilter");
     const marketType = location.href.split("/markets/")[1];
 
@@ -34,12 +34,10 @@ window.onload = async () => {
     mcapFilter.setAttribute("order", "ASC");
     mcapFilter.setAttribute("sort", "mcap");
 
-    nameFilter.addEventListener("click", sortBy)
-    priceFilter.addEventListener("click", sortBy)
-    changeFilter.addEventListener("click", sortBy)
-    mcapFilter.addEventListener("click", sortBy)
-
-
+    nameFilter.addEventListener("click", sortBy);
+    priceFilter.addEventListener("click", sortBy);
+    changeFilter.addEventListener("click", sortBy);
+    mcapFilter.addEventListener("click", sortBy);
 
     async function sortBy() {
         const assetListDiv = document.querySelector("#assetList");
@@ -55,16 +53,17 @@ window.onload = async () => {
     }
 };
 
-
 function listAssets(assets) {
     assets.forEach((asset) => {
         const assetListDiv = document.querySelector("#assetList");
         const link = document.createElement("a");
         link.classList.add("no-link");
+        link.classList.add("assetLink");
         link.setAttribute("href", `/markets/${asset.type.name}/${asset.id}`);
 
         const list = document.createElement("li");
         list.classList.add("no-list");
+        list.classList.add("asset");
 
         const listDiv = document.createElement("div");
         listDiv.classList.add("list-items");
@@ -74,20 +73,14 @@ function listAssets(assets) {
 
         const price = document.createElement("p");
         price.classList.add("price");
-        if (asset.price < 0.00000001) {
-            price.innerText = `${asset.price.toFixed(13)}`;
-        } else {
-            price.innerText = `${asset.price.toFixed(5)}`;
-        }
+        price.innerText = "$" + new Intl.NumberFormat().format(asset.price);
 
         const mcap = document.createElement("p");
         mcap.classList.add("mcap");
-        mcap.innerText = `N/A`;
-        if (asset.mcap == null && asset.supply && asset.price) {
-            mcap.innerText = `${asset.price * asset.supply}`;
-        } else {
-            mcap.innerText = `${asset.mcap}`;
-        }
+        mcap.innerText =
+            "$" + new Intl.NumberFormat().format(asset.mcap) ??
+            new Intl.NumberFormat().format(asset.price * asset.supply) ??
+            `N/A`;
 
         if (!asset.change) {
             asset.change = "N/A";

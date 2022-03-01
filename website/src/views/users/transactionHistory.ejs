@@ -87,7 +87,7 @@
                                                 <%= transaction.amount %>
                                             </p>
                                             <p class="price">
-                                                <%= transaction.price / transaction.amount %>
+                                                $<%= new Intl.NumberFormat().format(transaction.price / transaction.amount) %>
                                             </p>
                                         </div>
                                     </li>

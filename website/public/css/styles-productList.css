@@ -36,7 +36,8 @@
 }
 
 .list-items .green,
-.list-items .red {
+.list-items .red,
+.list-items .gray {
     border-radius: 3px;
     color: white;
     justify-content: center;
@@ -46,6 +47,9 @@
 }
 .list-items .green {
     background-color: rgb(14, 203, 129);
+}
+.list-items .gray {
+    background-color: rgb(128,128,128)
 }
 
 .list-items .mcap {
@@ -63,6 +67,8 @@
     max-height: 100vh;
     overflow: auto;
 }
+
+.assetLink:hover .asset {background-color: gainsboro}
 /* MEDIA QUERY DE PANTALLAS DESDE A 480PX */
 @media (min-width: 481px) {
 }

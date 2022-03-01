@@ -291,6 +291,7 @@ div {
     display: block;
     width: 100%;
     position: relative;
+    margin-right: 20px;
   }
   .chart img {
     width: 100%;

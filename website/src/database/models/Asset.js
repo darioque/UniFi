@@ -61,6 +61,9 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             foreignKey: true,
         },
+        description: {
+            type: dataTypes.TEXT,
+        },
     };
     let config = {
         timestamps: true,

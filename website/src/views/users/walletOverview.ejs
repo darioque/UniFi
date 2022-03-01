@@ -64,23 +64,27 @@
 
                                             </div>
                                             <p class="price">
-                                                <%= asset.AssetUser.amount %>
+                                                <%= new Intl.NumberFormat().format(asset.AssetUser.amount) %>
                                             </p>
                                             <p class="price">
-                                                $<%= asset.price %>
+                                                $<%= new Intl.NumberFormat().format(asset.price) %>
                                             </p>
                                             <p class="mcap">
-                                                $<%= asset.AssetUser.amount * asset.price %>
+                                                $<%= new Intl.NumberFormat().format(asset.price * asset.AssetUser.amount) %>
                                             </p>
-                                            <% if (asset.change < 0) { %>
+                                            <% if (asset.price_change_24 < 0) { %>
                                                 <p class="change red">
-                                                    <%= asset.change %>%
+                                                    <%= asset.price_change_24 %>%
                                                 </p>
-                                                <% } else {%>
+                                                <% } else if (asset.price_change_24 > 0) {%>
                                                     <p class="change green">
-                                                        <%= asset.change %>%
+                                                        <%= asset.price_change_24 %>%
                                                     </p>
-                                                    <% } %>
+                                                    <% } else { %>
+                                                        <p class="change gray">
+                                                            0%
+                                                        </p>
+                                                   <% } %>
                                         </div>
                                     </li>
                                 </a>

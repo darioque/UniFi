@@ -25,8 +25,26 @@ window.onload = () => {
         "#transactionConfirmationButton"
     );
 
+    window.onclick = function (event) {
+        if (
+            event.target == document.getElementById("listModal") ||
+            event.target == document.getElementById("myModal")
+        ) {
+            event.target.style.display = "none";
+        }
+    };
+
     function createChart() {
-        const labels = ["January", "February", "March", "April", "May", "June"];
+        const labels = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+        ];
+        const price = priceInput.value;
 
         const data = {
             labels: labels,
@@ -35,7 +53,15 @@ window.onload = () => {
                     label: "Under starting price",
                     borderColor: "rgb(255, 99, 132)",
                     backgroundColor: "rgba(255, 99, 132, 0.5)",
-                    data: [0, 10, 5, 2, null, null, null],
+                    data: [
+                        math.random(price * 0.45, price * 0.30),
+                        math.random(price * 0.15, price * 0.25),
+                        math.random(price * 0.10, price * 0.15),
+                        price * 0.33,
+                        null,
+                        null,
+                        null,
+                    ],
                     fill: {
                         target: "start",
                         below: "rgb(255, 99, 132)",
@@ -45,7 +71,15 @@ window.onload = () => {
                     label: "Above starting price",
                     borderColor: "rgb(80, 255, 132)",
                     backgroundColor: "rgba(80, 255, 132, 0.5)",
-                    data: [null, null, null, 30, 50, 92, 45],
+                    data: [
+                        null,
+                        null,
+                        null,
+                        price * 0.33,
+                        math.random(price * 0.75, price * 0.85),
+                        math.random(price * 0.95, price),
+                        price,
+                    ],
                     fill: {
                         target: "start",
                         below: "rgb(0,255,0) ",
@@ -101,12 +135,6 @@ window.onload = () => {
                 listAssets(filteredAssets);
             });
         };
-
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        };
     }
 
     function purchase() {
@@ -148,12 +176,6 @@ window.onload = () => {
             modal.style.display = "none";
         };
 
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        };
-
         let price = priceInput.value;
 
         amountInput.addEventListener("focus", function () {
@@ -165,31 +187,34 @@ window.onload = () => {
         });
 
         if (window.ethereum) {
-            transactionConfirmationButton.addEventListener("click", async (e) => {
-                e.preventDefault();
-                try {
-                    var accounts = await window.ethereum.request({
-                        method: "eth_requestAccounts",
-                    });
-                } catch (err) {
-                    alert(`Error: ${err.message}`);
-                    clickCounter--;
-                    return false;
+            transactionConfirmationButton.addEventListener(
+                "click",
+                async (e) => {
+                    e.preventDefault();
+                    try {
+                        var accounts = await window.ethereum.request({
+                            method: "eth_requestAccounts",
+                        });
+                    } catch (err) {
+                        alert(`Error: ${err.message}`);
+                        clickCounter--;
+                        return false;
+                    }
+                    // variables para la transacción
+                    const from = accounts[0];
+                    const msg = `UniFi purchase with wallet address ${accounts[0]}`;
+                    try {
+                        await ethereum.request({
+                            method: "personal_sign",
+                            params: [msg, from, "Example password"],
+                        });
+                        modalForm.submit();
+                    } catch (err) {
+                        alert(`Error: ${err.message}`);
+                        return false;
+                    }
                 }
-                // variables para la transacción
-                const from = accounts[0];
-                const msg = `UniFi purchase with wallet address ${accounts[0]}`;
-                try {
-                    await ethereum.request({
-                        method: "personal_sign",
-                        params: [msg, from, "Example password"],
-                    });
-                    modalForm.submit()
-                } catch (err) {
-                    alert(`Error: ${err.message}`);
-                    return false;
-                }
-            });
+            );
         }
     }
 

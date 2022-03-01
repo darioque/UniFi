@@ -24,11 +24,11 @@
             </section>
             <ul class="no-list progressive-links">
                 <li>
-                    <a class="no-link" href="/"><span>home</span></a>
+                    <a class="no-link" href="/"><span>Home</span></a>
                 </li>
                 <li>
                     <i class="fas fa-chevron-right"></i>
-                    <a class="no-link" href="/markets/"><span>markets</span></a>
+                    <a class="no-link" href="/markets/"><span>Markets</span></a>
                 </li>
             </ul>
             <section class="explore">
@@ -65,7 +65,7 @@
                                     
                                     <span class="percentage-change green"><i class="fas fa-arrow-circle-up" style="margin-right: 4px;"></i><%= mainGainer.price_change_24 %>%</span>
                                 </div>
-                                <p class="price"><%= mainGainer.price %></p>
+                                <p class="price">$<%= new Intl.NumberFormat().format(mainGainer.price) %></p>
                             </article>
                         </a>
                         <a class="no-link" href="/markets/<%= mainLoser.type.name%>/<%= mainLoser.id  %>">
@@ -76,7 +76,7 @@
                                     <%= mainLoser.name %>
                                     <span class="percentage-change red"><i class="fas fa-arrow-circle-down" style="margin-right: 4px;"></i><%= mainLoser.price_change_24?? '0' %>%</span>
                                 </div>
-                                <p class="price"><%= mainLoser.price %></p>
+                                <p class="price">$<%= new Intl.NumberFormat().format(mainLoser.price) %></p>
                             </article>
                         </a>
                     </div>

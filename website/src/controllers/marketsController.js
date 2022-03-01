@@ -83,7 +83,10 @@ const marketsController = {
         try {
             const assetRequested = req.params.id;
             //obtiene el objeto de la consulta a la BD
-            const asset = await assetService.findAsset(assetRequested);
+            const marketType = assetService.parseMarketType(
+                req.params.marketType
+            );
+            const asset = await assetService.findAsset(assetRequested, marketType);
 
             res.render("products/editProductForm", {
                 pageTitle: "UniFi - Edit Product",

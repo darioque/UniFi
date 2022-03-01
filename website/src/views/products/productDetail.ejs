@@ -5,6 +5,8 @@
     <%- include('../partials/head')%>
     <link rel="stylesheet" href="/css/styles-productDetail.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@10.2.0/lib/browser/math.min.js"></script>
+    
     <script src="/js/productDetail.js"></script>
 </head>
 
@@ -42,7 +44,7 @@
                     <a href="/markets/<%= asset.type.name %>/edit/<%= asset.id %>"><button type="button">Editar Producto</button></a>
                 <% } %>          
                 <div class="price-title">
-                    <span>$<%= asset.price %> </span>
+                    <span>$<%= new Intl.NumberFormat().format(asset.price) %> </span>
                     <%if (asset.change < 0) { %>
                         <span class="percentage-change red"><%= asset.price_change_24 %>%</span>
                         <% } else {%>
@@ -53,6 +55,18 @@
             <div class="content-container">
                 <div class="chart">
                     <canvas id="myChart"></canvas>
+                     <%if (asset.description  ) { %>
+                        <section>
+                            <div class="description-container">
+                                <h2 class="description-title">
+                                    What is <%= asset.name %> (<%= asset.ticker %> )? 
+                                </h2>
+                                <p class="description">
+                                    <%= asset.description %> 
+                                </p>
+                            </div>
+                        </section>
+                    <% } %>
                 </div>
                 <div>
                     <h3 class="converter-title">Buy <%= asset.ticker %>
@@ -148,7 +162,8 @@
                                 <p>
                                     <%= asset.name %> Price
                                 </p>
-                                <p>$<%= asset.price %>
+                                <p>
+                                   $<%= new Intl.NumberFormat().format(asset.price) %>
                                 </p>
                             </div>
                             <div class="statistic">
@@ -163,13 +178,13 @@
                                 <p>Trading Volume</p>
                                 <p>$30,000,000</p>
                             </div>
-                            <div class="statistic">
+                            <div class="statistic" style="margin-right: 4px;">
                                 <p>Market Cap</p>
-                                <p>$<%= asset.mcap %></p>
+                                <p>$<%= new Intl.NumberFormat().format(asset.mcap) %></p>
                             </div>
                             <div class="statistic">
                                 <p>Market Rank</p>
-                                <p>#1</p>
+                                <p>#5</p>
                             </div>
                         </div>
                     </div>
