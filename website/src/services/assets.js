@@ -31,8 +31,7 @@ async function getAssets(order = ["ticker", "ASC"]) {
 }
 
 async function getCrypto(order = ['ticker', 'ASC']) {
-    let cryptos = [];
-    const resultCryptos = await db.Asset.findAll({
+    const cryptos = await db.Asset.findAll({
         include: [
             {
                 association: "type",
@@ -44,16 +43,10 @@ async function getCrypto(order = ['ticker', 'ASC']) {
         order: [order],
     });
 
-    //completa el array con criptomonedas a partir de la propiedad dataValues del resultado de la BD
-    for (let i = 0; i < resultCryptos.length; i++){
-        cryptos[i] = resultCryptos[i].dataValues;
-    };
-
     return cryptos;
 }
 async function getStock(order = ["ticker", "ASC"]) {
-    let stocks = [];
-    const resultStocks = await db.Asset.findAll({
+    const stocks = await db.Asset.findAll({
         include: [
             {
                 association: "type",
@@ -64,11 +57,6 @@ async function getStock(order = ["ticker", "ASC"]) {
         },
         order: [order],
     });
-
-    ////completa el array con activos a partir de la propiedad dataValues del resultado de la BD
-    for (let i = 0; i < resultStocks.length; i++){
-        stocks[i] = resultStocks[i].dataValues;
-    };
 
     return stocks;
 }
