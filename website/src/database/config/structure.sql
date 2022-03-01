@@ -77,8 +77,8 @@ DROP TABLE IF EXISTS `assets_users`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `assets_users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `user_id` int(10) unsigned
-  `asset_id` int(10) unsigned
+  `user_id` int(10) unsigned,
+  `asset_id` int(10) unsigned,
   `amount` decimal(24,12) NOT NULL DEFAULT 0.000000000000,
   PRIMARY KEY (`id`),
   KEY `assets_users_user_id_foreign` (`user_id`),
