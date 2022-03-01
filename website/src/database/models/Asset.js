@@ -34,6 +34,10 @@ module.exports = (sequelize, dataTypes) => {
         price_change_24: {
             type: dataTypes.FLOAT,
             allowNull: true,
+            get() {
+                const value = this.getDataValue("price_change_24");
+                return value === null ? null : value.toFixed(2);
+            }
         },
         supply: {
             type: dataTypes.BIGINT(20),

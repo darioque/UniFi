@@ -7,9 +7,9 @@ values (DEFAULT, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, "LEONARDO DARIO", "BUJAN"
 
 /*TYPES*/
 INSERT INTO unifi_db.types
-values (DEFAULT, "Criptocurrencies");
+values (1, "cryptocurrencies");
 INSERT INTO unifi_db.types
-values (DEFAULT, "Stcoks");
+values (2, "stocks");
 
 
 /*ASSETS*/

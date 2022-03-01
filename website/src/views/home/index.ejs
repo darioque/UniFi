@@ -65,79 +65,63 @@
         <!-- Sección de artículos -->
         <section class="section-article">
           <!-- IMPLEMENTANDO EJS -->
-        
-            <article>
-                <!-- Sección de CRIPTOCURRENCIES -->
-                <% if (cryptoList.length != 0) { %>
-                    <% for (let i=0; i < cryptoList.length; i++) { %>
-                        <% if (i < 5) { %>
-                            <ul>
-                                <li class="article">
-                                    <img
-                                    class="image-article"
-                                    src="<%= cryptoList[i].logo %>"
-                                    alt="Logo de <%= cryptoList[i].name %>"
-                                    />
-                                    <h3><%= cryptoList[i].name %></h3>
-                                    <div class="box-price">
-                                    <p class="price-article">Price</p>
-                                    <p class="value-article"><%= cryptoList[i].price %></p>
-                                    </div>
-                                    <div class="box-price">
-                                    <p class="change-article">Change</p>
-                                    <% if (cryptoList[i].price_change_24 > 0) { %>
-                                    <p class="percentage-article percentage-green">
-                                        <%= cryptoList[i].price_change_24 %>%
-                                    </p>
-                                    <% } else { %>
-                                    <p class="percentage-article percentage-red">
-                                        <%= cryptoList[i].price_change_24 %>0%
-                                    </p>
-                                    <% } %>
-                                    </div>
-                                </li>
-                            </ul>
-                        <% } else { %>
-                            <% break; %>
-                        <% } %>
-                    <% } %>
-                <% } %>
-
-                <!-- Sección de STOCKS -->
-                <% if (stockList.length != 0) { %>                    
-                    <% for (let i=0; i < stockList.length; i++) { %>
-                        <% if (i < 5) { %>
-                            <ul>
-                                <li class="article">
-                                    <img
-                                    class="image-article"
-                                    src="<%= stockList[i].logo %>"
-                                    alt="Logo de <%= stockList[i].name %>"
-                                    />
-                                    <h3><%= stockList[i].name %></h3>
-                                    <div class="box-price">
-                                    <p class="price-article">Price</p>
-                                    <p class="value-article"><%= stockList[i].price %></p>
-                                    </div>
-                                    <div class="box-price">
-                                    <p class="change-article">Change</p>
-                                    <% if (stockList[i].price_change_24 > 0) { %>
-                                    <p class="percentage-article percentage-green">
-                                        <%= stockList[i].price_change_24 %>%
-                                    </p>
-                                    <% } else { %>
-                                    <p class="percentage-article percentage-red">
-                                        <%= stockList[i].change %>0%
-                                    </p>
-                                    <% } %>
-                                    </div>
-                                </li>
-                            </ul>
-                        <% } else { %>                        
-                            <% break; %>
-                        <% } %>
-                    <% } %>
-                <% } %>
+  
+          <article>
+            <% for (let i = 0; i != 3; i++) { %>
+            <ul>
+              <li class="article">
+                <img
+                  class="image-article"
+                  src="<%= cryptoList[i].logo %>"
+                  alt="Logo de <%= cryptoList[i].name %>"
+                />
+                <h3><%= cryptoList[i].name %></h3>
+                <div class="box-price">
+                  <p class="price-article">Price</p>
+                  <p class="value-article"><%= new Intl.NumberFormat().format(cryptoList[i].price) %></p>
+                </div>
+                <div class="box-price">
+                  <p class="change-article">Change</p>
+                  <% if (cryptoList[i].change > 0) { %>
+                  <p class="percentage-article percentage-green">
+                    <%= cryptoList[i].change %>%
+                  </p>
+                  <% } else { %>
+                  <p class="percentage-article percentage-red">
+                    <%= cryptoList[i].change %>0%
+                  </p>
+                  <% } %>
+                </div>
+              </li>
+            </ul>
+            <% } %> <% for (let i = 0; i != 5; i++) { %>
+            <ul>
+              <li class="article">
+                <img
+                  class="image-article"
+                  src="<%= stockList[i].logo %>"
+                  alt="Logo de <%= stockList[i].name %>"
+                />
+                <h3><%= stockList[i].name %></h3>
+                <div class="box-price">
+                  <p class="price-article">Price</p>
+                  <p class="value-article"><%= new Intl.NumberFormat().format(stockList[i].price) %></p>
+                </div>
+                <div class="box-price">
+                  <p class="change-article">Change</p>
+                  <% if (stockList[i].change > 0) { %>
+                  <p class="percentage-article percentage-green">
+                    <%= stockList[i].change %>%
+                  </p>
+                  <% } else { %>
+                  <p class="percentage-article percentage-red">
+                    <%= stockList[i].change %>0%
+                  </p>
+                  <% } %>
+                </div>
+              </li>
+            </ul>
+            <% } %>
           </article>
         </section>
       </div>

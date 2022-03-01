@@ -7,7 +7,9 @@
     <!-- estilos de menu hamburguesa -->
     <div class="burguerMenu" id="burguerMenu">
         <div class="myLinks" id="myLinks">
-            <a class="no-link" href="#about-us">About Us</a>
+            <% if (locals.pageTitle && locals.pageTitle.includes('Home')) { %>
+                <a class="no-link" href="#about-us">About Us</a>
+            <% } %>
             <a class="no-link" href="/markets">Discover</a>
             <a class="no-link" href="/markets/cryptocurrencies"
                 >Cryptocurrencies</a
@@ -57,7 +59,9 @@
     <!-- estilos de header normal (min width 768 en themes) -->
     <nav class="index-navbar">
         <ul class="navbar-menu no-list">
-            <li><a class="no-link" href="#about-us">About Us</a></li>
+            <% if (locals.pageTitle && locals.pageTitle.includes('Home')) { %>
+                <li><a class="no-link" href="#about-us">About Us</a></li>
+            <% } %>
             <li><a class="no-link" href="/markets">Discover</a></li>
             <li>
                 <a class="no-link" href="/markets/cryptocurrencies"
