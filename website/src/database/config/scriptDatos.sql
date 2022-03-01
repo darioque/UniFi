@@ -7,14 +7,13 @@ values (DEFAULT, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, "LEONARDO DARIO", "BUJAN"
 
 /*TYPES*/
 INSERT INTO unifi_db.types
-values (1, "cryptocurrencies");
-INSERT INTO unifi_db.types
-values (2, "stocks");
+values (1, "cryptocurrencies"),
+(2, "stocks");
 
 
 /*ASSETS*/
-INSERT INTO unifi_db.assets (id, created_at, updated_at, name, ticker, price, price_change_24, supply, mcap, logo, type_id, description) VALUES 
-(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"Bitcoin","BTC",43841.47062777188,5.93220239,21000000,831750516419.1969,"/img/assets/default_logo.png",1,"Infomation"),
+INSERT INTO unifi_db.assets 
+VALUES (DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"Bitcoin","BTC",43841.47062777188,5.93220239,21000000,831750516419.1969,"/img/assets/default_logo.png",1,"Infomation"),
 (DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"Ethereum","ETH",2957.4937740908786,5.35683493,null,354258392822.66675,"/img/assets/default_logo.png",1,"Infomation"),
 (DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"Tether","USDT",1.000521836571189,-0.0040924,null,79457508615.897,"/img/assets/default_logo.png",1,"Infomation"),
 (DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"Bnb","BNB",407.7341410510415,5.90459611,165116760,67323740674.61434,"/img/assets/default_logo.png",1,"Infomation"),
