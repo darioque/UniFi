@@ -23,13 +23,15 @@
         height: 22px;
       "
     ></div>
-    <div class="header">
-      <a class="logo" href="/"></a><a href="/login" class="login">Login</a>
+    <div>
+      <a href="/"></a><a href="/">UniFi - Home</a>
     </div>
     <div class="content">
       <div class="container">
         <h1>Oops, Something went wrong...</h1>
-        <h2><%= err??'404' %> </h2>
+        <% if (locals && locals.err) { %>
+          <h2><%= err %> </h2>
+        <% } %>
       </div>
     </div>
   </body>

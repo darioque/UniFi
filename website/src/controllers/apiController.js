@@ -5,7 +5,6 @@ const assetService = require("../services/assets");
 const userService = require("../services/users");
 
 const apiController = {
-    // funcion controladora para la pagina de "descubrir"/"mercados"
     listTypes: async function (req, res) {
         try {
             const types = await assetService.listTypes();
@@ -27,7 +26,6 @@ const apiController = {
         }
     },
 
-    // funcion controladora para listar los activos de los mercados individuales
     listAssets: async function (req, res) {
         try {
             const marketType = req.params.marketType;

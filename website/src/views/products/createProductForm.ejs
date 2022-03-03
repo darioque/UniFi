@@ -26,7 +26,13 @@
             </li>
         </ul>
         <h1 class="text-center">Create New Product</h1>        
-        <form action="/markets" method="POST" enctype="multipart/form-data">
+        <!-- Si se enviaron mensajes de error a la vista de registro, mostrarlos -->
+        <% if (locals && locals.errorMessages) { %> 
+            <% for(let error in errorMessages) { %>
+            <p class="errors"><%= errorMessages[error].msg %> </p>
+            <% } %> 
+        <% } %> 
+        <form action="/markets/<%= marketType %>/" method="POST" enctype="multipart/form-data">
             <div class="form">
                 <input type="text" name="name" placeholder="Name" class="input">
                 <select name="type_id" id="type_id" class="select">
