@@ -47,34 +47,86 @@ const editFormValidations = [
         .bail()
         .isIn([1, 2])
         .withMessage("Invalid type_id"),
-    
-    body('ticker')
+
+    body("ticker")
         .notEmpty()
-        .withMessage('There needs to be a ticker for the asset')
+        .withMessage("There needs to be a ticker for the asset")
         .bail()
         .isLength({ max: 10 })
-        .withMessage('Invalid ticker. Max length is 10'),
+        .withMessage("Invalid ticker. Max length is 10"),
 
-    body('price')
+    body("price")
+        .optional({ nullable: true, checkFalsy: true })
         .isNumeric()
-        .withMessage('Invalid price. Must be a number'),
-    
-    body('price_change_24')
-        .isNumeric()
-        .withMessage('Invalid price change. Must be a number'),
-    
-    body('supply')
-        .isNumeric()
-        .withMessage('Invalid supply. Must be a number'),
-    
-    body('mcap')
-        .isNumeric()
-        .withMessage('Invalid mcap. Must be a number'),
-    
-    body('description')
-        .isLength({max: 255})
-        .withMessage('Invalid description. Max characters 255')
+        .withMessage("Invalid price. Must be a number"),
 
+    body("price_change_24")
+        .optional({ nullable: true, checkFalsy: true })
+        .isNumeric()
+        .withMessage("Invalid price change. Must be a number (max 100)"),
+
+    body("supply")
+        .optional({ nullable: true, checkFalsy: true })
+        .isNumeric()
+        .withMessage("Invalid supply. Must be a number"),
+
+    body("mcap")
+        .optional({ nullable: true, checkFalsy: true })
+        .isNumeric()
+        .withMessage("Invalid mcap. Must be a number"),
+
+    body("description")
+        .optional({ nullable: true, checkFalsy: true })
+        .isLength({ max: 255 })
+        .withMessage("Invalid description. Max characters 255"),
+];
+// validaciones de formulario de creacion de producto
+const createFormValidations = [
+    body("name")
+        .notEmpty()
+        .withMessage("There needs to be a name for the asset")
+        .bail()
+        .isLength({ max: 40 })
+        .withMessage("Invalid name. 40 characters max"),
+
+    body("type_id")
+        .notEmpty()
+        .withMessage("There needs to be a type_id for the asset")
+        .bail()
+        .isIn([1, 2])
+        .withMessage("Invalid type_id"),
+
+    body("ticker")
+        .notEmpty()
+        .withMessage("There needs to be a ticker for the asset")
+        .bail()
+        .isLength({ max: 10 })
+        .withMessage("Invalid ticker. Max length is 10"),
+
+    body("price")
+        .optional({ nullable: true, checkFalsy: true })
+        .isNumeric()
+        .withMessage("Invalid price. Must be a number"),
+
+    body("price_change_24")
+        .optional({ nullable: true, checkFalsy: true })
+        .isNumeric()
+        .withMessage("Invalid price change. Must be a number"),
+
+    body("supply")
+        .optional({ nullable: true, checkFalsy: true })
+        .isNumeric()
+        .withMessage("Invalid supply. Must be a number"),
+
+    body("mcap")
+        .optional({ nullable: true, checkFalsy: true })
+        .isNumeric()
+        .withMessage("Invalid mcap. Must be a number"),
+
+    body("description")
+        .optional({ nullable: true, checkFalsy: true })
+        .isLength({ max: 255 })
+        .withMessage("Invalid description. Max characters 255"),
 ];
 
 router.get("/", marketsController.markets);
@@ -82,6 +134,7 @@ router.post(
     "/:marketType/",
     adminMiddleware,
     uploadFile.single("logo"),
+    createFormValidations,
     marketsController.store
 );
 

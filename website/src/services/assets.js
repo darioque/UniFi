@@ -68,11 +68,13 @@ async function createAsset(assetRequested) {
         name: assetRequested.name,
         ticker: assetRequested.ticker,
         price: assetRequested.price,
-        price_change_24: parseFloat(assetRequested.change) ?? 0.00,
-        supply: assetRequested.price * assetRequested.change,
-        mcap: assetRequested.mcap,
+        price_change_24: parseFloat(assetRequested.price_change_24) ?? 0.0,
+        supply: assetRequested.supply,
+        mcap:
+            assetRequested.mcap ?? assetRequested.price * assetRequested.supply,
         logo: assetRequested.logo,
         type_id: parseInt(assetRequested.type_id),
+        description: assetRequested.description,
     });
     return create;
 }
