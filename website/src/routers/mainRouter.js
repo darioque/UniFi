@@ -45,9 +45,17 @@ const registerValidations = [
         .withMessage("Invalid Email Address")
         .bail()
         .custom(async (value) => {
-            return await userService.findUser("email", value) == null;
+            return (await userService.findUser("email", value)) == null;
         })
         .withMessage("E-mail already in use"),
+
+    body("address")
+        
+        .custom(async (value) => {
+            console.log(value);
+            return (await userService.findUser("address", value)) == null;
+        })
+        .withMessage("Address already in use"),
 ];
 
 router.get("/", mainController.index);

@@ -32,6 +32,18 @@
                 <div class="input-box">
                     <input type="email" name="email" value="<%= locals.old && old.email ? old.email : '' %>" required>
                 </div>
+                <label for="email">First Name</label>
+                <div class="input-box">
+                    <input type="first_name" name="first_name" value="<%= locals.old && old.first_name ? old.first_name : '' %>" required>
+                </div>
+                <label for="email">Last Name</label>
+                <div class="input-box">
+                    <input type="last_name" name="last_name" value="<%= locals.old && old.last_name ? old.last_name : '' %>" required>
+                </div>
+                <label for="email">Username</label>
+                <div class="input-box">
+                    <input type="user_name" name="user_name" value="<%= locals.old && old.user_name ? old.user_name : '' %>" required>
+                </div>
                 <label for="password">Password</label>
                 <div class="input-box">
                     <input  type="password" name="password" value="<%= locals.old && old.password ? old.password : '' %>" required>

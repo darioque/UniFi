@@ -1,6 +1,7 @@
 const fs = require("fs");
 const db = require("../database/models");
 const Op = db.Sequelize.Op;
+const sequelize = require('sequelize')
 const path = require("path");
 const bcrypt = require("bcryptjs");
 const jdenticon = require("jdenticon");
@@ -13,7 +14,29 @@ async function generateId(db) {
 }
 
 async function getUsers() {
-    const users = await db.User.findAll();
+    const users = await db.User.findAll({
+        attributes: [
+            "id",
+            [
+                sequelize.fn(
+                    "COALESCE",
+                    sequelize.col("email"),
+                    sequelize.col("user_name"),
+                    sequelize.col("address")
+                ),
+                'identification',
+            ],
+            [
+                sequelize.fn(
+                    "CONCAT",
+                    `http://localhost:3001/users/`,
+                    sequelize.col("id"),
+                    `/profile`
+                ),
+                "details",
+            ],
+        ],
+    });
     return users;
 }
 

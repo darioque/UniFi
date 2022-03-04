@@ -102,10 +102,7 @@ const apiController = {
         try {
             const userList = await userService.getUsers();
             res.status(200).json({
-                meta: {
-                    status: 200,
-                    count: userList.length,
-                },
+                count: userList.length,
                 data: userList,
             });
         } catch (err) {
