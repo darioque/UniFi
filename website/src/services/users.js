@@ -19,9 +19,18 @@ async function getUsers() {
             "id",
             [
                 sequelize.fn(
+                    "CONCAT",
+                    sequelize.col("first_name"),
+                    ' ',
+                    sequelize.col("last_name")
+                ),
+                'name',
+            ],
+            [
+                sequelize.fn(
                     "COALESCE",
-                    sequelize.col("email"),
                     sequelize.col("user_name"),
+                    sequelize.col("email"),
                     sequelize.col("address")
                 ),
                 'identification',
@@ -33,7 +42,7 @@ async function getUsers() {
                     sequelize.col("id"),
                     `/profile`
                 ),
-                "details",
+                "detail",
             ],
         ],
     });
@@ -84,6 +93,7 @@ async function createUser(userRequested) {
         });
     } else {
         create = await db.User.create({
+            id: await generateId(db.User),
             first_name: userRequested.first_name,
             last_name: userRequested.last_name,
             user_name: userRequested.user_name,

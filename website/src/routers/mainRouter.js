@@ -22,8 +22,20 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({ storage });
 
-// validaciones
+// validaciones de registro
 const registerValidations = [
+    body("address")
+        .if((value, { req }) => {
+            return req.body.email == null;
+        })
+        .custom(async (address) => {
+            const user = await userService.findUser("address", address);
+            if (user) {
+                throw new Error("Address already in use");
+            }
+            return;
+        }),
+
     body("password")
         .if((value, { req }) => {
             return req.body.address == null;
@@ -32,7 +44,9 @@ const registerValidations = [
         .withMessage("You need to set a password")
         .bail()
         .isLength({ min: 6, max: 15 })
-        .withMessage("Minimum length is 6 and max length is 15"),
+        .withMessage(
+            "Invalid password. Minimum length is 6 and max length is 15"
+        ),
 
     body("email")
         .if((value, { req }) => {
@@ -44,18 +58,74 @@ const registerValidations = [
         .isEmail()
         .withMessage("Invalid Email Address")
         .bail()
-        .custom(async (value) => {
-            return (await userService.findUser("email", value)) == null;
-        })
-        .withMessage("E-mail already in use"),
+        .trim()
+        .normalizeEmail()
+        .custom(async (email) => {
+            const user = await userService.findUser("email", email);
+            if (user) {
+                throw new Error("E-mail already in use");
+            }
+            return;
+        }),
 
-    body("address")
-        
-        .custom(async (value) => {
-            console.log(value);
-            return (await userService.findUser("address", value)) == null;
+    body("user_name")
+        .if((value, { req }) => {
+            return req.body.address == null;
         })
-        .withMessage("Address already in use"),
+        .trim()
+        .custom(async (user_name) => {
+            const user = await userService.findUser("user_name", user_name);
+            if (user) {
+                throw new Error("Username already in use");
+            }
+            return;
+        })
+        .customSanitizer((value) => {
+            return value === "" ? null : value;
+        }),
+
+    body("first_name")
+        .if((value, { req }) => {
+            return req.body.address == null;
+        })
+        .trim()
+        .customSanitizer((value) => {
+            return value === "" ? null : value;
+        }),
+
+    body("last_name")
+        .if((value, { req }) => {
+            return req.body.address == null;
+        })
+        .trim()
+        .customSanitizer((value) => {
+            return value === "" ? null : value;
+        }),
+];
+
+// validaciones de login
+const loginValidations = [
+    body("email")
+        .if((value, { req }) => {
+            return req.body.address == null;
+        })
+        .notEmpty()
+        .withMessage("You need to set an email/username")
+        .customSanitizer((value, {req}) => {
+            if (!value.includes('@')) {
+                req.body.user_name = value
+                return null
+            }
+            return value
+        })
+        .trim(),
+
+    body("password")
+        .if((value, { req }) => {
+            return req.body.address == null;
+        })
+        .notEmpty()
+        .withMessage("You need to set a password"),
 ];
 
 router.get("/", mainController.index);
@@ -76,5 +146,5 @@ router.post(
     registerValidations,
     mainController.processRegister
 );
-router.post("/login", mainController.processLogin);
+router.post("/login", loginValidations, mainController.processLogin);
 module.exports = router;

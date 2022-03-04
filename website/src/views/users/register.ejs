@@ -34,15 +34,15 @@
                 </div>
                 <label for="email">First Name</label>
                 <div class="input-box">
-                    <input type="first_name" name="first_name" value="<%= locals.old && old.first_name ? old.first_name : '' %>" required>
+                    <input type="first_name" name="first_name" value="<%= locals.old && old.first_name ? old.first_name : null %>">
                 </div>
                 <label for="email">Last Name</label>
                 <div class="input-box">
-                    <input type="last_name" name="last_name" value="<%= locals.old && old.last_name ? old.last_name : '' %>" required>
+                    <input type="last_name" name="last_name" value="<%= locals.old && old.last_name ? old.last_name : null %>">
                 </div>
                 <label for="email">Username</label>
                 <div class="input-box">
-                    <input type="user_name" name="user_name" value="<%= locals.old && old.user_name ? old.user_name : '' %>" required>
+                    <input type="user_name" name="user_name" value="<%= locals.old && old.user_name ? old.user_name : null %>">
                 </div>
                 <label for="password">Password</label>
                 <div class="input-box">
@@ -66,9 +66,10 @@
                 </form>
             </div>
         </div>
+        <img src="/img/metamask.svg" alt="Metamask Logo" id="metamaskLogo" style="height: 60px; width: 100%; margin-top:30px">
     </main>
     <footer>
-        <p class="copyright color-white text-center">©Todos los derechos reservados a UniFi</p>
+        <p class="copyright color-white text-center">©All rights reserved for UniFi</p>
     </footer>
 </body>
 </html>

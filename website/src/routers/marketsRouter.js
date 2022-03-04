@@ -29,7 +29,7 @@ const editFormValidations = [
         .bail()
         .isInt()
         .withMessage("ID needs to be an integer")
-        .custom(async (value) => {
+        .custom(async (value, {req}) => {
             return (await assetService.findAsset(value)) == null;
         })
         .withMessage("ID does not correspond to an asset in our database"),
@@ -39,7 +39,8 @@ const editFormValidations = [
         .withMessage("There needs to be a name for the asset")
         .bail()
         .isLength({ max: 40 })
-        .withMessage("Invalid name. 40 characters max"),
+        .withMessage("Invalid name. 40 characters max")
+        .trim(),
 
     body("type_id")
         .notEmpty()
@@ -53,7 +54,8 @@ const editFormValidations = [
         .withMessage("There needs to be a ticker for the asset")
         .bail()
         .isLength({ max: 10 })
-        .withMessage("Invalid ticker. Max length is 10"),
+        .withMessage("Invalid ticker. Max length is 10")
+        .trim(),
 
     body("price")
         .optional({ nullable: true, checkFalsy: true })
@@ -78,7 +80,8 @@ const editFormValidations = [
     body("description")
         .optional({ nullable: true, checkFalsy: true })
         .isLength({ max: 255 })
-        .withMessage("Invalid description. Max characters 255"),
+        .withMessage("Invalid description. Max characters 255")
+        .trim(),
 ];
 // validaciones de formulario de creacion de producto
 const createFormValidations = [
@@ -87,7 +90,8 @@ const createFormValidations = [
         .withMessage("There needs to be a name for the asset")
         .bail()
         .isLength({ max: 40 })
-        .withMessage("Invalid name. 40 characters max"),
+        .withMessage("Invalid name. 40 characters max")
+        .trim(),
 
     body("type_id")
         .notEmpty()
@@ -101,7 +105,8 @@ const createFormValidations = [
         .withMessage("There needs to be a ticker for the asset")
         .bail()
         .isLength({ max: 10 })
-        .withMessage("Invalid ticker. Max length is 10"),
+        .withMessage("Invalid ticker. Max length is 10")
+        .trim(),
 
     body("price")
         .optional({ nullable: true, checkFalsy: true })
@@ -126,7 +131,8 @@ const createFormValidations = [
     body("description")
         .optional({ nullable: true, checkFalsy: true })
         .isLength({ max: 255 })
-        .withMessage("Invalid description. Max characters 255"),
+        .withMessage("Invalid description. Max characters 255")
+        .trim(),
 ];
 
 router.get("/", marketsController.markets);
@@ -143,7 +149,7 @@ router.get("/:marketType/create", adminMiddleware, marketsController.create);
 
 router.get("/:marketType/:id/", marketsController.detail);
 
-router.post("/:marketType/", authMiddleware, marketsController.transaction);
+router.post("/:marketType/:id/", authMiddleware, marketsController.transaction);
 
 router.get("/:marketType/edit/:id", adminMiddleware, marketsController.edit);
 

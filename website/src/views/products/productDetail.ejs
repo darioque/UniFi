@@ -123,7 +123,7 @@
                                     </div>
                                     <div class="converter-container">
                                         <h3 class="converter-title">Do you accept this price?</h3>
-                                        <form action="/markets/<%= asset.type.name %>" method="POST" id="modalForm">
+                                        <form action="/markets/<%= asset.type.name %>/<%= asset.id %>" method="POST" id="modalForm">
                                             <div class="modal-converter">
                                                 <div class="currency first-currency">
                                                     <img class="currency-logo" src="<%= asset.logo %> " alt="<%= asset.ticker %>'s logo" id="confirmationCurrencyLogo">
