@@ -45,7 +45,7 @@
                 <% } %>          
                 <div class="price-title">
                     <span>$<%= new Intl.NumberFormat().format(asset.price) %> </span>
-                    <%if (asset.change < 0) { %>
+                    <%if (asset.price_change_24 < 0) { %>
                         <span class="percentage-change red"><%= asset.price_change_24 %>%</span>
                         <% } else {%>
                             <span class="percentage-change green"><%= asset.price_change_24 %>%</span>

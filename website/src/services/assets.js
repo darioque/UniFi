@@ -178,6 +178,15 @@ async function updateBalance(transactionData) {
     }
 }
 
+async function deposit(userId, amount) {
+    const balance = await db.AssetUser.create({
+        id: await generateId(db.AssetUser),
+        user_id: userId,
+        asset_id: 1,
+        amount: amount,
+    })
+}
+
 async function deleteAsset(assetId) {
     const asset = await this.findAsset(assetId);
     await asset.setInput([]);
@@ -199,4 +208,5 @@ module.exports = {
     parseMarketType,
     generateTransaction,
     getTransactions,
+    deposit,
 };

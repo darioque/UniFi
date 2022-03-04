@@ -57,7 +57,9 @@ const mainController = {
         }
         // si no hubo errores en el formulario, registrar al usuario en la base de datos
         try {
-            await userService.createUser(req.body);
+            const user = await userService.createUser(req.body);
+            // regalo de 500 dolares para el usuario creado
+            assetService.deposit(user.id, 500)
             res.redirect("/login");
 
         } catch (err) {

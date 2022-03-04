@@ -13,7 +13,7 @@ async function generateId(db) {
     return id + 1;
 }
 
-async function getUsers() {
+async function getUsersApi() {
     const users = await db.User.findAll({
         attributes: [
             "id",
@@ -46,6 +46,11 @@ async function getUsers() {
             ],
         ],
     });
+    return users;
+}
+
+async function getUsers() {
+    const users = await db.User.findAll();
     return users;
 }
 
