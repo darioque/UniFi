@@ -1,6 +1,7 @@
 // se importan las bases de datos
 const db = require("../database/models");
 const Op = db.Sequelize.Op
+const sequelize = require('sequelize')
 
 async function generateId(model) {
     const id = await model.max("id");
@@ -19,17 +20,72 @@ async function getTransactions() {
     return transactions
 }
 
+async function findAssetApi(assetId) {
+    const asset = await db.Asset.findByPk(assetId,{
+        include: [
+            {
+                association: 'input'
+            },
+            {
+                association: 'output'
+            },
+            {
+                association: 'type'
+            }
+        ]
+    })
+    return asset
+}
+
+async function getAssetsApi() {
+    const assets = await db.Asset.findAll({
+        attributes: [
+            'id',
+            'name',
+            'description',
+            [
+            sequelize.fn(
+                "CONCAT",
+                `http://localhost:3001/api/markets/`,
+                sequelize.col("asset.id"),
+                `/`
+            ),
+            'detail'
+            ],
+        ],
+        include: [
+            {
+                association: "input",
+            },
+            {
+                association: "output",
+            },
+        ],
+    });
+    const cryptoCount = await db.Asset.count({
+        where: {
+            type_id: 1,
+        }
+    })
+
+    const stockCount = await db.Asset.count({
+        where: {
+            type_id: 2,
+        }
+    })
+    return {assets, stockCount, cryptoCount}
+}
+
 async function getAssets(order = ["ticker", "ASC"]) {
-    const cryptos = await db.Asset.findAll({
+    const assets = await db.Asset.findAll({
         include: [
             {
                 association: "type",
             },
         ],
         order: [order],
-        limit: 4,
     });
-    return cryptos;
+    return assets;
 }
 
 async function getCrypto(order = ['ticker', 'ASC']) {
@@ -210,4 +266,6 @@ module.exports = {
     generateTransaction,
     getTransactions,
     deposit,
+    getAssetsApi,
+    findAssetApi,
 };

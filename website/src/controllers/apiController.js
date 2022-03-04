@@ -58,13 +58,16 @@ const apiController = {
     // funcion controladora para listar los activos de los mercados individuales
     listAllAssets: async function (req, res) {
         try {
-            const assetList = await assetService.getAssets();
+            const response = await assetService.getAssetsApi()
+            const {assets, stockCount, cryptoCount} = response
+
             res.status(200).json({
-                meta: {
-                    status: 200,
-                    count: assetList.length,
+                count: assets.length,
+                countByCategory: {
+                    cryptocurrencies: cryptoCount,
+                    stocks: stockCount,
                 },
-                data: assetList,
+                assets,
             });
         } catch (err) {
             console.error(err);
@@ -100,10 +103,44 @@ const apiController = {
 
     listUsers: async function (req, res) {
         try {
-            const userList = await userService.getUsers();
+            const userList = await userService.getUsersApi();
             res.status(200).json({
                 count: userList.length,
-                data: userList,
+                users: userList,
+            });
+        } catch (err) {
+            console.error(err);
+            res.status(400).json({
+                meta: {
+                    status: 400,
+                },
+                data: err,
+            });
+        }
+    },
+    assetDetail: async function (req, res) {
+        try {
+            const assetId = req.params.id
+            const asset = await assetService.findAssetApi(assetId)
+            res.status(200).json({
+                asset
+            });
+        } catch (err) {
+            console.error(err);
+            res.status(400).json({
+                meta: {
+                    status: 400,
+                },
+                data: err,
+            });
+        }
+    },
+    userDetail: async function (req, res) {
+        try {
+            const userId = req.params.id
+            const user = await userService.findUserApi(userId)
+            res.status(200).json({
+                user
             });
         } catch (err) {
             console.error(err);

@@ -38,9 +38,9 @@ async function getUsersApi() {
             [
                 sequelize.fn(
                     "CONCAT",
-                    `http://localhost:3001/users/`,
+                    `http://localhost:3001/api/users/`,
                     sequelize.col("id"),
-                    `/profile`
+                    `/`
                 ),
                 "detail",
             ],
@@ -116,6 +116,14 @@ async function findUser(field, text) {
         where: {
             [field]: text,
         },
+    });
+    return user;
+}
+async function findUserApi(userId) {
+    const user = await db.User.findByPk(userId, {
+        attributes: {
+            exclude: ['password']
+        }
     });
     return user;
 }
@@ -209,4 +217,6 @@ module.exports = {
     updateUser,
     getUsers,
     getWalletTransactions,
+    getUsersApi,
+    findUserApi,
 };
