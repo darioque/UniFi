@@ -46,9 +46,15 @@ function SideBar() {
             </li>
 
             <li className="nav-item">
-                <Link to="/tables" className="nav-link" href="/">
+                <Link to="/products/" className="nav-link" href="/">
                     <i className="fas fa-fw fa-table"></i>
-                    <span>Tables</span>
+                    <span>Products</span>
+                </Link>
+            </li>
+            <li className="nav-item">
+                <Link to="/products/table" className="nav-link" href="/">
+                    <i className="fas fa-fw fa-table"></i>
+                    <span>Products Table</span>
                 </Link>
             </li>
 

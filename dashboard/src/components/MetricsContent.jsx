@@ -36,7 +36,7 @@ class MetricsContent extends Component {
 		const assets = assetsJson.meta.count;
 		const usersJson = await usersResponse.json()
 		const transactionsJson = await transactionsResponse.json();
-		const users = usersJson.meta.count;
+		const users = usersJson.count;
 		const transactions = transactionsJson.meta.count;
 		this.setState({
 			data: [assets, users, transactions]

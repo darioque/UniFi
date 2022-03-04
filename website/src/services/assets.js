@@ -27,6 +27,7 @@ async function getAssets(order = ["ticker", "ASC"]) {
             },
         ],
         order: [order],
+        limit: 4,
     });
     return cryptos;
 }

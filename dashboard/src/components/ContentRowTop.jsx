@@ -1,7 +1,7 @@
 import React from "react";
 import MetricsContent from "./MetricsContent";
 import TypesInDb from "./TypesInDb";
-import LastMovieInDb from "./LastMovieInDb";
+import LastMovieInDb from "./LastAssetInDB";
 import AssetsTable from "./AssetsTable";
 
 function ContentRowTop() {
