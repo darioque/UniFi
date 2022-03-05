@@ -12,7 +12,7 @@ class AssetsTable extends Component {
     async getAssets() {
         const response = await fetch("http://localhost:3001/api/markets/");
         const assets = await response.json();
-        this.setState({ assets: assets.data });
+        this.setState({ assets: assets.assets });
     }
 
     componentDidMount() {

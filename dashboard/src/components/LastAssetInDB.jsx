@@ -11,7 +11,7 @@ class LastMovieInDb extends Component {
     async getAssets() {
         const response = await fetch("http://localhost:3001/api/markets/");
         const assets = await response.json();
-        const lastAsset = assets.data[assets.data.length - 5]
+        const lastAsset = assets.assets[assets.count - 1]
         this.setState({ asset: lastAsset });
     }
 
@@ -49,8 +49,8 @@ class LastMovieInDb extends Component {
                         <a
                             className="btn btn-danger"
                             target="_blank"
-                            rel="nofollow"
-                            href="/"
+                            rel="noreferrer"
+                            href={this.state.asset.detail}
                         >
                             View asset details
                         </a>

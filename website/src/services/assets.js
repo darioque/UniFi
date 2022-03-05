@@ -37,30 +37,29 @@ async function findAssetApi(assetId) {
     return asset
 }
 
-async function getAssetsApi() {
+async function getAssetsApi(limit = null, offset = 0) {
     const assets = await db.Asset.findAll({
         attributes: [
-            'id',
-            'name',
-            'description',
+            "id",
+            "name",
+            "description",
             [
-            sequelize.fn(
-                "CONCAT",
-                `http://localhost:3001/api/markets/`,
-                sequelize.col("asset.id"),
-                `/`
-            ),
-            'detail'
+                sequelize.fn(
+                    "CONCAT",
+                    `http://localhost:3001/api/markets/`,
+                    sequelize.col("asset.id"),
+                    `/`
+                ),
+                "detail",
             ],
         ],
         include: [
             {
-                association: "input",
-            },
-            {
-                association: "output",
+                association: "type",
             },
         ],
+        limit: limit?Number(limit):limit,
+        offset: Number(offset) * Number(limit),
     });
     const cryptoCount = await db.Asset.count({
         where: {

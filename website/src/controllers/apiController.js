@@ -58,11 +58,13 @@ const apiController = {
     // funcion controladora para listar los activos de los mercados individuales
     listAllAssets: async function (req, res) {
         try {
-            const response = await assetService.getAssetsApi()
-            const {assets, stockCount, cryptoCount} = response
+            const limit = req.query.limit;
+            const page = req.query.page;
+            const response = await assetService.getAssetsApi(limit, page);
+            const { assets, stockCount, cryptoCount } = response;
 
             res.status(200).json({
-                count: assets.length,
+                count: stockCount + cryptoCount,
                 countByCategory: {
                     cryptocurrencies: cryptoCount,
                     stocks: stockCount,
@@ -120,10 +122,10 @@ const apiController = {
     },
     assetDetail: async function (req, res) {
         try {
-            const assetId = req.params.id
-            const asset = await assetService.findAssetApi(assetId)
+            const assetId = req.params.id;
+            const asset = await assetService.findAssetApi(assetId);
             res.status(200).json({
-                asset
+                asset,
             });
         } catch (err) {
             console.error(err);
@@ -137,10 +139,10 @@ const apiController = {
     },
     userDetail: async function (req, res) {
         try {
-            const userId = req.params.id
-            const user = await userService.findUserApi(userId)
+            const userId = req.params.id;
+            const user = await userService.findUserApi(userId);
             res.status(200).json({
-                user
+                user,
             });
         } catch (err) {
             console.error(err);

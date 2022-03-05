@@ -33,7 +33,7 @@ class MetricsContent extends Component {
 		const usersResponse = await fetch('http://localhost:3001/api/users/')
 		const transactionsResponse = await fetch('http://localhost:3001/api/transactions')
 		const assetsJson = await assetsResponse.json()
-		const assets = assetsJson.meta.count;
+		const assets = assetsJson.count;
 		const usersJson = await usersResponse.json()
 		const transactionsJson = await transactionsResponse.json();
 		const users = usersJson.count;
