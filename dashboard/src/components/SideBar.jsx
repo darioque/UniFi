@@ -34,14 +34,21 @@ function SideBar() {
             <li className="nav-item">
                 <Link to="/types" className="nav-link collapsed">
                     <i className="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
+                    <span>Asset Types</span>
                 </Link>
             </li>
 
             <li className="nav-item">
-                <Link to="/charts" className="nav-link">
+                <Link to="/last-asset" className="nav-link">
                     <i className="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span>
+                    <span>Last Asset in DB</span>
+                </Link>
+            </li>
+
+            <li className="nav-item">
+                <Link to="/last-user" className="nav-link">
+                    <i className="fas fa-fw fa-chart-area"></i>
+                    <span>Last User in DB</span>
                 </Link>
             </li>
 
@@ -54,7 +61,7 @@ function SideBar() {
             <li className="nav-item">
                 <Link to="/products/table" className="nav-link" href="/">
                     <i className="fas fa-fw fa-table"></i>
-                    <span>Products Table</span>
+                    <span>Assets Table</span>
                 </Link>
             </li>
 

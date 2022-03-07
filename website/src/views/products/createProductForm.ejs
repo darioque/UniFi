@@ -12,17 +12,17 @@
     <main class="main-container">
         <ul class="no-list progressive-links">
             <li>
-                <a class="no-link" href="/markets/"><span>markets</span></a>
+                <a class="no-link" href="/markets/"><span>Markets</span></a>
                 <i class="fas fa-chevron-right"></i>
             </li>
             <li>
                 <a class="no-link" href="/markets/<%= marketType %>">
-                    <span><%= marketType %></span>
+                    <span><%= marketType.replace(marketType[0], marketType[0].toUpperCase()) %></span>
                 </a>
             </li>
             <li>
                 <i class="fas fa-chevron-right"></i>
-                <span>create</span>
+                <span>Create</span>
             </li>
         </ul>
         <h1 class="text-center">Create New Product</h1>        
@@ -37,8 +37,8 @@
                 <input type="text" name="name" placeholder="Name" class="input">
                 <select name="type_id" id="type_id" class="select">
                     <option value=""></option>
-                    <option value="1" <%= marketType == 'cryptocurrencies'? "selected": null %> >cryptocurrencies</option>
-                    <option value="2" <%= marketType == 'stocks'? "selected": null %>>stocks</option>
+                    <option value="1" <%= marketType == 'cryptocurrencies'? "selected": null %> >Cryptocurrencies</option>
+                    <option value="2" <%= marketType == 'stocks'? "selected": null %>>Stocks</option>
                 </select>
                 <input type="text" name="ticker" placeholder="Ticker" class="input">
                 <input type="number" name="price" placeholder="Price" class="input">

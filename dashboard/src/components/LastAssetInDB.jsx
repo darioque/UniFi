@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-class LastMovieInDb extends Component {
+class LastAssetInDB extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -8,15 +8,19 @@ class LastMovieInDb extends Component {
         };
     }
 
-    async getAssets() {
+    async getAsset() {
         const response = await fetch("http://localhost:3001/api/markets/");
         const assets = await response.json();
-        const lastAsset = assets.assets[assets.count - 1]
-        this.setState({ asset: lastAsset });
+        const lastAssetData = await fetch(
+            assets.assets[assets.count - 1].detail
+        );
+        const lastAsset = await lastAssetData.json()
+        const asset = lastAsset.asset
+        this.setState({ asset });
     }
 
     componentDidMount() {
-        this.getAssets();
+        this.getAsset();
     }
     render() {
         return (
@@ -32,19 +36,13 @@ class LastMovieInDb extends Component {
                             <img
                                 className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                                 style={{ width: "10rem" }}
-                                src={this.state.asset.logo}
-                                alt={this.state.asset.name}
+                                src={`http://localhost:3001/${this.state.asset.logo}`}
+                                alt={`${this.state.asset.name}'s logo`}
                             />
                             <h2>{this.state.asset.name}</h2>
                         </div>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dolores, consequatur explicabo officia
-                            inventore libero veritatis iure voluptate reiciendis
-                            a magnam, vitae, aperiam voluptatum non corporis
-                            quae dolorem culpa citationem ratione aperiam
-                            voluptatum non corporis ratione aperiam voluptatum
-                            quae dolorem culpa ratione aperiam voluptatum?
+                        {this.state.asset.description}
                         </p>
                         <a
                             className="btn btn-danger"
@@ -61,4 +59,4 @@ class LastMovieInDb extends Component {
     }
 }
 
-export default LastMovieInDb;
+export default LastAssetInDB;

@@ -14,19 +14,19 @@ function AssetPage() {
 
 
     useEffect(() => {
-        fetch(`http://localhost:3001/api/markets/?limit=20&&page=0`)
+        fetch(`http://localhost:3001/api/markets/?limit=12&&page=0`)
             .then((response) => {
                 return response.json();
             })
             .then((assets) => {
                 setAssets(assets.assets);
-                setCount(assets.count - 20);
+                setCount(assets.count - 12);
                 return;
             });
     }, []);
 
     useEffect(() => {
-        fetch(`http://localhost:3001/api/markets/?limit=20&&page=${page}`)
+        fetch(`http://localhost:3001/api/markets/?limit=12&&page=${page}`)
             .then((response) => {
                 return response.json();
             })
@@ -48,96 +48,22 @@ function AssetPage() {
 
     function nextPage() {
         setPage(page + 1);
-        setCount(count - 20);
+        setCount(count - 12);
     }
 
     function previousPage() {
         setPage(page - 1);
-        setCount(count + 20);
+        setCount(count + 12);
     }
 
     const previousButton = useRef();
 
     const nextButton = useRef();
-    // return (
 
-    //     <div id="content-wrapper">
-    //         <div className="card-deck ml-5 mr-5 mb-5 mt-5">
-    //             {assets.length > 0 &&
-    //                 assets.map((asset) => {
-    //                     return (
-    //                         <ProductCard
-    //                             key={asset.id}
-    //                             logo={asset.logo}
-    //                             name={asset.name}
-    //                             type={asset.type}
-    //                         />
-    //                     );
-    //                 })}
-    //         </div>
-    //         <div className="card-deck ml-5 mr-5 mb-5 mt-5">
-    //             {assets.length > 0 &&
-    //                 assets.map((asset) => {
-    //                     return (
-    //                         <ProductCard
-    //                             key={asset.id}
-    //                             logo={asset.logo}
-    //                             name={asset.name}
-    //                             type={asset.type}
-    //                         />
-    //                     );
-    //                 })}
-    //         </div>
-    //         <div className="card-deck ml-5 mr-5 mb-5 mt-5">
-    //             {assets.length > 0 &&
-    //                 assets.map((asset) => {
-    //                     return (
-    //                         <ProductCard
-    //                             key={asset.id}
-    //                             logo={asset.logo}
-    //                             name={asset.name}
-    //                             type={asset.type}
-    //                         />
-    //                     );
-    //                 })}
-    //         </div>
-    //         <div className="card-deck ml-5 mr-5 mb-5 mt-5">
-    //             {assets.length > 0 &&
-    //                 assets.map((asset) => {
-    //                     return (
-    //                         <ProductCard
-    //                             key={asset.id}
-    //                             logo={asset.logo}
-    //                             name={asset.name}
-    //                             type={asset.type}
-    //                         />
-    //                     );
-    //                 })}
-    //         </div>
-    //         <nav aria-label="product pages" style={{ marginRight: "60px" }}>
-    //             <ul className="pagination justify-content-end">
-    //                 <li className="page-item disabled" ref={previousButton}>
-    //                     <a
-    //                         className="page-link"
-    //                         href="#"
-    //                         onClick={previousPage}
-    //                     >
-    //                         Previous
-    //                     </a>
-    //                 </li>
-    //                 <li className="page-item" ref={nextButton}>
-    //                     <a className="page-link" href="#" onClick={nextPage}>
-    //                         Next
-    //                     </a>
-    //                 </li>
-    //             </ul>
-    //         </nav>
-    //     </div>
-    // );
     const getColumnsForRow = () => {
         let items = assets.map((asset) => {
             return (
-                <Col key={asset.id} style={{width: "25%"}}>
+                <Col key={asset.id} style={{width: "25%", margin: '10px'}}>
                              <ProductCard
                                  key={asset.id}
                                  id={asset.id}

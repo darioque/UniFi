@@ -5,10 +5,9 @@ function Asset(props) {
         <tr>
             <th scope="row">{props.id}</th>
             <td>{props.name}</td>
-            <td>{props.ticker}</td>
-            <td>{props.price}</td>
-            <td>{props.supply}</td>
-            <td>{props.mcap}</td>
+            <td>{props.typeId}</td>
+            <td>{props.type}</td>
+
         </tr>
     );
 

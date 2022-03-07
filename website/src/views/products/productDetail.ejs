@@ -18,18 +18,18 @@
         <div class="main-container">
             <ul class="no-list progressive-links">
                 <li>
-                    <a class="no-link" href="/markets/"><span>markets</span></a>
+                    <a class="no-link" href="/markets/"><span>Markets</span></a>
                     <i class="fas fa-chevron-right"></i>
                 </li>
                 <li>
                     <a class="no-link" href="/markets/<%= asset.type.name %>">
-                        <span><%= asset.type.name %></span>
+                        <span><%= asset.type.name.replace(asset.type.name[0], asset.type.name[0].toUpperCase()) %></span>
                     </a>
                 </li>
                 <li>
                     <i class="fas fa-chevron-right"></i>
                     <a class="no-link" href="/markets/<%= asset.type.name %>/<%= asset.id %>"><span>
-                            <%= asset.name %>
+                        <%= asset.name %>
                         </span></a>
                 </li>
             </ul>
