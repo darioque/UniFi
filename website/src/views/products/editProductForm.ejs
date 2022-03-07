@@ -11,12 +11,12 @@
     <main class="main-container">
         <ul class="no-list progressive-links">
             <li>
-                <a class="no-link" href="/markets/"><span>markets</span></a>
+                <a class="no-link" href="/markets/"><span>Markets</span></a>
                 <i class="fas fa-chevron-right"></i>
             </li>
             <li>
                 <a class="no-link" href="/markets/<%= asset.type.name %>">
-                    <span><%= asset.type.name %></span>
+                    <span><%= asset.type.name.replace(asset.type.name[0], asset.type.name[0].toUpperCase()) %></span>
                 </a>
             </li>
             <li>
@@ -27,24 +27,30 @@
             </li>
             <li>
                 <i class="fas fa-chevron-right"></i>
-                <span>edit</span>
+                <span>Edit</span>
             </li>
         </ul>
         <h1 class="text-center">Edit Product</h1>
+        <!-- Si se enviaron mensajes de error a la vista de registro, mostrarlos -->
+        <% if (locals && locals.errorMessages) { %> 
+            <% for(let error in errorMessages) { %>
+            <p class="errors"><%= errorMessages[error].msg %> </p>
+            <% } %> 
+        <% } %> 
         <form action="/markets/<%= asset.type.name %>/<%= asset.id %>?_method=PUT" method="POST" enctype='multipart/form-data'>
 
             <div class="form">
-                <input type="text" name="id" placeholder="ID" class="input hidden" value="<%= asset.id %>">
+                <input type="number" name="id" placeholder="ID" class="input hidden" value="<%= asset.id %>">
                 
                 <input type="text" name="name" placeholder="Name" class="input" value="<%= asset.name %>">                
 
-                <input type="text" name="type_id" class="input" value="<%= asset.type_id %>" style="display: none;" readonly>               
+                <input type="number" name="type_id" class="input hidden" value="<%= asset.type_id %>" readonly>               
 
                 <input type="text" name="ticker" placeholder="Ticker" class="input" value="<%= asset.ticker %>">
                 
                 <input type="text" name="price" class="input" value="<%= asset.price %>">
 
-                <input type="number" step="0.01" name="price_change_24" class="input" value="<%= asset.price_change_24 %>">
+                <input type="number" step="0.01" placeholder="Price change" name="price_change_24" class="input" value="<%= asset.price_change_24 %>">
 
                 <input type="number" name="supply" placeholder="Supply" class="input" value="<%= asset.supply %>">
 

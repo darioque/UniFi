@@ -1,6 +1,7 @@
 const fs = require("fs");
 const db = require("../database/models");
 const Op = db.Sequelize.Op;
+const sequelize = require('sequelize')
 const path = require("path");
 const bcrypt = require("bcryptjs");
 const jdenticon = require("jdenticon");
@@ -10,6 +11,44 @@ const avatarsFilePath = path.join(__dirname, "../../public/img/users/");
 async function generateId(db) {
     const id = await db.max('id');
     return id + 1;
+}
+
+async function getUsersApi(limit = null, offset = 0) {
+    const {count, rows} = await db.User.findAndCountAll({
+        attributes: [
+            "id",
+            [
+                sequelize.fn(
+                    "CONCAT",
+                    sequelize.col("first_name"),
+                    " ",
+                    sequelize.col("last_name")
+                ),
+                "name",
+            ],
+            [
+                sequelize.fn(
+                    "COALESCE",
+                    sequelize.col("user_name"),
+                    sequelize.col("email"),
+                    sequelize.col("address")
+                ),
+                "user",
+            ],
+            [
+                sequelize.fn(
+                    "CONCAT",
+                    `http://localhost:3001/api/users/`,
+                    sequelize.col("id"),
+                    `/`
+                ),
+                "detail",
+            ],
+        ],
+        limit: limit ? Number(limit) : limit,
+        offset: Number(offset) * Number(limit),
+    });
+    return {users: rows, count};
 }
 
 async function getUsers() {
@@ -61,6 +100,7 @@ async function createUser(userRequested) {
         });
     } else {
         create = await db.User.create({
+            id: await generateId(db.User),
             first_name: userRequested.first_name,
             last_name: userRequested.last_name,
             user_name: userRequested.user_name,
@@ -78,6 +118,14 @@ async function findUser(field, text) {
         where: {
             [field]: text,
         },
+    });
+    return user;
+}
+async function findUserApi(userId) {
+    const user = await db.User.findByPk(userId, {
+        attributes: {
+            exclude: ['password']
+        }
     });
     return user;
 }
@@ -171,4 +219,6 @@ module.exports = {
     updateUser,
     getUsers,
     getWalletTransactions,
+    getUsersApi,
+    findUserApi,
 };

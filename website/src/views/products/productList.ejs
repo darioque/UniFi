@@ -14,34 +14,18 @@
             <section>
                 <ul class="no-list progressive-links">
                     <li>
-                        <a class="no-link" href="/markets/"><span>markets</span></a>
+                        <a class="no-link" href="/markets/"><span>Markets</span></a>
                     </li>
                     <li>
                         <i class="fas fa-chevron-right"></i>
-                        <a class="no-link" href="/markets/<%= marketType %>"><span><%= marketType %></span></a>
+                        <a class="no-link" href="/markets/<%= marketType %>"><span><%= marketType.replace(marketType[0], marketType[0].toUpperCase())%></span></a>
                     </li>
                 </ul>
                 <div>
     
                 </div>
             </section>
-            <section>
                 <h1>Explore <%=marketType %>  </h1>
-
-                <div class="cards-container">
-                    <div class="card-title">
-                        <i class="fas fa-arrow-circle-down"></i>
-                        <h2>Biggest Gainers</h2>
-                    </div>
-                    <div class="table">
-                        <div>
-                            <ol>
-                                <% for (let i = 0; i != 10; i++) %> 
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <section>
                 <input type="text" name="search" id="search" placeholder="Search Asset" class="search-input">
                     <% if (locals.authenticatedUser && locals.authenticatedUser.admin) { %>

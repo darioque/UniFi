@@ -33,14 +33,14 @@
         <div class="login-form-container">
             <form class="login-form" action="/login" method="POST">
 
-                <label for="email">Email</label>
+                <label for="email">Email or Username</label>
                 <div class="input-box">
-                    <input class="email" type="email" name="email" value="<%= locals.old? old.email: '' %>">
+                    <input class="email" type="text" name="email" value="<%= locals.old? old.email: '' %>" required>
                 </div>
 
                 <label for="password">Password</label>
                 <div class="input-box">
-                    <input class="password" type="password" name="password">
+                    <input class="password" type="password" name="password" required>
                 </div>
 
                 <label for="remember">

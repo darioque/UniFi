@@ -1,36 +1,33 @@
 <html>
-  <body>
-    <a
-      href="#"
-      tabindex="-1"
-      aria-hidden="true"
-      rel="nofollow"
-      style="
+
+<body>
+  <a href="#" tabindex="-1" aria-hidden="true" rel="nofollow" style="
         opacity: 0.01;
         position: absolute;
         z-index: -999;
         width: 54px;
         height: 22px;
-      "
-      >___</a
-    >
-    <div
-      style="
+      ">___</a>
+  <div style="
         opacity: 0.01;
         position: absolute;
         z-index: -1000;
         width: 54px;
         height: 22px;
-      "
-    ></div>
-    <div class="header">
-      <a class="logo" href="/"></a><a href="/login" class="login">Login</a>
+      "></div>
+  <div>
+    <a href="/"></a><a href="/">UniFi - Home</a>
+  </div>
+  <div class="content">
+    <div class="container">
+      <h1>Oops, Something went wrong...</h1>
+      <% if (locals && locals.err) { %>
+        <h2>
+          <%= err %>
+        </h2>
+        <% } %>
     </div>
-    <div class="content">
-      <div class="container">
-        <h1>Oops, Something went wrong...</h1>
-        <h2><%= err??'404' %> </h2>
-      </div>
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>

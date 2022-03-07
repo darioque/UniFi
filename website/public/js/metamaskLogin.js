@@ -14,7 +14,7 @@ window.addEventListener("load", (event) => {
             metamaskButton.innerText = "Metamask is not installed";
             return false;
         }
-        metamaskLogo.addEventListener("click", signIn);        
+        metamaskLogo? metamaskLogo.addEventListener("click", signIn): '';        
         metamaskButton.addEventListener("click", signIn);        
 
     }

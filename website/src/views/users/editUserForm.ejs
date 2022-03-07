@@ -1,103 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <%- include('../partials/head') %>
-        <link rel="stylesheet" href="/css/styles-creUpDelProduct.css" />
-    </head>
-    <body>
-        <header class="header bg-dark-gray">
-            <%- include('../partials/header') %>
-        </header>
-        <main class="main-container">
-            <ul class="no-list progressive-links">
-                <li>
-                    <a class="no-link" href="/"><span>home</span></a>
-                    <i class="fas fa-chevron-right"></i>
-                </li>
-                <li>
-                    <a class="no-link" href="/users/">
-                        <span>users</span>
-                    </a>
-                </li>
-                <li>
-                    <i class="fas fa-chevron-right"></i>
-                    <a class="no-link" href="/users/profile/"
-                        ><span>profile</span></a
-                    >
-                </li>
-                <li>
-                    <i class="fas fa-chevron-right"></i>
-                    <a class="no-link" href="/users/profile/edit"
-                        ><span>edit</span></a
-                    >
-                </li>
-            </ul>
-            <h1 class="text-center">Edit Profile</h1>
-            <form
-                action="/users/profile/edit?_method=PUT"
-                method="POST"
-                enctype="multipart/form-data"
-            >
-                <% if (user.address) { %>
-                <input
-                    type="text"
-                    name="address"
-                    value="<%= user.address%> "
-                    readonly
-                />
-                <input type="text" name="user_name" id="user_name" value="<%= user.user_name%> "/>
-                <% } else { %>
-                <div class="form">
-                    <label for="email">Email</label>
-                    <input
-                        type="email"
-                        name="email"
-                        class="input"
-                        value="<%= user.email %>"
-                        required
-                    />
-                    <label for="password">Password</label>
-                    <input
-                        type="password"
-                        name="password"
-                        class="input"
-                        required
-                    />
-                    <% } %>
-                    <div class="input-file">
-                        <input
-                            type="file"
-                            name="avatar"
-                            id="avatar"
-                            class="input-file-button"
-                            value="<%= user.avatar%>"
-                        />
-                    </div>
-                    <input
-                        type="submit"
-                        value="Edit Profile"
-                        class="load-product"
-                    />
-                </div>
-            </form>
-            <form
-                action="/users/profile/edit?_method=DELETE"
-                method="POST"
-                id="delete"
-            >
-                <input type="submit" value="Delete User" class="load-product" />
-            </form>
-        </main>
 
-        <footer class="footer"><%- include('../partials/footer') %></footer>
-    </body>
-    <script>
-        document.querySelector("#delete").addEventListener("submit", (e) => {
-            e.preventDefault();
-            const confirmation = confirm(
-                "This will delete your account and log you out, are you sure?"
-            );
-            confirmation? e.target.submit():''
-        });
-    </script>
+<head>
+    <%- include('../partials/head') %>
+        <link rel="stylesheet" href="/css/styles-creUpDelProduct.css" />
+</head>
+
+<body>
+    <header class="header bg-dark-gray">
+        <%- include('../partials/header') %>
+    </header>
+    <main class="main-container">
+        <ul class="no-list progressive-links">
+            <li>
+                <a class="no-link" href="/"><span>Home</span></a>
+                <i class="fas fa-chevron-right"></i>
+            </li>
+            <li>
+                <a class="no-link" href="/users/">
+                    <span>Users</span>
+                </a>
+            </li>
+            <li>
+                <i class="fas fa-chevron-right"></i>
+                <a class="no-link" href="/users/profile/"><span>Profile</span></a>
+            </li>
+            <li>
+                <i class="fas fa-chevron-right"></i>
+                <a class="no-link" href="/users/profile/edit"><span>Edit</span></a>
+            </li>
+        </ul>
+        <h1 class="text-center">Edit Profile</h1>
+        <form action="/users/profile/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="form">
+                                <!-- Si se enviaron mensajes de error a la vista de registro, mostrarlos -->
+                                <% if (locals && locals.errorMessages) { %>
+                                    <% for(let error in errorMessages) { %>
+                                        <p class="errors">
+                                            <%= errorMessages[error].msg %>
+                                        </p>
+                                        <% } %>
+                                            <% } %>
+                                <% if (user.address) { %>
+                                    <label for="address">Address</label>
+                                    <input type="text" name="address" class="input" value="<%= user.address%>"
+                                        readonly />
+                                    <% } else { %>
+                                        <label for="email">Email</label>
+                                        <input type="email" name="email" class="input" value="<%= user.email %>"
+                                            required />
+                                        <label for="email">First Name</label>
+                                        <input type="text" name="first_name" class="input"
+                                            value="<%= user.first_name %>" />
+                                        <label for="email">Last Name</label>
+                                        <input type="text" name="last_name" class="input"
+                                            value="<%= user.last_name %>" />
+                                        <label for="password">Password</label>
+                                        <input type="password" name="password" class="input" required />
+                                        <% } %>
+                                            <label for="user_name">Username</label>
+                                            <input type="text" name="user_name" id="user_name" class="input"
+                                                value="<%=user.user_name%>" />
+                                            <div class="input-file">
+                                                <label for="file">Profile picture</label>
+                                                <input type="file" name="avatar" id="avatar" class="input-file-button"
+                                                    value="<%=user.avatar%>" />
+                                            </div>
+                                            <input type="submit" value="Edit Profile" class="load-product" />
+                            </div>
+                        </form>
+
+                        <form class="form" action="/users/profile/edit?_method=DELETE" method="POST" id="delete">
+                            <input type="submit" value="Delete User" class="load-product" />
+                        </form>
+    </main>
+
+    <footer class="footer">
+        <%- include('../partials/footer') %>
+    </footer>
+</body>
+<script>
+    document.querySelector("#delete").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const confirmation = confirm(
+            "This will delete your account and log you out, are you sure?"
+        );
+        confirmation ? e.target.submit() : ''
+    });
+</script>
+
 </html>

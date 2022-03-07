@@ -5,7 +5,6 @@ const assetService = require("../services/assets");
 const userService = require("../services/users");
 
 const apiController = {
-    // funcion controladora para la pagina de "descubrir"/"mercados"
     listTypes: async function (req, res) {
         try {
             const types = await assetService.listTypes();
@@ -27,7 +26,6 @@ const apiController = {
         }
     },
 
-    // funcion controladora para listar los activos de los mercados individuales
     listAssets: async function (req, res) {
         try {
             const marketType = req.params.marketType;
@@ -60,13 +58,18 @@ const apiController = {
     // funcion controladora para listar los activos de los mercados individuales
     listAllAssets: async function (req, res) {
         try {
-            const assetList = await assetService.getAssets();
+            const limit = req.query.limit;
+            const page = req.query.page;
+            const response = await assetService.getAssetsApi(limit, page);
+            const { assets, stockCount, cryptoCount } = response;
+
             res.status(200).json({
-                meta: {
-                    status: 200,
-                    count: assetList.length,
+                count: stockCount + cryptoCount,
+                countByCategory: {
+                    cryptocurrencies: cryptoCount,
+                    stocks: stockCount,
                 },
-                data: assetList,
+                assets,
             });
         } catch (err) {
             console.error(err);
@@ -102,13 +105,47 @@ const apiController = {
 
     listUsers: async function (req, res) {
         try {
-            const userList = await userService.getUsers();
+            const limit = req.query.limit;
+            const page = req.query.page;
+            const userList = await userService.getUsersApi(limit, page);
+            const {count, users} = userList
             res.status(200).json({
+                count: count,
+                users: users,
+            });
+        } catch (err) {
+            console.error(err);
+            res.status(400).json({
                 meta: {
-                    status: 200,
-                    count: userList.length,
+                    status: 400,
                 },
-                data: userList,
+                data: err,
+            });
+        }
+    },
+    assetDetail: async function (req, res) {
+        try {
+            const assetId = req.params.id;
+            const asset = await assetService.findAssetApi(assetId);
+            res.status(200).json({
+                asset,
+            });
+        } catch (err) {
+            console.error(err);
+            res.status(400).json({
+                meta: {
+                    status: 400,
+                },
+                data: err,
+            });
+        }
+    },
+    userDetail: async function (req, res) {
+        try {
+            const userId = req.params.id;
+            const user = await userService.findUserApi(userId);
+            res.status(200).json({
+                user,
             });
         } catch (err) {
             console.error(err);

@@ -22,8 +22,20 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({ storage });
 
-// validaciones
+// validaciones de registro
 const registerValidations = [
+    body("address")
+        .if((value, { req }) => {
+            return req.body.email == null;
+        })
+        .custom(async (address) => {
+            const user = await userService.findUser("address", address);
+            if (user) {
+                throw new Error("Address already in use");
+            }
+            return;
+        }),
+
     body("password")
         .if((value, { req }) => {
             return req.body.address == null;
@@ -31,8 +43,10 @@ const registerValidations = [
         .notEmpty()
         .withMessage("You need to set a password")
         .bail()
-        .isLength({ min: 6, max: 15 })
-        .withMessage("Minimum length is 6 and max length is 15"),
+        .isLength({ min: 8, max: 15 })
+        .withMessage(
+            "Invalid password. Minimum length is 8 and max length is 15"
+        ),
 
     body("email")
         .if((value, { req }) => {
@@ -44,10 +58,93 @@ const registerValidations = [
         .isEmail()
         .withMessage("Invalid Email Address")
         .bail()
-        .custom(async (value) => {
-            return await userService.findUser("email", value) == null;
+        .trim()
+        .normalizeEmail()
+        .custom(async (email) => {
+            const user = await userService.findUser("email", email);
+            if (user) {
+                throw new Error("E-mail already in use");
+            }
+            return;
+        }),
+
+    body("user_name")
+        .if((value, { req }) => {
+            return req.body.address == null;
         })
-        .withMessage("E-mail already in use"),
+        .trim()
+        .custom(async (user_name) => {
+            const user = await userService.findUser("user_name", user_name);
+            if (user) {
+                throw new Error("Username already in use");
+            }
+            return;
+        })
+        .customSanitizer((value) => {
+            return value === "" ? null : value;
+        }),
+
+    body("first_name")
+        .if((value, { req }) => {
+            return req.body.address == null;
+        })
+        .notEmpty()
+        .withMessage("You need to provide a first name")
+        .isLength({ min: 2 })
+        .withMessage("Invalid name. Minimum length is 2 characters")
+        .trim(),
+
+    body("last_name")
+        .if((value, { req }) => {
+            return req.body.address == null;
+        })
+        .notEmpty()
+        .withMessage("You need to provide a last name")
+        .isLength({ min: 2 })
+        .withMessage("Invalid last name. Minimum length is 2 characters")
+        .trim(),
+        
+    body('avatar')
+        .if((value, { req }) => {
+            return req.body.address == null;
+        })
+        .custom((value, { req }) => {
+            let file = req.file
+            let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.svg']
+            if (!file) {
+                throw new Error('You need to upload an image')
+            }
+
+            if (!acceptedExtensions.includes(path.extname(file.originalname))) {
+                throw new Error('Not a valid image file')
+            }
+            return true;
+        })
+];
+
+// validaciones de login
+const loginValidations = [
+    body("email")
+        .if((value, { req }) => {
+            return req.body.address == null;
+        })
+        .notEmpty()
+        .withMessage("You need to set an email/username")
+        .customSanitizer((value, {req}) => {
+            if (!value.includes('@')) {
+                req.body.user_name = value
+                return null
+            }
+            return value
+        })
+        .trim(),
+
+    body("password")
+        .if((value, { req }) => {
+            return req.body.address == null;
+        })
+        .notEmpty()
+        .withMessage("You need to set a password"),
 ];
 
 router.get("/", mainController.index);
@@ -68,5 +165,5 @@ router.post(
     registerValidations,
     mainController.processRegister
 );
-router.post("/login", mainController.processLogin);
+router.post("/login", loginValidations, mainController.processLogin);
 module.exports = router;

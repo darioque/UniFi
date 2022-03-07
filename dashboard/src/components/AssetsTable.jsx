@@ -12,7 +12,7 @@ class AssetsTable extends Component {
     async getAssets() {
         const response = await fetch("http://localhost:3001/api/markets/");
         const assets = await response.json();
-        this.setState({ assets: assets.data });
+        this.setState({ assets: assets.assets });
     }
 
     componentDidMount() {
@@ -26,10 +26,8 @@ class AssetsTable extends Component {
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Ticker</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Market Cap</th>
-                        <th scope="col">Supply</th>
+                        <th scope="col">Type ID</th>
+                        <th scope="col">Type Name</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,10 +37,8 @@ class AssetsTable extends Component {
                                 key={asset.id}
                                 id={asset.id}
                                 name={asset.name}
-                                ticker={asset.ticker}
-                                price={asset.price}
-                                mcap={asset.mcap}
-                                supply={asset.supply}
+                                type={asset.type.name}
+                                typeId={asset.type.id}
                             ></Asset>
                         );
                     })}
