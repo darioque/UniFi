@@ -29,9 +29,9 @@ const editUserValidations = [
         .notEmpty()
         .withMessage("You need to set a password")
         .bail()
-        .isLength({ min: 6, max: 15 })
+        .isLength({ min: 8, max: 15 })
         .withMessage(
-            "Invalid password. Minimum length is 6 and max length is 15"
+            "Invalid password. Minimum length is 8 and max length is 15"
         ),
 
     body("email")
@@ -58,7 +58,7 @@ const editUserValidations = [
         .if((value, { req }) => {
             return req.body.address == null;
         })
-        .custom(async (user_name, {req}) => {
+        .custom(async (user_name, { req }) => {
             const user = await userService.findUser("user_name", user_name);
             if (user && user.id != req.session.authenticatedUser.id) {
                 throw new Error("Username already in use");
@@ -74,18 +74,33 @@ const editUserValidations = [
         .if((value, { req }) => {
             return req.body.address == null;
         })
-        .trim()
-        .customSanitizer((value) => {
-            return value === "" ? null : value;
-        }),
+        .notEmpty()
+        .withMessage("You need to provide a first name")
+        .isLength({ min: 2 })
+        .withMessage("Invalid name. Minimum length is 2 characters")
+        .trim(),
 
     body("last_name")
         .if((value, { req }) => {
             return req.body.address == null;
         })
-        .trim()
-        .customSanitizer((value) => {
-            return value === "" ? null : value;
+        .notEmpty()
+        .withMessage("You need to provide a last name")
+        .isLength({ min: 2 })
+        .withMessage("Invalid last name. Minimum length is 2 characters")
+        .trim(),
+
+    body("avatar")
+        .if((value, { req }) => {
+            return req.body.address == null;
+        })
+        .custom((value, { req }) => {
+            let file = req.file;
+            let acceptedExtensions = [".jpg", ".jpeg", ".png", ".svg"];
+            if (file && !acceptedExtensions.includes(path.extname(file.originalname))) {
+                throw new Error("Not a valid image file");
+            }
+            return true;
         }),
 ];
 

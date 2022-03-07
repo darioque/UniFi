@@ -29,7 +29,7 @@ const editFormValidations = [
         .bail()
         .isInt()
         .withMessage("ID needs to be an integer")
-        .custom(async (value, {req}) => {
+        .custom(async (value, { req }) => {
             return (await assetService.findAsset(value)) == null;
         })
         .withMessage("ID does not correspond to an asset in our database"),
@@ -79,9 +79,24 @@ const editFormValidations = [
 
     body("description")
         .optional({ nullable: true, checkFalsy: true })
-        .isLength({ max: 255 })
-        .withMessage("Invalid description. Max characters 255")
+        .isLength({ min: 20, max: 255 })
+        .withMessage(
+            "Invalid description. Minimum length must be 20, maximum is 255"
+        )
         .trim(),
+
+    body("logo")
+        .if((value, { req }) => {
+            return req.body.address == null;
+        })
+        .custom((value, { req }) => {
+            let file = req.file;
+            let acceptedExtensions = [".jpg", ".jpeg", ".png", ".svg"];
+            if (file && !acceptedExtensions.includes(path.extname(file.originalname))) {
+                throw new Error("Not a valid image file");
+            }
+            return true;
+        }),
 ];
 // validaciones de formulario de creacion de producto
 const createFormValidations = [
@@ -130,9 +145,22 @@ const createFormValidations = [
 
     body("description")
         .optional({ nullable: true, checkFalsy: true })
-        .isLength({ max: 255 })
-        .withMessage("Invalid description. Max characters 255")
+        .isLength({ min:20, max: 255 })
+        .withMessage("Invalid description. Minimum length must be 20, maximum is 255")
         .trim(),
+
+    body("logo")
+        .if((value, { req }) => {
+            return req.body.address == null;
+        })
+        .custom((value, { req }) => {
+            let file = req.file;
+            let acceptedExtensions = [".jpg", ".jpeg", ".png", ".svg"];
+            if (file && !acceptedExtensions.includes(path.extname(file.originalname))) {
+                throw new Error("Not a valid image file");
+            }
+            return true;
+        }),
 ];
 
 router.get("/", marketsController.markets);
