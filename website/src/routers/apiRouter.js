@@ -5,6 +5,7 @@ const authMiddleware = require("../middlewares/authMiddleware");
 const path = require("path");
 
 router.get("/markets/", apiController.listAllAssets);
+router.get("/:marketType/markets/", apiController.listAssets);
 router.get("/markets/types", apiController.listTypes);
 router.get("/transactions", apiController.listTransactions);
 router.get("/markets/:id", apiController.assetDetail);

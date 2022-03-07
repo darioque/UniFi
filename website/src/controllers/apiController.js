@@ -105,10 +105,13 @@ const apiController = {
 
     listUsers: async function (req, res) {
         try {
-            const userList = await userService.getUsersApi();
+            const limit = req.query.limit;
+            const page = req.query.page;
+            const userList = await userService.getUsersApi(limit, page);
+            const {count, users} = userList
             res.status(200).json({
-                count: userList.length,
-                users: userList,
+                count: count,
+                users: users,
             });
         } catch (err) {
             console.error(err);

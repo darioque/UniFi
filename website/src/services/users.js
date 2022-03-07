@@ -13,18 +13,18 @@ async function generateId(db) {
     return id + 1;
 }
 
-async function getUsersApi() {
-    const users = await db.User.findAll({
+async function getUsersApi(limit = null, offset = 0) {
+    const {count, rows} = await db.User.findAndCountAll({
         attributes: [
             "id",
             [
                 sequelize.fn(
                     "CONCAT",
                     sequelize.col("first_name"),
-                    ' ',
+                    " ",
                     sequelize.col("last_name")
                 ),
-                'name',
+                "name",
             ],
             [
                 sequelize.fn(
@@ -33,7 +33,7 @@ async function getUsersApi() {
                     sequelize.col("email"),
                     sequelize.col("address")
                 ),
-                'identification',
+                "user",
             ],
             [
                 sequelize.fn(
@@ -45,8 +45,10 @@ async function getUsersApi() {
                 "detail",
             ],
         ],
+        limit: limit ? Number(limit) : limit,
+        offset: Number(offset) * Number(limit),
     });
-    return users;
+    return {users: rows, count};
 }
 
 async function getUsers() {
