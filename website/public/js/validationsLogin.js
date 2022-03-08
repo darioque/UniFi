@@ -1,10 +1,8 @@
 window.addEventListener('load', function() {
-git 
 
 const formulario = document.querySelector('form.login-form')
 const email = document.querySelector('input.email')
 const password = document.querySelector('input.password')
-const button = document.querySelector('button')
 
     formulario.addEventListener('submit', function(e){
         
