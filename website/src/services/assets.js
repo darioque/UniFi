@@ -1,40 +1,38 @@
 // se importan las bases de datos
 const db = require("../database/models");
-const Op = db.Sequelize.Op
-const sequelize = require('sequelize')
+const Op = db.Sequelize.Op;
+const sequelize = require("sequelize");
 
 async function generateId(model) {
     const id = await model.max("id");
     return id + 1;
 }
 
-
-
 async function listTypes() {
     const types = await db.Type.findAll();
-    return types
+    return types;
 }
 
 async function getTransactions() {
     const transactions = await db.Transaction.findAll();
-    return transactions
+    return transactions;
 }
 
 async function findAssetApi(assetId) {
-    const asset = await db.Asset.findByPk(assetId,{
+    const asset = await db.Asset.findByPk(assetId, {
         include: [
             {
-                association: 'input'
+                association: "input",
             },
             {
-                association: 'output'
+                association: "output",
             },
             {
-                association: 'type'
-            }
-        ]
-    })
-    return asset
+                association: "type",
+            },
+        ],
+    });
+    return asset;
 }
 
 async function getAssetsApi(limit = null, offset = 0) {
@@ -58,21 +56,21 @@ async function getAssetsApi(limit = null, offset = 0) {
                 association: "type",
             },
         ],
-        limit: limit?Number(limit):limit,
+        limit: limit ? Number(limit) : limit,
         offset: Number(offset) * Number(limit),
     });
     const cryptoCount = await db.Asset.count({
         where: {
             type_id: 1,
-        }
-    })
+        },
+    });
 
     const stockCount = await db.Asset.count({
         where: {
             type_id: 2,
-        }
-    })
-    return {assets, stockCount, cryptoCount}
+        },
+    });
+    return { assets, stockCount, cryptoCount };
 }
 
 async function getAssets(order = ["ticker", "ASC"]) {
@@ -87,7 +85,7 @@ async function getAssets(order = ["ticker", "ASC"]) {
     return assets;
 }
 
-async function getCrypto(order = ['ticker', 'ASC']) {
+async function getCrypto(order = ["ticker", "ASC"]) {
     const cryptos = await db.Asset.findAll({
         include: [
             {
@@ -161,8 +159,8 @@ async function findAsset(assetRequested, marketType) {
         where: {
             id: assetRequested,
             type_id: {
-                [Op.or]: [marketType??1, marketType??2]
-            }
+                [Op.or]: [marketType ?? 1, marketType ?? 2],
+            },
         },
         include: [
             {
@@ -171,7 +169,7 @@ async function findAsset(assetRequested, marketType) {
         ],
     });
     if (!asset) {
-        throw new Error('Asset does not exist')
+        throw new Error("Asset does not exist");
     }
     return asset;
 }
@@ -240,7 +238,7 @@ async function deposit(userId, amount) {
         user_id: userId,
         asset_id: 1,
         amount: amount,
-    })
+    });
 }
 
 async function deleteAsset(assetId) {

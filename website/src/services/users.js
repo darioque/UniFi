@@ -1,7 +1,7 @@
 const fs = require("fs");
 const db = require("../database/models");
 const Op = db.Sequelize.Op;
-const sequelize = require('sequelize')
+const sequelize = require("sequelize");
 const path = require("path");
 const bcrypt = require("bcryptjs");
 const jdenticon = require("jdenticon");
@@ -9,12 +9,12 @@ const crypto = require("crypto");
 const avatarsFilePath = path.join(__dirname, "../../public/img/users/");
 
 async function generateId(db) {
-    const id = await db.max('id');
+    const id = await db.max("id");
     return id + 1;
 }
 
 async function getUsersApi(limit = null, offset = 0) {
-    const {count, rows} = await db.User.findAndCountAll({
+    const { count, rows } = await db.User.findAndCountAll({
         attributes: [
             "id",
             [
@@ -48,7 +48,7 @@ async function getUsersApi(limit = null, offset = 0) {
         limit: limit ? Number(limit) : limit,
         offset: Number(offset) * Number(limit),
     });
-    return {users: rows, count};
+    return { users: rows, count };
 }
 
 async function getUsers() {
@@ -58,13 +58,17 @@ async function getUsers() {
 
 async function getWalletBalances(userId) {
     const user = await db.User.findByPk(userId, {
-        include: [{
-            association: 'assets',
-            include: [{
-                association: 'type',
-            }]
-        }]
-    })
+        include: [
+            {
+                association: "assets",
+                include: [
+                    {
+                        association: "type",
+                    },
+                ],
+            },
+        ],
+    });
     return user;
 }
 
@@ -124,8 +128,8 @@ async function findUser(field, text) {
 async function findUserApi(userId) {
     const user = await db.User.findByPk(userId, {
         attributes: {
-            exclude: ['password']
-        }
+            exclude: ["password"],
+        },
     });
     return user;
 }

@@ -60,7 +60,7 @@ const mainController = {
             const user = await userService.createUser(req.body);
             console.log(user);
             // regalo de 500 dolares para el usuario creado
-            await assetService.deposit(user.id, 500)
+            await assetService.deposit(user.id, 10000)
             res.redirect("/login");
 
         } catch (err) {

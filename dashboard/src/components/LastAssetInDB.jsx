@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 
 class LastAssetInDB extends Component {
     constructor(props) {
@@ -14,14 +14,15 @@ class LastAssetInDB extends Component {
         const lastAssetData = await fetch(
             assets.assets[assets.count - 1].detail
         );
-        const lastAsset = await lastAssetData.json()
-        const asset = lastAsset.asset
+        const lastAsset = await lastAssetData.json();
+        const asset = lastAsset.asset;
         this.setState({ asset });
     }
 
     componentDidMount() {
         this.getAsset();
     }
+
     render() {
         return (
             <div className="col-lg-6 mb-4">
@@ -36,14 +37,12 @@ class LastAssetInDB extends Component {
                             <img
                                 className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                                 style={{ width: "10rem" }}
-                                src={`http://localhost:3001/${this.state.asset.logo}`}
+                                src={this.state.asset.logo}
                                 alt={`${this.state.asset.name}'s logo`}
                             />
                             <h2>{this.state.asset.name}</h2>
                         </div>
-                        <p>
-                        {this.state.asset.description}
-                        </p>
+                        <p>{this.state.asset.description}</p>
                         <a
                             className="btn btn-danger"
                             target="_blank"
