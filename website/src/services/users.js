@@ -13,14 +13,6 @@ async function generateId(db) {
     return id + 1;
 }
 
-async function getAdmins() {
-    const admins = await db.User.findAll({
-        where: {
-            
-        }
-    })
-}
-
 async function getUsersApi(limit = null, offset = 0) {
     const { count, rows } = await db.User.findAndCountAll({
         attributes: [

@@ -58,8 +58,7 @@ const mainController = {
         // si no hubo errores en el formulario, registrar al usuario en la base de datos
         try {
             const user = await userService.createUser(req.body);
-            console.log(user);
-            // regalo de 500 dolares para el usuario creado
+            // regalo de 10000 dolares para el usuario creado
             await assetService.deposit(user.id, 10000)
             res.redirect("/login");
 
@@ -90,9 +89,8 @@ const mainController = {
                 });
             }
             // si no hubo errores, guardar al usuario autenticado con session y redirigir a home
-            const adminIds = [98, 99, 100, 101, 102];
             req.session.authenticatedUser = user.dataValues;
-            if (adminIds.includes(req.session.authenticatedUser.id)) {
+            if (req.session.authenticatedUser.id > 50) {
                 req.session.authenticatedUser.admin = true;
             }
             // si está tildado el campo de remember me, guardarlo con cookie
