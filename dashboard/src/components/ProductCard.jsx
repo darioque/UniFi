@@ -15,7 +15,7 @@ function ProductCard(props) {
         <div className="card" style={{ width: "18rem" }}>
             <img
                 className="card-img-top"
-                src={`http://localhost:3001/${asset.logo}`}
+                src={asset.logo}
                 style={{ width: "100px", height: '100px' }}
                 alt="product card"
             />

@@ -108,8 +108,8 @@ async function createUser(userRequested) {
             password: bcrypt.hashSync(userRequested.password, 10),
             avatar: userRequested.avatar,
         });
-        return create;
     }
+    return create;
 }
 
 // funcion para buscar y devolver un usuario a partir de algun campo a determinar como parametro

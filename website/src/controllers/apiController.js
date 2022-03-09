@@ -108,7 +108,7 @@ const apiController = {
             const limit = req.query.limit;
             const page = req.query.page;
             const userList = await userService.getUsersApi(limit, page);
-            const {count, users} = userList
+            const { count, users } = userList;
             res.status(200).json({
                 count: count,
                 users: users,

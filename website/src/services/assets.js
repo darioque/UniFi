@@ -222,7 +222,7 @@ async function updateBalance(transactionData) {
     });
     if (outputAssetBalance) {
         return await outputAssetBalance.update({
-            amount: outputAssetBalance.amount + transactionData.amount,
+            amount: outputAssetBalance.amount + Number(transactionData.amount),
         });
     } else {
         return await db.AssetUser.create({
