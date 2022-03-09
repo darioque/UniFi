@@ -9,11 +9,11 @@ class TypesInDb extends Component {
     }
 
     async getTypes() {
-        const response = await fetch(
-            "http://localhost:3001/api/markets/types"
-        );
+        const response = await fetch("http://localhost:3001/api/markets/");
         const types = await response.json();
-		this.setState({types: types.data,})
+		this.setState({ 
+            types: types.countByCategory,
+        });
 
     }
 
@@ -38,22 +38,20 @@ class TypesInDb extends Component {
                             onMouseLeave={() => {
                                 this.changeBg(document.querySelector("#types"));
                             }}
-                             className="m-0 font-weight-bold text-gray-800"
+                            className="m-0 font-weight-bold text-gray-800"
                         >
                             Types in Data Base
                         </h5>
                     </div>
                     <div className="card-body" id="types">
                         <div className="row">
-                            {this.state.types.map((type) => {
+                            {Object.keys(this.state.types).map((type, i) => {
                                 return (
-                                    <div
-                                        key={type.id}
-                                        className="col-lg-6 mb-4"
-                                    >
+                                    <div key={type + i} className="col-lg-6 mb-4">
                                         <div className="card bg-dark text-white shadow">
                                             <div className="card-body">
-                                                {type.name}
+                                                {type.replace(type[0], type[0].toUpperCase())}
+                                                <p>Amount in DB: {this.state.types[type]}</p>
                                             </div>
                                         </div>
                                     </div>
