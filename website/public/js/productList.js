@@ -11,6 +11,7 @@ window.onload = async () => {
     ).then((assets) => assets.json());
     const assets = response.data;
     listAssets(assets);
+
     searchInput.addEventListener("input", function (e) {
         const assetListDiv = document.querySelector("#assetList");
 
@@ -132,7 +133,7 @@ function listAssets(assets) {
     if (assets.length == 0) {
         const assetListDiv = document.querySelector("#assetList");
         const p = document.createElement("p");
-        p.innerHTML = "No assets match";
+        p.innerHTML = "No assets found";
         assetListDiv.appendChild(p);
     }
     return;

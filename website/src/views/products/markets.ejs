@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/styles-markets.css"> 
+        <link rel="stylesheet" href="/css/styles-markets.css">
 </head>
+
 <body>
     <header class="main-header bg-dark-gray">
-        <%- include('../partials/header') %> 
+        <%- include('../partials/header') %>
     </header>
 
     <main>
@@ -16,9 +18,10 @@
                     <div class="slide-track">
                         <% for (let asset of assetList) {%>
                             <div class="slide">
-                                <a class="no-link" href="/markets/<%= asset.type.name %>/<%= asset.id %>"><img class="slide-img" src="<%= asset.logo %> " alt="<%= asset.ticker %> Logo "></a>
+                                <a class="no-link" href="/markets/<%= asset.type.name %>/<%= asset.id %>"><img
+                                        class="slide-img" src="<%= asset.logo %> " alt="<%= asset.ticker %> Logo "></a>
                             </div>
-                        <% } %> 
+                            <% } %>
                     </div>
                 </div>
             </section>
@@ -37,7 +40,7 @@
                     <div class="cards-container">
                         <a class="no-link" href="/markets/cryptocurrencies">
                             <article class="card bg-gray market-card">
-                                <h2>Cryptocurrencies</h2>
+                                <h2 style="text-overflow: ellipsis;overflow: hidden;">Cryptocurrencies</h2>
                                 <div class="card-title">
                                     <img src="/img/stocks2.svg" alt="Crypto Logo">
                                 </div>
@@ -62,10 +65,14 @@
                                 <div class="card-title">
                                     <img src="<%= mainGainer.logo %>" alt="<%= mainGainer.name %> Logo">
                                     <%= mainGainer.name %>
-                                    
-                                    <span class="percentage-change green"><i class="fas fa-arrow-circle-up" style="margin-right: 4px;"></i><%= mainGainer.price_change_24 %>%</span>
+
+                                        <span class="percentage-change green"><i class="fas fa-arrow-circle-up"
+                                                style="margin-right: 4px;"></i>
+                                            <%= mainGainer.price_change_24 %>%
+                                        </span>
                                 </div>
-                                <p class="price">$<%= new Intl.NumberFormat().format(mainGainer.price) %></p>
+                                <p class="price">$<%= new Intl.NumberFormat().format(mainGainer.price) %>
+                                </p>
                             </article>
                         </a>
                         <a class="no-link" href="/markets/<%= mainLoser.type.name%>/<%= mainLoser.id  %>">
@@ -74,9 +81,13 @@
                                 <div class="card-title">
                                     <img src="<%= mainLoser.logo %>" alt="<%= mainLoser.name %> Logo">
                                     <%= mainLoser.name %>
-                                    <span class="percentage-change red"><i class="fas fa-arrow-circle-down" style="margin-right: 4px;"></i><%= mainLoser.price_change_24?? '0' %>%</span>
+                                        <span class="percentage-change red"><i class="fas fa-arrow-circle-down"
+                                                style="margin-right: 4px;"></i>
+                                            <%= mainLoser.price_change_24?? '0' %>%
+                                        </span>
                                 </div>
-                                <p class="price">$<%= new Intl.NumberFormat().format(mainLoser.price) %></p>
+                                <p class="price">$<%= new Intl.NumberFormat().format(mainLoser.price) %>
+                                </p>
                             </article>
                         </a>
                     </div>
@@ -92,7 +103,7 @@
                             <div>
                                 <span class="green bold">54k</span>
                                 <span class="bold">Users</span>
-    
+
                             </div>
                             <div>
                                 <span class="green bold">20%</span>
@@ -108,12 +119,12 @@
                         <div>
                             <div>
                                 <span class="green bold">20k</span>
-                                <span class="bold" >Users</span>
-                    
+                                <span class="bold">Users</span>
+
                             </div>
                             <div>
                                 <span class="green bold">50%</span>
-                                <span class="bold" >Performance</span>
+                                <span class="bold">Performance</span>
                             </div>
                         </div>
                     </div>
@@ -125,12 +136,12 @@
                         <div>
                             <div>
                                 <span class="green bold">10</span>
-                                <span class="bold" >Users</span>
-                    
+                                <span class="bold">Users</span>
+
                             </div>
                             <div>
                                 <span class="red bold">-20%</span>
-                                <span class="bold" >Performance</span>
+                                <span class="bold">Performance</span>
                             </div>
                         </div>
                     </div>
@@ -142,12 +153,12 @@
                         <div>
                             <div>
                                 <span class="green bold">180k</span>
-                                <span class="bold" >Users</span>
-                    
+                                <span class="bold">Users</span>
+
                             </div>
                             <div>
                                 <span class="green bold">95%</span>
-                                <span class="bold" >Performance</span>
+                                <span class="bold">Performance</span>
                             </div>
                         </div>
                     </div>
@@ -157,7 +168,8 @@
     </main>
 
     <footer class="footer bg-dark-gray">
-        <%- include('../partials/footer') %> 
+        <%- include('../partials/footer') %>
     </footer>
 </body>
+
 </html>

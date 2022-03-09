@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import Card from "react-bootstrap/Card";
 import ProductCard from "../components/ProductCard";
 
 function AssetPage() {

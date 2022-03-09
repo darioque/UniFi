@@ -39,23 +39,23 @@
             <!-- No agregar require a los inputs porque se pisa con las validaciones de front -->
                 <label for="email">Email</label>
                 <div class="input-box">
-                    <input type="email" name="email" value="<%= locals.old && old.email ? old.email : '' %>">
+                    <input type="email" class="email" name="email" value="<%= locals.old && old.email ? old.email : '' %>">
                 </div>
                 <label for="email">First Name</label>
                 <div class="input-box">
-                    <input type="first_name" name="first_name" value="<%= locals.old && old.first_name ? old.first_name : null %>">
+                    <input type="first_name" name="first_name" class="first_name" value="<%= locals.old && old.first_name ? old.first_name : null %>">
                 </div>
                 <label for="email">Last Name</label>
                 <div class="input-box">
-                    <input type="last_name" name="last_name" value="<%= locals.old && old.last_name ? old.last_name : null %>">
+                    <input type="last_name" name="last_name" class="last_name" value="<%= locals.old && old.last_name ? old.last_name : null %>">
                 </div>
                 <label for="email">Username</label>
                 <div class="input-box">
-                    <input type="user_name" name="user_name" value="<%= locals.old && old.user_name ? old.user_name : null %>">
+                    <input type="user_name" name="user_name" class="user_name" value="<%= locals.old && old.user_name ? old.user_name : null %>">
                 </div>
                 <label for="password">Password</label>
                 <div class="input-box">
-                    <input  type="password" name="password">
+                    <input  type="password" name="password" class="password">
                 </div>
 
                 <label for="avatar">Profile picture</label>
