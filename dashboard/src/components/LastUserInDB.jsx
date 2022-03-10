@@ -39,17 +39,16 @@ class LastUserInDB extends Component {
                             <img
                                 className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                                 style={{ width: "10rem" }}
-                                src={this.state.user.avatar}
+                                src={`http://localhost:3001${this.state.user.avatar}`}
                                 alt={`${this.state.user.first_name + " " + this.state.user.last_name}'s logo`}
                             />
-                            <h2>{this.state.user.first_name + " " + this.state.user.last_name}</h2>
+                            <h2>{this.state.user.user_name??this.state.user.email?? this.state.user.address}</h2>
                         </div>
-                        <p>{this.state.user.user_name}</p>
                         <a
                             className="btn btn-danger"
                             target="_blank"
                             rel="noreferrer"
-                            href= {`http://localhost:3001/api/users/${this.state.user.id}`}                            
+                            href={`http://localhost:3001/users/${this.state.user.id}/profile`}                           
                             style={{color: 'white', backgroundColor: '#4e73df', borderColor: '#4e73df'}}
                         >
                             View user details

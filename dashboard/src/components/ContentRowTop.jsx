@@ -3,6 +3,7 @@ import MetricsContent from "./MetricsContent";
 import TypesInDb from "./TypesInDb";
 import LastAssetInDB from "./LastAssetInDB";
 import AssetsTable from "./AssetsTable";
+import LastUserInDB from "./LastUserInDB";
 
 function ContentRowTop() {
     return (
@@ -15,6 +16,7 @@ function ContentRowTop() {
 
             <div className="row">
                 <LastAssetInDB />
+                <LastUserInDB />
                 <TypesInDb />
             </div>
 
