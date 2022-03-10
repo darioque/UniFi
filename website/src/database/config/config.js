@@ -1,23 +1,23 @@
 module.exports = {
     development: {
-        username: "root",
-        password: null,
-        database: "unifi_db",
-        host: "127.0.0.1",
+        username: "ba6dc77c4f18a5",
+        password: "737cf286",
+        database: "heroku_ab174ddb8bf0fd6",
+        host: "us-cdbr-east-05.cleardb.net",
         dialect: "mysql",
     },
     test: {
-        username: "root",
-        password: null,
-        database: "database_test",
-        host: "127.0.0.1",
+        username: "ba6dc77c4f18a5",
+        password: "737cf286",
+        database: "heroku_ab174ddb8bf0fd6",
+        host: "us-cdbr-east-05.cleardb.net",
         dialect: "mysql",
     },
     production: {
-        username: "root",
-        password: null,
-        database: "database_production",
-        host: "127.0.0.1",
+        username: "ba6dc77c4f18a5",
+        password: "737cf286",
+        database: "heroku_ab174ddb8bf0fd6",
+        host: "us-cdbr-east-05.cleardb.net",
         dialect: "mysql",
     },
-};
+}

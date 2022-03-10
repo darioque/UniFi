@@ -7,7 +7,7 @@ window.onload = async () => {
     const marketType = location.href.split("/markets/")[1];
 
     const response = await fetch(
-        `http://localhost:3001/api/${marketType}/markets/`
+        `http://unifi-grupo6.herokuapp.com/api/${marketType}/markets/`
     ).then((assets) => assets.json());
     const assets = response.data;
     listAssets(assets);
@@ -46,7 +46,7 @@ window.onload = async () => {
         const order = this.getAttribute("order") == "ASC" ? "DESC" : "ASC";
         this.setAttribute("order", order);
         const response = await fetch(
-            `http://localhost:3001/api/${marketType}/markets/?sortBy=${sort}&orderBy=${order}`
+            `http://unifi-grupo6.herokuapp.com/api/${marketType}/markets/?sortBy=${sort}&orderBy=${order}`
         ).then((assets) => assets.json());
         const assets = response.data;
         assetListDiv.innerHTML = "";
