@@ -113,7 +113,7 @@ window.onload = () => {
                 .split("/markets/")[1]
                 .split("/")[0];
             const response = await fetch(
-                `http://unifi-grupo6.herokuapp.com/api/${marketType}/markets/`
+                `https://unifi-grupo6.herokuapp.com/api/${marketType}/markets/`
             ).then((assets) => assets.json());
             const assets = response.data;
             const assetList = document.querySelector("#assetList");
