@@ -40,22 +40,22 @@ function SideBar() {
 
             <li className="nav-item">
                 <Link to="/last-asset" className="nav-link">
-                    <i className="fas fa-fw fa-chart-area"></i>
+                <i className="fas fa-fw fa-funnel-dollar"></i>
                     <span>Last Asset in DB</span>
                 </Link>
             </li>
 
             <li className="nav-item">
                 <Link to="/last-user" className="nav-link">
-                    <i className="fas fa-fw fa-chart-area"></i>
+                    <i className="fas fa-fw fa-user"></i>
                     <span>Last User in DB</span>
                 </Link>
             </li>
 
             <li className="nav-item">
                 <Link to="/products/" className="nav-link" href="/">
-                    <i className="fas fa-fw fa-table"></i>
-                    <span>Products</span>
+                    <i className="fas fa-solid fa-fw fa-coins"></i>
+                    <span>Assets</span>
                 </Link>
             </li>
             <li className="nav-item">

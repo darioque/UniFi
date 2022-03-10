@@ -1,28 +1,27 @@
 import React from "react";
 import MetricsContent from "./MetricsContent";
 import TypesInDb from "./TypesInDb";
-import LastMovieInDb from "./LastAssetInDB";
+import LastAssetInDB from "./LastAssetInDB";
 import AssetsTable from "./AssetsTable";
+import LastUserInDB from "./LastUserInDB";
 
 function ContentRowTop() {
     return (
-				<div className="container-fluid">
-					<div className="d-sm-flex align-items-center justify-content-between mb-4">
-						<h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
-					</div>
+        <div className="container-fluid">
+            <div className="d-sm-flex align-items-center justify-content-between mb-4">
+                <h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
+            </div>
 
-					<MetricsContent/>
+            <MetricsContent />
 
-					<div className="row">
+            <div className="row">
+                <LastAssetInDB />
+                <LastUserInDB />
+                <TypesInDb />
+            </div>
 
-						<LastMovieInDb/>
-
-						<TypesInDb/>
-
-					</div>
-
-					<AssetsTable/>
-				</div>
+            <AssetsTable />
+        </div>
     );
 }
 
