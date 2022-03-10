@@ -7,7 +7,6 @@ import AssetsTable from "./AssetsTable";
 import LastAssetInDB from "./LastAssetInDB";
 import AssetList from "./AssetList";
 import Error404 from "./Error404";
-import LastUserInDB from "./LastUserInDB";
 
 function App() {
     return (
@@ -19,7 +18,7 @@ function App() {
                 <Route path="/products/" exact component={AssetList} />
                 <Route path="/products/table" component={AssetsTable} />
                 <Route path="/last-asset" component={LastAssetInDB} />
-                <Route path="/last-user" component={LastUserInDB} />
+                <Route path="/last-user" component={LastAssetInDB} />
                 <Route component={Error404} />
             </Switch>
         </div>
