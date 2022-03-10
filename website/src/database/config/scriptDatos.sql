@@ -1,5387 +1,1592 @@
-/*USERS*/
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		1,
-		'2021-10-10 22:14:32',
-		'2021-05-31 14:36:52',
-		NULL,
-		NULL,
-		'kmapother0',
-		'0xb213f9fcb8711a5f9225f1b23e2ad20b87622e13',
-		'mstamp0@comsenz.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (1, '2021-10-10 22:14:32', '2021-05-31 14:36:52', null, null, 'kmapother0', '0xb213f9fcb8711a5f9225f1b23e2ad20b87622e13', 'mstamp0@comsenz.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (2, '2021-05-12 07:58:54', '2022-01-10 17:05:44', null, null, 'amushet1', null, 'cryan1@admin.ch', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (3, '2021-07-14 11:05:51', '2021-12-10 04:55:07', 'Felice', 'Pigrome', 'fpigrome2', '0x6f44055fee0b310060dad032ee35e6030d40123d', 'fpigrome2@oakley.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (4, '2021-06-24 23:04:01', '2021-03-20 09:35:30', null, null, 'rongin3', '0x5bca7579a7944e640e2a8753deb4e7990fffe74c', 'rbegg3@printfriendly.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (5, '2021-09-23 17:32:28', '2021-11-20 18:22:48', 'Maryjane', 'Maywood', 'mmaywood4', '0x26c740f35a1984b1de47ae298a2264328025fe4c', 'mmaywood4@google.com.hk', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (6, '2021-07-21 09:58:27', '2021-12-28 07:39:39', 'Pamelina', 'Rumney', 'prumney5', null, 'prumney5@techcrunch.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (7, '2021-12-27 02:50:06', '2021-11-11 14:26:52', 'Nerita', 'Raitt', 'nraitt6', '0xf244186fe6b0054eb7474690525de28b86e8d4db', 'nraitt6@psu.edu', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (8, '2021-12-11 22:25:19', '2021-11-03 00:22:00', 'Harli', 'Baynton', 'hbaynton7', '0x9283b52b90e2e6c2b741fd045eb8d41a99b92fb7', 'hbaynton7@webs.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (9, '2021-03-02 14:33:47', '2021-12-19 21:49:04', 'Dehlia', 'Tallent', 'dtallent8', null, 'dtallent8@cocolog-nifty.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (10, '2021-10-06 01:58:05', '2021-07-29 21:21:54', 'Rabbi', 'Really', 'rreally9', '0x591b6677aac4047c5011370d9b3b480540da5d1e', 'rreally9@phpbb.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (11, '2021-10-29 16:01:26', '2021-07-03 08:22:35', null, null, 'mivea', '0xecfdcb50da21584f60f3cd6a82dc610c68181e90', 'kolomana@tripod.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (12, '2021-04-04 03:55:29', '2021-09-04 21:39:20', 'Lorilyn', 'Odom', 'lodomb', '0xba9ab657d9ea897094d22405d67dac83d2be4c01', 'lodomb@techcrunch.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (13, '2021-08-15 18:54:32', '2021-11-01 04:45:35', null, null, 'hcorbinc', '0xe4d15b94cc986ac7c02f9473ae026cd1a5046fed', 'cdionisoc@youku.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (14, '2021-05-21 00:18:35', '2021-02-25 21:16:12', 'Marylou', 'Iddons', 'middonsd', null, 'middonsd@stumbleupon.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (15, '2021-06-06 17:53:43', '2022-01-29 14:23:05', null, null, 'mmosconee', null, 'bbewe@wikimedia.org', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (16, '2021-10-08 10:02:56', '2021-02-01 12:43:13', null, null, 'akristoff', '0x27527e0ff1aec63d67147b2d986ab56e36024369', 'ahendrichsf@java.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (17, '2021-04-18 10:40:47', '2021-02-28 03:06:12', 'Arne', 'Draisey', 'adraiseyg', '0x12105d32f4a9cd3bc6a97d504efed2db7fe4fc83', 'adraiseyg@goo.gl', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (18, '2022-01-18 04:28:15', '2021-08-16 09:09:27', 'Susie', 'Carrack', 'scarrackh', '0xcde3af4efd62c7806946df206050277152fbaa8e', 'scarrackh@ebay.co.uk', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (19, '2021-10-14 05:46:38', '2021-10-02 00:43:38', 'Aurelie', 'Throughton', 'athroughtoni', '0xaf58a894cd28adc1e84a3c158f3ec49fa98fea9d', 'athroughtoni@sourceforge.net', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (20, '2021-10-03 19:42:58', '2021-04-12 05:30:24', null, null, 'agregorowiczj', '0x79e34276674ec7ad98a106ac2137eb718a5933cc', null, 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (21, '2021-03-01 07:59:48', '2021-08-03 09:59:34', 'Arabele', 'Sammons', 'asammonsk', null, 'asammonsk@xing.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (22, '2021-02-14 19:23:49', '2021-11-24 07:57:24', 'Winne', 'Nowaczyk', 'wnowaczykl', '0xfd7374d733857862a1054a443413029b6e73672d', 'wnowaczykl@shinystat.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (23, '2021-02-27 05:45:31', '2021-06-12 23:54:31', 'Norbie', 'Kiellor', 'nkiellorm', null, 'nkiellorm@themeforest.net', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (24, '2021-06-23 07:46:44', '2021-03-30 16:00:32', 'Lorenzo', 'Colvill', 'lcolvilln', '0x6bf960274d65e572313ff1e1ad4e2547296ed804', 'lcolvilln@army.mil', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (25, '2022-01-23 10:13:06', '2021-10-07 22:10:37', 'Fairlie', 'Cottam', 'fcottamo', null, 'fcottamo@yelp.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (26, '2021-02-19 17:13:27', '2021-12-03 20:43:56', 'Lois', 'Choke', 'lchokep', '0x1121d57c4a5ec1c7cadae7f7b5141dd041ec3db9', 'lchokep@usgs.gov', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (27, '2021-02-05 05:09:26', '2021-12-06 06:09:08', 'Vevay', 'Fackrell', 'vfackrellq', '0xe4b3411699314499373672ce3914e4cfc9b200d3', 'vfackrellq@blogs.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (28, '2021-05-25 14:34:58', '2021-07-01 15:44:32', 'Jillie', 'Skelhorn', 'jskelhornr', '0xad9cf0727bf017a225bf038c151cfe13c55ba7dc', 'jskelhornr@4shared.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (29, '2021-10-23 14:16:24', '2021-08-18 02:52:32', null, null, 'mwitsons', null, 'idurtnalls@list-manage.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (30, '2021-03-22 21:21:34', '2021-10-03 23:04:18', null, null, 'dnoart', '0x9d4855d092ced41d7e6603515529a9c96697b7d9', 'astallibrasst@mac.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (31, '2022-01-08 19:53:56', '2021-12-14 13:09:41', 'Conni', 'Clift', 'ccliftu', '0xc39e5ce40079107e1cc16a92c7969056a945b84b', 'ccliftu@mysql.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (32, '2021-12-25 00:52:44', '2021-09-22 20:56:56', 'Susan', 'Donaghy', 'sdonaghyv', null, null, 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (33, '2021-06-01 10:17:52', '2022-01-01 11:20:30', 'Tiffani', 'Iannuzzelli', 'tiannuzzelliw', null, 'tiannuzzelliw@taobao.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (34, '2021-07-12 16:51:19', '2021-04-18 06:32:19', 'Edith', 'Curd', 'ecurdx', '0xfe30eff9f531665e06525432da88d156be0aa53f', 'ecurdx@senate.gov', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (35, '2021-05-30 11:34:27', '2021-08-17 01:15:24', null, null, 'sokroyy', '0x299d94408d4e5871442e7fddacd448f722473a6e', 'aethelstony@gov.uk', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (36, '2021-04-17 18:26:56', '2021-04-20 12:48:31', 'Monah', 'Muck', 'mmuckz', null, 'mmuckz@topsy.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (37, '2021-01-27 20:17:02', '2021-07-14 20:38:32', 'Leora', 'Hilling', 'lhilling10', '0x7303d0b3cd6f8c704189b7ff107490e2704e8144', 'lhilling10@google.cn', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (38, '2021-06-17 23:53:29', '2021-08-17 05:24:06', null, null, 'sbarnardo11', '0x735de4d6bf868592f06de768d8fb4e4c9a2cb3f4', 'vfisher11@printfriendly.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (39, '2022-02-23 10:33:40', '2021-09-22 17:27:50', 'Fairleigh', 'Graveston', 'fgraveston12', '0x8e99e287ea4ac7d94f629911e4d0f6cff205c6c4', 'fgraveston12@hao123.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (40, '2021-03-27 13:38:04', '2021-12-15 18:05:44', null, null, 'cperigoe13', null, 'lmobbs13@walmart.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (41, '2022-01-28 02:40:50', '2021-08-16 02:24:38', 'Peria', 'Fountaine', 'pfountaine14', null, 'pfountaine14@craigslist.org', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (42, '2021-04-01 19:22:14', '2021-11-16 20:20:07', null, null, 'dgarnsey15', '0x59b8ded203ddb2b079578f355a4df8aa515f7d9d', 'aviollet15@nba.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (43, '2021-11-01 21:09:39', '2021-12-08 05:09:12', 'Dorotea', 'Tomczak', 'dtomczak16', '0x2cfe918c72028c8607255f223837ceff9cef9781', 'dtomczak16@mysql.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (44, '2021-07-19 14:34:45', '2021-07-23 09:58:33', 'Gaylor', 'Gridon', 'ggridon17', '0x8dec5e806d68a3f0f83fa43a44027df51bf07d1a', 'ggridon17@opensource.org', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (45, '2021-06-12 17:31:20', '2021-03-26 17:13:38', null, null, 'cvurley18', null, 'stinmouth18@yellowbook.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (46, '2021-01-28 07:00:28', '2021-04-03 09:00:53', 'Yuma', 'Sibson', 'ysibson19', '0x9f633b0563c5fcc8f22bac1f78eb923eb0c09ed0', 'ysibson19@pbs.org', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (47, '2021-08-18 11:05:22', '2021-12-14 13:26:07', 'Orella', 'Cinelli', 'ocinelli1a', null, 'ocinelli1a@princeton.edu', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (48, '2021-12-25 09:56:22', '2021-04-01 11:15:11', 'Margie', 'Keepe', 'mkeepe1b', null, 'mkeepe1b@nbcnews.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (49, '2021-01-22 06:28:38', '2021-06-25 15:07:43', 'Anton', 'Buse', 'abuse1c', null, 'abuse1c@ft.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
+insert into users (id, created_at, updated_at, first_name, last_name, user_name, address, email, password) values (50, '2021-09-23 11:44:19', '2022-01-03 23:52:48', null, null, 'nshalloe1d', '0xb8e8a203f850a06d947847e90ee4099ef2a8bce8', 'cvanvelde1d@webmd.com', 'd67609760b634a29c49f0f0b6246639a510e0cde');
 
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		2,
-		'2021-05-12 07:58:54',
-		'2022-01-10 17:05:44',
-		NULL,
-		NULL,
-		'amushet1',
-		NULL,
-		'cryan1@admin.ch',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		3,
-		'2021-07-14 11:05:51',
-		'2021-12-10 04:55:07',
-		'Felice',
-		'Pigrome',
-		'fpigrome2',
-		'0x6f44055fee0b310060dad032ee35e6030d40123d',
-		'fpigrome2@oakley.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		4,
-		'2021-06-24 23:04:01',
-		'2021-03-20 09:35:30',
-		NULL,
-		NULL,
-		'rongin3',
-		'0x5bca7579a7944e640e2a8753deb4e7990fffe74c',
-		'rbegg3@printfriendly.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		5,
-		'2021-09-23 17:32:28',
-		'2021-11-20 18:22:48',
-		'Maryjane',
-		'Maywood',
-		'mmaywood4',
-		'0x26c740f35a1984b1de47ae298a2264328025fe4c',
-		'mmaywood4@google.com.hk',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		6,
-		'2021-07-21 09:58:27',
-		'2021-12-28 07:39:39',
-		'Pamelina',
-		'Rumney',
-		'prumney5',
-		NULL,
-		'prumney5@techcrunch.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		7,
-		'2021-12-27 02:50:06',
-		'2021-11-11 14:26:52',
-		'Nerita',
-		'Raitt',
-		'nraitt6',
-		'0xf244186fe6b0054eb7474690525de28b86e8d4db',
-		'nraitt6@psu.edu',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		8,
-		'2021-12-11 22:25:19',
-		'2021-11-03 00:22:00',
-		'Harli',
-		'Baynton',
-		'hbaynton7',
-		'0x9283b52b90e2e6c2b741fd045eb8d41a99b92fb7',
-		'hbaynton7@webs.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		9,
-		'2021-03-02 14:33:47',
-		'2021-12-19 21:49:04',
-		'Dehlia',
-		'Tallent',
-		'dtallent8',
-		NULL,
-		'dtallent8@cocolog-nifty.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		10,
-		'2021-10-06 01:58:05',
-		'2021-07-29 21:21:54',
-		'Rabbi',
-		'Really',
-		'rreally9',
-		'0x591b6677aac4047c5011370d9b3b480540da5d1e',
-		'rreally9@phpbb.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		11,
-		'2021-10-29 16:01:26',
-		'2021-07-03 08:22:35',
-		NULL,
-		NULL,
-		'mivea',
-		'0xecfdcb50da21584f60f3cd6a82dc610c68181e90',
-		'kolomana@tripod.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		12,
-		'2021-04-04 03:55:29',
-		'2021-09-04 21:39:20',
-		'Lorilyn',
-		'Odom',
-		'lodomb',
-		'0xba9ab657d9ea897094d22405d67dac83d2be4c01',
-		'lodomb@techcrunch.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		13,
-		'2021-08-15 18:54:32',
-		'2021-11-01 04:45:35',
-		NULL,
-		NULL,
-		'hcorbinc',
-		'0xe4d15b94cc986ac7c02f9473ae026cd1a5046fed',
-		'cdionisoc@youku.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		14,
-		'2021-05-21 00:18:35',
-		'2021-02-25 21:16:12',
-		'Marylou',
-		'Iddons',
-		'middonsd',
-		NULL,
-		'middonsd@stumbleupon.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		15,
-		'2021-06-06 17:53:43',
-		'2022-01-29 14:23:05',
-		NULL,
-		NULL,
-		'mmosconee',
-		NULL,
-		'bbewe@wikimedia.org',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		16,
-		'2021-10-08 10:02:56',
-		'2021-02-01 12:43:13',
-		NULL,
-		NULL,
-		'akristoff',
-		'0x27527e0ff1aec63d67147b2d986ab56e36024369',
-		'ahendrichsf@java.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		17,
-		'2021-04-18 10:40:47',
-		'2021-02-28 03:06:12',
-		'Arne',
-		'Draisey',
-		'adraiseyg',
-		'0x12105d32f4a9cd3bc6a97d504efed2db7fe4fc83',
-		'adraiseyg@goo.gl',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		18,
-		'2022-01-18 04:28:15',
-		'2021-08-16 09:09:27',
-		'Susie',
-		'Carrack',
-		'scarrackh',
-		'0xcde3af4efd62c7806946df206050277152fbaa8e',
-		'scarrackh@ebay.co.uk',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		19,
-		'2021-10-14 05:46:38',
-		'2021-10-02 00:43:38',
-		'Aurelie',
-		'Throughton',
-		'athroughtoni',
-		'0xaf58a894cd28adc1e84a3c158f3ec49fa98fea9d',
-		'athroughtoni@sourceforge.net',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		20,
-		'2021-10-03 19:42:58',
-		'2021-04-12 05:30:24',
-		NULL,
-		NULL,
-		'agregorowiczj',
-		'0x79e34276674ec7ad98a106ac2137eb718a5933cc',
-		NULL,
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		21,
-		'2021-03-01 07:59:48',
-		'2021-08-03 09:59:34',
-		'Arabele',
-		'Sammons',
-		'asammonsk',
-		NULL,
-		'asammonsk@xing.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		22,
-		'2021-02-14 19:23:49',
-		'2021-11-24 07:57:24',
-		'Winne',
-		'Nowaczyk',
-		'wnowaczykl',
-		'0xfd7374d733857862a1054a443413029b6e73672d',
-		'wnowaczykl@shinystat.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		23,
-		'2021-02-27 05:45:31',
-		'2021-06-12 23:54:31',
-		'Norbie',
-		'Kiellor',
-		'nkiellorm',
-		NULL,
-		'nkiellorm@themeforest.net',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		24,
-		'2021-06-23 07:46:44',
-		'2021-03-30 16:00:32',
-		'Lorenzo',
-		'Colvill',
-		'lcolvilln',
-		'0x6bf960274d65e572313ff1e1ad4e2547296ed804',
-		'lcolvilln@army.mil',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		25,
-		'2022-01-23 10:13:06',
-		'2021-10-07 22:10:37',
-		'Fairlie',
-		'Cottam',
-		'fcottamo',
-		NULL,
-		'fcottamo@yelp.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		26,
-		'2021-02-19 17:13:27',
-		'2021-12-03 20:43:56',
-		'Lois',
-		'Choke',
-		'lchokep',
-		'0x1121d57c4a5ec1c7cadae7f7b5141dd041ec3db9',
-		'lchokep@usgs.gov',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		27,
-		'2021-02-05 05:09:26',
-		'2021-12-06 06:09:08',
-		'Vevay',
-		'Fackrell',
-		'vfackrellq',
-		'0xe4b3411699314499373672ce3914e4cfc9b200d3',
-		'vfackrellq@blogs.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		28,
-		'2021-05-25 14:34:58',
-		'2021-07-01 15:44:32',
-		'Jillie',
-		'Skelhorn',
-		'jskelhornr',
-		'0xad9cf0727bf017a225bf038c151cfe13c55ba7dc',
-		'jskelhornr@4shared.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		29,
-		'2021-10-23 14:16:24',
-		'2021-08-18 02:52:32',
-		NULL,
-		NULL,
-		'mwitsons',
-		NULL,
-		'idurtnalls@list-manage.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		30,
-		'2021-03-22 21:21:34',
-		'2021-10-03 23:04:18',
-		NULL,
-		NULL,
-		'dnoart',
-		'0x9d4855d092ced41d7e6603515529a9c96697b7d9',
-		'astallibrasst@mac.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		31,
-		'2022-01-08 19:53:56',
-		'2021-12-14 13:09:41',
-		'Conni',
-		'Clift',
-		'ccliftu',
-		'0xc39e5ce40079107e1cc16a92c7969056a945b84b',
-		'ccliftu@mysql.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		32,
-		'2021-12-25 00:52:44',
-		'2021-09-22 20:56:56',
-		'Susan',
-		'Donaghy',
-		'sdonaghyv',
-		NULL,
-		NULL,
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		33,
-		'2021-06-01 10:17:52',
-		'2022-01-01 11:20:30',
-		'Tiffani',
-		'Iannuzzelli',
-		'tiannuzzelliw',
-		NULL,
-		'tiannuzzelliw@taobao.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		34,
-		'2021-07-12 16:51:19',
-		'2021-04-18 06:32:19',
-		'Edith',
-		'Curd',
-		'ecurdx',
-		'0xfe30eff9f531665e06525432da88d156be0aa53f',
-		'ecurdx@senate.gov',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		35,
-		'2021-05-30 11:34:27',
-		'2021-08-17 01:15:24',
-		NULL,
-		NULL,
-		'sokroyy',
-		'0x299d94408d4e5871442e7fddacd448f722473a6e',
-		'aethelstony@gov.uk',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		36,
-		'2021-04-17 18:26:56',
-		'2021-04-20 12:48:31',
-		'Monah',
-		'Muck',
-		'mmuckz',
-		NULL,
-		'mmuckz@topsy.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		37,
-		'2021-01-27 20:17:02',
-		'2021-07-14 20:38:32',
-		'Leora',
-		'Hilling',
-		'lhilling10',
-		'0x7303d0b3cd6f8c704189b7ff107490e2704e8144',
-		'lhilling10@google.cn',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		38,
-		'2021-06-17 23:53:29',
-		'2021-08-17 05:24:06',
-		NULL,
-		NULL,
-		'sbarnardo11',
-		'0x735de4d6bf868592f06de768d8fb4e4c9a2cb3f4',
-		'vfisher11@printfriendly.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		39,
-		'2022-02-23 10:33:40',
-		'2021-09-22 17:27:50',
-		'Fairleigh',
-		'Graveston',
-		'fgraveston12',
-		'0x8e99e287ea4ac7d94f629911e4d0f6cff205c6c4',
-		'fgraveston12@hao123.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		40,
-		'2021-03-27 13:38:04',
-		'2021-12-15 18:05:44',
-		NULL,
-		NULL,
-		'cperigoe13',
-		NULL,
-		'lmobbs13@walmart.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		41,
-		'2022-01-28 02:40:50',
-		'2021-08-16 02:24:38',
-		'Peria',
-		'Fountaine',
-		'pfountaine14',
-		NULL,
-		'pfountaine14@craigslist.org',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		42,
-		'2021-04-01 19:22:14',
-		'2021-11-16 20:20:07',
-		NULL,
-		NULL,
-		'dgarnsey15',
-		'0x59b8ded203ddb2b079578f355a4df8aa515f7d9d',
-		'aviollet15@nba.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		43,
-		'2021-11-01 21:09:39',
-		'2021-12-08 05:09:12',
-		'Dorotea',
-		'Tomczak',
-		'dtomczak16',
-		'0x2cfe918c72028c8607255f223837ceff9cef9781',
-		'dtomczak16@mysql.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		44,
-		'2021-07-19 14:34:45',
-		'2021-07-23 09:58:33',
-		'Gaylor',
-		'Gridon',
-		'ggridon17',
-		'0x8dec5e806d68a3f0f83fa43a44027df51bf07d1a',
-		'ggridon17@opensource.org',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		45,
-		'2021-06-12 17:31:20',
-		'2021-03-26 17:13:38',
-		NULL,
-		NULL,
-		'cvurley18',
-		NULL,
-		'stinmouth18@yellowbook.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		46,
-		'2021-01-28 07:00:28',
-		'2021-04-03 09:00:53',
-		'Yuma',
-		'Sibson',
-		'ysibson19',
-		'0x9f633b0563c5fcc8f22bac1f78eb923eb0c09ed0',
-		'ysibson19@pbs.org',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		47,
-		'2021-08-18 11:05:22',
-		'2021-12-14 13:26:07',
-		'Orella',
-		'Cinelli',
-		'ocinelli1a',
-		NULL,
-		'ocinelli1a@princeton.edu',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		48,
-		'2021-12-25 09:56:22',
-		'2021-04-01 11:15:11',
-		'Margie',
-		'Keepe',
-		'mkeepe1b',
-		NULL,
-		'mkeepe1b@nbcnews.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		49,
-		'2021-01-22 06:28:38',
-		'2021-06-25 15:07:43',
-		'Anton',
-		'Buse',
-		'abuse1c',
-		NULL,
-		'abuse1c@ft.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
-
-INSERT INTO
-	users (
-		id,
-		created_at,
-		updated_at,
-		first_name,
-		last_name,
-		user_name,
-		address,
-		email,
-		PASSWORD
-	)
-VALUES
-	(
-		50,
-		'2021-09-23 11:44:19',
-		'2022-01-03 23:52:48',
-		NULL,
-		NULL,
-		'nshalloe1d',
-		'0xb8e8a203f850a06d947847e90ee4099ef2a8bce8',
-		'cvanvelde1d@webmd.com',
-		'd67609760b634a29c49f0f0b6246639a510e0cde'
-	);
 
 /*TYPES*/
-INSERT INTO
-	unifi_db.types
-VALUES
-	(1, "cryptocurrencies"),
-	(2, "stocks");
+INSERT INTO unifi_db.types
+values (1, "cryptocurrencies"),
+(2, "stocks");
+
 
 /*ASSETS*/
-INSERT INTO
-	assets(
-		id,
-		created_at,
-		updated_at,
-		name,
-		ticker,
-		price,
-		price_change_24,
-		supply,
-		mcap,
-		logo,
-		type_id,
-		description
-	)
-VALUES
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 21:12:32',
-		'Tether',
-		'USDT',
-		1.000521836571,
-		-0.0040924,
-		NULL,
-		79457508616,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png',
-		1,
-		X '5465746865722028555344542920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e205465746865722068617320612063757272656e7420737570706c79206f662038332c3136342c3639372c3034382e373738323120776974682038302c3032392c3535362c3435392e303935323920696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662054657468657220697320312e30303033323635332055534420616e6420697320646f776e202d302e3031206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20323932383020616374697665206d61726b65742873292077697468202435362c3133392c3937332c3535322e373520747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7465746865722e746f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Bitcoin',
-		'BTC',
-		43841.470627771880,
-		5.9322,
-		21000000,
-		831750516419,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png',
-		1,
-		X '426974636f696e20284254432920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e657261746520425443207468726f756768207468652070726f63657373206f66206d696e696e672e20426974636f696e2068617320612063757272656e7420737570706c79206f662031382c3937382c3031322e20546865206c617374206b6e6f776e207072696365206f6620426974636f696e2069732033382c3636322e33383932343738362055534420616e6420697320757020312e3335206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e203932323020616374697665206d61726b65742873292077697468202432362c3035302c3538352c3937352e373520747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f626974636f696e2e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Ethereum',
-		'ETH',
-		2957.493774090879,
-		5.35683,
-		NULL,
-		354258392823,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png',
-		1,
-		X '457468657265756d20284554482920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e657261746520455448207468726f756768207468652070726f63657373206f66206d696e696e672e20457468657265756d2068617320612063757272656e7420737570706c79206f66203131392c3838302c3433382e3734392e20546865206c617374206b6e6f776e207072696365206f6620457468657265756d20697320322c3537362e31333631343733352055534420616e6420697320757020332e3231206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e203535343820616374697665206d61726b65742873292077697468202431342c3037372c3036372c3439342e373920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e657468657265756d2e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:56',
-		'Bnb',
-		'BNB',
-		407.734141051042,
-		5.9046,
-		165116760,
-		67323740675,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png',
-		1,
-		X '424e422028424e422920697320612063727970746f63757272656e6379202e20424e422068617320612063757272656e7420737570706c79206f66203136352c3131362c3736302e38392e20546865206c617374206b6e6f776e207072696365206f6620424e42206973203338312e31313936313336322055534420616e6420697320646f776e202d302e3230206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2037333420616374697665206d61726b657428732920776974682024312c3730392c3535362c3030352e313620747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e62696e616e63652e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Usd coin',
-		'USDC',
-		0.999365303471,
-		-0.0528703,
-		NULL,
-		53494554017,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png',
-		1,
-		X '55534420436f696e2028555344432920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e2055534420436f696e2068617320612063757272656e7420737570706c79206f662035322c3433322c3333342c3233322e3938353035342e20546865206c617374206b6e6f776e207072696365206f662055534420436f696e20697320312e30303031363530312055534420616e6420697320757020302e3038206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e203332303520616374697665206d61726b657428732920776974682024342c3232392c3433352c3233352e313920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e63656e7472652e696f2f757364632e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Xrp',
-		'XRP',
-		0.783178607299,
-		2.47649,
-		100000000000,
-		37552851223,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png',
-		1,
-		X '58525020285852502920697320612063727970746f63757272656e6379202e205852502068617320612063757272656e7420737570706c79206f662039392c3938392c3639382c31373720776974682034372c3934342c3237302c39353420696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662058525020697320302e37323230313237392055534420616e6420697320646f776e202d302e3232206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2036383620616374697665206d61726b657428732920776974682024312c3933382c3238352c3437312e313320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7872706c2e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Terra',
-		'LUNA',
-		91.506335987020,
-		8.12566,
-		NULL,
-		34338188997,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/4172.png',
-		1,
-		X '546572726120284c554e412920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031392e2054657272612068617320612063757272656e7420737570706c79206f66203737372c3632392c3236332e3734313232362077697468203336342c3635342c3833342e3632343034343320696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662054657272612069732038342e37363333373132382055534420616e6420697320757020392e3230206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031363620616374697665206d61726b657428732920776974682024332c3236362c3438372c3839362e353320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f74657272612e6d6f6e65792f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:56',
-		'Cardano',
-		'ADA',
-		0.964036688688,
-		3.98038,
-		45000000000,
-		32450759446,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png',
-		1,
-		X '43617264616e6f20284144412920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031372e205573657273206172652061626c6520746f2067656e657261746520414441207468726f756768207468652070726f63657373206f66206d696e696e672e2043617264616e6f2068617320612063757272656e7420737570706c79206f662033342c3138322c3130352c3432322e34383620776974682033332c3637342c3337372c3032372e323520696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662043617264616e6f20697320302e37393734323933342055534420616e6420697320646f776e202d302e3237206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2033373220616374697665206d61726b6574287329207769746820243936342c3537362c3430382e383920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e63617264616e6f2e6f72672e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Solana',
-		'SOL',
-		98.178619693953,
-		1.992,
-		NULL,
-		31462710396,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png',
-		1,
-		X '536f6c616e612028534f4c2920697320612063727970746f63757272656e6379206c61756e6368656420696e20323032302e20536f6c616e612068617320612063757272656e7420737570706c79206f66203531312c3631362c3934362e3134323238392077697468203331382c3034332c3737382e3236353638303920696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620536f6c616e612069732038322e30373137313037362055534420616e6420697320646f776e202d302e3236206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032363720616374697665206d61726b657428732920776974682024322c3134332c3132392c3937332e353120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f736f6c616e612e636f6d2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:56',
-		'Avalanche',
-		'AVAX',
-		86.458473721391,
-		7.3925,
-		NULL,
-		21291478562,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/5805.png',
-		1,
-		X '4176616c616e6368652028415641582920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031382e204176616c616e6368652068617320612063757272656e7420737570706c79206f66203339352c3839312c3238392e393133343130372077697468203236352c3836342c3832362e373132303234303320696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204176616c616e6368652069732037322e38333939303930362055534420616e6420697320757020312e3330206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032303320616374697665206d61726b657428732920776974682024312c3335362c3932392c3939322e383820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f617661782e6e6574776f726b2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Polkadot',
-		'DOT',
-		18.830109119052,
-		5.46806,
-		NULL,
-		18596226264,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/6636.png',
-		1,
-		X '506f6c6b61646f742028444f542920697320612063727970746f63757272656e6379202e20506f6c6b61646f742068617320612063757272656e7420737570706c79206f6620312c3130332c3330332c3437312e3338323237332077697468203938372c3537392c3331342e39353730383520696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620506f6c6b61646f742069732031362e383831343632372055534420616e6420697320757020332e3335206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2033313420616374697665206d61726b6574287329207769746820243838362c3037372c3332322e373620747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f706f6c6b61646f742e6e6574776f726b2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Binance usd',
-		'BUSD',
-		0.999529718499,
-		-0.0424088,
-		NULL,
-		18321426256,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/4687.png',
-		1,
-		X '42696e616e6365205553442028425553442920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520424e4220426561636f6e20436861696e2028424550322920706c6174666f726d2e2042696e616e6365205553442068617320612063757272656e7420737570706c79206f662031372c3834312c3534322c3437392e3437393235362e20546865206c617374206b6e6f776e207072696365206f662042696e616e63652055534420697320302e393939353736382055534420616e6420697320757020302e3036206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e203331313920616374697665206d61726b657428732920776974682024342c3638322c3632382c3030312e363720747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e62696e616e63652e636f6d2f656e2f627573642e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Dogecoin',
-		'DOGE',
-		0.133549593674,
-		4.13252,
-		NULL,
-		17718126665,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/74.png',
-		1,
-		X '446f6765636f696e2028444f47452920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e657261746520444f4745207468726f756768207468652070726f63657373206f66206d696e696e672e20446f6765636f696e2068617320612063757272656e7420737570706c79206f66203133322c3637302c3736342c3239392e38393430392e20546865206c617374206b6e6f776e207072696365206f6620446f6765636f696e20697320302e31313637313335322055534420616e6420697320646f776e202d302e3330206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2034353320616374697665206d61726b6574287329207769746820243439342c3235322c3236382e333220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e6420617420687474703a2f2f646f6765636f696e2e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Shiba inu',
-		'SHIB',
-		0.000027008150,
-		8.02678,
-		NULL,
-		14829183475,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/5994.png',
-		1,
-		X '536869626120496e752028534849422920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20536869626120496e752068617320612063757272656e7420737570706c79206f66203538392c3733352c3033302c3430382c3332322e382077697468203534392c3036332c3237382c3837362c3330312e393420696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620536869626120496e7520697320302e30303030323237392055534420616e6420697320646f776e202d302e3433206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2033313620616374697665206d61726b6574287329207769746820243731322c3539372c3234322e383120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7368696261746f6b656e2e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Terrausd',
-		'UST',
-		1.003406272799,
-		-0.0587902,
-		NULL,
-		13062718207,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/7129.png',
-		1,
-		X '546572726155534420285553542920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031392e2054657272615553442068617320612063757272656e7420737570706c79206f662031332c3936372c3339372c3331372e3132353137322e20546865206c617374206b6e6f776e207072696365206f6620546572726155534420697320312e30303435343938392055534420616e6420697320757020302e3436206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2033313320616374697665206d61726b6574287329207769746820243532372c3032332c3732372e373620747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f74657272612e6d6f6e65792e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Polygon',
-		'MATIC',
-		1.623053890169,
-		4.71578,
-		10000000000,
-		12266799401,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png',
-		1,
-		X '506f6c79676f6e20284d415449432920697320612063727970746f63757272656e6379202e20506f6c79676f6e2068617320612063757272656e7420737570706c79206f662031302c3030302c3030302c303030207769746820372c3636342c3731332c3435352e363220696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620506f6c79676f6e20697320312e34343033363832352055534420616e6420697320757020312e3739206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2033333920616374697665206d61726b6574287329207769746820243930372c3534352c3032342e313020747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f706f6c79676f6e2e746563686e6f6c6f67792f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Wrapped bitcoin',
-		'WBTC',
-		43836.947455976600,
-		6.44422,
-		NULL,
-		11496774582,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/3717.png',
-		1,
-		X '5772617070656420426974636f696e2028574254432920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e205772617070656420426974636f696e2068617320612063757272656e7420737570706c79206f66203237312c3337342e38393833363139342e20546865206c617374206b6e6f776e207072696365206f66205772617070656420426974636f696e2069732033382c3635392e37333138303032382055534420616e6420697320757020312e3339206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2033333920616374697665206d61726b6574287329207769746820243131352c3435342c3039352e343420747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f776274632e6e6574776f726b2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Cronos',
-		'CRO',
-		0.437514206069,
-		3.44533,
-		30263013692,
-		11052927378,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/3635.png',
-		1,
-		X '43726f6e6f73202843524f2920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e2043726f6e6f732068617320612063757272656e7420737570706c79206f662033302c3236332c3031332c36393220776974682032352c3236332c3031332c36393220696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662043726f6e6f7320697320302e33383732373735342055534420616e6420697320757020312e3834206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031323920616374697665206d61726b65742873292077697468202437362c3230332c3930332e303020747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e63727970746f2e636f6d2f656e2f636861696e2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Dai',
-		'DAI',
-		0.999708003932,
-		-0.0957712,
-		NULL,
-		9694973016,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png',
-		1,
-		X '44616920284441492920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e204461692068617320612063757272656e7420737570706c79206f6620392c3737342c3638362c3534392e3431313331362e20546865206c617374206b6e6f776e207072696365206f662044616920697320312e30303033383039352055534420616e6420697320757020302e3037206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2037383520616374697665206d61726b6574287329207769746820243431312c3734372c3836372e333620747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e6420617420687474703a2f2f7777772e6d616b657264616f2e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:56',
-		'Cosmos',
-		'ATOM',
-		31.161572717771,
-		4.37767,
-		NULL,
-		8923748834,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/3794.png',
-		1,
-		X '436f736d6f73202841544f4d2920697320612063727970746f63757272656e6379202e20436f736d6f732068617320612063757272656e7420737570706c79206f6620302077697468203238362c3337302c32393720696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620436f736d6f732069732032372e373335343230362055534420616e6420697320646f776e202d322e3434206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032343620616374697665206d61726b657428732920776974682024312c3034362c3134382c3532392e333820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f636f736d6f732e6e6574776f726b2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Litecoin',
-		'LTC',
-		112.192271558359,
-		2.42251,
-		84000000,
-		7825136774,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/2.png',
-		1,
-		X '4c697465636f696e20284c54432920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e6572617465204c5443207468726f756768207468652070726f63657373206f66206d696e696e672e204c697465636f696e2068617320612063757272656e7420737570706c79206f662038342c3030302c30303020776974682036392c3739392c3239332e373737393134363420696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204c697465636f696e206973203130302e31323538313937352055534420616e6420697320757020312e3433206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2037343220616374697665206d61726b6574287329207769746820243730302c3835342c3931362e313420747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6c697465636f696e2e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Near protocol',
-		'NEAR',
-		11.438161433104,
-		25.0247,
-		1000000000,
-		7359386087,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/6535.png',
-		1,
-		X '4e4541522050726f746f636f6c20284e4541522920697320612063727970746f63757272656e6379206c61756e6368656420696e20323032302e204e4541522050726f746f636f6c2068617320612063757272656e7420737570706c79206f6620312c3030302c3030302c3030302077697468203634342c3635372c30323120696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204e4541522050726f746f636f6c20697320392e37313832323334332055534420616e6420697320646f776e202d302e3037206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031303920616374697665206d61726b6574287329207769746820243433322c3435392c3033362e313720747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6e6561722e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Uniswap',
-		'UNI',
-		10.389113240738,
-		2.81543,
-		1000000000,
-		7135336407,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/7083.png',
-		1,
-		X '556e69737761702028554e492920697320612063727970746f63757272656e6379206c61756e6368656420696e2032303230616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20556e69737761702068617320612063757272656e7420737570706c79206f6620312c3030302c3030302c3030302077697468203638372c3231322c3038332e3035353231333920696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620556e697377617020697320382e37393331353130362055534420616e6420697320757020352e3537206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2033343320616374697665206d61726b6574287329207769746820243231392c3438362c3938322e313220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f756e69737761702e6f72672f626c6f672f756e692f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Chainlink',
-		'LINK',
-		15.250742743579,
-		3.7255,
-		1000000000,
-		7122242499,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1975.png',
-		1,
-		X '436861696e6c696e6b20284c494e4b2920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20436861696e6c696e6b2068617320612063757272656e7420737570706c79206f6620312c3030302c3030302c3030302077697468203436372c3030392c3534392e3532303536333720696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620436861696e6c696e6b2069732031332e30313638323232312055534420616e6420697320757020322e3537206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2036303620616374697665206d61726b6574287329207769746820243738372c3737302c3530342e373820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f636861696e2e6c696e6b2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Ftx token',
-		'FTT',
-		45.983286506989,
-		1.97371,
-		352170015,
-		6337358351,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/4195.png',
-		1,
-		X '46545820546f6b656e20284654542920697320612063727970746f63757272656e6379206c61756e6368656420696e2032303139616e64206f70657261746573206f6e2074686520424e4220426561636f6e20436861696e2028424550322920706c6174666f726d2e2046545820546f6b656e2068617320612063757272656e7420737570706c79206f66203333332c3434372c3430352e373835393731352077697468203133372c3537382c3036392e373138373433373420696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662046545820546f6b656e2069732034302e35303032383835342055534420616e6420697320757020312e3830206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031313420616374697665206d61726b6574287329207769746820243131352c3130382c3139332e313320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6674782e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Tron',
-		'TRX',
-		0.061808735449,
-		2.61257,
-		NULL,
-		6288251398,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1958.png',
-		1,
-		X '54524f4e20285452582920697320612063727970746f63757272656e6379202e2054524f4e2068617320612063757272656e7420737570706c79206f66203130312c3732312c3933372c3337362e31343032332077697468203130312c3732312c3934362c3437362e363538343320696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662054524f4e20697320302e30363033373330372055534420616e6420697320757020332e3136206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2035373420616374697665206d61726b657428732920776974682024312c3130342c3431382c3132332e303720747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f74726f6e2e6e6574776f726b2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:56',
-		'Bitcoin cash',
-		'BCH',
-		327.994129391956,
-		0.364167,
-		21000000,
-		6230777378,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1831.png',
-		1,
-		X '426974636f696e204361736820284243482920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e657261746520424348207468726f756768207468652070726f63657373206f66206d696e696e672e20426974636f696e20436173682068617320612063757272656e7420737570706c79206f662031392c3030322c3939332e37352e20546865206c617374206b6e6f776e207072696365206f6620426974636f696e2043617368206973203238332e33323438333634342055534420616e6420697320757020332e3034206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2035373420616374697665206d61726b657428732920776974682024332c3537322c3532312c3139322e363420747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e6420617420687474703a2f2f6263682e696e666f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Unus sed leo',
-		'LEO',
-		5.933008322162,
-		2.76792,
-		NULL,
-		5659817792,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/3957.png',
-		1,
-		X '554e555320534544204c454f20284c454f2920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20554e555320534544204c454f2068617320612063757272656e7420737570706c79206f66203938352c3233392c3530342077697468203935332c3935342c31333020696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620554e555320534544204c454f20697320352e36353534373139342055534420616e6420697320757020332e3936206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20313920616374697665206d61726b657428732920776974682024352c3632352c3837372e393320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e62697466696e65782e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:56',
-		'Algorand',
-		'ALGO',
-		0.852655568573,
-		1.39025,
-		10000000000,
-		5643756141,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/4030.png',
-		1,
-		X '416c676f72616e642028414c474f2920697320612063727970746f63757272656e6379202e20416c676f72616e642068617320612063757272656e7420737570706c79206f6620372c3036302c3333312c3338342e313538383339207769746820362c3632342c3939332c3832332e34353032333520696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620416c676f72616e6420697320302e37333634363331362055534420616e6420697320757020302e3538206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031393320616374697665206d61726b6574287329207769746820243135332c3236372c3035332e393420747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e6420617420687474703a2f2f616c676f72616e642e666f756e646174696f6e2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Decentraland',
-		'MANA',
-		2.806032648414,
-		3.47905,
-		NULL,
-		5140978430,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1966.png',
-		1,
-		X '446563656e7472616c616e6420284d414e412920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20446563656e7472616c616e642068617320612063757272656e7420737570706c79206f6620322c3139332c3738372c3632372e333230313436207769746820312c3833322c3037392c3439382e3336333432393820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620446563656e7472616c616e6420697320322e33383933393030382055534420616e6420697320757020302e3833206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032343620616374697665206d61726b6574287329207769746820243337382c3135322c3237322e353320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f646563656e7472616c616e642e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Stellar',
-		'XLM',
-		0.198138862789,
-		3.82193,
-		50001806812,
-		4942363537,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/512.png',
-		1,
-		X '5374656c6c61722028584c4d2920697320612063727970746f63757272656e6379202e205374656c6c61722068617320612063757272656e7420737570706c79206f662035302c3030312c3738382c3132372e313439303820776974682032342c3536312c3536302c3035332e313938323420696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66205374656c6c617220697320302e31373133333239312055534420616e6420697320757020302e3531206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2034303720616374697665206d61726b6574287329207769746820243238342c3031372c3030372e313820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e7374656c6c61722e6f72672e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Fantom',
-		'FTM',
-		1.839146334762,
-		6.91539,
-		3175000000,
-		4680638959,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/3513.png',
-		1,
-		X '46616e746f6d202846544d2920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031382e2046616e746f6d2068617320612063757272656e7420737570706c79206f6620322c3534352c3030362c3237332e20546865206c617374206b6e6f776e207072696365206f662046616e746f6d20697320312e33323031333136382055534420616e6420697320646f776e202d302e3438206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032363020616374697665206d61726b657428732920776974682024312c3233362c3032322c3336382e323620747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f66616e746f6d2e666f756e646174696f6e2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Bitcoin bep2',
-		'BTCB',
-		43806.853886682020,
-		6.02656,
-		NULL,
-		4606317465,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/4023.png',
-		1,
-		X '426974636f696e20424550322028425443422920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520424e4220426561636f6e20436861696e2028424550322920706c6174666f726d2e20426974636f696e20424550322068617320612063757272656e7420737570706c79206f66203131322c3530312077697468203130352c3135342e363838393938303320696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620426974636f696e20424550322069732033382c3630382e33323539323339372055534420616e6420697320757020312e3238206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031303520616374697665206d61726b65742873292077697468202433362c3839302c3131392e383220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f626974636f696e2e6f72672f656e2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Hedera',
-		'HBAR',
-		0.225442797809,
-		1.84157,
-		50000000000,
-		4410868800,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/4642.png',
-		1,
-		X '4865646572612028484241522920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031372e204865646572612068617320612063757272656e7420737570706c79206f662035302c3030302c3030302c30303020776974682031392c3536352c3335362c3930302e36353432393720696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662048656465726120697320302e32303432393035322055534420616e6420697320646f776e202d302e3730206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20383820616374697665206d61726b65742873292077697468202436372c3830312c3938342e373920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e6865646572612e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Internet computer',
-		'ICP',
-		19.511386020704,
-		1.43015,
-		NULL,
-		4051453377,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/8916.png',
-		1,
-		X '496e7465726e657420436f6d707574657220284943502920697320612063727970746f63757272656e6379206c61756e6368656420696e20323032312e20496e7465726e657420436f6d70757465722068617320612063757272656e7420737570706c79206f66203437372c3932352c3336382e343931373031392077697468203230382c3635342c3431332e373938313136363520696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620496e7465726e657420436f6d70757465722069732031362e37343539383939332055534420616e6420697320757020322e3434206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031303120616374697665206d61726b6574287329207769746820243134302c3931392c3532342e303420747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6466696e6974792e6f72672e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Ethereum classic',
-		'ETC',
-		30.281423148169,
-		5.27466,
-		210700000,
-		4036184975,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1321.png',
-		1,
-		X '457468657265756d20436c617373696320284554432920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e657261746520455443207468726f756768207468652070726f63657373206f66206d696e696e672e20457468657265756d20436c61737369632068617320612063757272656e7420737570706c79206f66203231302c3730302c3030302077697468203133332c3431372c3235392e393630383138313420696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620457468657265756d20436c61737369632069732032362e333835363436392055534420616e6420697320757020312e3033206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032383920616374697665206d61726b6574287329207769746820243335362c3332332c3436322e313820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f657468657265756d636c61737369632e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'The sandbox',
-		'SAND',
-		3.322281573273,
-		8.51081,
-		3000000000,
-		3737383288,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/6210.png',
-		1,
-		X '5468652053616e64626f78202853414e442920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e205468652053616e64626f782068617320612063757272656e7420737570706c79206f6620332c3030302c3030302c303030207769746820312c3132342c3934342c3737322e3232333332323620696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66205468652053616e64626f7820697320322e38313832323433322055534420616e6420697320757020312e3237206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031393920616374697665206d61726b6574287329207769746820243534332c3737392c3333302e393120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e73616e64626f782e67616d652f656e2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Filecoin',
-		'FIL',
-		21.024832770346,
-		-0.461901,
-		NULL,
-		3584470420,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/2280.png',
-		1,
-		X '46696c65636f696e202846494c2920697320612063727970746f63757272656e6379206c61756e6368656420696e20323032302e205573657273206172652061626c6520746f2067656e65726174652046494c207468726f756768207468652070726f63657373206f66206d696e696e672e2046696c65636f696e2068617320612063757272656e7420737570706c79206f66203137332c3930312c3339362e20546865206c617374206b6e6f776e207072696365206f662046696c65636f696e2069732031382e30393136303637352055534420616e6420697320757020312e3235206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031383220616374697665206d61726b6574287329207769746820243239352c3132362c3731342e353120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f66696c65636f696e2e696f2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:56',
-		'Axie infinity',
-		'AXS',
-		57.828360221637,
-		14.7066,
-		270000000,
-		3522180850,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/6783.png',
-		1,
-		X '4178696520496e66696e69747920284158532920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e204178696520496e66696e6974792068617320612063757272656e7420737570706c79206f66203237302c3030302c30303020776974682036302c3930372c35303020696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204178696520496e66696e6974792069732034362e36353336343539362055534420616e6420697320757020302e3637206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031393320616374697665206d61726b6574287329207769746820243238312c3037352c3932332e313420747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f61786965696e66696e6974792e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Vechain',
-		'VET',
-		0.052464111165,
-		5.90319,
-		86712634466,
-		3374259581,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/3077.png',
-		1,
-		X '5665436861696e20285645542920697320612063727970746f63757272656e6379202e205665436861696e2068617320612063757272656e7420737570706c79206f662038362c3731322c3633342c34363620776974682036342c3331352c3537362c39383920696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66205665436861696e20697320302e30343633393839392055534420616e6420697320757020302e3432206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031363920616374697665206d61726b6574287329207769746820243236352c3437352c3034302e393620747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e7665636861696e2e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Elrond',
-		'EGLD',
-		152.108625092323,
-		6.19679,
-		31415926,
-		3282981865,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/6892.png',
-		1,
-		X '456c726f6e64202845474c442920697320612063727970746f63757272656e6379202e20456c726f6e642068617320612063757272656e7420737570706c79206f662032332c3031362c32393820776974682032312c3631382c3538302e393031353831333820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620456c726f6e64206973203133312e35383938383633332055534420616e6420697320757020302e3239206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20383320616374697665206d61726b6574287329207769746820243133302c3134372c3834362e373320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f656c726f6e642e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Theta network',
-		'THETA',
-		3.273777065597,
-		11.5089,
-		1000000000,
-		3273777066,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/2416.png',
-		1,
-		X '5468657461204e6574776f726b202854484554412920697320612063727970746f63757272656e6379202e205468657461204e6574776f726b2068617320612063757272656e7420737570706c79206f6620312c3030302c3030302c3030302e20546865206c617374206b6e6f776e207072696365206f66205468657461204e6574776f726b20697320322e38313233393835392055534420616e6420697320757020322e3936206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031303120616374697665206d61726b6574287329207769746820243239342c3435322c3133302e313320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e7468657461746f6b656e2e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Klaytn',
-		'KLAY',
-		1.220213099904,
-		0.257042,
-		NULL,
-		3217390509,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/4256.png',
-		1,
-		X '4b6c6179746e20284b4c41592920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031392e204b6c6179746e2068617320612063757272656e7420737570706c79206f662031302c3738322c3239372c3938302e38207769746820322c3633382c3731342c3335372e3420696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204b6c6179746e20697320312e31313236363039382055534420616e6420697320757020302e3331206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20373520616374697665206d61726b65742873292077697468202436362c3937352c3438322e363920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e6b6c6179746e2e666f756e646174696f6e2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Monero',
-		'XMR',
-		176.511232865246,
-		5.68051,
-		NULL,
-		3192433973,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/328.png',
-		1,
-		X '4d6f6e65726f2028584d522920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e657261746520584d52207468726f756768207468652070726f63657373206f66206d696e696e672e204d6f6e65726f2068617320612063757272656e7420737570706c79206f662031382c3038392c3739392e38343833363839352e20546865206c617374206b6e6f776e207072696365206f66204d6f6e65726f206973203139342e37363730323735312055534420616e642069732075702032332e3139206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031363820616374697665206d61726b6574287329207769746820243330372c3038332c3433332e323120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e6765746d6f6e65726f2e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Tezos',
-		'XTZ',
-		3.490192912821,
-		3.93437,
-		NULL,
-		3070922999,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/2011.png',
-		1,
-		X '54657a6f73202858545a2920697320612063727970746f63757272656e6379202e2054657a6f732068617320612063757272656e7420737570706c79206f66203930382c3633342c3131382e3233323632332077697468203838362c3639322c3835372e33373531393920696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662054657a6f7320697320322e39393633343231352055534420616e6420697320757020322e3032206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032303320616374697665206d61726b65742873292077697468202439382c3037372c3935302e313820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e74657a6f732e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Helium',
-		'HNT',
-		24.725383516501,
-		2.64711,
-		223000000,
-		2779903204,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/5665.png',
-		1,
-		X '48656c69756d2028484e542920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031392e205573657273206172652061626c6520746f2067656e657261746520484e54207468726f756768207468652070726f63657373206f66206d696e696e672e2048656c69756d2068617320612063757272656e7420737570706c79206f66203232332c3030302c3030302077697468203131322c3937372c3533302e303238333539343120696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662048656c69756d2069732032302e39393835383937312055534420616e6420697320646f776e202d312e3033206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20343220616374697665206d61726b65742873292077697468202433332c3638382c3334322e323220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e68656c69756d2e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Iota',
-		'MIOTA',
-		0.811191103422,
-		5.54466,
-		2779530283,
-		2254730237,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1720.png',
-		1,
-		X '494f544120284d494f54412920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031352e20494f54412068617320612063757272656e7420737570706c79206f6620322c3737392c3533302c3238332e20546865206c617374206b6e6f776e207072696365206f6620494f544120697320302e373030353733322055534420616e6420697320757020302e3838206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20373320616374697665206d61726b65742873292077697468202432332c3535342c3734332e323020747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e696f74612e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Flow',
-		'FLOW',
-		6.749091064804,
-		7.53108,
-		NULL,
-		2231343197,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/4558.png',
-		1,
-		X '466c6f772028464c4f572920697320612063727970746f63757272656e6379206c61756e6368656420696e20323032312e20466c6f772068617320612063757272656e7420737570706c79206f6620312c3337382c3231312c3733392077697468203335322c3637342c38303720696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620466c6f7720697320352e37313331313832392055534420616e6420697320757020312e3136206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20353820616374697665206d61726b65742873292077697468202437352c3439392c3938362e333320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f666c6f772e636f6d2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Eos',
-		'EOS',
-		2.260334055807,
-		3.33561,
-		NULL,
-		2219131167,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1765.png',
-		1,
-		X '454f532028454f532920697320612063727970746f63757272656e6379202e20454f532068617320612063757272656e7420737570706c79206f6620312c3034382c3936382c3035382e393438342077697468203938322c3338312c3833332e3538383820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620454f5320697320312e39363239343934352055534420616e6420697320757020322e3034206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2034323720616374697665206d61726b6574287329207769746820243238352c3138302c3137382e353720747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f656f732e696f2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:56',
-		'Aave',
-		'AAVE',
-		143.261112774945,
-		1.98038,
-		16000000,
-		1952376591,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/7278.png',
-		1,
-		X '416176652028414156452920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20416176652068617320612063757272656e7420737570706c79206f662031362c3030302c30303020776974682031332c3633312c3730342e393732373739383820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662041617665206973203132312e38333837353737352055534420616e6420697320757020342e3030206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2033313120616374697665206d61726b6574287329207769746820243233322c3834352c3833322e313220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f616176652e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Waves',
-		'WAVES',
-		17.915717478039,
-		39.8587,
-		NULL,
-		1928128643,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1274.png',
-		1,
-		X '5761766573202857415645532920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031362e2057617665732068617320612063757272656e7420737570706c79206f66203130372c3638342c3132382e20546865206c617374206b6e6f776e207072696365206f662057617665732069732032322e34303533363639372055534420616e6420697320757020312e3233206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031363220616374697665206d61726b657428732920776974682024312c3535302c3239392c3434342e333520747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f77617665732e746563682f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Maker',
-		'MKR',
-		1962.638085488135,
-		4.50344,
-		1005577,
-		1918735907,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1518.png',
-		1,
-		X '4d616b657220284d4b522920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e204d616b65722068617320612063757272656e7420737570706c79206f66203937372c3633312e30333639353038392e20546865206c617374206b6e6f776e207072696365206f66204d616b657220697320312c3734392e34313438373936392055534420616e6420697320757020302e3636206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032333720616374697665206d61726b65742873292077697468202436302c3839342c3935392e383520747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6d616b657264616f2e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Harmony',
-		'ONE',
-		0.158420173316,
-		4.68779,
-		NULL,
-		1870608404,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/3945.png',
-		1,
-		X '4861726d6f6e7920284f4e452920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031382e204861726d6f6e792068617320612063757272656e7420737570706c79206f662031332c3337362c3737372c3630322e313030363820776974682031312c3831362c3236322c3630322e31303036363420696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204861726d6f6e7920697320302e31323837303038332055534420616e6420697320757020312e3331206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20383620616374697665206d61726b6574287329207769746820243130382c3236322c3830392e363020747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e6861726d6f6e792e6f6e652f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Bittorrent (DEFAULT)',
-		'BTT',
-		0.000001983682,
-		2.24381,
-		NULL,
-		1849778259,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/16086.png',
-		1,
-		X '426974546f7272656e7420284e65772920284254542920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e207468652054726f6e323020706c6174666f726d2e20426974546f7272656e7420284e6577292068617320612063757272656e7420737570706c79206f66203939302c3030302c3030302c3030302c3030302077697468203932332c3736372c3639362c3432392c30303020696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620426974546f7272656e7420284e65772920697320302e30303030303138312055534420616e6420697320757020322e3237206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20343620616374697665206d61726b65742873292077697468202436392c3630392c3237312e303220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f62742e696f2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Pancakeswap',
-		'CAKE',
-		6.756359724121,
-		1.31447,
-		NULL,
-		1839466552,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/7186.png',
-		1,
-		X '50616e63616b6553776170202843414b452920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520424e4220536d61727420436861696e202842455032302920706c6174666f726d2e2050616e63616b65537761702068617320612063757272656e7420737570706c79206f66203237342c3430382c3437352e353731373534372e20546865206c617374206b6e6f776e207072696365206f662050616e63616b655377617020697320352e39373437353238392055534420616e6420697320646f776e202d312e3434206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032313920616374697665206d61726b6574287329207769746820243131342c3134382c3832342e363220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f70616e63616b65737761702e66696e616e63652f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Gala',
-		'GALA',
-		0.256932821289,
-		3.57782,
-		NULL,
-		1792673077,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/7080.png',
-		1,
-		X '47616c61202847414c412920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e2047616c612068617320612063757272656e7420737570706c79206f662033352c3234302c3131322c343933207769746820362c3937372c3230352c34333620696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662047616c6120697320302e32313836353035352055534420616e6420697320757020312e3734206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031323720616374697665206d61726b6574287329207769746820243734322c3638302c3934372e383820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f67616c612e67616d65732f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'The graph',
-		'GRT',
-		0.374379561203,
-		2.76216,
-		10057044431,
-		1765474875,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/6719.png',
-		1,
-		X '54686520477261706820284752542920697320612063727970746f63757272656e6379206c61756e6368656420696e2032303138616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e205468652047726170682068617320612063757272656e7420737570706c79206f662031302c3030302c3030302c303030207769746820342c3731352c3733352c32303020696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662054686520477261706820697320302e33333534353931322055534420616e6420697320757020312e3634206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031383520616374697665206d61726b6574287329207769746820243130382c3430342c3539332e353120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f74686567726170682e636f6d2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Neo',
-		'NEO',
-		23.929033924665,
-		13.2907,
-		100000000,
-		1687926080,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1376.png',
-		1,
-		X '4e656f20284e454f2920697320612063727970746f63757272656e6379202e204e656f2068617320612063757272656e7420737570706c79206f66203130302c3030302c30303020776974682037302c3533382c38333120696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204e656f2069732032302e33353239383834312055534420616e6420697320757020302e3433206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032343120616374697665206d61726b6574287329207769746820243132322c3338352c3639332e333020747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6e656f2e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Bitcoin sv',
-		'BSV',
-		87.320174754951,
-		1.01534,
-		21000000,
-		1658443298,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/3602.png',
-		1,
-		X '426974636f696e20535620284253562920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e657261746520425356207468726f756768207468652070726f63657373206f66206d696e696e672e20426974636f696e2053562068617320612063757272656e7420737570706c79206f662031382c3939392c3030312e36343432333930352e20546865206c617374206b6e6f776e207072696365206f6620426974636f696e2053562069732037372e39393832303832312055534420616e6420697320757020312e3934206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031363920616374697665206d61726b6574287329207769746820243133362c3934332c3038372e313320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f626974636f696e73762e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Kucoin token',
-		'KCS',
-		20.598298217343,
-		2.24079,
-		170118638,
-		1650307598,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/2087.png',
-		1,
-		X '4b75436f696e20546f6b656e20284b43532920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e204b75436f696e20546f6b656e2068617320612063757272656e7420737570706c79206f66203137302c3131382c36333820776974682038302c3131382c36333820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204b75436f696e20546f6b656e2069732031372e39393331343432352055534420616e6420697320757020302e3933206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20333520616374697665206d61726b657428732920776974682024372c3734342c3536372e393020747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e6b75636f696e2e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Zcash',
-		'ZEC',
-		119.114458337332,
-		3.30885,
-		21000000,
-		1650064302,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1437.png',
-		1,
-		X '5a6361736820285a45432920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e6572617465205a4543207468726f756768207468652070726f63657373206f66206d696e696e672e205a636173682068617320612063757272656e7420737570706c79206f662031332c3930342c3133372e352e20546865206c617374206b6e6f776e207072696365206f66205a63617368206973203133332e32313836303234372055534420616e642069732075702032312e3137206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032343520616374697665206d61726b6574287329207769746820243538392c3431332c3535332e363920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7a2e636173682f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Stacks',
-		'STX',
-		1.256395212104,
-		3.09828,
-		1818000000,
-		1635026237,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/4847.png',
-		1,
-		X '537461636b7320285354582920697320612063727970746f63757272656e6379202e20537461636b732068617320612063757272656e7420737570706c79206f6620312c3335322c3436342c363030207769746820312c3330322c3330302c3838392e36313536393920696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620537461636b7320697320312e30353632393739332055534420616e6420697320757020302e3236206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20343220616374697665206d61726b65742873292077697468202431332c3438362c3834352e323220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f737461636b732e636f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Thorchain',
-		'RUNE',
-		4.914895327861,
-		31.1964,
-		500000000,
-		1625297208,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/4157.png',
-		1,
-		X '54484f52436861696e202852554e452920697320612063727970746f63757272656e6379206c61756e6368656420696e2032303138616e64206f70657261746573206f6e2074686520424e4220426561636f6e20436861696e2028424550322920706c6174666f726d2e2054484f52436861696e2068617320612063757272656e7420737570706c79206f66203333342c3933372c3937342e39313437383534342077697468203333302c3638382c3036312e333334343535393720696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662054484f52436861696e20697320342e30353035363737372055534420616e6420697320646f776e202d352e3536206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20373120616374697665206d61726b6574287329207769746820243130302c3436392c3739302e303520747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f74686f72636861696e2e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Ecash',
-		'XEC',
-		0.000078653058,
-		3.22649,
-		21000000000000,
-		1493817088,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/10791.png',
-		1,
-		X '654361736820285845432920697320612063727970746f63757272656e6379202e2065436173682068617320612063757272656e7420737570706c79206f662031382c3839392c3730342c3637332c33313320776974682031382c3939382c3837392c3637332c33313320696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620654361736820697320302e30303030363839322055534420616e6420697320757020302e3033206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20343720616374697665206d61726b65742873292077697468202431342c3638342c3539342e313720747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f652e636173682f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Trueusd',
-		'TUSD',
-		0.999173822868,
-		-0.119743,
-		NULL,
-		1493775504,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/2563.png',
-		1,
-		X '547275655553442028545553442920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520424e4220426561636f6e20436861696e2028424550322920706c6174666f726d2e20547275655553442068617320612063757272656e7420737570706c79206f6620312c3436302c3830302c3436392e3237333434362e20546865206c617374206b6e6f776e207072696365206f66205472756555534420697320312e303030343038372055534420616e6420697320757020302e3033206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032333820616374697665206d61726b6574287329207769746820243132312c3835362c3931382e323620747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e747275657573642e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Huobi token',
-		'HT',
-		9.546158407352,
-		3.27306,
-		500000000,
-		1490385908,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/2502.png',
-		1,
-		X '48756f626920546f6b656e202848542920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e2048756f626920546f6b656e2068617320612063757272656e7420737570706c79206f66203530302c3030302c3030302077697468203135362c3132342c3135342e323534343132303820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662048756f626920546f6b656e20697320392e313335343837342055534420616e6420697320757020302e3338206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031303820616374697665206d61726b65742873292077697468202433342c3634362c3031372e383920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e68756f626977616c6c65742e636f6d2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Quant',
-		'QNT',
-		116.319839893094,
-		4.25872,
-		14612493,
-		1404298951,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/3155.png',
-		1,
-		X '5175616e742028514e542920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e205175616e742068617320612063757272656e7420737570706c79206f662031342c3631322c3439332e30383038323620776974682031322c3037322c37333820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66205175616e74206973203131312e34323231323838312055534420616e6420697320757020302e3330206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20383220616374697665206d61726b65742873292077697468202434332c3932382c3835312e353120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7175616e742e6e6574776f726b2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Enjin coin',
-		'ENJ',
-		1.585888887102,
-		7.42681,
-		1000000000,
-		1373831288,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/2130.png',
-		1,
-		X '456e6a696e20436f696e2028454e4a2920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20456e6a696e20436f696e2068617320612063757272656e7420737570706c79206f6620312c3030302c3030302c3030302077697468203836372c3939342c3730352e35363735353820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620456e6a696e20436f696e20697320312e33323632343838332055534420616e6420697320757020302e3632206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032323620616374697665206d61726b6574287329207769746820243132372c3134342c3134372e393820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f656e6a696e2e696f2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:56',
-		'Amp',
-		'AMP',
-		0.029033867718,
-		1.24077,
-		92547638199,
-		1226033519,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/6945.png',
-		1,
-		X '416d702028414d502920697320612063727970746f63757272656e6379206c61756e6368656420696e2032303230616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20416d702068617320612063757272656e7420737570706c79206f662039392c3231332c3430382c35333520776974682034322c3232372c3730322c31383620696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620416d7020697320302e30323439303632322055534420616e6420697320646f776e202d302e3135206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20363720616374697665206d61726b65742873292077697468202431322c3339382c3736332e323220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f616d70746f6b656e2e6f72672e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Kadena',
-		'KDA',
-		7.093877885115,
-		2.69392,
-		1000000000,
-		1215093326,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/5647.png',
-		1,
-		X '4b6164656e6120284b44412920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e6572617465204b4441207468726f756768207468652070726f63657373206f66206d696e696e672e204b6164656e612068617320612063757272656e7420737570706c79206f6620312c3030302c3030302c3030302077697468203137312c3238372c3630312e313135383620696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204b6164656e6120697320362e31303838393532372055534420616e6420697320646f776e202d302e3031206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20313820616374697665206d61726b65742873292077697468202432312c3436342c3033382e393620747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e6420617420687474703a2f2f6b6164656e612e696f2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Kusama',
-		'KSM',
-		140.589301980851,
-		13.2239,
-		NULL,
-		1190805174,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/5034.png',
-		1,
-		X '4b7573616d6120284b534d2920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031392e204b7573616d612068617320612063757272656e7420737570706c79206f6620392c3635312c3231372e3435313236323036207769746820382c3437302c3039382e303537323632303620696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204b7573616d61206973203132312e35393534393636362055534420616e6420697320757020312e3436206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031323020616374697665206d61726b65742873292077697468202435302c3938322c3531352e313320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6b7573616d612e6e6574776f726b2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Nexo',
-		'NEXO',
-		2.100616939639,
-		0.176551,
-		1000000000,
-		1176345509,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/2694.png',
-		1,
-		X '4e65786f20284e45584f2920697320612063727970746f63757272656e6379206c61756e6368656420696e2032303138616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e204e65786f2068617320612063757272656e7420737570706c79206f6620312c3030302c3030302c3030302077697468203536302c3030302c30313120696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204e65786f20697320312e39373831393231352055534420616e6420697320757020322e3931206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20353720616374697665206d61726b657428732920776974682024352c3634342c3836392e323420747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e6420617420687474703a2f2f6e65786f2e696f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Chiliz',
-		'CHZ',
-		0.192253555770,
-		3.70975,
-		8888888888,
-		1148728030,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/4066.png',
-		1,
-		X '4368696c697a202843485a2920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e204368696c697a2068617320612063757272656e7420737570706c79206f6620382c3838382c3838382c383838207769746820352c3937392c3536372c3738392e39333935383320696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204368696c697a20697320302e31393330303136392055534420616e6420697320646f776e202d302e3935206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032323820616374697665206d61726b6574287329207769746820243135382c3537352c3134392e393220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e6368696c697a2e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Curve dao token',
-		'CRV',
-		2.526010130578,
-		7.29085,
-		3303030299,
-		1145601638,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/6538.png',
-		1,
-		X '43757276652044414f20546f6b656e20284352562920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e2043757276652044414f20546f6b656e2068617320612063757272656e7420737570706c79206f6620312c3730332c3834372c3236322e373939333339332077697468203435382c3333342c3130392e3834373537383220696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662043757276652044414f20546f6b656e20697320322e30323233353237352055534420616e6420697320757020312e3437206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032333820616374697665206d61726b6574287329207769746820243139322c3434372c3133332e333820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6775696465732e63757276652e66692f65766572797468696e672d796f752d6e6565642d746f2d6b6e6f772d61626f75742d6372762f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Celo',
-		'CELO',
-		2.675785856751,
-		6.36367,
-		1000000000,
-		1143600398,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/5567.png',
-		1,
-		X '43656c6f202843454c4f2920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031372e2043656c6f2068617320612063757272656e7420737570706c79206f6620312c3030302c3030302c3030302077697468203432372c3338382c36313020696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662043656c6f20697320322e37323435343036322055534420616e6420697320646f776e202d302e3734206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20383520616374697665206d61726b6574287329207769746820243135312c3434382c3339312e333020747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f63656c6f2e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:56',
-		'Basic attention token',
-		'BAT',
-		0.752345644160,
-		6.66076,
-		1500000000,
-		1125566324,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1697.png',
-		1,
-		X '426173696320417474656e74696f6e20546f6b656e20284241542920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20426173696320417474656e74696f6e20546f6b656e2068617320612063757272656e7420737570706c79206f6620312c3530302c3030302c303030207769746820312c3439362c3037362c3038322e3434373335303520696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620426173696320417474656e74696f6e20546f6b656e20697320302e36343832333331352055534420616e6420697320757020322e3535206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032383320616374697665206d61726b65742873292077697468202437372c3136342c3132322e363920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6261736963617474656e74696f6e746f6b656e2e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:56',
-		'Arweave',
-		'AR',
-		33.153660392463,
-		6.52018,
-		66000000,
-		1107156576,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/5632.png',
-		1,
-		X '41727765617665202841522920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031382e20417277656176652068617320612063757272656e7420737570706c79206f662036332c3139302c34333520776974682033332c3339342c37303120696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620417277656176652069732033322e35323537373338362055534420616e642069732075702031302e3131206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20343920616374697665206d61726b65742873292077697468202437382c3139362c3937392e363420747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e617277656176652e6f72672e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Loopring',
-		'LRC',
-		0.822810115535,
-		4.76943,
-		1374513896,
-		1094003444,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1934.png',
-		1,
-		X '4c6f6f7072696e6720284c52432920697320612063727970746f63757272656e6379206c61756e6368656420696e2032303137616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e204c6f6f7072696e672068617320612063757272656e7420737570706c79206f6620312c3337332c3837332c3434302e34343234353734207769746820312c3332392c3637352c3431342e3134393233383620696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204c6f6f7072696e6720697320302e373333313331372055534420616e6420697320757020332e3839206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031383120616374697665206d61726b6574287329207769746820243134352c3939342c3731312e313120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6c6f6f7072696e672e6f72672e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Okb',
-		'OKB',
-		18.144316939281,
-		3.73627,
-		NULL,
-		1088659016,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/3897.png',
-		1,
-		X '4f4b4220284f4b422920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e204f4b422068617320612063757272656e7420737570706c79206f66203330302c3030302c30303020776974682036302c3030302c30303020696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204f4b422069732031372e36313835353834392055534420616e6420697320646f776e202d302e3335206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20353820616374697665206d61726b6574287329207769746820243131302c3537382c3234312e333920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e6f6b782e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Dash',
-		'DASH',
-		99.576412466678,
-		2.84984,
-		18900000,
-		1056066225,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/131.png',
-		1,
-		X '446173682028444153482920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031342e205573657273206172652061626c6520746f2067656e65726174652044415348207468726f756768207468652070726f63657373206f66206d696e696e672e20446173682068617320612063757272656e7420737570706c79206f662031302c3631362c3039322e33303130363437312e20546865206c617374206b6e6f776e207072696365206f6620446173682069732039322e36363436353835332055534420616e6420697320757020372e3936206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2033323820616374697665206d61726b6574287329207769746820243139362c3132372c3531332e373220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e646173682e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Convex finance',
-		'CVX',
-		18.847915520591,
-		6.88322,
-		100000000,
-		984090453,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/9903.png',
-		1,
-		X '436f6e7665782046696e616e636520284356582920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20436f6e7665782046696e616e63652068617320612063757272656e7420737570706c79206f662038352c3836332c3632302e343334373838333820776974682035332c3430332c3032332e3035373231313320696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620436f6e7665782046696e616e63652069732031352e38383235393337332055534420616e6420697320757020312e3730206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20393420616374697665206d61726b65742873292077697468202431352c3639332c3036382e343620747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e636f6e76657866696e616e63652e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Nem',
-		'XEM',
-		0.107772444820,
-		2.45672,
-		8999999999,
-		969952003,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/873.png',
-		1,
-		X '4e454d202858454d2920697320612063727970746f63757272656e6379202e204e454d2068617320612063757272656e7420737570706c79206f6620382c3939392c3939392c3939392e20546865206c617374206b6e6f776e207072696365206f66204e454d20697320302e30393531393133362055534420616e6420697320757020312e3335206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031323120616374697665206d61726b65742873292077697468202431362c3735382c3336352e363320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e6420617420687474703a2f2f6e656d2e696f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Theta fuel',
-		'TFUEL',
-		0.180382206551,
-		5.58846,
-		NULL,
-		956244751,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/3822.png',
-		1,
-		X '5468657461204675656c2028544655454c2920697320612063727970746f63757272656e6379202e205468657461204675656c2068617320612063757272656e7420737570706c79206f6620352c3330312c3231342c3430302e20546865206c617374206b6e6f776e207072696365206f66205468657461204675656c20697320302e31353138313133342055534420616e6420697320757020322e3739206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20333420616374697665206d61726b65742873292077697468202434342c3930372c3730372e303920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e7468657461746f6b656e2e6f72672e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Pax dollar',
-		'USDP',
-		0.998820366083,
-		0.00345214,
-		NULL,
-		944527428,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/3330.png',
-		1,
-		X '50617820446f6c6c61722028555344502920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e2050617820446f6c6c61722068617320612063757272656e7420737570706c79206f66203934352c3634322c3934302e31312e20546865206c617374206b6e6f776e207072696365206f662050617820446f6c6c617220697320312e30303135353430352055534420616e6420697320757020302e3038206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20343020616374697665206d61726b65742873292077697468202431332c3432312c3235352e393120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e7061786f732e636f6d2f757364702f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:56',
-		'Anchor protocol',
-		'ANC',
-		3.639542359436,
-		1.67227,
-		1000000000,
-		938468992,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/8857.png',
-		1,
-		X '416e63686f722050726f746f636f6c2028414e432920697320612063727970746f63757272656e6379206c61756e6368656420696e2032303231616e64206f70657261746573206f6e2074686520546572726120706c6174666f726d2e20416e63686f722050726f746f636f6c2068617320612063757272656e7420737570706c79206f6620312c3030302c3030302c3030302077697468203236312c3438352c3031372e37323235333920696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620416e63686f722050726f746f636f6c20697320332e38303736393236352055534420616e6420697320646f776e202d332e3435206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20333520616374697665206d61726b6574287329207769746820243137382c3836342c3630302e303220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6170702e616e63686f7270726f746f636f6c2e636f6d2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Oasis network',
-		'ROSE',
-		0.261559534033,
-		4.85526,
-		10000000000,
-		913631194,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/7653.png',
-		1,
-		X '4f61736973204e6574776f726b2028524f53452920697320612063727970746f63757272656e6379206c61756e6368656420696e2032303230616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e204f61736973204e6574776f726b2068617320612063757272656e7420737570706c79206f662031302c3030302c3030302c303030207769746820332c3439332c3031342c3330362e323820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204f61736973204e6574776f726b20697320302e32313934343435392055534420616e6420697320757020302e3832206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20343420616374697665206d61726b6574287329207769746820243131312c3638352c3232362e303120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6f6173697370726f746f636f6c2e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Secret',
-		'SCRT',
-		5.320846461191,
-		-0.891954,
-		NULL,
-		868870587,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/5604.png',
-		1,
-		X '5365637265742028534352542920697320612063727970746f63757272656e6379206c61756e6368656420696e20323032302e205365637265742068617320612063757272656e7420737570706c79206f66203139302c3136352c3036302077697468203136332c3239352c35353720696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662053656372657420697320342e33353034323731362055534420616e6420697320757020302e3037206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20323820616374697665206d61726b65742873292077697468202432362c3831312c3136372e313220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f736372742e6e6574776f726b2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Symbol',
-		'XYM',
-		0.152640712391,
-		3.63796,
-		8999999999,
-		852110672,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/8677.png',
-		1,
-		X '53796d626f6c202858594d2920697320612063727970746f63757272656e6379206c61756e6368656420696e20323032312e2053796d626f6c2068617320612063757272656e7420737570706c79206f6620372c3936372c3938382c3932392e3530343737207769746820352c3538322c3436302c3030342e35353834303220696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662053796d626f6c20697320302e31333235353938372055534420616e6420697320646f776e202d312e3238206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20333620616374697665206d61726b657428732920776974682024332c3134362c3037382e393020747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e73796d626f6c2e6465762e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Mina',
-		'MINA',
-		2.175041861578,
-		2.20694,
-		NULL,
-		851435653,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/8646.png',
-		1,
-		X '4d696e6120284d494e412920697320612063727970746f63757272656e6379202e204d696e612068617320612063757272656e7420737570706c79206f66203832342c3130342c3937322077697468203339382c3331332c3534352e383430303339323520696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204d696e6120697320312e38313739333132372055534420616e6420697320646f776e202d312e3037206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20353020616374697665206d61726b65742873292077697468202433362c3032352c3533302e363220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6d696e6170726f746f636f6c2e636f6d2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Decred',
-		'DCR',
-		61.407121556025,
-		2.92871,
-		21000000,
-		847998221,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1168.png',
-		1,
-		X '44656372656420284443522920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031362e205573657273206172652061626c6520746f2067656e657261746520444352207468726f756768207468652070726f63657373206f66206d696e696e672e204465637265642068617320612063757272656e7420737570706c79206f662031332c3832392c3636302e353836343533342e20546865206c617374206b6e6f776e207072696365206f66204465637265642069732035312e39323438303938372055534420616e6420697320646f776e202d322e3637206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20353620616374697665206d61726b657428732920776974682024342c3935332c3436302e383320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6465637265642e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Bora',
-		'BORA',
-		0.968715760351,
-		1.41562,
-		NULL,
-		834306449,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/3801.png',
-		1,
-		X '424f52412028424f52412920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e20746865204b6c6179746e20706c6174666f726d2e20424f52412068617320612063757272656e7420737570706c79206f6620312c3230352c3735302c3030302077697468203836312c3235302c30303020696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620424f524120697320302e38333933383534382055534420616e6420697320757020302e3435206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e203420616374697665206d61726b65742873292077697468202432332c3531372c3535352e303920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f626f726165636f73797374656d2e636f6d2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Compound',
-		'COMP',
-		124.815476776420,
-		6.8453,
-		10000000,
-		823394988,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/5692.png',
-		1,
-		X '436f6d706f756e642028434f4d502920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20436f6d706f756e642068617320612063757272656e7420737570706c79206f662031302c3030302c303030207769746820362c3631332c3233322e313137353838373320696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620436f6d706f756e64206973203130332e37373931383532342055534420616e6420697320757020322e3536206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032343720616374697665206d61726b65742873292077697468202436352c3536392c3034362e363920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f636f6d706f756e642e66696e616e63652f676f7665726e616e63652f636f6d702e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Holo',
-		'HOT',
-		0.004666953798,
-		6.30603,
-		NULL,
-		808600358,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/2682.png',
-		1,
-		X '486f6c6f2028484f542920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20486f6c6f2068617320612063757272656e7420737570706c79206f66203137372c3631392c3433332c3534312e31343133332077697468203137332c3236302c3834342c3837312e383433363320696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620486f6c6f20697320302e30303430333130382055534420616e6420697320646f776e202d302e3038206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031303520616374697665206d61726b65742873292077697468202433392c3436392c3337382e373220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f686f6c6f636861696e2e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Yearn.finance',
-		'YFI',
-		21627.914906686867,
-		4.26705,
-		36666,
-		792397517,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/5864.png',
-		1,
-		X '796561726e2e66696e616e636520285946492920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20796561726e2e66696e616e63652068617320612063757272656e7420737570706c79206f662033362c36363620776974682033362c3633372e373231323235383820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620796561726e2e66696e616e63652069732031392c3231322e30313132383637372055534420616e6420697320757020342e3538206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032363020616374697665206d61726b6574287329207769746820243237302c3034322c3339322e393320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f796561726e2e66696e616e63652f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Celsius',
-		'CEL',
-		3.225015322260,
-		3.6409,
-		695658160,
-		770338511,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/2700.png',
-		1,
-		X '43656c73697573202843454c2920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e2043656c736975732068617320612063757272656e7420737570706c79206f66203639352c3635382c3136302077697468203233382c3836332c3531392e38323620696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662043656c7369757320697320322e38393839363239342055534420616e6420697320757020312e3834206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20353620616374697665206d61726b657428732920776974682024322c3831352c3531362e323820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f63656c736975732e6e6574776f726b2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Iotex',
-		'IOTX',
-		0.080429455948,
-		6.29404,
-		10000000000,
-		767359690,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/2777.png',
-		1,
-		X '496f5465582028494f54582920697320612063727970746f63757272656e6379202e20496f5465582068617320612063757272656e7420737570706c79206f6620392c3632362c3132342c3333322e3332207769746820392c3534302c3737392c3332342e333037383820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620496f54655820697320302e30363833353236322055534420616e6420697320757020302e3832206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20373820616374697665206d61726b65742873292077697468202432312c3038322c3736382e333020747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e696f7465782e696f2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Uma',
-		'UMA',
-		10.529823437364,
-		109.9,
-		101172570,
-		688301097,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/5617.png',
-		1,
-		X '554d412028554d412920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20554d412068617320612063757272656e7420737570706c79206f66203130362c3235312c3032392e3034303130363420776974682036352c3336382c3337372e313534313420696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620554d4120697320372e38313538313138372055534420616e6420697320757020302e3233206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031313320616374697665206d61726b65742873292077697468202439332c3733302c3536382e333220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f756d6170726f6a6563742e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Qtum',
-		'QTUM',
-		6.731572064701,
-		7.35389,
-		107822406,
-		666624948,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1684.png',
-		1,
-		X '5174756d20285154554d2920697320612063727970746f63757272656e6379202e205174756d2068617320612063757272656e7420737570706c79206f66203130332c3934342c35303120776974682039392c3033392c3238322e3732363035363820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66205174756d20697320352e37303933303939362055534420616e6420697320646f776e202d302e3032206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031383620616374697665206d61726b65742873292077697468202438372c3730312c3439392e343420747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7174756d2e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Xdc network',
-		'XDC',
-		0.053949926277,
-		2.25636,
-		NULL,
-		663854528,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/2634.png',
-		1,
-		X '584443204e6574776f726b20285844432920697320612063727970746f63757272656e6379202e20584443204e6574776f726b2068617320612063757272656e7420737570706c79206f662033372c3730352c3031322c3639382e373520776974682031322c3330352c3031322c3639382e373520696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620584443204e6574776f726b20697320302e30343736303931322055534420616e6420697320757020322e3531206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20353220616374697665206d61726b657428732920776974682024372c3833332c3036372e393720747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f78696e66696e2e6f72672f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:24:45',
-		'2022-03-08 20:24:57',
-		'Gnosis',
-		'GNO',
-		355.018827791052,
-		5.04304,
-		10000000,
-		662119699,
-		'https://s2.coinmarketcap.com/static/img/coins/64x64/1659.png',
-		1,
-		X '476e6f7369732028474e4f2920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20476e6f7369732068617320612063757272656e7420737570706c79206f662031302c3030302c303030207769746820312c3836352c30323720696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620476e6f736973206973203239372e39343332373430322055534420616e6420697320757020312e3932206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20353920616374697665206d61726b657428732920776974682024372c3235392c3733312e383220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f676e6f7369732e696f2f2e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:28:11',
-		'2022-03-08 20:28:11',
-		'Tether',
-		'USDT',
-		1.000521836571,
-		-0.0040924,
-		NULL,
-		79457508616,
-		'/img/assets/default_logo.png',
-		2,
-		X '496e666f726d6174696f6e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:28:11',
-		'2022-03-08 20:28:11',
-		'Bitcoin',
-		'BTC',
-		43841.470627771880,
-		5.9322,
-		21000000,
-		831750516419,
-		'/img/assets/default_logo.png',
-		2,
-		X '496e666f726d6174696f6e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:28:11',
-		'2022-03-08 20:28:11',
-		'Ethereum',
-		'ETH',
-		2957.493774090879,
-		5.35683,
-		NULL,
-		354258392823,
-		'/img/assets/default_logo.png',
-		2,
-		X '496e666f726d6174696f6e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:28:11',
-		'2022-03-08 20:28:11',
-		'Bnb',
-		'BNB',
-		407.734141051042,
-		5.9046,
-		165116760,
-		67323740675,
-		'/img/assets/default_logo.png',
-		2,
-		X '496e666f726d6174696f6e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:28:11',
-		'2022-03-08 20:28:11',
-		'Usd coin',
-		'USDC',
-		0.999365303471,
-		-0.0528703,
-		NULL,
-		53494554017,
-		'/img/assets/default_logo.png',
-		2,
-		X '496e666f726d6174696f6e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:28:11',
-		'2022-03-08 20:28:11',
-		'Xrp',
-		'XRP',
-		0.783178607299,
-		2.47649,
-		100000000000,
-		37552851223,
-		'/img/assets/default_logo.png',
-		2,
-		X '496e666f726d6174696f6e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:28:11',
-		'2022-03-08 20:28:11',
-		'Terra',
-		'LUNA',
-		91.506335987020,
-		8.12566,
-		NULL,
-		34338188997,
-		'/img/assets/default_logo.png',
-		2,
-		X '496e666f726d6174696f6e'
-	),
-	(
-		DEFAULT,
-		'2022-03-08 20:28:11',
-		'2022-03-08 20:28:11',
-		'Cardano',
-		'ADA',
-		0.964036688688,
-		3.98038,
-		45000000000,
-		32450759446,
-		'/img/assets/default_logo.png',
-		2,
-		X '496e666f726d6174696f6e'
-	);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(1, 50, 75, 874.187359702);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(2, 49, 29, 460.710360277);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(3, 12, 60, 803.613067701);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(4, 49, 8, 362.918086852);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(5, 47, 49, 769.575328985);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(6, 48, 31, 431.315132522);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(7, 44, 79, 353.991898893);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(8, 22, 35, 443.055477863);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(9, 10, 52, 308.155469702);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(10, 37, 66, 372.777579595);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(11, 7, 69, 571.681568099);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(12, 45, 39, 325.693032598);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(13, 50, 4, 818.802073864);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(14, 21, 5, 544.139236564);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(15, 16, 75, 163.778105898);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(16, 38, 100, 576.550650907);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(17, 21, 1, 192.960326952);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(18, 7, 27, 903.212903192);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(19, 44, 16, 935.858136047);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(20, 41, 86, 763.671276175);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(21, 1, 42, 292.851332466);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(22, 30, 7, 796.266043175);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(23, 29, 53, 439.827289812);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(24, 23, 12, 514.721477528);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(25, 13, 67, 300.746054438);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(26, 38, 81, 53.641193236);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(27, 29, 39, 476.559164563);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(28, 5, 35, 653.785618022);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(29, 10, 97, 404.775150864);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(30, 50, 7, 260.992790511);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(31, 35, 41, 206.529500986);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(32, 28, 32, 259.591848529);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(33, 13, 37, 163.936230776);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(34, 18, 42, 607.610551429);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(35, 14, 21, 432.207496812);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(36, 20, 35, 547.589146028);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(37, 2, 32, 141.355738027);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(38, 26, 32, 147.151043874);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(39, 31, 17, 882.399572617);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(40, 46, 16, 852.66132817);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(41, 30, 97, 428.065447403);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(42, 36, 21, 629.603105628);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(43, 6, 37, 252.834557271);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(44, 14, 49, 910.205647679);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(45, 31, 48, 221.230627827);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(46, 42, 84, 823.314262614);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(47, 41, 19, 50.965334289);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(48, 11, 93, 125.890983605);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(49, 28, 87, 597.658404946);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(50, 14, 25, 748.302637134);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(51, 20, 57, 871.563618697);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(52, 22, 51, 659.129463981);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(53, 2, 51, 442.919657507);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(54, 33, 67, 689.619108662);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(55, 50, 41, 802.775305894);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(56, 41, 87, 471.508488199);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(57, 29, 13, 158.433521938);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(58, 34, 15, 270.736647729);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(59, 20, 41, 153.38746563);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(60, 25, 76, 268.529554011);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(61, 37, 13, 319.29025459);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(62, 44, 8, 429.276805409);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(63, 2, 83, 644.142736804);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(64, 36, 90, 713.967425626);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(65, 3, 45, 307.578766519);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(66, 19, 83, 412.030167221);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(67, 6, 37, 988.753676965);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(68, 29, 1, 260.792780516);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(69, 26, 76, 115.364985504);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(70, 20, 54, 40.70111545);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(71, 41, 20, 824.050486962);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(72, 9, 41, 218.368769282);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(73, 14, 79, 436.416082876);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(74, 15, 52, 287.298080136);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(75, 8, 77, 723.823319823);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(76, 47, 34, 706.011462612);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(77, 9, 59, 991.488736768);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(78, 3, 78, 983.97342385);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(79, 9, 81, 776.083975237);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(80, 5, 21, 16.572502733);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(81, 1, 55, 216.812333761);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(82, 41, 17, 261.227072153);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(83, 36, 17, 657.364865193);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(84, 8, 26, 545.393350548);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(85, 22, 49, 617.891516887);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(86, 3, 51, 34.237718459);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(87, 8, 52, 687.255511263);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(88, 32, 84, 417.262044706);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(89, 12, 1, 608.638606681);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(90, 50, 38, 363.184839066);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(91, 29, 95, 368.474509502);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(92, 5, 5, 695.991903056);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(93, 43, 30, 802.303369586);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(94, 4, 73, 241.760837204);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(95, 42, 37, 301.755461479);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(96, 39, 17, 331.339555788);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(97, 14, 52, 720.98700089);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(98, 23, 86, 153.590356155);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(99, 29, 68, 296.645753662);
-
-INSERT INTO
-	assets_users (id, user_id, asset_id, amount)
-VALUES
-	(100, 30, 84, 830.423941408);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-11-21 15:02:50',
-		'2021-05-27 01:31:32',
-		42.835976775,
-		123.254549572,
-		22,
-		28,
-		78
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-10-23 15:23:29',
-		'2022-01-07 04:59:46',
-		119.472458439,
-		43.836843359,
-		10,
-		59,
-		89
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-10-16 05:38:46',
-		'2021-04-04 16:24:24',
-		175.410931418,
-		147.537584966,
-		14,
-		98,
-		50
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-09-29 11:30:59',
-		'2021-09-12 06:21:39',
-		118.185598659,
-		184.730685726,
-		24,
-		56,
-		29
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-06-25 09:40:37',
-		'2021-12-09 13:15:43',
-		150.994809497,
-		84.723030252,
-		43,
-		63,
-		84
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-02-08 17:42:01',
-		'2021-05-28 12:30:26',
-		46.185790731,
-		153.359139439,
-		33,
-		21,
-		69
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-07-27 15:20:23',
-		'2021-03-16 11:23:46',
-		19.196890966,
-		102.276176583,
-		18,
-		63,
-		20
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-04-22 11:47:15',
-		'2021-04-28 12:45:18',
-		93.84334356,
-		234.000467048,
-		4,
-		59,
-		69
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-08-12 07:18:10',
-		'2022-01-27 12:06:58',
-		35.565636959,
-		228.281447363,
-		34,
-		74,
-		30
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-09-01 16:46:09',
-		'2021-09-10 00:50:43',
-		10.853250842,
-		60.726152457,
-		45,
-		83,
-		65
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-04-07 11:41:23',
-		'2021-05-23 05:23:55',
-		5.792546896,
-		28.529001289,
-		12,
-		82,
-		15
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-12-05 18:26:45',
-		'2021-04-21 06:19:19',
-		67.759701753,
-		91.941784415,
-		8,
-		1,
-		45
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-08-11 20:19:38',
-		'2021-11-16 01:01:54',
-		144.260518053,
-		167.694166158,
-		39,
-		1,
-		29
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-03-18 17:05:11',
-		'2021-09-03 23:10:55',
-		146.853881361,
-		89.741820557,
-		45,
-		62,
-		69
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-11-03 11:47:20',
-		'2021-09-27 19:34:59',
-		176.992714567,
-		26.756443858,
-		47,
-		98,
-		19
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2022-01-12 22:38:19',
-		'2021-04-13 04:21:05',
-		116.637031028,
-		184.276047841,
-		1,
-		34,
-		22
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-11-12 14:02:21',
-		'2022-01-01 20:50:33',
-		115.771495852,
-		115.615644715,
-		18,
-		87,
-		46
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-06-29 00:57:19',
-		'2021-08-05 16:53:19',
-		110.147051232,
-		168.530890882,
-		30,
-		68,
-		34
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2022-01-14 11:22:57',
-		'2021-03-07 14:05:46',
-		106.85699553,
-		75.244958367,
-		36,
-		97,
-		18
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-06-05 23:18:42',
-		'2021-05-28 14:47:00',
-		74.29795371,
-		158.571443672,
-		16,
-		35,
-		52
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-06-09 06:51:53',
-		'2021-07-14 11:11:52',
-		30.422185203,
-		115.289526619,
-		36,
-		3,
-		1
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-11-29 08:29:46',
-		'2021-09-01 10:53:57',
-		43.103834751,
-		12.403579911,
-		47,
-		31,
-		62
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-09-19 04:32:31',
-		'2021-02-22 13:28:49',
-		102.670299869,
-		113.33098544,
-		17,
-		43,
-		46
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-08-16 07:59:12',
-		'2021-06-30 08:43:25',
-		9.229610216,
-		165.582438009,
-		47,
-		65,
-		35
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-04-22 01:46:15',
-		'2021-06-24 10:50:10',
-		82.653609884,
-		56.472745449,
-		26,
-		8,
-		10
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-12-21 06:35:53',
-		'2021-06-30 13:46:00',
-		37.227630161,
-		107.816814753,
-		27,
-		16,
-		51
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-11-18 06:50:51',
-		'2021-09-18 00:26:12',
-		55.677048811,
-		168.778081196,
-		36,
-		68,
-		85
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-11-18 09:08:50',
-		'2021-02-16 08:35:35',
-		115.390190006,
-		57.265153119,
-		29,
-		40,
-		56
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-10-29 14:02:12',
-		'2021-05-01 02:57:07',
-		95.419201841,
-		242.636012435,
-		20,
-		86,
-		100
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-07-25 09:22:33',
-		'2021-10-01 17:59:11',
-		9.816456922,
-		147.53857964,
-		39,
-		83,
-		74
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2022-01-27 05:33:27',
-		'2021-02-09 04:24:35',
-		113.207036241,
-		145.28346586,
-		35,
-		51,
-		84
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-09-20 04:37:12',
-		'2021-10-30 19:45:18',
-		154.535468711,
-		186.218749463,
-		3,
-		57,
-		96
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-12-23 16:48:34',
-		'2021-12-10 00:33:11',
-		153.176821728,
-		170.769639419,
-		26,
-		28,
-		80
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-10-08 23:21:24',
-		'2021-07-17 17:19:37',
-		21.486541317,
-		86.519811603,
-		27,
-		19,
-		13
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-07-26 12:06:48',
-		'2021-02-02 13:41:36',
-		115.17175322,
-		140.834204795,
-		30,
-		27,
-		49
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-05-28 06:24:30',
-		'2022-01-03 00:55:03',
-		73.154767806,
-		243.373194773,
-		25,
-		62,
-		48
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-08-14 17:46:08',
-		'2021-05-27 00:10:05',
-		186.842110899,
-		11.415910841,
-		10,
-		72,
-		53
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2022-01-09 01:44:50',
-		'2021-09-17 03:32:17',
-		77.511571117,
-		161.922687028,
-		28,
-		58,
-		12
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-08-21 05:32:33',
-		'2021-04-30 12:22:38',
-		2.466530562,
-		111.984676395,
-		45,
-		15,
-		27
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-02-24 02:10:23',
-		'2021-02-19 10:20:55',
-		9.026241536,
-		64.868460302,
-		33,
-		74,
-		81
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-07-07 08:40:14',
-		'2021-12-03 10:48:20',
-		114.823155143,
-		85.762768935,
-		19,
-		91,
-		97
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-08-04 08:35:13',
-		'2021-03-19 20:41:38',
-		151.050532176,
-		137.454222969,
-		15,
-		15,
-		47
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-06-30 23:17:22',
-		'2021-04-05 14:15:46',
-		92.427649646,
-		242.367363465,
-		29,
-		83,
-		76
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-12-17 14:03:50',
-		'2021-06-26 14:48:31',
-		91.466459291,
-		203.085399802,
-		34,
-		32,
-		65
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-07-09 15:38:45',
-		'2021-07-01 06:11:09',
-		19.997760721,
-		69.272623704,
-		24,
-		18,
-		19
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2022-01-29 16:11:11',
-		'2021-11-23 16:42:14',
-		21.974622631,
-		151.41557432,
-		22,
-		51,
-		94
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-08-26 14:04:48',
-		'2021-03-24 09:58:18',
-		142.544097879,
-		231.974601848,
-		42,
-		48,
-		85
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-08-22 19:49:16',
-		'2021-12-27 22:13:42',
-		155.176326034,
-		176.271898941,
-		7,
-		24,
-		77
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-11-14 23:13:32',
-		'2021-09-11 14:00:05',
-		40.883438081,
-		32.695261931,
-		44,
-		6,
-		53
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-09-14 07:36:50',
-		'2021-11-24 13:00:29',
-		45.405258402,
-		186.256434691,
-		25,
-		68,
-		97
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-06-26 13:19:21',
-		'2021-08-31 21:31:03',
-		63.538156331,
-		128.193904068,
-		32,
-		54,
-		2
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-10-16 03:22:30',
-		'2021-08-30 22:10:46',
-		181.059586254,
-		78.455712326,
-		27,
-		54,
-		21
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2022-01-06 02:18:45',
-		'2021-07-22 07:31:38',
-		148.961343184,
-		242.873865974,
-		34,
-		79,
-		18
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-06-12 13:34:33',
-		'2021-09-30 03:44:35',
-		123.366672766,
-		236.063192208,
-		1,
-		98,
-		34
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-10-02 14:50:22',
-		'2021-01-15 02:41:24',
-		191.654128595,
-		53.500569626,
-		1,
-		40,
-		64
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-08-24 17:40:45',
-		'2021-11-11 20:05:20',
-		186.354176892,
-		106.719863506,
-		4,
-		41,
-		7
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-08-31 07:02:22',
-		'2022-01-02 21:02:07',
-		45.101890198,
-		150.993475587,
-		17,
-		99,
-		31
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-10-21 21:49:02',
-		'2021-08-22 06:09:55',
-		135.286312028,
-		68.843815278,
-		46,
-		35,
-		91
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-05-18 22:49:10',
-		'2021-07-27 22:32:09',
-		159.428102783,
-		63.323589994,
-		14,
-		16,
-		42
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-06-04 08:24:59',
-		'2021-10-11 10:24:31',
-		141.69880723,
-		200.439361094,
-		1,
-		18,
-		99
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-04-16 07:13:25',
-		'2021-11-06 00:58:30',
-		92.631454186,
-		70.693349164,
-		30,
-		29,
-		88
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-09-12 14:51:34',
-		'2021-10-25 14:11:42',
-		60.329916398,
-		144.434130255,
-		19,
-		8,
-		74
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-11-19 18:38:32',
-		'2021-04-03 03:43:35',
-		49.161884434,
-		81.66660961,
-		31,
-		75,
-		12
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-01-28 08:44:22',
-		'2021-12-15 14:08:59',
-		130.291387692,
-		244.611703074,
-		16,
-		46,
-		95
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-12-20 22:59:04',
-		'2021-11-26 09:48:18',
-		15.41233202,
-		99.037656492,
-		48,
-		88,
-		84
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-04-13 06:23:44',
-		'2021-06-19 22:36:57',
-		76.176486204,
-		187.29998395,
-		46,
-		21,
-		35
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-12-13 14:50:03',
-		'2021-08-10 10:45:38',
-		42.259365168,
-		249.079722112,
-		23,
-		42,
-		27
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-01-22 17:18:51',
-		'2021-07-04 02:47:39',
-		64.248125171,
-		205.161331325,
-		42,
-		68,
-		83
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-05-20 04:33:48',
-		'2021-05-17 02:50:28',
-		188.158803187,
-		104.167777406,
-		38,
-		16,
-		63
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-06-03 23:41:08',
-		'2021-12-23 04:22:07',
-		161.523458027,
-		44.728005508,
-		36,
-		87,
-		4
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-07-13 14:13:04',
-		'2021-01-15 22:24:29',
-		133.997382826,
-		66.638326321,
-		29,
-		55,
-		13
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-06-20 08:35:35',
-		'2021-07-13 21:12:37',
-		35.648786749,
-		241.241859766,
-		32,
-		93,
-		98
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-11-20 09:59:14',
-		'2021-10-08 17:45:33',
-		26.399257959,
-		193.256920478,
-		38,
-		82,
-		68
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-02-26 09:08:03',
-		'2021-05-06 04:43:53',
-		45.214145655,
-		142.916959436,
-		4,
-		87,
-		50
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2022-01-01 11:35:09',
-		'2022-01-19 19:00:57',
-		154.287205053,
-		247.798952535,
-		22,
-		16,
-		66
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-07-07 05:47:43',
-		'2021-08-01 17:37:25',
-		43.901556913,
-		243.869516887,
-		1,
-		8,
-		1
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-03-09 14:40:52',
-		'2021-01-19 06:30:40',
-		185.274183108,
-		40.079531567,
-		24,
-		56,
-		67
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-02-07 00:03:00',
-		'2021-07-22 23:29:20',
-		66.019432713,
-		37.551579975,
-		21,
-		11,
-		85
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-03-13 18:48:34',
-		'2022-01-09 02:00:11',
-		15.553757588,
-		90.090798301,
-		33,
-		48,
-		77
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-11-27 12:13:45',
-		'2021-05-12 12:18:58',
-		19.601641689,
-		117.255489474,
-		26,
-		63,
-		68
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-10-16 22:17:52',
-		'2021-03-09 05:07:19',
-		178.858891067,
-		127.486828116,
-		16,
-		46,
-		50
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-12-20 05:00:27',
-		'2021-10-21 14:55:46',
-		192.137111086,
-		2.878238118,
-		17,
-		78,
-		71
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-06-11 07:22:54',
-		'2021-11-06 20:31:06',
-		28.484987224,
-		168.485600936,
-		25,
-		79,
-		77
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-12-29 07:50:05',
-		'2021-11-08 23:33:32',
-		97.788230989,
-		3.930788885,
-		46,
-		56,
-		81
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-08-22 14:29:28',
-		'2021-10-02 00:10:57',
-		15.710530992,
-		58.138032359,
-		1,
-		100,
-		4
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-08-24 17:54:42',
-		'2022-01-24 16:21:27',
-		99.074623324,
-		240.117119525,
-		20,
-		65,
-		62
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-07-07 01:23:46',
-		'2021-04-05 01:25:41',
-		139.145612543,
-		176.263586203,
-		2,
-		33,
-		1
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-08-04 16:07:59',
-		'2021-09-10 22:06:12',
-		41.00110889,
-		115.836022043,
-		14,
-		83,
-		36
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-01-18 21:53:05',
-		'2021-11-17 11:57:53',
-		4.240112038,
-		204.479906571,
-		16,
-		92,
-		60
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-06-19 04:31:31',
-		'2021-06-24 22:11:59',
-		1.738715419,
-		90.728678581,
-		32,
-		61,
-		84
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-04-20 05:32:13',
-		'2021-10-31 06:02:43',
-		23.144160423,
-		92.346653944,
-		29,
-		93,
-		48
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-01-19 16:17:44',
-		'2021-11-22 08:49:08',
-		7.826387204,
-		88.207382559,
-		37,
-		34,
-		65
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-10-28 00:02:13',
-		'2021-04-28 18:00:36',
-		72.846229881,
-		216.504381364,
-		40,
-		41,
-		77
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-10-20 23:04:00',
-		'2021-02-07 00:28:13',
-		91.666819316,
-		46.399929437,
-		16,
-		78,
-		60
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-09-01 01:59:53',
-		'2021-11-04 01:06:00',
-		161.25588145,
-		36.788949557,
-		23,
-		2,
-		77
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-03-21 06:23:16',
-		'2021-08-18 00:57:55',
-		180.774100888,
-		197.939919264,
-		6,
-		35,
-		98
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-07-08 16:21:12',
-		'2021-07-31 12:47:29',
-		57.70902965,
-		97.459084581,
-		30,
-		22,
-		80
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-10-05 10:09:14',
-		'2021-11-23 05:51:40',
-		142.671080952,
-		76.31189793,
-		41,
-		93,
-		59
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-03-21 17:20:10',
-		'2021-08-22 11:28:18',
-		154.69934064,
-		130.568765685,
-		19,
-		99,
-		64
-	);
-
-INSERT INTO
-	transactions (
-		created_at,
-		updated_at,
-		amount,
-		price,
-		user_id,
-		input_asset_id,
-		output_asset_id
-	)
-VALUES
-	(
-		'2021-04-24 06:55:15',
-		'2021-10-11 10:11:56',
-		86.019399146,
-		15.492683059,
-		42,
-		86,
-		95
-	);
+INSERT
+	INTO
+	assets(id,
+	created_at,
+	updated_at,
+	name,
+	ticker,
+	price,
+	price_change_24,
+	supply,
+	mcap,
+	logo,
+	type_id,
+	description)
+VALUES(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 21:12:32',
+'Tether',
+'USDT',
+1.000521836571,
+-0.0040924,
+NULL,
+79457508616,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png',
+1,
+X'5465746865722028555344542920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e205465746865722068617320612063757272656e7420737570706c79206f662038332c3136342c3639372c3034382e373738323120776974682038302c3032392c3535362c3435392e303935323920696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662054657468657220697320312e30303033323635332055534420616e6420697320646f776e202d302e3031206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20323932383020616374697665206d61726b65742873292077697468202435362c3133392c3937332c3535322e373520747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7465746865722e746f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Bitcoin',
+'BTC',
+43841.470627771880,
+5.9322,
+21000000,
+831750516419,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png',
+1,
+X'426974636f696e20284254432920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e657261746520425443207468726f756768207468652070726f63657373206f66206d696e696e672e20426974636f696e2068617320612063757272656e7420737570706c79206f662031382c3937382c3031322e20546865206c617374206b6e6f776e207072696365206f6620426974636f696e2069732033382c3636322e33383932343738362055534420616e6420697320757020312e3335206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e203932323020616374697665206d61726b65742873292077697468202432362c3035302c3538352c3937352e373520747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f626974636f696e2e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Ethereum',
+'ETH',
+2957.493774090879,
+5.35683,
+NULL,
+354258392823,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png',
+1,
+X'457468657265756d20284554482920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e657261746520455448207468726f756768207468652070726f63657373206f66206d696e696e672e20457468657265756d2068617320612063757272656e7420737570706c79206f66203131392c3838302c3433382e3734392e20546865206c617374206b6e6f776e207072696365206f6620457468657265756d20697320322c3537362e31333631343733352055534420616e6420697320757020332e3231206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e203535343820616374697665206d61726b65742873292077697468202431342c3037372c3036372c3439342e373920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e657468657265756d2e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:56',
+'Bnb',
+'BNB',
+407.734141051042,
+5.9046,
+165116760,
+67323740675,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png',
+1,
+X'424e422028424e422920697320612063727970746f63757272656e6379202e20424e422068617320612063757272656e7420737570706c79206f66203136352c3131362c3736302e38392e20546865206c617374206b6e6f776e207072696365206f6620424e42206973203338312e31313936313336322055534420616e6420697320646f776e202d302e3230206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2037333420616374697665206d61726b657428732920776974682024312c3730392c3535362c3030352e313620747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e62696e616e63652e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Usd coin',
+'USDC',
+0.999365303471,
+-0.0528703,
+NULL,
+53494554017,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png',
+1,
+X'55534420436f696e2028555344432920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e2055534420436f696e2068617320612063757272656e7420737570706c79206f662035322c3433322c3333342c3233322e3938353035342e20546865206c617374206b6e6f776e207072696365206f662055534420436f696e20697320312e30303031363530312055534420616e6420697320757020302e3038206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e203332303520616374697665206d61726b657428732920776974682024342c3232392c3433352c3233352e313920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e63656e7472652e696f2f757364632e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Xrp',
+'XRP',
+0.783178607299,
+2.47649,
+100000000000,
+37552851223,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png',
+1,
+X'58525020285852502920697320612063727970746f63757272656e6379202e205852502068617320612063757272656e7420737570706c79206f662039392c3938392c3639382c31373720776974682034372c3934342c3237302c39353420696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662058525020697320302e37323230313237392055534420616e6420697320646f776e202d302e3232206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2036383620616374697665206d61726b657428732920776974682024312c3933382c3238352c3437312e313320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7872706c2e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Terra',
+'LUNA',
+91.506335987020,
+8.12566,
+NULL,
+34338188997,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/4172.png',
+1,
+X'546572726120284c554e412920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031392e2054657272612068617320612063757272656e7420737570706c79206f66203737372c3632392c3236332e3734313232362077697468203336342c3635342c3833342e3632343034343320696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662054657272612069732038342e37363333373132382055534420616e6420697320757020392e3230206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031363620616374697665206d61726b657428732920776974682024332c3236362c3438372c3839362e353320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f74657272612e6d6f6e65792f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:56',
+'Cardano',
+'ADA',
+0.964036688688,
+3.98038,
+45000000000,
+32450759446,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png',
+1,
+X'43617264616e6f20284144412920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031372e205573657273206172652061626c6520746f2067656e657261746520414441207468726f756768207468652070726f63657373206f66206d696e696e672e2043617264616e6f2068617320612063757272656e7420737570706c79206f662033342c3138322c3130352c3432322e34383620776974682033332c3637342c3337372c3032372e323520696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662043617264616e6f20697320302e37393734323933342055534420616e6420697320646f776e202d302e3237206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2033373220616374697665206d61726b6574287329207769746820243936342c3537362c3430382e383920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e63617264616e6f2e6f72672e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Solana',
+'SOL',
+98.178619693953,
+1.992,
+NULL,
+31462710396,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png',
+1,
+X'536f6c616e612028534f4c2920697320612063727970746f63757272656e6379206c61756e6368656420696e20323032302e20536f6c616e612068617320612063757272656e7420737570706c79206f66203531312c3631362c3934362e3134323238392077697468203331382c3034332c3737382e3236353638303920696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620536f6c616e612069732038322e30373137313037362055534420616e6420697320646f776e202d302e3236206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032363720616374697665206d61726b657428732920776974682024322c3134332c3132392c3937332e353120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f736f6c616e612e636f6d2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:56',
+'Avalanche',
+'AVAX',
+86.458473721391,
+7.3925,
+NULL,
+21291478562,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/5805.png',
+1,
+X'4176616c616e6368652028415641582920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031382e204176616c616e6368652068617320612063757272656e7420737570706c79206f66203339352c3839312c3238392e393133343130372077697468203236352c3836342c3832362e373132303234303320696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204176616c616e6368652069732037322e38333939303930362055534420616e6420697320757020312e3330206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032303320616374697665206d61726b657428732920776974682024312c3335362c3932392c3939322e383820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f617661782e6e6574776f726b2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Polkadot',
+'DOT',
+18.830109119052,
+5.46806,
+NULL,
+18596226264,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/6636.png',
+1,
+X'506f6c6b61646f742028444f542920697320612063727970746f63757272656e6379202e20506f6c6b61646f742068617320612063757272656e7420737570706c79206f6620312c3130332c3330332c3437312e3338323237332077697468203938372c3537392c3331342e39353730383520696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620506f6c6b61646f742069732031362e383831343632372055534420616e6420697320757020332e3335206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2033313420616374697665206d61726b6574287329207769746820243838362c3037372c3332322e373620747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f706f6c6b61646f742e6e6574776f726b2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Binance usd',
+'BUSD',
+0.999529718499,
+-0.0424088,
+NULL,
+18321426256,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/4687.png',
+1,
+X'42696e616e6365205553442028425553442920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520424e4220426561636f6e20436861696e2028424550322920706c6174666f726d2e2042696e616e6365205553442068617320612063757272656e7420737570706c79206f662031372c3834312c3534322c3437392e3437393235362e20546865206c617374206b6e6f776e207072696365206f662042696e616e63652055534420697320302e393939353736382055534420616e6420697320757020302e3036206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e203331313920616374697665206d61726b657428732920776974682024342c3638322c3632382c3030312e363720747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e62696e616e63652e636f6d2f656e2f627573642e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Dogecoin',
+'DOGE',
+0.133549593674,
+4.13252,
+NULL,
+17718126665,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/74.png',
+1,
+X'446f6765636f696e2028444f47452920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e657261746520444f4745207468726f756768207468652070726f63657373206f66206d696e696e672e20446f6765636f696e2068617320612063757272656e7420737570706c79206f66203133322c3637302c3736342c3239392e38393430392e20546865206c617374206b6e6f776e207072696365206f6620446f6765636f696e20697320302e31313637313335322055534420616e6420697320646f776e202d302e3330206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2034353320616374697665206d61726b6574287329207769746820243439342c3235322c3236382e333220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e6420617420687474703a2f2f646f6765636f696e2e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Shiba inu',
+'SHIB',
+0.000027008150,
+8.02678,
+NULL,
+14829183475,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/5994.png',
+1,
+X'536869626120496e752028534849422920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20536869626120496e752068617320612063757272656e7420737570706c79206f66203538392c3733352c3033302c3430382c3332322e382077697468203534392c3036332c3237382c3837362c3330312e393420696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620536869626120496e7520697320302e30303030323237392055534420616e6420697320646f776e202d302e3433206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2033313620616374697665206d61726b6574287329207769746820243731322c3539372c3234322e383120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7368696261746f6b656e2e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Terrausd',
+'UST',
+1.003406272799,
+-0.0587902,
+NULL,
+13062718207,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/7129.png',
+1,
+X'546572726155534420285553542920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031392e2054657272615553442068617320612063757272656e7420737570706c79206f662031332c3936372c3339372c3331372e3132353137322e20546865206c617374206b6e6f776e207072696365206f6620546572726155534420697320312e30303435343938392055534420616e6420697320757020302e3436206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2033313320616374697665206d61726b6574287329207769746820243532372c3032332c3732372e373620747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f74657272612e6d6f6e65792e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Polygon',
+'MATIC',
+1.623053890169,
+4.71578,
+10000000000,
+12266799401,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png',
+1,
+X'506f6c79676f6e20284d415449432920697320612063727970746f63757272656e6379202e20506f6c79676f6e2068617320612063757272656e7420737570706c79206f662031302c3030302c3030302c303030207769746820372c3636342c3731332c3435352e363220696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620506f6c79676f6e20697320312e34343033363832352055534420616e6420697320757020312e3739206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2033333920616374697665206d61726b6574287329207769746820243930372c3534352c3032342e313020747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f706f6c79676f6e2e746563686e6f6c6f67792f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Wrapped bitcoin',
+'WBTC',
+43836.947455976600,
+6.44422,
+NULL,
+11496774582,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/3717.png',
+1,
+X'5772617070656420426974636f696e2028574254432920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e205772617070656420426974636f696e2068617320612063757272656e7420737570706c79206f66203237312c3337342e38393833363139342e20546865206c617374206b6e6f776e207072696365206f66205772617070656420426974636f696e2069732033382c3635392e37333138303032382055534420616e6420697320757020312e3339206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2033333920616374697665206d61726b6574287329207769746820243131352c3435342c3039352e343420747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f776274632e6e6574776f726b2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Cronos',
+'CRO',
+0.437514206069,
+3.44533,
+30263013692,
+11052927378,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/3635.png',
+1,
+X'43726f6e6f73202843524f2920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e2043726f6e6f732068617320612063757272656e7420737570706c79206f662033302c3236332c3031332c36393220776974682032352c3236332c3031332c36393220696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662043726f6e6f7320697320302e33383732373735342055534420616e6420697320757020312e3834206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031323920616374697665206d61726b65742873292077697468202437362c3230332c3930332e303020747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e63727970746f2e636f6d2f656e2f636861696e2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Dai',
+'DAI',
+0.999708003932,
+-0.0957712,
+NULL,
+9694973016,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png',
+1,
+X'44616920284441492920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e204461692068617320612063757272656e7420737570706c79206f6620392c3737342c3638362c3534392e3431313331362e20546865206c617374206b6e6f776e207072696365206f662044616920697320312e30303033383039352055534420616e6420697320757020302e3037206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2037383520616374697665206d61726b6574287329207769746820243431312c3734372c3836372e333620747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e6420617420687474703a2f2f7777772e6d616b657264616f2e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:56',
+'Cosmos',
+'ATOM',
+31.161572717771,
+4.37767,
+NULL,
+8923748834,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/3794.png',
+1,
+X'436f736d6f73202841544f4d2920697320612063727970746f63757272656e6379202e20436f736d6f732068617320612063757272656e7420737570706c79206f6620302077697468203238362c3337302c32393720696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620436f736d6f732069732032372e373335343230362055534420616e6420697320646f776e202d322e3434206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032343620616374697665206d61726b657428732920776974682024312c3034362c3134382c3532392e333820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f636f736d6f732e6e6574776f726b2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Litecoin',
+'LTC',
+112.192271558359,
+2.42251,
+84000000,
+7825136774,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/2.png',
+1,
+X'4c697465636f696e20284c54432920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e6572617465204c5443207468726f756768207468652070726f63657373206f66206d696e696e672e204c697465636f696e2068617320612063757272656e7420737570706c79206f662038342c3030302c30303020776974682036392c3739392c3239332e373737393134363420696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204c697465636f696e206973203130302e31323538313937352055534420616e6420697320757020312e3433206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2037343220616374697665206d61726b6574287329207769746820243730302c3835342c3931362e313420747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6c697465636f696e2e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Near protocol',
+'NEAR',
+11.438161433104,
+25.0247,
+1000000000,
+7359386087,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/6535.png',
+1,
+X'4e4541522050726f746f636f6c20284e4541522920697320612063727970746f63757272656e6379206c61756e6368656420696e20323032302e204e4541522050726f746f636f6c2068617320612063757272656e7420737570706c79206f6620312c3030302c3030302c3030302077697468203634342c3635372c30323120696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204e4541522050726f746f636f6c20697320392e37313832323334332055534420616e6420697320646f776e202d302e3037206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031303920616374697665206d61726b6574287329207769746820243433322c3435392c3033362e313720747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6e6561722e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Uniswap',
+'UNI',
+10.389113240738,
+2.81543,
+1000000000,
+7135336407,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/7083.png',
+1,
+X'556e69737761702028554e492920697320612063727970746f63757272656e6379206c61756e6368656420696e2032303230616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20556e69737761702068617320612063757272656e7420737570706c79206f6620312c3030302c3030302c3030302077697468203638372c3231322c3038332e3035353231333920696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620556e697377617020697320382e37393331353130362055534420616e6420697320757020352e3537206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2033343320616374697665206d61726b6574287329207769746820243231392c3438362c3938322e313220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f756e69737761702e6f72672f626c6f672f756e692f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Chainlink',
+'LINK',
+15.250742743579,
+3.7255,
+1000000000,
+7122242499,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1975.png',
+1,
+X'436861696e6c696e6b20284c494e4b2920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20436861696e6c696e6b2068617320612063757272656e7420737570706c79206f6620312c3030302c3030302c3030302077697468203436372c3030392c3534392e3532303536333720696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620436861696e6c696e6b2069732031332e30313638323232312055534420616e6420697320757020322e3537206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2036303620616374697665206d61726b6574287329207769746820243738372c3737302c3530342e373820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f636861696e2e6c696e6b2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Ftx token',
+'FTT',
+45.983286506989,
+1.97371,
+352170015,
+6337358351,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/4195.png',
+1,
+X'46545820546f6b656e20284654542920697320612063727970746f63757272656e6379206c61756e6368656420696e2032303139616e64206f70657261746573206f6e2074686520424e4220426561636f6e20436861696e2028424550322920706c6174666f726d2e2046545820546f6b656e2068617320612063757272656e7420737570706c79206f66203333332c3434372c3430352e373835393731352077697468203133372c3537382c3036392e373138373433373420696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662046545820546f6b656e2069732034302e35303032383835342055534420616e6420697320757020312e3830206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031313420616374697665206d61726b6574287329207769746820243131352c3130382c3139332e313320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6674782e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Tron',
+'TRX',
+0.061808735449,
+2.61257,
+NULL,
+6288251398,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1958.png',
+1,
+X'54524f4e20285452582920697320612063727970746f63757272656e6379202e2054524f4e2068617320612063757272656e7420737570706c79206f66203130312c3732312c3933372c3337362e31343032332077697468203130312c3732312c3934362c3437362e363538343320696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662054524f4e20697320302e30363033373330372055534420616e6420697320757020332e3136206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2035373420616374697665206d61726b657428732920776974682024312c3130342c3431382c3132332e303720747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f74726f6e2e6e6574776f726b2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:56',
+'Bitcoin cash',
+'BCH',
+327.994129391956,
+0.364167,
+21000000,
+6230777378,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1831.png',
+1,
+X'426974636f696e204361736820284243482920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e657261746520424348207468726f756768207468652070726f63657373206f66206d696e696e672e20426974636f696e20436173682068617320612063757272656e7420737570706c79206f662031392c3030322c3939332e37352e20546865206c617374206b6e6f776e207072696365206f6620426974636f696e2043617368206973203238332e33323438333634342055534420616e6420697320757020332e3034206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2035373420616374697665206d61726b657428732920776974682024332c3537322c3532312c3139322e363420747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e6420617420687474703a2f2f6263682e696e666f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Unus sed leo',
+'LEO',
+5.933008322162,
+2.76792,
+NULL,
+5659817792,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/3957.png',
+1,
+X'554e555320534544204c454f20284c454f2920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20554e555320534544204c454f2068617320612063757272656e7420737570706c79206f66203938352c3233392c3530342077697468203935332c3935342c31333020696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620554e555320534544204c454f20697320352e36353534373139342055534420616e6420697320757020332e3936206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20313920616374697665206d61726b657428732920776974682024352c3632352c3837372e393320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e62697466696e65782e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:56',
+'Algorand',
+'ALGO',
+0.852655568573,
+1.39025,
+10000000000,
+5643756141,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/4030.png',
+1,
+X'416c676f72616e642028414c474f2920697320612063727970746f63757272656e6379202e20416c676f72616e642068617320612063757272656e7420737570706c79206f6620372c3036302c3333312c3338342e313538383339207769746820362c3632342c3939332c3832332e34353032333520696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620416c676f72616e6420697320302e37333634363331362055534420616e6420697320757020302e3538206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031393320616374697665206d61726b6574287329207769746820243135332c3236372c3035332e393420747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e6420617420687474703a2f2f616c676f72616e642e666f756e646174696f6e2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Decentraland',
+'MANA',
+2.806032648414,
+3.47905,
+NULL,
+5140978430,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1966.png',
+1,
+X'446563656e7472616c616e6420284d414e412920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20446563656e7472616c616e642068617320612063757272656e7420737570706c79206f6620322c3139332c3738372c3632372e333230313436207769746820312c3833322c3037392c3439382e3336333432393820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620446563656e7472616c616e6420697320322e33383933393030382055534420616e6420697320757020302e3833206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032343620616374697665206d61726b6574287329207769746820243337382c3135322c3237322e353320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f646563656e7472616c616e642e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Stellar',
+'XLM',
+0.198138862789,
+3.82193,
+50001806812,
+4942363537,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/512.png',
+1,
+X'5374656c6c61722028584c4d2920697320612063727970746f63757272656e6379202e205374656c6c61722068617320612063757272656e7420737570706c79206f662035302c3030312c3738382c3132372e313439303820776974682032342c3536312c3536302c3035332e313938323420696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66205374656c6c617220697320302e31373133333239312055534420616e6420697320757020302e3531206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2034303720616374697665206d61726b6574287329207769746820243238342c3031372c3030372e313820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e7374656c6c61722e6f72672e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Fantom',
+'FTM',
+1.839146334762,
+6.91539,
+3175000000,
+4680638959,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/3513.png',
+1,
+X'46616e746f6d202846544d2920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031382e2046616e746f6d2068617320612063757272656e7420737570706c79206f6620322c3534352c3030362c3237332e20546865206c617374206b6e6f776e207072696365206f662046616e746f6d20697320312e33323031333136382055534420616e6420697320646f776e202d302e3438206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032363020616374697665206d61726b657428732920776974682024312c3233362c3032322c3336382e323620747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f66616e746f6d2e666f756e646174696f6e2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Bitcoin bep2',
+'BTCB',
+43806.853886682020,
+6.02656,
+NULL,
+4606317465,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/4023.png',
+1,
+X'426974636f696e20424550322028425443422920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520424e4220426561636f6e20436861696e2028424550322920706c6174666f726d2e20426974636f696e20424550322068617320612063757272656e7420737570706c79206f66203131322c3530312077697468203130352c3135342e363838393938303320696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620426974636f696e20424550322069732033382c3630382e33323539323339372055534420616e6420697320757020312e3238206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031303520616374697665206d61726b65742873292077697468202433362c3839302c3131392e383220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f626974636f696e2e6f72672f656e2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Hedera',
+'HBAR',
+0.225442797809,
+1.84157,
+50000000000,
+4410868800,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/4642.png',
+1,
+X'4865646572612028484241522920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031372e204865646572612068617320612063757272656e7420737570706c79206f662035302c3030302c3030302c30303020776974682031392c3536352c3335362c3930302e36353432393720696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662048656465726120697320302e32303432393035322055534420616e6420697320646f776e202d302e3730206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20383820616374697665206d61726b65742873292077697468202436372c3830312c3938342e373920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e6865646572612e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Internet computer',
+'ICP',
+19.511386020704,
+1.43015,
+NULL,
+4051453377,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/8916.png',
+1,
+X'496e7465726e657420436f6d707574657220284943502920697320612063727970746f63757272656e6379206c61756e6368656420696e20323032312e20496e7465726e657420436f6d70757465722068617320612063757272656e7420737570706c79206f66203437372c3932352c3336382e343931373031392077697468203230382c3635342c3431332e373938313136363520696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620496e7465726e657420436f6d70757465722069732031362e37343539383939332055534420616e6420697320757020322e3434206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031303120616374697665206d61726b6574287329207769746820243134302c3931392c3532342e303420747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6466696e6974792e6f72672e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Ethereum classic',
+'ETC',
+30.281423148169,
+5.27466,
+210700000,
+4036184975,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1321.png',
+1,
+X'457468657265756d20436c617373696320284554432920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e657261746520455443207468726f756768207468652070726f63657373206f66206d696e696e672e20457468657265756d20436c61737369632068617320612063757272656e7420737570706c79206f66203231302c3730302c3030302077697468203133332c3431372c3235392e393630383138313420696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620457468657265756d20436c61737369632069732032362e333835363436392055534420616e6420697320757020312e3033206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032383920616374697665206d61726b6574287329207769746820243335362c3332332c3436322e313820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f657468657265756d636c61737369632e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'The sandbox',
+'SAND',
+3.322281573273,
+8.51081,
+3000000000,
+3737383288,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/6210.png',
+1,
+X'5468652053616e64626f78202853414e442920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e205468652053616e64626f782068617320612063757272656e7420737570706c79206f6620332c3030302c3030302c303030207769746820312c3132342c3934342c3737322e3232333332323620696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66205468652053616e64626f7820697320322e38313832323433322055534420616e6420697320757020312e3237206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031393920616374697665206d61726b6574287329207769746820243534332c3737392c3333302e393120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e73616e64626f782e67616d652f656e2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Filecoin',
+'FIL',
+21.024832770346,
+-0.461901,
+NULL,
+3584470420,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/2280.png',
+1,
+X'46696c65636f696e202846494c2920697320612063727970746f63757272656e6379206c61756e6368656420696e20323032302e205573657273206172652061626c6520746f2067656e65726174652046494c207468726f756768207468652070726f63657373206f66206d696e696e672e2046696c65636f696e2068617320612063757272656e7420737570706c79206f66203137332c3930312c3339362e20546865206c617374206b6e6f776e207072696365206f662046696c65636f696e2069732031382e30393136303637352055534420616e6420697320757020312e3235206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031383220616374697665206d61726b6574287329207769746820243239352c3132362c3731342e353120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f66696c65636f696e2e696f2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:56',
+'Axie infinity',
+'AXS',
+57.828360221637,
+14.7066,
+270000000,
+3522180850,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/6783.png',
+1,
+X'4178696520496e66696e69747920284158532920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e204178696520496e66696e6974792068617320612063757272656e7420737570706c79206f66203237302c3030302c30303020776974682036302c3930372c35303020696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204178696520496e66696e6974792069732034362e36353336343539362055534420616e6420697320757020302e3637206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031393320616374697665206d61726b6574287329207769746820243238312c3037352c3932332e313420747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f61786965696e66696e6974792e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Vechain',
+'VET',
+0.052464111165,
+5.90319,
+86712634466,
+3374259581,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/3077.png',
+1,
+X'5665436861696e20285645542920697320612063727970746f63757272656e6379202e205665436861696e2068617320612063757272656e7420737570706c79206f662038362c3731322c3633342c34363620776974682036342c3331352c3537362c39383920696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66205665436861696e20697320302e30343633393839392055534420616e6420697320757020302e3432206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031363920616374697665206d61726b6574287329207769746820243236352c3437352c3034302e393620747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e7665636861696e2e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Elrond',
+'EGLD',
+152.108625092323,
+6.19679,
+31415926,
+3282981865,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/6892.png',
+1,
+X'456c726f6e64202845474c442920697320612063727970746f63757272656e6379202e20456c726f6e642068617320612063757272656e7420737570706c79206f662032332c3031362c32393820776974682032312c3631382c3538302e393031353831333820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620456c726f6e64206973203133312e35383938383633332055534420616e6420697320757020302e3239206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20383320616374697665206d61726b6574287329207769746820243133302c3134372c3834362e373320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f656c726f6e642e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Theta network',
+'THETA',
+3.273777065597,
+11.5089,
+1000000000,
+3273777066,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/2416.png',
+1,
+X'5468657461204e6574776f726b202854484554412920697320612063727970746f63757272656e6379202e205468657461204e6574776f726b2068617320612063757272656e7420737570706c79206f6620312c3030302c3030302c3030302e20546865206c617374206b6e6f776e207072696365206f66205468657461204e6574776f726b20697320322e38313233393835392055534420616e6420697320757020322e3936206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031303120616374697665206d61726b6574287329207769746820243239342c3435322c3133302e313320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e7468657461746f6b656e2e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Klaytn',
+'KLAY',
+1.220213099904,
+0.257042,
+NULL,
+3217390509,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/4256.png',
+1,
+X'4b6c6179746e20284b4c41592920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031392e204b6c6179746e2068617320612063757272656e7420737570706c79206f662031302c3738322c3239372c3938302e38207769746820322c3633382c3731342c3335372e3420696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204b6c6179746e20697320312e31313236363039382055534420616e6420697320757020302e3331206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20373520616374697665206d61726b65742873292077697468202436362c3937352c3438322e363920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e6b6c6179746e2e666f756e646174696f6e2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Monero',
+'XMR',
+176.511232865246,
+5.68051,
+NULL,
+3192433973,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/328.png',
+1,
+X'4d6f6e65726f2028584d522920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e657261746520584d52207468726f756768207468652070726f63657373206f66206d696e696e672e204d6f6e65726f2068617320612063757272656e7420737570706c79206f662031382c3038392c3739392e38343833363839352e20546865206c617374206b6e6f776e207072696365206f66204d6f6e65726f206973203139342e37363730323735312055534420616e642069732075702032332e3139206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031363820616374697665206d61726b6574287329207769746820243330372c3038332c3433332e323120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e6765746d6f6e65726f2e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Tezos',
+'XTZ',
+3.490192912821,
+3.93437,
+NULL,
+3070922999,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/2011.png',
+1,
+X'54657a6f73202858545a2920697320612063727970746f63757272656e6379202e2054657a6f732068617320612063757272656e7420737570706c79206f66203930382c3633342c3131382e3233323632332077697468203838362c3639322c3835372e33373531393920696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662054657a6f7320697320322e39393633343231352055534420616e6420697320757020322e3032206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032303320616374697665206d61726b65742873292077697468202439382c3037372c3935302e313820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e74657a6f732e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Helium',
+'HNT',
+24.725383516501,
+2.64711,
+223000000,
+2779903204,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/5665.png',
+1,
+X'48656c69756d2028484e542920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031392e205573657273206172652061626c6520746f2067656e657261746520484e54207468726f756768207468652070726f63657373206f66206d696e696e672e2048656c69756d2068617320612063757272656e7420737570706c79206f66203232332c3030302c3030302077697468203131322c3937372c3533302e303238333539343120696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662048656c69756d2069732032302e39393835383937312055534420616e6420697320646f776e202d312e3033206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20343220616374697665206d61726b65742873292077697468202433332c3638382c3334322e323220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e68656c69756d2e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Iota',
+'MIOTA',
+0.811191103422,
+5.54466,
+2779530283,
+2254730237,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1720.png',
+1,
+X'494f544120284d494f54412920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031352e20494f54412068617320612063757272656e7420737570706c79206f6620322c3737392c3533302c3238332e20546865206c617374206b6e6f776e207072696365206f6620494f544120697320302e373030353733322055534420616e6420697320757020302e3838206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20373320616374697665206d61726b65742873292077697468202432332c3535342c3734332e323020747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e696f74612e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Flow',
+'FLOW',
+6.749091064804,
+7.53108,
+NULL,
+2231343197,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/4558.png',
+1,
+X'466c6f772028464c4f572920697320612063727970746f63757272656e6379206c61756e6368656420696e20323032312e20466c6f772068617320612063757272656e7420737570706c79206f6620312c3337382c3231312c3733392077697468203335322c3637342c38303720696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620466c6f7720697320352e37313331313832392055534420616e6420697320757020312e3136206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20353820616374697665206d61726b65742873292077697468202437352c3439392c3938362e333320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f666c6f772e636f6d2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Eos',
+'EOS',
+2.260334055807,
+3.33561,
+NULL,
+2219131167,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1765.png',
+1,
+X'454f532028454f532920697320612063727970746f63757272656e6379202e20454f532068617320612063757272656e7420737570706c79206f6620312c3034382c3936382c3035382e393438342077697468203938322c3338312c3833332e3538383820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620454f5320697320312e39363239343934352055534420616e6420697320757020322e3034206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2034323720616374697665206d61726b6574287329207769746820243238352c3138302c3137382e353720747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f656f732e696f2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:56',
+'Aave',
+'AAVE',
+143.261112774945,
+1.98038,
+16000000,
+1952376591,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/7278.png',
+1,
+X'416176652028414156452920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20416176652068617320612063757272656e7420737570706c79206f662031362c3030302c30303020776974682031332c3633312c3730342e393732373739383820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662041617665206973203132312e38333837353737352055534420616e6420697320757020342e3030206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2033313120616374697665206d61726b6574287329207769746820243233322c3834352c3833322e313220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f616176652e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Waves',
+'WAVES',
+17.915717478039,
+39.8587,
+NULL,
+1928128643,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1274.png',
+1,
+X'5761766573202857415645532920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031362e2057617665732068617320612063757272656e7420737570706c79206f66203130372c3638342c3132382e20546865206c617374206b6e6f776e207072696365206f662057617665732069732032322e34303533363639372055534420616e6420697320757020312e3233206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031363220616374697665206d61726b657428732920776974682024312c3535302c3239392c3434342e333520747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f77617665732e746563682f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Maker',
+'MKR',
+1962.638085488135,
+4.50344,
+1005577,
+1918735907,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1518.png',
+1,
+X'4d616b657220284d4b522920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e204d616b65722068617320612063757272656e7420737570706c79206f66203937372c3633312e30333639353038392e20546865206c617374206b6e6f776e207072696365206f66204d616b657220697320312c3734392e34313438373936392055534420616e6420697320757020302e3636206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032333720616374697665206d61726b65742873292077697468202436302c3839342c3935392e383520747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6d616b657264616f2e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Harmony',
+'ONE',
+0.158420173316,
+4.68779,
+NULL,
+1870608404,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/3945.png',
+1,
+X'4861726d6f6e7920284f4e452920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031382e204861726d6f6e792068617320612063757272656e7420737570706c79206f662031332c3337362c3737372c3630322e313030363820776974682031312c3831362c3236322c3630322e31303036363420696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204861726d6f6e7920697320302e31323837303038332055534420616e6420697320757020312e3331206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20383620616374697665206d61726b6574287329207769746820243130382c3236322c3830392e363020747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e6861726d6f6e792e6f6e652f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Bittorrent (DEFAULT)',
+'BTT',
+0.000001983682,
+2.24381,
+NULL,
+1849778259,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/16086.png',
+1,
+X'426974546f7272656e7420284e65772920284254542920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e207468652054726f6e323020706c6174666f726d2e20426974546f7272656e7420284e6577292068617320612063757272656e7420737570706c79206f66203939302c3030302c3030302c3030302c3030302077697468203932332c3736372c3639362c3432392c30303020696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620426974546f7272656e7420284e65772920697320302e30303030303138312055534420616e6420697320757020322e3237206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20343620616374697665206d61726b65742873292077697468202436392c3630392c3237312e303220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f62742e696f2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Pancakeswap',
+'CAKE',
+6.756359724121,
+1.31447,
+NULL,
+1839466552,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/7186.png',
+1,
+X'50616e63616b6553776170202843414b452920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520424e4220536d61727420436861696e202842455032302920706c6174666f726d2e2050616e63616b65537761702068617320612063757272656e7420737570706c79206f66203237342c3430382c3437352e353731373534372e20546865206c617374206b6e6f776e207072696365206f662050616e63616b655377617020697320352e39373437353238392055534420616e6420697320646f776e202d312e3434206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032313920616374697665206d61726b6574287329207769746820243131342c3134382c3832342e363220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f70616e63616b65737761702e66696e616e63652f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Gala',
+'GALA',
+0.256932821289,
+3.57782,
+NULL,
+1792673077,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/7080.png',
+1,
+X'47616c61202847414c412920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e2047616c612068617320612063757272656e7420737570706c79206f662033352c3234302c3131322c343933207769746820362c3937372c3230352c34333620696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662047616c6120697320302e32313836353035352055534420616e6420697320757020312e3734206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031323720616374697665206d61726b6574287329207769746820243734322c3638302c3934372e383820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f67616c612e67616d65732f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'The graph',
+'GRT',
+0.374379561203,
+2.76216,
+10057044431,
+1765474875,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/6719.png',
+1,
+X'54686520477261706820284752542920697320612063727970746f63757272656e6379206c61756e6368656420696e2032303138616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e205468652047726170682068617320612063757272656e7420737570706c79206f662031302c3030302c3030302c303030207769746820342c3731352c3733352c32303020696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662054686520477261706820697320302e33333534353931322055534420616e6420697320757020312e3634206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031383520616374697665206d61726b6574287329207769746820243130382c3430342c3539332e353120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f74686567726170682e636f6d2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Neo',
+'NEO',
+23.929033924665,
+13.2907,
+100000000,
+1687926080,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1376.png',
+1,
+X'4e656f20284e454f2920697320612063727970746f63757272656e6379202e204e656f2068617320612063757272656e7420737570706c79206f66203130302c3030302c30303020776974682037302c3533382c38333120696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204e656f2069732032302e33353239383834312055534420616e6420697320757020302e3433206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032343120616374697665206d61726b6574287329207769746820243132322c3338352c3639332e333020747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6e656f2e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Bitcoin sv',
+'BSV',
+87.320174754951,
+1.01534,
+21000000,
+1658443298,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/3602.png',
+1,
+X'426974636f696e20535620284253562920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e657261746520425356207468726f756768207468652070726f63657373206f66206d696e696e672e20426974636f696e2053562068617320612063757272656e7420737570706c79206f662031382c3939392c3030312e36343432333930352e20546865206c617374206b6e6f776e207072696365206f6620426974636f696e2053562069732037372e39393832303832312055534420616e6420697320757020312e3934206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031363920616374697665206d61726b6574287329207769746820243133362c3934332c3038372e313320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f626974636f696e73762e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Kucoin token',
+'KCS',
+20.598298217343,
+2.24079,
+170118638,
+1650307598,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/2087.png',
+1,
+X'4b75436f696e20546f6b656e20284b43532920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e204b75436f696e20546f6b656e2068617320612063757272656e7420737570706c79206f66203137302c3131382c36333820776974682038302c3131382c36333820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204b75436f696e20546f6b656e2069732031372e39393331343432352055534420616e6420697320757020302e3933206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20333520616374697665206d61726b657428732920776974682024372c3734342c3536372e393020747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e6b75636f696e2e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Zcash',
+'ZEC',
+119.114458337332,
+3.30885,
+21000000,
+1650064302,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1437.png',
+1,
+X'5a6361736820285a45432920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e6572617465205a4543207468726f756768207468652070726f63657373206f66206d696e696e672e205a636173682068617320612063757272656e7420737570706c79206f662031332c3930342c3133372e352e20546865206c617374206b6e6f776e207072696365206f66205a63617368206973203133332e32313836303234372055534420616e642069732075702032312e3137206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032343520616374697665206d61726b6574287329207769746820243538392c3431332c3535332e363920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7a2e636173682f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Stacks',
+'STX',
+1.256395212104,
+3.09828,
+1818000000,
+1635026237,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/4847.png',
+1,
+X'537461636b7320285354582920697320612063727970746f63757272656e6379202e20537461636b732068617320612063757272656e7420737570706c79206f6620312c3335322c3436342c363030207769746820312c3330322c3330302c3838392e36313536393920696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620537461636b7320697320312e30353632393739332055534420616e6420697320757020302e3236206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20343220616374697665206d61726b65742873292077697468202431332c3438362c3834352e323220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f737461636b732e636f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Thorchain',
+'RUNE',
+4.914895327861,
+31.1964,
+500000000,
+1625297208,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/4157.png',
+1,
+X'54484f52436861696e202852554e452920697320612063727970746f63757272656e6379206c61756e6368656420696e2032303138616e64206f70657261746573206f6e2074686520424e4220426561636f6e20436861696e2028424550322920706c6174666f726d2e2054484f52436861696e2068617320612063757272656e7420737570706c79206f66203333342c3933372c3937342e39313437383534342077697468203333302c3638382c3036312e333334343535393720696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662054484f52436861696e20697320342e30353035363737372055534420616e6420697320646f776e202d352e3536206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20373120616374697665206d61726b6574287329207769746820243130302c3436392c3739302e303520747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f74686f72636861696e2e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Ecash',
+'XEC',
+0.000078653058,
+3.22649,
+21000000000000,
+1493817088,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/10791.png',
+1,
+X'654361736820285845432920697320612063727970746f63757272656e6379202e2065436173682068617320612063757272656e7420737570706c79206f662031382c3839392c3730342c3637332c33313320776974682031382c3939382c3837392c3637332c33313320696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620654361736820697320302e30303030363839322055534420616e6420697320757020302e3033206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20343720616374697665206d61726b65742873292077697468202431342c3638342c3539342e313720747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f652e636173682f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Trueusd',
+'TUSD',
+0.999173822868,
+-0.119743,
+NULL,
+1493775504,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/2563.png',
+1,
+X'547275655553442028545553442920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520424e4220426561636f6e20436861696e2028424550322920706c6174666f726d2e20547275655553442068617320612063757272656e7420737570706c79206f6620312c3436302c3830302c3436392e3237333434362e20546865206c617374206b6e6f776e207072696365206f66205472756555534420697320312e303030343038372055534420616e6420697320757020302e3033206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032333820616374697665206d61726b6574287329207769746820243132312c3835362c3931382e323620747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e747275657573642e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Huobi token',
+'HT',
+9.546158407352,
+3.27306,
+500000000,
+1490385908,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/2502.png',
+1,
+X'48756f626920546f6b656e202848542920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e2048756f626920546f6b656e2068617320612063757272656e7420737570706c79206f66203530302c3030302c3030302077697468203135362c3132342c3135342e323534343132303820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662048756f626920546f6b656e20697320392e313335343837342055534420616e6420697320757020302e3338206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031303820616374697665206d61726b65742873292077697468202433342c3634362c3031372e383920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e68756f626977616c6c65742e636f6d2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Quant',
+'QNT',
+116.319839893094,
+4.25872,
+14612493,
+1404298951,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/3155.png',
+1,
+X'5175616e742028514e542920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e205175616e742068617320612063757272656e7420737570706c79206f662031342c3631322c3439332e30383038323620776974682031322c3037322c37333820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66205175616e74206973203131312e34323231323838312055534420616e6420697320757020302e3330206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20383220616374697665206d61726b65742873292077697468202434332c3932382c3835312e353120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7175616e742e6e6574776f726b2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Enjin coin',
+'ENJ',
+1.585888887102,
+7.42681,
+1000000000,
+1373831288,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/2130.png',
+1,
+X'456e6a696e20436f696e2028454e4a2920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20456e6a696e20436f696e2068617320612063757272656e7420737570706c79206f6620312c3030302c3030302c3030302077697468203836372c3939342c3730352e35363735353820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620456e6a696e20436f696e20697320312e33323632343838332055534420616e6420697320757020302e3632206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032323620616374697665206d61726b6574287329207769746820243132372c3134342c3134372e393820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f656e6a696e2e696f2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:56',
+'Amp',
+'AMP',
+0.029033867718,
+1.24077,
+92547638199,
+1226033519,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/6945.png',
+1,
+X'416d702028414d502920697320612063727970746f63757272656e6379206c61756e6368656420696e2032303230616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20416d702068617320612063757272656e7420737570706c79206f662039392c3231332c3430382c35333520776974682034322c3232372c3730322c31383620696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620416d7020697320302e30323439303632322055534420616e6420697320646f776e202d302e3135206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20363720616374697665206d61726b65742873292077697468202431322c3339382c3736332e323220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f616d70746f6b656e2e6f72672e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Kadena',
+'KDA',
+7.093877885115,
+2.69392,
+1000000000,
+1215093326,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/5647.png',
+1,
+X'4b6164656e6120284b44412920697320612063727970746f63757272656e6379202e205573657273206172652061626c6520746f2067656e6572617465204b4441207468726f756768207468652070726f63657373206f66206d696e696e672e204b6164656e612068617320612063757272656e7420737570706c79206f6620312c3030302c3030302c3030302077697468203137312c3238372c3630312e313135383620696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204b6164656e6120697320362e31303838393532372055534420616e6420697320646f776e202d302e3031206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20313820616374697665206d61726b65742873292077697468202432312c3436342c3033382e393620747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e6420617420687474703a2f2f6b6164656e612e696f2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Kusama',
+'KSM',
+140.589301980851,
+13.2239,
+NULL,
+1190805174,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/5034.png',
+1,
+X'4b7573616d6120284b534d2920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031392e204b7573616d612068617320612063757272656e7420737570706c79206f6620392c3635312c3231372e3435313236323036207769746820382c3437302c3039382e303537323632303620696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204b7573616d61206973203132312e35393534393636362055534420616e6420697320757020312e3436206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031323020616374697665206d61726b65742873292077697468202435302c3938322c3531352e313320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6b7573616d612e6e6574776f726b2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Nexo',
+'NEXO',
+2.100616939639,
+0.176551,
+1000000000,
+1176345509,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/2694.png',
+1,
+X'4e65786f20284e45584f2920697320612063727970746f63757272656e6379206c61756e6368656420696e2032303138616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e204e65786f2068617320612063757272656e7420737570706c79206f6620312c3030302c3030302c3030302077697468203536302c3030302c30313120696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204e65786f20697320312e39373831393231352055534420616e6420697320757020322e3931206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20353720616374697665206d61726b657428732920776974682024352c3634342c3836392e323420747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e6420617420687474703a2f2f6e65786f2e696f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Chiliz',
+'CHZ',
+0.192253555770,
+3.70975,
+8888888888,
+1148728030,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/4066.png',
+1,
+X'4368696c697a202843485a2920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e204368696c697a2068617320612063757272656e7420737570706c79206f6620382c3838382c3838382c383838207769746820352c3937392c3536372c3738392e39333935383320696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204368696c697a20697320302e31393330303136392055534420616e6420697320646f776e202d302e3935206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032323820616374697665206d61726b6574287329207769746820243135382c3537352c3134392e393220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e6368696c697a2e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Curve dao token',
+'CRV',
+2.526010130578,
+7.29085,
+3303030299,
+1145601638,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/6538.png',
+1,
+X'43757276652044414f20546f6b656e20284352562920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e2043757276652044414f20546f6b656e2068617320612063757272656e7420737570706c79206f6620312c3730332c3834372c3236322e373939333339332077697468203435382c3333342c3130392e3834373537383220696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662043757276652044414f20546f6b656e20697320322e30323233353237352055534420616e6420697320757020312e3437206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032333820616374697665206d61726b6574287329207769746820243139322c3434372c3133332e333820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6775696465732e63757276652e66692f65766572797468696e672d796f752d6e6565642d746f2d6b6e6f772d61626f75742d6372762f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Celo',
+'CELO',
+2.675785856751,
+6.36367,
+1000000000,
+1143600398,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/5567.png',
+1,
+X'43656c6f202843454c4f2920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031372e2043656c6f2068617320612063757272656e7420737570706c79206f6620312c3030302c3030302c3030302077697468203432372c3338382c36313020696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662043656c6f20697320322e37323435343036322055534420616e6420697320646f776e202d302e3734206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20383520616374697665206d61726b6574287329207769746820243135312c3434382c3339312e333020747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f63656c6f2e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:56',
+'Basic attention token',
+'BAT',
+0.752345644160,
+6.66076,
+1500000000,
+1125566324,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1697.png',
+1,
+X'426173696320417474656e74696f6e20546f6b656e20284241542920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20426173696320417474656e74696f6e20546f6b656e2068617320612063757272656e7420737570706c79206f6620312c3530302c3030302c303030207769746820312c3439362c3037362c3038322e3434373335303520696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620426173696320417474656e74696f6e20546f6b656e20697320302e36343832333331352055534420616e6420697320757020322e3535206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032383320616374697665206d61726b65742873292077697468202437372c3136342c3132322e363920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6261736963617474656e74696f6e746f6b656e2e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:56',
+'Arweave',
+'AR',
+33.153660392463,
+6.52018,
+66000000,
+1107156576,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/5632.png',
+1,
+X'41727765617665202841522920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031382e20417277656176652068617320612063757272656e7420737570706c79206f662036332c3139302c34333520776974682033332c3339342c37303120696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620417277656176652069732033322e35323537373338362055534420616e642069732075702031302e3131206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20343920616374697665206d61726b65742873292077697468202437382c3139362c3937392e363420747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e617277656176652e6f72672e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Loopring',
+'LRC',
+0.822810115535,
+4.76943,
+1374513896,
+1094003444,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1934.png',
+1,
+X'4c6f6f7072696e6720284c52432920697320612063727970746f63757272656e6379206c61756e6368656420696e2032303137616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e204c6f6f7072696e672068617320612063757272656e7420737570706c79206f6620312c3337332c3837332c3434302e34343234353734207769746820312c3332392c3637352c3431342e3134393233383620696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204c6f6f7072696e6720697320302e373333313331372055534420616e6420697320757020332e3839206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031383120616374697665206d61726b6574287329207769746820243134352c3939342c3731312e313120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6c6f6f7072696e672e6f72672e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Okb',
+'OKB',
+18.144316939281,
+3.73627,
+NULL,
+1088659016,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/3897.png',
+1,
+X'4f4b4220284f4b422920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e204f4b422068617320612063757272656e7420737570706c79206f66203330302c3030302c30303020776974682036302c3030302c30303020696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204f4b422069732031372e36313835353834392055534420616e6420697320646f776e202d302e3335206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20353820616374697665206d61726b6574287329207769746820243131302c3537382c3234312e333920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e6f6b782e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Dash',
+'DASH',
+99.576412466678,
+2.84984,
+18900000,
+1056066225,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/131.png',
+1,
+X'446173682028444153482920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031342e205573657273206172652061626c6520746f2067656e65726174652044415348207468726f756768207468652070726f63657373206f66206d696e696e672e20446173682068617320612063757272656e7420737570706c79206f662031302c3631362c3039322e33303130363437312e20546865206c617374206b6e6f776e207072696365206f6620446173682069732039322e36363436353835332055534420616e6420697320757020372e3936206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2033323820616374697665206d61726b6574287329207769746820243139362c3132372c3531332e373220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e646173682e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Convex finance',
+'CVX',
+18.847915520591,
+6.88322,
+100000000,
+984090453,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/9903.png',
+1,
+X'436f6e7665782046696e616e636520284356582920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20436f6e7665782046696e616e63652068617320612063757272656e7420737570706c79206f662038352c3836332c3632302e343334373838333820776974682035332c3430332c3032332e3035373231313320696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620436f6e7665782046696e616e63652069732031352e38383235393337332055534420616e6420697320757020312e3730206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20393420616374697665206d61726b65742873292077697468202431352c3639332c3036382e343620747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e636f6e76657866696e616e63652e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Nem',
+'XEM',
+0.107772444820,
+2.45672,
+8999999999,
+969952003,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/873.png',
+1,
+X'4e454d202858454d2920697320612063727970746f63757272656e6379202e204e454d2068617320612063757272656e7420737570706c79206f6620382c3939392c3939392c3939392e20546865206c617374206b6e6f776e207072696365206f66204e454d20697320302e30393531393133362055534420616e6420697320757020312e3335206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031323120616374697665206d61726b65742873292077697468202431362c3735382c3336352e363320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e6420617420687474703a2f2f6e656d2e696f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Theta fuel',
+'TFUEL',
+0.180382206551,
+5.58846,
+NULL,
+956244751,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/3822.png',
+1,
+X'5468657461204675656c2028544655454c2920697320612063727970746f63757272656e6379202e205468657461204675656c2068617320612063757272656e7420737570706c79206f6620352c3330312c3231342c3430302e20546865206c617374206b6e6f776e207072696365206f66205468657461204675656c20697320302e31353138313133342055534420616e6420697320757020322e3739206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20333420616374697665206d61726b65742873292077697468202434342c3930372c3730372e303920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e7468657461746f6b656e2e6f72672e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Pax dollar',
+'USDP',
+0.998820366083,
+0.00345214,
+NULL,
+944527428,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/3330.png',
+1,
+X'50617820446f6c6c61722028555344502920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e2050617820446f6c6c61722068617320612063757272656e7420737570706c79206f66203934352c3634322c3934302e31312e20546865206c617374206b6e6f776e207072696365206f662050617820446f6c6c617220697320312e30303135353430352055534420616e6420697320757020302e3038206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20343020616374697665206d61726b65742873292077697468202431332c3432312c3235352e393120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e7061786f732e636f6d2f757364702f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:56',
+'Anchor protocol',
+'ANC',
+3.639542359436,
+1.67227,
+1000000000,
+938468992,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/8857.png',
+1,
+X'416e63686f722050726f746f636f6c2028414e432920697320612063727970746f63757272656e6379206c61756e6368656420696e2032303231616e64206f70657261746573206f6e2074686520546572726120706c6174666f726d2e20416e63686f722050726f746f636f6c2068617320612063757272656e7420737570706c79206f6620312c3030302c3030302c3030302077697468203236312c3438352c3031372e37323235333920696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620416e63686f722050726f746f636f6c20697320332e38303736393236352055534420616e6420697320646f776e202d332e3435206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20333520616374697665206d61726b6574287329207769746820243137382c3836342c3630302e303220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6170702e616e63686f7270726f746f636f6c2e636f6d2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Oasis network',
+'ROSE',
+0.261559534033,
+4.85526,
+10000000000,
+913631194,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/7653.png',
+1,
+X'4f61736973204e6574776f726b2028524f53452920697320612063727970746f63757272656e6379206c61756e6368656420696e2032303230616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e204f61736973204e6574776f726b2068617320612063757272656e7420737570706c79206f662031302c3030302c3030302c303030207769746820332c3439332c3031342c3330362e323820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204f61736973204e6574776f726b20697320302e32313934343435392055534420616e6420697320757020302e3832206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20343420616374697665206d61726b6574287329207769746820243131312c3638352c3232362e303120747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6f6173697370726f746f636f6c2e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Secret',
+'SCRT',
+5.320846461191,
+-0.891954,
+NULL,
+868870587,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/5604.png',
+1,
+X'5365637265742028534352542920697320612063727970746f63757272656e6379206c61756e6368656420696e20323032302e205365637265742068617320612063757272656e7420737570706c79206f66203139302c3136352c3036302077697468203136332c3239352c35353720696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662053656372657420697320342e33353034323731362055534420616e6420697320757020302e3037206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20323820616374697665206d61726b65742873292077697468202432362c3831312c3136372e313220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f736372742e6e6574776f726b2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Symbol',
+'XYM',
+0.152640712391,
+3.63796,
+8999999999,
+852110672,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/8677.png',
+1,
+X'53796d626f6c202858594d2920697320612063727970746f63757272656e6379206c61756e6368656420696e20323032312e2053796d626f6c2068617320612063757272656e7420737570706c79206f6620372c3936372c3938382c3932392e3530343737207769746820352c3538322c3436302c3030342e35353834303220696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662053796d626f6c20697320302e31333235353938372055534420616e6420697320646f776e202d312e3238206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20333620616374697665206d61726b657428732920776974682024332c3134362c3037382e393020747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e73796d626f6c2e6465762e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Mina',
+'MINA',
+2.175041861578,
+2.20694,
+NULL,
+851435653,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/8646.png',
+1,
+X'4d696e6120284d494e412920697320612063727970746f63757272656e6379202e204d696e612068617320612063757272656e7420737570706c79206f66203832342c3130342c3937322077697468203339382c3331332c3534352e383430303339323520696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66204d696e6120697320312e38313739333132372055534420616e6420697320646f776e202d312e3037206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20353020616374697665206d61726b65742873292077697468202433362c3032352c3533302e363220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6d696e6170726f746f636f6c2e636f6d2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Decred',
+'DCR',
+61.407121556025,
+2.92871,
+21000000,
+847998221,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1168.png',
+1,
+X'44656372656420284443522920697320612063727970746f63757272656e6379206c61756e6368656420696e20323031362e205573657273206172652061626c6520746f2067656e657261746520444352207468726f756768207468652070726f63657373206f66206d696e696e672e204465637265642068617320612063757272656e7420737570706c79206f662031332c3832392c3636302e353836343533342e20546865206c617374206b6e6f776e207072696365206f66204465637265642069732035312e39323438303938372055534420616e6420697320646f776e202d322e3637206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20353620616374697665206d61726b657428732920776974682024342c3935332c3436302e383320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f6465637265642e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Bora',
+'BORA',
+0.968715760351,
+1.41562,
+NULL,
+834306449,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/3801.png',
+1,
+X'424f52412028424f52412920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e20746865204b6c6179746e20706c6174666f726d2e20424f52412068617320612063757272656e7420737570706c79206f6620312c3230352c3735302c3030302077697468203836312c3235302c30303020696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620424f524120697320302e38333933383534382055534420616e6420697320757020302e3435206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e203420616374697665206d61726b65742873292077697468202432332c3531372c3535352e303920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f626f726165636f73797374656d2e636f6d2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Compound',
+'COMP',
+124.815476776420,
+6.8453,
+10000000,
+823394988,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/5692.png',
+1,
+X'436f6d706f756e642028434f4d502920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20436f6d706f756e642068617320612063757272656e7420737570706c79206f662031302c3030302c303030207769746820362c3631332c3233322e313137353838373320696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620436f6d706f756e64206973203130332e37373931383532342055534420616e6420697320757020322e3536206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032343720616374697665206d61726b65742873292077697468202436352c3536392c3034362e363920747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f636f6d706f756e642e66696e616e63652f676f7665726e616e63652f636f6d702e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Holo',
+'HOT',
+0.004666953798,
+6.30603,
+NULL,
+808600358,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/2682.png',
+1,
+X'486f6c6f2028484f542920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20486f6c6f2068617320612063757272656e7420737570706c79206f66203137372c3631392c3433332c3534312e31343133332077697468203137332c3236302c3834342c3837312e383433363320696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620486f6c6f20697320302e30303430333130382055534420616e6420697320646f776e202d302e3038206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031303520616374697665206d61726b65742873292077697468202433392c3436392c3337382e373220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f686f6c6f636861696e2e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Yearn.finance',
+'YFI',
+21627.914906686867,
+4.26705,
+36666,
+792397517,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/5864.png',
+1,
+X'796561726e2e66696e616e636520285946492920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20796561726e2e66696e616e63652068617320612063757272656e7420737570706c79206f662033362c36363620776974682033362c3633372e373231323235383820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620796561726e2e66696e616e63652069732031392c3231322e30313132383637372055534420616e6420697320757020342e3538206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2032363020616374697665206d61726b6574287329207769746820243237302c3034322c3339322e393320747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f796561726e2e66696e616e63652f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Celsius',
+'CEL',
+3.225015322260,
+3.6409,
+695658160,
+770338511,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/2700.png',
+1,
+X'43656c73697573202843454c2920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e2043656c736975732068617320612063757272656e7420737570706c79206f66203639352c3635382c3136302077697468203233382c3836332c3531392e38323620696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f662043656c7369757320697320322e38393839363239342055534420616e6420697320757020312e3834206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20353620616374697665206d61726b657428732920776974682024322c3831352c3531362e323820747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f63656c736975732e6e6574776f726b2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Iotex',
+'IOTX',
+0.080429455948,
+6.29404,
+10000000000,
+767359690,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/2777.png',
+1,
+X'496f5465582028494f54582920697320612063727970746f63757272656e6379202e20496f5465582068617320612063757272656e7420737570706c79206f6620392c3632362c3132342c3333322e3332207769746820392c3534302c3737392c3332342e333037383820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620496f54655820697320302e30363833353236322055534420616e6420697320757020302e3832206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20373820616374697665206d61726b65742873292077697468202432312c3038322c3736382e333020747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7777772e696f7465782e696f2f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Uma',
+'UMA',
+10.529823437364,
+109.9,
+101172570,
+688301097,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/5617.png',
+1,
+X'554d412028554d412920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20554d412068617320612063757272656e7420737570706c79206f66203130362c3235312c3032392e3034303130363420776974682036352c3336382c3337372e313534313420696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620554d4120697320372e38313538313138372055534420616e6420697320757020302e3233206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031313320616374697665206d61726b65742873292077697468202439332c3733302c3536382e333220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f756d6170726f6a6563742e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Qtum',
+'QTUM',
+6.731572064701,
+7.35389,
+107822406,
+666624948,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1684.png',
+1,
+X'5174756d20285154554d2920697320612063727970746f63757272656e6379202e205174756d2068617320612063757272656e7420737570706c79206f66203130332c3934342c35303120776974682039392c3033392c3238322e3732363035363820696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f66205174756d20697320352e37303933303939362055534420616e6420697320646f776e202d302e3032206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e2031383620616374697665206d61726b65742873292077697468202438372c3730312c3439392e343420747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f7174756d2e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Xdc network',
+'XDC',
+0.053949926277,
+2.25636,
+NULL,
+663854528,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/2634.png',
+1,
+X'584443204e6574776f726b20285844432920697320612063727970746f63757272656e6379202e20584443204e6574776f726b2068617320612063757272656e7420737570706c79206f662033372c3730352c3031322c3639382e373520776974682031322c3330352c3031322c3639382e373520696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620584443204e6574776f726b20697320302e30343736303931322055534420616e6420697320757020322e3531206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20353220616374697665206d61726b657428732920776974682024372c3833332c3036372e393720747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f78696e66696e2e6f72672f2e'),
+(DEFAULT,
+'2022-03-08 20:24:45',
+'2022-03-08 20:24:57',
+'Gnosis',
+'GNO',
+355.018827791052,
+5.04304,
+10000000,
+662119699,
+'https://s2.coinmarketcap.com/static/img/coins/64x64/1659.png',
+1,
+X'476e6f7369732028474e4f2920697320612063727970746f63757272656e637920616e64206f70657261746573206f6e2074686520457468657265756d20706c6174666f726d2e20476e6f7369732068617320612063757272656e7420737570706c79206f662031302c3030302c303030207769746820312c3836352c30323720696e2063697263756c6174696f6e2e20546865206c617374206b6e6f776e207072696365206f6620476e6f736973206973203239372e39343332373430322055534420616e6420697320757020312e3932206f76657220746865206c61737420323420686f7572732e2049742069732063757272656e746c792074726164696e67206f6e20353920616374697665206d61726b657428732920776974682024372c3235392c3733312e383220747261646564206f76657220746865206c61737420323420686f7572732e204d6f726520696e666f726d6174696f6e2063616e20626520666f756e642061742068747470733a2f2f676e6f7369732e696f2f2e'),
+(DEFAULT,
+'2022-03-08 20:28:11',
+'2022-03-08 20:28:11',
+'Tether',
+'USDT',
+1.000521836571,
+-0.0040924,
+NULL,
+79457508616,
+'/img/assets/default_logo.png',
+2,
+X'496e666f726d6174696f6e'),
+(DEFAULT,
+'2022-03-08 20:28:11',
+'2022-03-08 20:28:11',
+'Bitcoin',
+'BTC',
+43841.470627771880,
+5.9322,
+21000000,
+831750516419,
+'/img/assets/default_logo.png',
+2,
+X'496e666f726d6174696f6e'),
+(DEFAULT,
+'2022-03-08 20:28:11',
+'2022-03-08 20:28:11',
+'Ethereum',
+'ETH',
+2957.493774090879,
+5.35683,
+NULL,
+354258392823,
+'/img/assets/default_logo.png',
+2,
+X'496e666f726d6174696f6e'),
+(DEFAULT,
+'2022-03-08 20:28:11',
+'2022-03-08 20:28:11',
+'Bnb',
+'BNB',
+407.734141051042,
+5.9046,
+165116760,
+67323740675,
+'/img/assets/default_logo.png',
+2,
+X'496e666f726d6174696f6e'),
+(DEFAULT,
+'2022-03-08 20:28:11',
+'2022-03-08 20:28:11',
+'Usd coin',
+'USDC',
+0.999365303471,
+-0.0528703,
+NULL,
+53494554017,
+'/img/assets/default_logo.png',
+2,
+X'496e666f726d6174696f6e'),
+(DEFAULT,
+'2022-03-08 20:28:11',
+'2022-03-08 20:28:11',
+'Xrp',
+'XRP',
+0.783178607299,
+2.47649,
+100000000000,
+37552851223,
+'/img/assets/default_logo.png',
+2,
+X'496e666f726d6174696f6e'),
+(DEFAULT,
+'2022-03-08 20:28:11',
+'2022-03-08 20:28:11',
+'Terra',
+'LUNA',
+91.506335987020,
+8.12566,
+NULL,
+34338188997,
+'/img/assets/default_logo.png',
+2,
+X'496e666f726d6174696f6e'),
+(DEFAULT,
+'2022-03-08 20:28:11',
+'2022-03-08 20:28:11',
+'Cardano',
+'ADA',
+0.964036688688,
+3.98038,
+45000000000,
+32450759446,
+'/img/assets/default_logo.png',
+2,
+X'496e666f726d6174696f6e'),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"American Airlines Group Inc.","AAL",14.02,-1.92,NULL,9143000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"American Airlines Group Inc.","AAL",14.02,-1.92,NULL,9143000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"Apple Inc.","AAPL",158.38,-2.80,NULL,2587000000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"Pretium Resources Inc.","PVG",15.05,-1.31,NULL,2873000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"JD.com, inc.","JD",52.23,-16.30,NULL,85641000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"Advanced Micro Devices, Inc.","AMD",106.26,-4.31,NULL,173346000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"KE Holdings Inc.","BEKE",11.78,-18.53,NULL,14023000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"Occidental Petroleum Corporation","OXY",57.56,0.10,NULL,53671000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"Alibaba Group Holding Limited","BABA",92.59,-8.26,NULL,249077000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"FuelCell Energy, Inc.","FCEL",6.58,4.13,NULL,2417000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"Ford Motor Company","F",16.13,-1.45,NULL,64729000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"iQIYI, Inc.","IQ",32.80,-20.25,NULL,2577000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"Bank of America Corporation","BAC",40.71,-0.82,NULL,329893000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"Coupang, Inc.","CPNG",18.88,-16.85,NULL,33164000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"Carnival Corporation & plc","CCL",17.59,1.88,NULL,20581000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"Asana, Inc.","ASAN",37.22,-23.76,NULL,7292000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"Exxon Mobil Corporation","XOM",83.39,0.72,NULL,353568000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"Palantir Technologies Inc.","PLTR",11.62,-0.26,NULL,23751000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"Barrick Gold Corporation","GOLD",24.98,2.67,NULL,44659000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"NVIDIA Corporation","NVDA",221.57,-3.73,NULL,553074000000,"/img/assets/default_logo.svg",2,"Asset description"),
+(DEFAULT,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,"CrowdStrike Holdings, Inc.","CRWD",189.35,11.52,NULL,43506000000,"/img/assets/default_logo.svg",2,"Asset description");
+
+insert into assets_users (id, user_id, asset_id, amount) values (1, 50, 75, 874.187359702);
+insert into assets_users (id, user_id, asset_id, amount) values (2, 49, 29, 460.710360277);
+insert into assets_users (id, user_id, asset_id, amount) values (3, 12, 60, 803.613067701);
+insert into assets_users (id, user_id, asset_id, amount) values (4, 49, 8, 362.918086852);
+insert into assets_users (id, user_id, asset_id, amount) values (5, 47, 49, 769.575328985);
+insert into assets_users (id, user_id, asset_id, amount) values (6, 48, 31, 431.315132522);
+insert into assets_users (id, user_id, asset_id, amount) values (7, 44, 79, 353.991898893);
+insert into assets_users (id, user_id, asset_id, amount) values (8, 22, 35, 443.055477863);
+insert into assets_users (id, user_id, asset_id, amount) values (9, 10, 52, 308.155469702);
+insert into assets_users (id, user_id, asset_id, amount) values (10, 37, 66, 372.777579595);
+insert into assets_users (id, user_id, asset_id, amount) values (11, 7, 69, 571.681568099);
+insert into assets_users (id, user_id, asset_id, amount) values (12, 45, 39, 325.693032598);
+insert into assets_users (id, user_id, asset_id, amount) values (13, 50, 4, 818.802073864);
+insert into assets_users (id, user_id, asset_id, amount) values (14, 21, 5, 544.139236564);
+insert into assets_users (id, user_id, asset_id, amount) values (15, 16, 75, 163.778105898);
+insert into assets_users (id, user_id, asset_id, amount) values (16, 38, 100, 576.550650907);
+insert into assets_users (id, user_id, asset_id, amount) values (17, 21, 1, 192.960326952);
+insert into assets_users (id, user_id, asset_id, amount) values (18, 7, 27, 903.212903192);
+insert into assets_users (id, user_id, asset_id, amount) values (19, 44, 16, 935.858136047);
+insert into assets_users (id, user_id, asset_id, amount) values (20, 41, 86, 763.671276175);
+insert into assets_users (id, user_id, asset_id, amount) values (21, 1, 42, 292.851332466);
+insert into assets_users (id, user_id, asset_id, amount) values (22, 30, 7, 796.266043175);
+insert into assets_users (id, user_id, asset_id, amount) values (23, 29, 53, 439.827289812);
+insert into assets_users (id, user_id, asset_id, amount) values (24, 23, 12, 514.721477528);
+insert into assets_users (id, user_id, asset_id, amount) values (25, 13, 67, 300.746054438);
+insert into assets_users (id, user_id, asset_id, amount) values (26, 38, 81, 53.641193236);
+insert into assets_users (id, user_id, asset_id, amount) values (27, 29, 39, 476.559164563);
+insert into assets_users (id, user_id, asset_id, amount) values (28, 5, 35, 653.785618022);
+insert into assets_users (id, user_id, asset_id, amount) values (29, 10, 97, 404.775150864);
+insert into assets_users (id, user_id, asset_id, amount) values (30, 50, 7, 260.992790511);
+insert into assets_users (id, user_id, asset_id, amount) values (31, 35, 41, 206.529500986);
+insert into assets_users (id, user_id, asset_id, amount) values (32, 28, 32, 259.591848529);
+insert into assets_users (id, user_id, asset_id, amount) values (33, 13, 37, 163.936230776);
+insert into assets_users (id, user_id, asset_id, amount) values (34, 18, 42, 607.610551429);
+insert into assets_users (id, user_id, asset_id, amount) values (35, 14, 21, 432.207496812);
+insert into assets_users (id, user_id, asset_id, amount) values (36, 20, 35, 547.589146028);
+insert into assets_users (id, user_id, asset_id, amount) values (37, 2, 32, 141.355738027);
+insert into assets_users (id, user_id, asset_id, amount) values (38, 26, 32, 147.151043874);
+insert into assets_users (id, user_id, asset_id, amount) values (39, 31, 17, 882.399572617);
+insert into assets_users (id, user_id, asset_id, amount) values (40, 46, 16, 852.66132817);
+insert into assets_users (id, user_id, asset_id, amount) values (41, 30, 97, 428.065447403);
+insert into assets_users (id, user_id, asset_id, amount) values (42, 36, 21, 629.603105628);
+insert into assets_users (id, user_id, asset_id, amount) values (43, 6, 37, 252.834557271);
+insert into assets_users (id, user_id, asset_id, amount) values (44, 14, 49, 910.205647679);
+insert into assets_users (id, user_id, asset_id, amount) values (45, 31, 48, 221.230627827);
+insert into assets_users (id, user_id, asset_id, amount) values (46, 42, 84, 823.314262614);
+insert into assets_users (id, user_id, asset_id, amount) values (47, 41, 19, 50.965334289);
+insert into assets_users (id, user_id, asset_id, amount) values (48, 11, 93, 125.890983605);
+insert into assets_users (id, user_id, asset_id, amount) values (49, 28, 87, 597.658404946);
+insert into assets_users (id, user_id, asset_id, amount) values (50, 14, 25, 748.302637134);
+insert into assets_users (id, user_id, asset_id, amount) values (51, 20, 57, 871.563618697);
+insert into assets_users (id, user_id, asset_id, amount) values (52, 22, 51, 659.129463981);
+insert into assets_users (id, user_id, asset_id, amount) values (53, 2, 51, 442.919657507);
+insert into assets_users (id, user_id, asset_id, amount) values (54, 33, 67, 689.619108662);
+insert into assets_users (id, user_id, asset_id, amount) values (55, 50, 41, 802.775305894);
+insert into assets_users (id, user_id, asset_id, amount) values (56, 41, 87, 471.508488199);
+insert into assets_users (id, user_id, asset_id, amount) values (57, 29, 13, 158.433521938);
+insert into assets_users (id, user_id, asset_id, amount) values (58, 34, 15, 270.736647729);
+insert into assets_users (id, user_id, asset_id, amount) values (59, 20, 41, 153.38746563);
+insert into assets_users (id, user_id, asset_id, amount) values (60, 25, 76, 268.529554011);
+insert into assets_users (id, user_id, asset_id, amount) values (61, 37, 13, 319.29025459);
+insert into assets_users (id, user_id, asset_id, amount) values (62, 44, 8, 429.276805409);
+insert into assets_users (id, user_id, asset_id, amount) values (63, 2, 83, 644.142736804);
+insert into assets_users (id, user_id, asset_id, amount) values (64, 36, 90, 713.967425626);
+insert into assets_users (id, user_id, asset_id, amount) values (65, 3, 45, 307.578766519);
+insert into assets_users (id, user_id, asset_id, amount) values (66, 19, 83, 412.030167221);
+insert into assets_users (id, user_id, asset_id, amount) values (67, 6, 37, 988.753676965);
+insert into assets_users (id, user_id, asset_id, amount) values (68, 29, 1, 260.792780516);
+insert into assets_users (id, user_id, asset_id, amount) values (69, 26, 76, 115.364985504);
+insert into assets_users (id, user_id, asset_id, amount) values (70, 20, 54, 40.70111545);
+insert into assets_users (id, user_id, asset_id, amount) values (71, 41, 20, 824.050486962);
+insert into assets_users (id, user_id, asset_id, amount) values (72, 9, 41, 218.368769282);
+insert into assets_users (id, user_id, asset_id, amount) values (73, 14, 79, 436.416082876);
+insert into assets_users (id, user_id, asset_id, amount) values (74, 15, 52, 287.298080136);
+insert into assets_users (id, user_id, asset_id, amount) values (75, 8, 77, 723.823319823);
+insert into assets_users (id, user_id, asset_id, amount) values (76, 47, 34, 706.011462612);
+insert into assets_users (id, user_id, asset_id, amount) values (77, 9, 59, 991.488736768);
+insert into assets_users (id, user_id, asset_id, amount) values (78, 3, 78, 983.97342385);
+insert into assets_users (id, user_id, asset_id, amount) values (79, 9, 81, 776.083975237);
+insert into assets_users (id, user_id, asset_id, amount) values (80, 5, 21, 16.572502733);
+insert into assets_users (id, user_id, asset_id, amount) values (81, 1, 55, 216.812333761);
+insert into assets_users (id, user_id, asset_id, amount) values (82, 41, 17, 261.227072153);
+insert into assets_users (id, user_id, asset_id, amount) values (83, 36, 17, 657.364865193);
+insert into assets_users (id, user_id, asset_id, amount) values (84, 8, 26, 545.393350548);
+insert into assets_users (id, user_id, asset_id, amount) values (85, 22, 49, 617.891516887);
+insert into assets_users (id, user_id, asset_id, amount) values (86, 3, 51, 34.237718459);
+insert into assets_users (id, user_id, asset_id, amount) values (87, 8, 52, 687.255511263);
+insert into assets_users (id, user_id, asset_id, amount) values (88, 32, 84, 417.262044706);
+insert into assets_users (id, user_id, asset_id, amount) values (89, 12, 1, 608.638606681);
+insert into assets_users (id, user_id, asset_id, amount) values (90, 50, 38, 363.184839066);
+insert into assets_users (id, user_id, asset_id, amount) values (91, 29, 95, 368.474509502);
+insert into assets_users (id, user_id, asset_id, amount) values (92, 5, 5, 695.991903056);
+insert into assets_users (id, user_id, asset_id, amount) values (93, 43, 30, 802.303369586);
+insert into assets_users (id, user_id, asset_id, amount) values (94, 4, 73, 241.760837204);
+insert into assets_users (id, user_id, asset_id, amount) values (95, 42, 37, 301.755461479);
+insert into assets_users (id, user_id, asset_id, amount) values (96, 39, 17, 331.339555788);
+insert into assets_users (id, user_id, asset_id, amount) values (97, 14, 52, 720.98700089);
+insert into assets_users (id, user_id, asset_id, amount) values (98, 23, 86, 153.590356155);
+insert into assets_users (id, user_id, asset_id, amount) values (99, 29, 68, 296.645753662);
+insert into assets_users (id, user_id, asset_id, amount) values (100, 30, 84, 830.423941408);
+
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-11-21 15:02:50', '2021-05-27 01:31:32', 42.835976775, 123.254549572, 22, 28, 78);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-10-23 15:23:29', '2022-01-07 04:59:46', 119.472458439, 43.836843359, 10, 59, 89);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-10-16 05:38:46', '2021-04-04 16:24:24', 175.410931418, 147.537584966, 14, 98, 50);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-09-29 11:30:59', '2021-09-12 06:21:39', 118.185598659, 184.730685726, 24, 56, 29);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-06-25 09:40:37', '2021-12-09 13:15:43', 150.994809497, 84.723030252, 43, 63, 84);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-02-08 17:42:01', '2021-05-28 12:30:26', 46.185790731, 153.359139439, 33, 21, 69);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-07-27 15:20:23', '2021-03-16 11:23:46', 19.196890966, 102.276176583, 18, 63, 20);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-04-22 11:47:15', '2021-04-28 12:45:18', 93.84334356, 234.000467048, 4, 59, 69);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-08-12 07:18:10', '2022-01-27 12:06:58', 35.565636959, 228.281447363, 34, 74, 30);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-09-01 16:46:09', '2021-09-10 00:50:43', 10.853250842, 60.726152457, 45, 83, 65);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-04-07 11:41:23', '2021-05-23 05:23:55', 5.792546896, 28.529001289, 12, 82, 15);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-12-05 18:26:45', '2021-04-21 06:19:19', 67.759701753, 91.941784415, 8, 1, 45);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-08-11 20:19:38', '2021-11-16 01:01:54', 144.260518053, 167.694166158, 39, 1, 29);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-03-18 17:05:11', '2021-09-03 23:10:55', 146.853881361, 89.741820557, 45, 62, 69);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-11-03 11:47:20', '2021-09-27 19:34:59', 176.992714567, 26.756443858, 47, 98, 19);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2022-01-12 22:38:19', '2021-04-13 04:21:05', 116.637031028, 184.276047841, 1, 34, 22);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-11-12 14:02:21', '2022-01-01 20:50:33', 115.771495852, 115.615644715, 18, 87, 46);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-06-29 00:57:19', '2021-08-05 16:53:19', 110.147051232, 168.530890882, 30, 68, 34);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2022-01-14 11:22:57', '2021-03-07 14:05:46', 106.85699553, 75.244958367, 36, 97, 18);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-06-05 23:18:42', '2021-05-28 14:47:00', 74.29795371, 158.571443672, 16, 35, 52);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-06-09 06:51:53', '2021-07-14 11:11:52', 30.422185203, 115.289526619, 36, 3, 1);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-11-29 08:29:46', '2021-09-01 10:53:57', 43.103834751, 12.403579911, 47, 31, 62);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-09-19 04:32:31', '2021-02-22 13:28:49', 102.670299869, 113.33098544, 17, 43, 46);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-08-16 07:59:12', '2021-06-30 08:43:25', 9.229610216, 165.582438009, 47, 65, 35);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-04-22 01:46:15', '2021-06-24 10:50:10', 82.653609884, 56.472745449, 26, 8, 10);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-12-21 06:35:53', '2021-06-30 13:46:00', 37.227630161, 107.816814753, 27, 16, 51);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-11-18 06:50:51', '2021-09-18 00:26:12', 55.677048811, 168.778081196, 36, 68, 85);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-11-18 09:08:50', '2021-02-16 08:35:35', 115.390190006, 57.265153119, 29, 40, 56);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-10-29 14:02:12', '2021-05-01 02:57:07', 95.419201841, 242.636012435, 20, 86, 100);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-07-25 09:22:33', '2021-10-01 17:59:11', 9.816456922, 147.53857964, 39, 83, 74);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2022-01-27 05:33:27', '2021-02-09 04:24:35', 113.207036241, 145.28346586, 35, 51, 84);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-09-20 04:37:12', '2021-10-30 19:45:18', 154.535468711, 186.218749463, 3, 57, 96);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-12-23 16:48:34', '2021-12-10 00:33:11', 153.176821728, 170.769639419, 26, 28, 80);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-10-08 23:21:24', '2021-07-17 17:19:37', 21.486541317, 86.519811603, 27, 19, 13);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-07-26 12:06:48', '2021-02-02 13:41:36', 115.17175322, 140.834204795, 30, 27, 49);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-05-28 06:24:30', '2022-01-03 00:55:03', 73.154767806, 243.373194773, 25, 62, 48);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-08-14 17:46:08', '2021-05-27 00:10:05', 186.842110899, 11.415910841, 10, 72, 53);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2022-01-09 01:44:50', '2021-09-17 03:32:17', 77.511571117, 161.922687028, 28, 58, 12);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-08-21 05:32:33', '2021-04-30 12:22:38', 2.466530562, 111.984676395, 45, 15, 27);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-02-24 02:10:23', '2021-02-19 10:20:55', 9.026241536, 64.868460302, 33, 74, 81);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-07-07 08:40:14', '2021-12-03 10:48:20', 114.823155143, 85.762768935, 19, 91, 97);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-08-04 08:35:13', '2021-03-19 20:41:38', 151.050532176, 137.454222969, 15, 15, 47);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-06-30 23:17:22', '2021-04-05 14:15:46', 92.427649646, 242.367363465, 29, 83, 76);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-12-17 14:03:50', '2021-06-26 14:48:31', 91.466459291, 203.085399802, 34, 32, 65);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-07-09 15:38:45', '2021-07-01 06:11:09', 19.997760721, 69.272623704, 24, 18, 19);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2022-01-29 16:11:11', '2021-11-23 16:42:14', 21.974622631, 151.41557432, 22, 51, 94);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-08-26 14:04:48', '2021-03-24 09:58:18', 142.544097879, 231.974601848, 42, 48, 85);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-08-22 19:49:16', '2021-12-27 22:13:42', 155.176326034, 176.271898941, 7, 24, 77);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-11-14 23:13:32', '2021-09-11 14:00:05', 40.883438081, 32.695261931, 44, 6, 53);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-09-14 07:36:50', '2021-11-24 13:00:29', 45.405258402, 186.256434691, 25, 68, 97);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-06-26 13:19:21', '2021-08-31 21:31:03', 63.538156331, 128.193904068, 32, 54, 2);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-10-16 03:22:30', '2021-08-30 22:10:46', 181.059586254, 78.455712326, 27, 54, 21);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2022-01-06 02:18:45', '2021-07-22 07:31:38', 148.961343184, 242.873865974, 34, 79, 18);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-06-12 13:34:33', '2021-09-30 03:44:35', 123.366672766, 236.063192208, 1, 98, 34);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-10-02 14:50:22', '2021-01-15 02:41:24', 191.654128595, 53.500569626, 1, 40, 64);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-08-24 17:40:45', '2021-11-11 20:05:20', 186.354176892, 106.719863506, 4, 41, 7);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-08-31 07:02:22', '2022-01-02 21:02:07', 45.101890198, 150.993475587, 17, 99, 31);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-10-21 21:49:02', '2021-08-22 06:09:55', 135.286312028, 68.843815278, 46, 35, 91);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-05-18 22:49:10', '2021-07-27 22:32:09', 159.428102783, 63.323589994, 14, 16, 42);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-06-04 08:24:59', '2021-10-11 10:24:31', 141.69880723, 200.439361094, 1, 18, 99);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-04-16 07:13:25', '2021-11-06 00:58:30', 92.631454186, 70.693349164, 30, 29, 88);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-09-12 14:51:34', '2021-10-25 14:11:42', 60.329916398, 144.434130255, 19, 8, 74);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-11-19 18:38:32', '2021-04-03 03:43:35', 49.161884434, 81.66660961, 31, 75, 12);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-01-28 08:44:22', '2021-12-15 14:08:59', 130.291387692, 244.611703074, 16, 46, 95);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-12-20 22:59:04', '2021-11-26 09:48:18', 15.41233202, 99.037656492, 48, 88, 84);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-04-13 06:23:44', '2021-06-19 22:36:57', 76.176486204, 187.29998395, 46, 21, 35);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-12-13 14:50:03', '2021-08-10 10:45:38', 42.259365168, 249.079722112, 23, 42, 27);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-01-22 17:18:51', '2021-07-04 02:47:39', 64.248125171, 205.161331325, 42, 68, 83);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-05-20 04:33:48', '2021-05-17 02:50:28', 188.158803187, 104.167777406, 38, 16, 63);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-06-03 23:41:08', '2021-12-23 04:22:07', 161.523458027, 44.728005508, 36, 87, 4);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-07-13 14:13:04', '2021-01-15 22:24:29', 133.997382826, 66.638326321, 29, 55, 13);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-06-20 08:35:35', '2021-07-13 21:12:37', 35.648786749, 241.241859766, 32, 93, 98);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-11-20 09:59:14', '2021-10-08 17:45:33', 26.399257959, 193.256920478, 38, 82, 68);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-02-26 09:08:03', '2021-05-06 04:43:53', 45.214145655, 142.916959436, 4, 87, 50);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2022-01-01 11:35:09', '2022-01-19 19:00:57', 154.287205053, 247.798952535, 22, 16, 66);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-07-07 05:47:43', '2021-08-01 17:37:25', 43.901556913, 243.869516887, 1, 8, 1);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-03-09 14:40:52', '2021-01-19 06:30:40', 185.274183108, 40.079531567, 24, 56, 67);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-02-07 00:03:00', '2021-07-22 23:29:20', 66.019432713, 37.551579975, 21, 11, 85);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-03-13 18:48:34', '2022-01-09 02:00:11', 15.553757588, 90.090798301, 33, 48, 77);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-11-27 12:13:45', '2021-05-12 12:18:58', 19.601641689, 117.255489474, 26, 63, 68);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-10-16 22:17:52', '2021-03-09 05:07:19', 178.858891067, 127.486828116, 16, 46, 50);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-12-20 05:00:27', '2021-10-21 14:55:46', 192.137111086, 2.878238118, 17, 78, 71);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-06-11 07:22:54', '2021-11-06 20:31:06', 28.484987224, 168.485600936, 25, 79, 77);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-12-29 07:50:05', '2021-11-08 23:33:32', 97.788230989, 3.930788885, 46, 56, 81);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-08-22 14:29:28', '2021-10-02 00:10:57', 15.710530992, 58.138032359, 1, 100, 4);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-08-24 17:54:42', '2022-01-24 16:21:27', 99.074623324, 240.117119525, 20, 65, 62);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-07-07 01:23:46', '2021-04-05 01:25:41', 139.145612543, 176.263586203, 2, 33, 1);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-08-04 16:07:59', '2021-09-10 22:06:12', 41.00110889, 115.836022043, 14, 83, 36);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-01-18 21:53:05', '2021-11-17 11:57:53', 4.240112038, 204.479906571, 16, 92, 60);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-06-19 04:31:31', '2021-06-24 22:11:59', 1.738715419, 90.728678581, 32, 61, 84);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-04-20 05:32:13', '2021-10-31 06:02:43', 23.144160423, 92.346653944, 29, 93, 48);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-01-19 16:17:44', '2021-11-22 08:49:08', 7.826387204, 88.207382559, 37, 34, 65);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-10-28 00:02:13', '2021-04-28 18:00:36', 72.846229881, 216.504381364, 40, 41, 77);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-10-20 23:04:00', '2021-02-07 00:28:13', 91.666819316, 46.399929437, 16, 78, 60);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-09-01 01:59:53', '2021-11-04 01:06:00', 161.25588145, 36.788949557, 23, 2, 77);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-03-21 06:23:16', '2021-08-18 00:57:55', 180.774100888, 197.939919264, 6, 35, 98);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-07-08 16:21:12', '2021-07-31 12:47:29', 57.70902965, 97.459084581, 30, 22, 80);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-10-05 10:09:14', '2021-11-23 05:51:40', 142.671080952, 76.31189793, 41, 93, 59);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-03-21 17:20:10', '2021-08-22 11:28:18', 154.69934064, 130.568765685, 19, 99, 64);
+insert into transactions (created_at, updated_at, amount, price, user_id, input_asset_id, output_asset_id) values ('2021-04-24 06:55:15', '2021-10-11 10:11:56', 86.019399146, 15.492683059, 42, 86, 95);
