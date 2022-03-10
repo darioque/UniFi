@@ -85,13 +85,13 @@
 							
 								<div class="box-price">
 									<p class="change-article">Change</p>
-									<% if (cryptoList[i].change > 0) { %>
+									<% if (cryptoList[i].price_change_24 > 0) { %>
 									<p class="percentage-article percentage-green">
-										<%= cryptoList[i].change %>%
+										<%= cryptoList[i].price_change_24 %>%
 									</p>
 									<% } else { %>
 									<p class="percentage-article percentage-red">
-										<%= cryptoList[i].change %>0%
+										<%= cryptoList[i].price_change_24 %>0%
 									</p>
 									<% } %>
 								</div>															
@@ -118,13 +118,13 @@
 								</div>
 								<div class="box-price">
 									<p class="change-article">Change</p>
-									<% if (stockList[i].change > 0) { %>
+									<% if (stockList[i].price_change_24 > 0) { %>
 									<p class="percentage-article percentage-green">
-										<%= stockList[i].change %>%
+										<%= stockList[i].price_change_24 %>%
 									</p>
 									<% } else { %>
 									<p class="percentage-article percentage-red">
-										<%= stockList[i].change %>0%
+										<%= stockList[i].price_change_24 %>0%
 									</p>
 									<% } %>
 								</div>
