@@ -50,14 +50,26 @@ html {
 }
 
 .article {
-    display: flex;
-    justify-content: space-around;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     border-top: 1px solid rgb(239, 242, 245);
+}
+
+.ul-list {
+    padding-inline-start: 0 !important;
+    margin-block-start: 0px !important;
+    margin-block-end: 0px !important;
 }
 
 .image-article {
     width: 30px;
     height: 30px;
+    align-self: center;
+    margin-left: 15px;
+}
+
+.name-product {
     align-self: center;
 }
 
@@ -76,6 +88,7 @@ html {
 
 .percentage-article {
     align-self: center;
+    text-align: center;
 }
 
 .percentage-green {
@@ -86,6 +99,26 @@ html {
     color: red;
 }
 
+.title-members{
+    margin: 20px 10px;
+}
+
+.card-members {
+    display: flex;
+    margin: 20px 10px;
+    border: 1px solid rgb(239, 242, 245);
+    border-radius: 10px;
+}
+
+.name-text {
+    margin: 0 15px;
+}
+
+.image-index {
+    width: 150px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
 
 /* MEDIA QUERY DE PANTALLAS DESDE A 480PX */
 @media (min-width: 481px) {
@@ -137,6 +170,7 @@ html {
     .box-price {
         text-align: center;
         align-self: center;
+        margin: 10px 0;
     }
 
     .stock-section {
