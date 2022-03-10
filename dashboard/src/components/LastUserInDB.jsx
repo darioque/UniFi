@@ -1,28 +1,28 @@
 import React, { Component } from "react";
 
-class LastAssetInDB extends Component {
+class LastUserInDB extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            asset: {},
+            user: {},
         };
     }
 
-    async getAsset() {
-        const response = await fetch("http://localhost:3001/api/markets/");
-        const assets = await response.json();
-        const lastAssetData = await fetch(
-            assets.assets[assets.count - 1].detail
+    async getUser() {
+        const response = await fetch("http://localhost:3001/api/users/");
+        const users = await response.json();
+        const lastUserData = await fetch(
+            users.users[users.count - 1].detail
         );
-        const lastAsset = await lastAssetData.json();
-        const asset = lastAsset.asset;
-        this.setState({ asset, type:asset.type.name });
+        const lastUser = await lastUserData.json();
+        const user = lastUser.user;
+        this.setState({ user, type:user.first_name });
     }
 
     
 
     componentDidMount() {
-        this.getAsset();
+        this.getUser();
     }
 
     render() {
@@ -31,7 +31,7 @@ class LastAssetInDB extends Component {
                 <div className="card shadow mb-4">
                     <div className="card-header py-3">
                         <h5 className="m-0 font-weight-bold text-gray-800">
-                            Last Asset in Data Base
+                            Last User in Data Base
                         </h5>
                     </div>
                     <div className="card-body">
@@ -39,20 +39,20 @@ class LastAssetInDB extends Component {
                             <img
                                 className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                                 style={{ width: "10rem" }}
-                                src={this.state.asset.logo}
-                                alt={`${this.state.asset.name}'s logo`}
+                                src={this.state.user.avatar}
+                                alt={`${this.state.user.first_name + " " + this.state.user.last_name}'s logo`}
                             />
-                            <h2>{this.state.asset.name}</h2>
+                            <h2>{this.state.user.first_name + " " + this.state.user.last_name}</h2>
                         </div>
-                        <p>{this.state.asset.description}</p>
+                        <p>{this.state.user.user_name}</p>
                         <a
                             className="btn btn-danger"
                             target="_blank"
                             rel="noreferrer"
-                            href={`http://localhost:3001/markets/${this.state.type}/${this.state.asset.id}`}
+                            href= {`http://localhost:3001/api/users/${this.state.user.id}`}                            
                             style={{color: 'white', backgroundColor: '#4e73df', borderColor: '#4e73df'}}
                         >
-                            View asset details
+                            View user details
                         </a>
                     </div>
                 </div>
@@ -61,4 +61,4 @@ class LastAssetInDB extends Component {
     }
 }
 
-export default LastAssetInDB;
+export default LastUserInDB;
