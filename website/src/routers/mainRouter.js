@@ -12,12 +12,10 @@ const userService = require("../services/users");
 // implementando multer para fotos de perfil
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        console.log('im in destination');
-        cb(null, "./public/img/users");
+        cb(null, "./website/public/img/users");
     },
     filename: (req, file, cb) => {
         let fileName = `${Date.now()}_avatar${path.extname(file.originalname)}`;
-        console.log('im in filename');
         cb(null, fileName);
     },
 });

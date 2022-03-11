@@ -211,6 +211,7 @@ function generateAvatar() {
     const svg = jdenticon.toSvg(value, size);
     const fileName = `${Date.now()}_avatar.svg`;
     fs.writeFileSync(`${avatarsFilePath}${fileName}`, svg);
+    
     return `/img/users/${fileName}`;
 }
 
