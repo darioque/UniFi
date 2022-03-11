@@ -12,6 +12,7 @@ const userService = require("../services/users");
 // implementando multer para fotos de perfil
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
+        console.log('hola llegue aca');
         cb(null, "./public/img/users");
     },
     filename: (req, file, cb) => {
@@ -109,6 +110,7 @@ const registerValidations = [
             return req.body.address == null;
         })
         .custom((value, { req }) => {
+            console.log('hola llegue acas');
             let file = req.file
             let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.svg']
             if (!file) {
