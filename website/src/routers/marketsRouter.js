@@ -11,7 +11,7 @@ const assetService = require("../services/assets");
 // implementando multer para logos de activos
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, "./public/img/assets");
+        cb(null, "./website/public/img/assets");
     },
     filename: (req, file, cb) => {
         let fileName = `${Date.now()}_logo${path.extname(file.originalname)}`;

@@ -39,7 +39,7 @@ const mainController = {
             // si hubo errores en registro con foto de perfil, borrarla
             if (req.file) {
                 try {
-                    await unlink(path.resolve(__dirname, `../../${req.file.path}`));
+                    await unlink(path.resolve(__dirname, `../../../${req.file.path}`));
                     console.log("Successfully deleted pfp");
                 } catch (error) {
                     console.error("There was an error deleting the image: ", error);

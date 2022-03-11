@@ -54,7 +54,7 @@ const usersController = {
             if (req.file) {
                 try {
                     await unlink(
-                        path.resolve(__dirname, `../../${req.file.path}`)
+                        path.resolve(__dirname, `../../../${req.file.path}`)
                     );
                     console.log("Successfully deleted logo");
                 } catch (error) {
@@ -114,7 +114,7 @@ const usersController = {
             req.session.destroy();
             res.redirect("/login");
             await unlink(
-                path.resolve(__dirname, `../public/${user.avatar}`)
+                path.resolve(__dirname, `../../public/${user.avatar}`)
             );
         } catch (err) {
             console.error("there was an error deleting the user: ", err);
