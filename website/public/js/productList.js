@@ -5,7 +5,6 @@ window.onload = async () => {
     const changeFilter = document.querySelector("#changeFilter");
     const priceFilter = document.querySelector("#priceFilter");
     const marketType = location.href.split("/markets/")[1];
-
     const response = await fetch(
         `https://unifi.onrender.com/api/${marketType}/markets/`
     ).then((assets) => assets.json());
