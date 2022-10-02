@@ -1,23 +1,39 @@
+require("dotenv").config();
 module.exports = {
-    development: {
-        username: "pogkvzfyd28puuug",
-        password: "nes6ukssrueetyo6",
-        database: "gh8qn8hgxtcqkjwr",
-        host: "m7az7525jg6ygibs.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-        dialect: "mysql",
-    },
-    test: {
-        username: "pogkvzfyd28puuug",
-        password: "nes6ukssrueetyo6",
-        database: "gh8qn8hgxtcqkjwr",
-        host: "m7az7525jg6ygibs.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-        dialect: "mysql",
-    },
-    production: {
-        username: "pogkvzfyd28puuug",
-        password: "nes6ukssrueetyo6",
-        database: "gh8qn8hgxtcqkjwr",
-        host: "m7az7525jg6ygibs.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-        dialect: "mysql",
-    },
-}
+	development: {
+		username: process.env.DB_USERNAME,
+		password: process.env.DB_PASSWORD,
+		database: process.env.DB_DATABASE,
+		host: process.env.DB_HOST,
+		dialect: "mysql",
+        dialectOptions: {
+            ssl :{
+                rejectUnauthorized: false
+            }
+        }
+	},
+	test: {
+		username: process.env.DB_USERNAME,
+		password: process.env.DB_PASSWORD,
+		database: process.env.DB_DATABASE,
+		host: process.env.DB_HOST,
+		dialect: "mysql",
+        dialectOptions: {
+            ssl :{
+                rejectUnauthorized: false
+            }
+        }
+	},
+	production: {
+		username: process.env.DB_USERNAME,
+		password: process.env.DB_PASSWORD,
+		database: process.env.DB_DATABASE,
+		host: process.env.DB_HOST,
+		dialect: "mysql",
+        dialectOptions: {
+            ssl :{
+                rejectUnauthorized: false
+            }
+        }
+	},
+};
