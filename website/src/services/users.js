@@ -38,7 +38,7 @@ async function getUsersApi(limit = null, offset = 0) {
             [
                 sequelize.fn(
                     "CONCAT",
-                    `https://unifi-grupo6.herokuapp.com/api/users/`,
+                    `https://unifi.onrender.com/api/users/`,
                     sequelize.col("id"),
                     `/`
                 ),
