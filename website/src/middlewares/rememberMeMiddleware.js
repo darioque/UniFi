@@ -2,7 +2,7 @@
 const userService = require("../services/users");
 function rememberMeMiddleware(req, res, next) {
     if (req.cookies.rememberMe) {
-        req.session.rememberMe = userService.findUserByPk(
+        req.session.rememberMe = userService.findUser("id",
             parseInt(req.cookies.rememberMe)
         );
     }

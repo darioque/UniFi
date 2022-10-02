@@ -56,5 +56,5 @@ app.use((req, res, next) => {
 
 // ejecutamos el servidor
 app.listen(process.env.PORT || 3001, () => {
-    console.log("Server is online");
+    console.log("server is online at http://localhost:3001/");
 });

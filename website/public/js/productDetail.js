@@ -34,6 +34,69 @@ window.onload = () => {
         }
     };
     
+    function createChart() {
+        const labels = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+        ];
+        const price = priceInput.value;
+
+        const data = {
+            labels: labels,
+            datasets: [
+                {
+                    label: "Under starting price",
+                    borderColor: "rgb(255, 99, 132)",
+                    backgroundColor: "rgba(255, 99, 132, 0.5)",
+                    data: [
+                        math.random(price * 0.45, price * 0.30),
+                        math.random(price * 0.15, price * 0.25),
+                        math.random(price * 0.10, price * 0.15),
+                        price * 0.33,
+                        null,
+                        null,
+                        null,
+                    ],
+                    fill: {
+                        target: "start",
+                        below: "rgb(255, 99, 132)",
+                    },
+                },
+                {
+                    label: "Above starting price",
+                    borderColor: "rgb(80, 255, 132)",
+                    backgroundColor: "rgba(80, 255, 132, 0.5)",
+                    data: [
+                        null,
+                        null,
+                        null,
+                        price * 0.33,
+                        math.random(price * 0.75, price * 0.85),
+                        math.random(price * 0.95, price),
+                        price,
+                    ],
+                    fill: {
+                        target: "start",
+                        below: "rgb(0,255,0) ",
+                    },
+                },
+            ],
+        };
+
+        const config = {
+            type: "line",
+            data: data,
+            options: {},
+        };
+
+        const myChart = new Chart(document.getElementById("myChart"), config);
+    }
+
     function changeAsset() {
         const modal = document.getElementById("listModal");
 

@@ -45,7 +45,7 @@ const mainController = {
                     console.error("There was an error deleting the image: ", error);
                 }
             }
-            // renderizar vista de registra con los respectivos errores
+            // renderizar vista de registro con los respectivos errores
             return res.render("users/register", {
                 pageTitle: "Register",
                 old: req.body,
