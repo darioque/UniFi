@@ -4,7 +4,7 @@
 	"description": "UniFi is a comprehensive finance site",
 	"main": "app.js",
 	"scripts": {
-		"start": "nodemon -e js ./src/app"
+		"start": "node ./src/app"
 	},
 	"repository": {
 		"type": "git",
