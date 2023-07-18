@@ -16,8 +16,10 @@ class LastUserInDB extends Component {
         );
         const lastUser = await lastUserData.json();
         const user = lastUser.user;
-        this.setState({ user });
+        this.setState({ user, type:user.first_name });
     }
+
+    
 
     componentDidMount() {
         this.getUser();
@@ -38,16 +40,15 @@ class LastUserInDB extends Component {
                                 className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                                 style={{ width: "10rem" }}
                                 src={`http://localhost:3001${this.state.user.avatar}`}
-                                alt={`${this.state.user.name}'s logo`}
+                                alt={`${this.state.user.first_name + " " + this.state.user.last_name}'s logo`}
                             />
                             <h2>{this.state.user.user_name??this.state.user.email?? this.state.user.address}</h2>
                         </div>
-                        <p>{this.state.user.description}</p>
                         <a
                             className="btn btn-danger"
                             target="_blank"
                             rel="noreferrer"
-                            href={`http://localhost:3001/users/${this.state.user.id}/profile`}
+                            href={`http://localhost:3001/users/${this.state.user.id}/profile`}                           
                             style={{color: 'white', backgroundColor: '#4e73df', borderColor: '#4e73df'}}
                         >
                             View user details

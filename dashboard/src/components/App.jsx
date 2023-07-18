@@ -5,9 +5,9 @@ import { Route, Switch } from "react-router-dom";
 import TypesInDb from "./TypesInDb";
 import AssetsTable from "./AssetsTable";
 import LastAssetInDB from "./LastAssetInDB";
+import LastUserInDB from "./LastUserInDB";
 import AssetList from "./AssetList";
 import Error404 from "./Error404";
-import LastUserInDB from "./LastUserInDB";
 
 function App() {
     return (

@@ -19,6 +19,8 @@ class LastAssetInDB extends Component {
         this.setState({ asset, type:asset.type.name });
     }
 
+    
+
     componentDidMount() {
         this.getAsset();
     }
