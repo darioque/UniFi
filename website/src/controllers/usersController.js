@@ -54,7 +54,7 @@ const usersController = {
             if (req.file) {
                 try {
                     await unlink(
-                        path.resolve(__dirname, `../../${req.file.path}`)
+                        path.resolve(__dirname, `../../../${req.file.path}`)
                     );
                     console.log("Successfully deleted logo");
                 } catch (error) {
@@ -111,11 +111,11 @@ const usersController = {
         try {
             const userId = req.session.authenticatedUser.id;
             const user = await userService.deleteUser(userId);
+            req.session.destroy();
+            res.redirect("/login");
             await unlink(
                 path.resolve(__dirname, `../../public/${user.avatar}`)
             );
-            req.session.destroy();
-            res.redirect("/login");
         } catch (err) {
             console.error("there was an error deleting the user: ", err);
             res.status(404).render("not-found");

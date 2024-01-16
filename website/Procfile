@@ -1,1 +1,0 @@
-web: nodemon -e js ./src/app

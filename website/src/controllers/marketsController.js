@@ -77,7 +77,7 @@ const marketsController = {
         if (!errors.isEmpty()) {
             if (req.file) {
                 try {
-                    await unlink(path.resolve(__dirname, `../../${req.file.path}`));
+                    await unlink(path.resolve(__dirname, `../../../${req.file.path}`));
                     console.log("Successfully deleted logo");
                 } catch (error) {
                     console.error("There was an error deleting the image: ", error);
@@ -139,7 +139,7 @@ const marketsController = {
         if (!errors.isEmpty()) {
             if (req.file) {
                 try {
-                    await unlink(path.resolve(__dirname, `../../${req.file.path}`));
+                    await unlink(path.resolve(__dirname, `../../../${req.file.path}`));
                     console.log("Successfully deleted logo");
                 } catch (error) {
                     console.error("There was an error deleting the image: ", error);
@@ -173,7 +173,7 @@ const marketsController = {
         try {
             const assetId = req.params.id;
             const asset = await assetService.deleteAsset(assetId);
-            await unlink(path.resolve(__dirname, `../../public/${asset.logo}`));
+            await unlink(path.resolve(__dirname, `../../../public/${asset.logo}`));
             console.log("Successfully deleted logo");
             res.redirect("/markets/" + req.params.marketType);
         } catch (err) {

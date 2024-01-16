@@ -9,7 +9,7 @@ class TypesInDb extends Component {
     }
 
     async getTypes() {
-        const response = await fetch("http://localhost:3001/api/markets/");
+        const response = await fetch("https://localhost:3001/api/markets/");
         const types = await response.json();
 		this.setState({ 
             types: types.countByCategory,

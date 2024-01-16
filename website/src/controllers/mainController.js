@@ -35,16 +35,17 @@ const mainController = {
         const errors = validationResult(req);
         // si hubo errores (el array no está vacío) mandar los mensajes a la vista del formulario
         if (!errors.isEmpty()) {
+            console.log('hubo errores', errors);
             // si hubo errores en registro con foto de perfil, borrarla
             if (req.file) {
                 try {
-                    await unlink(path.resolve(__dirname, `../../${req.file.path}`));
+                    await unlink(path.resolve(__dirname, `../../../${req.file.path}`));
                     console.log("Successfully deleted pfp");
                 } catch (error) {
                     console.error("There was an error deleting the image: ", error);
                 }
             }
-            // renderizar vista de registra con los respectivos errores
+            // renderizar vista de registro con los respectivos errores
             return res.render("users/register", {
                 pageTitle: "Register",
                 old: req.body,
@@ -54,6 +55,7 @@ const mainController = {
         // añade la url de la foto de perfil a una propiedad avatar del body para tenerlo todo en un objeto
         if (req.file) {
             req.body.avatar = "/img/users/" + req.file.filename;
+            console.log(req.file);
         }
         // si no hubo errores en el formulario, registrar al usuario en la base de datos
         try {

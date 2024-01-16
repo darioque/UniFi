@@ -1,47 +1,49 @@
 {
-  "name": "unifi",
-  "version": "1.0.0",
-  "description": "UniFi is a comprehensive finance site",
-  "main": "app.js",
-  "scripts": {
-    "start": "nodemon -e js ./src/app"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/0921CDFSNCN22LAED/grupo-06.git"
-  },
-  "keywords": [
-    "Crypto",
-    "finance",
-    "DeFi",
-    "CEX",
-    "Stocks"
-  ],
-  "author": "Grupo 06",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/0921CDFSNCN22LAED/grupo-06/issues"
-  },
-  "homepage": "https://github.com/0921CDFSNCN22LAED/grupo-06#readme",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.1",
-    "cookie-parser": "^1.4.6",
-    "cors": "^2.8.5",
-    "crypto": "^1.0.1",
-    "ejs": "^3.1.6",
-    "express": "^4.17.2",
-    "express-session": "^1.17.2",
-    "express-validator": "^6.14.0",
-    "jdenticon": "^3.1.1",
-    "lightweight-charts": "^3.8.0",
-    "method-override": "^3.0.0",
-    "moment": "^2.29.1",
-    "multer": "^1.4.4",
-    "mysql2": "^2.3.3",
-    "sequelize": "^6.14.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
-  }
+	"name": "unifi",
+	"version": "1.0.0",
+	"description": "UniFi is a comprehensive finance site",
+	"main": "app.js",
+	"scripts": {
+		"start": "nodemon -e js ./src/app"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/0921CDFSNCN22LAED/grupo-06.git"
+	},
+	"keywords": [
+		"Crypto",
+		"finance",
+		"DeFi",
+		"CEX",
+		"Stocks"
+	],
+	"author": "Grupo 06",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/0921CDFSNCN22LAED/grupo-06/issues"
+	},
+	"homepage": "https://github.com/0921CDFSNCN22LAED/grupo-06#readme",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"body-parser": "^1.19.1",
+		"cookie-parser": "^1.4.6",
+		"cookie-session": "^2.0.0",
+		"cors": "^2.8.5",
+		"crypto": "^1.0.1",
+		"dotenv": "^16.0.3",
+		"ejs": "^3.1.8",
+		"express": "^4.17.2",
+		"express-session": "^1.17.2",
+		"express-validator": "^6.14.0",
+		"jdenticon": "^3.1.1",
+		"lightweight-charts": "^3.8.0",
+		"method-override": "^3.0.0",
+		"moment": "^2.29.4",
+		"multer": "^1.4.4",
+		"mysql2": "^2.3.3",
+		"sequelize": "^6.14.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.20"
+	}
 }

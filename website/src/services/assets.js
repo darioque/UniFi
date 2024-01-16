@@ -44,7 +44,7 @@ async function getAssetsApi(limit = null, offset = 0) {
             [
                 sequelize.fn(
                     "CONCAT",
-                    `http://localhost:3001/api/markets/`,
+                    `https://unifi.onrender.com/api/markets/`,
                     sequelize.col("asset.id"),
                     `/`
                 ),

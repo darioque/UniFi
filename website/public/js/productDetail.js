@@ -33,7 +33,7 @@ window.onload = () => {
             event.target.style.display = "none";
         }
     };
-
+    
     function createChart() {
         const labels = [
             "January",
@@ -96,6 +96,7 @@ window.onload = () => {
 
         const myChart = new Chart(document.getElementById("myChart"), config);
     }
+
     function changeAsset() {
         const modal = document.getElementById("listModal");
 
@@ -113,7 +114,7 @@ window.onload = () => {
                 .split("/markets/")[1]
                 .split("/")[0];
             const response = await fetch(
-                `http://localhost:3001/api/${marketType}/markets/`
+                `https://unifi.onrender.com/api/${marketType}/markets/`
             ).then((assets) => assets.json());
             const assets = response.data;
             const assetList = document.querySelector("#assetList");

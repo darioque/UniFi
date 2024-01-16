@@ -38,7 +38,7 @@ async function getUsersApi(limit = null, offset = 0) {
             [
                 sequelize.fn(
                     "CONCAT",
-                    `http://localhost:3001/api/users/`,
+                    `https://unifi.onrender.com/api/users/`,
                     sequelize.col("id"),
                     `/`
                 ),
@@ -211,6 +211,7 @@ function generateAvatar() {
     const svg = jdenticon.toSvg(value, size);
     const fileName = `${Date.now()}_avatar.svg`;
     fs.writeFileSync(`${avatarsFilePath}${fileName}`, svg);
+    
     return `/img/users/${fileName}`;
 }
 
